@@ -5,8 +5,8 @@ const HeroSection = () => {
     <section className={s.heroSection} id="hero">
       <div className={s.content}>
         <p className={s.preHeading}>Hi, my name is</p>
-        <h1 className={s.myName}>Moamal Alaa</h1>
-        <h2 className={s.whatIDo}>I craft beautiful web experiences.</h2>
+        <h1 className={s.myName}>Moamal Alaa.</h1>
+        <h2 className={s.whatIDo}>I make the internet less boring.</h2>
 
         <p className={s.description}>
           I'm a front-end developer passionate about creating engaging and
