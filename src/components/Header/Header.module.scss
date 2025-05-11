@@ -1,21 +1,92 @@
-.header {}
+.header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 11;
+  padding: 0 50px;
+  width: 100%;
+  height: 100px;
+  background-color: rgba(10, 25, 47, .85);
+  backdrop-filter: blur(10px);
+}
 
-.header .logo {}
+.header .logo {
+  display: block;
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #64ffda;
+  padding: 8px;
+  width: fit-content;
+}
 
-.header .navLinks {}
+.header .navLinks {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-.header .navLinks {}
+.header .navLinks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  color: #ccd6f6;
+  font-family: var(--font-mono);
+  counter-reset: item 0;
+  z-index: 12;
+}
 
-.header .navLinks ul {}
+.header .navLinks .wrapper {
+  display: flex;
+  align-items: center;
+}
 
-.header .navLinks ul li {}
+.header .wrapper ol {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-.header .navLinks ul li a {
+.header .wrapper ol li {
+  margin: 0 5px;
+  position: relative;
+  counter-increment: item 1;
+  font-size: .8rem;
+}
+
+.header .wrapper ol li a {
+  display: inline-block;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  color: inherit;
+  position: relative;
+  padding: 10px;
 
   &:hover {}
 }
 
-.header .resume {
+.header .wrapper ol li a::before {
+  content: "0" counter(item) ".";
+  margin-right: 5px;
+  color: #64ffda;
+  font-size: .75rem;
+  text-align: right;
+}
+
+.header .wrapper .resume {
+  color: #5ff1cf;
+  background-color: transparent;
+  border: 1px solid #5ff1cf;
+  border-radius: 4px;
+  padding: .75rem 1rem;
+  font-family: var(--font-mono);
+  line-height: 1;
+  text-decoration: none;
+  margin-left: 15px;
+  font-size: .8rem;
 
   &:hover {}
 }
