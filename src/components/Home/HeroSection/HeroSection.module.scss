@@ -1,3 +1,5 @@
+@use "@/styles/mixins" as m;
+
 .heroSection {
   min-height: 100dvh;
   display: flex;
@@ -9,6 +11,18 @@
   overflow: hidden;
   margin: 0 147px;
   padding: 0 100px;
+}
+
+@include m.large {
+  .heroSection {
+    margin: 0;
+  }
+}
+
+@include m.medium {
+  .heroSection {
+    padding: 0 50px;
+  }
 }
 
 .heroSection .content {
@@ -37,10 +51,16 @@
   // transform: translateY(20px);
 }
 
+@include m.large {
+  .content .preHeading {
+    font-size: 1.1rem;
+  }
+}
+
 .content .myName {
   background: linear-gradient(135deg, #ccd6f6, #8892b0);
   margin-bottom: 16px;
-  font-size: 4.375rem;
+  font-size: clamp(3rem, 9vw, 4.375rem);
   line-height: 1.1;
   color: #ccd6f6;
   font-weight: 700;
@@ -54,7 +74,7 @@
 
 .content .whatIDo {
   margin-bottom: 32px;
-  font-size: 3rem;
+  font-size: clamp(2rem, 6vw, 3rem);
   color: #8892b0;
   font-weight: 700;
   letter-spacing: 1px;
@@ -78,6 +98,12 @@
   animation: fadeInUp 1s ease .8s forwards;
   // opacity: 0;
   // transform: translateY(20px);
+}
+
+@include m.large {
+  .content .description {
+    font-size: 1rem;
+  }
 }
 
 .content .buttons {

@@ -1,4 +1,24 @@
+@use "@/styles/mixins" as m;
+
 :root {
   --website-width: 1400px;
   --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace
+}
+
+@media (max-width: 1400px) {
+  :root {
+    --website-width: 1200px;
+  }
+}
+
+@include m.large {
+  :root {
+    --website-width: 90%;
+  }
+}
+
+@include m.small {
+  :root {
+    --website-width: 100%;
+  }
 }
