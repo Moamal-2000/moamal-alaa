@@ -1,3 +1,5 @@
+@use "@/styles/mixins" as m;
+
 .header {
   display: flex;
   align-items: center;
@@ -42,6 +44,12 @@
 .header .navLinks .wrapper {
   display: flex;
   align-items: center;
+}
+
+@include m.small {
+  .header .navLinks .wrapper {
+    display: none;
+  }
 }
 
 .header .wrapper ol {
