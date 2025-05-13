@@ -1,0 +1,59 @@
+/* Calibre Font */
+
+@font-face {
+  font-family: "Calibre";
+  src: url('../fonts/Calibre/Calibre-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Calibre";
+  src: url('../fonts/Calibre/Calibre-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Calibre";
+  src: url('../fonts/Calibre/Calibre-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Calibre";
+  src: url('../fonts/Calibre/Calibre-Semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* SFMono Font */
+
+@font-face {
+  font-family: "ٍSF Mono";
+  src: url('../fonts/SFMono/SFMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ٍSF Mono";
+  src: url('../fonts/SFMono/SFMono-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ٍSF Mono";
+  src: url('../fonts/SFMono/SFMono-Semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
