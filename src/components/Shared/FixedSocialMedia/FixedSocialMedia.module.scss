@@ -33,5 +33,9 @@
 .socialMedia a svg {
   width: 20px;
   height: 20px;
+  fill: none;
+}
+
+.socialMedia a svg[data-type=twitter] {
   fill: #a8b2d1;
 }
