@@ -131,7 +131,6 @@
     background-color .3s ease,
     border-color .3s ease,
     box-shadow .3s ease,
-    transform .3s ease,
     opacity .3s ease;
 }
 
@@ -145,6 +144,30 @@
   padding: 13px 32px;
   box-shadow: 0 4px 15px rgba(100, 255, 218, 0.2);
   overflow: hidden;
+
+  &:hover {
+    background: linear-gradient(135deg, #64ffda, #64ffda);
+    color: #0a192f;
+    box-shadow: 0 5px 20px rgba(100, 255, 218, .3);
+
+    &::before {
+      left: 100%;
+    }
+  }
+}
+
+.content .buttons .viewWorkBtn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, .1),
+      rgba(255, 255, 255, .3),
+      rgba(255, 255, 255, .1));
+  transition: left .5s ease-out;
 }
 
 .content .buttons .getInTouchBtn {
@@ -152,4 +175,26 @@
   color: #8892b0;
   border: 1px solid #8892b0;
   box-shadow: 0 4px 10px rgba(136, 146, 176, .1);
+
+  &:hover {
+    color: #ccd6f6;
+    border-color: #ccd6f6;
+    box-shadow: 0 6px 20px rgba(135, 211, 194, .15);
+
+    &::before {
+      opacity: .8;
+    }
+  }
+}
+
+.content .buttons .getInTouchBtn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg,
+      transparent,
+      rgba(100, 255, 218, .05),
+      transparent);
+  opacity: 0;
+  transition: opacity .3s ease;
 }
