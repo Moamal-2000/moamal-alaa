@@ -21,6 +21,11 @@
   color: #64ffda;
   padding: 8px;
   width: fit-content;
+  transition: text-shadow .25s cubic-bezier(0.245, 0.045, 0.355, 1);
+
+  &:hover {
+    text-shadow: -1px 1px 2px #64ffda;
+  }
 }
 
 .header .navLinks {
@@ -72,8 +77,11 @@
   color: inherit;
   position: relative;
   padding: 10px;
+  transition: color .25s cubic-bezier(0.645, 0.045, 0.355, 1);
 
-  &:hover {}
+  &:hover {
+    color: #64ffda;
+  }
 }
 
 .header .wrapper ol li a::before {
@@ -94,7 +102,16 @@
   line-height: 1;
   text-decoration: none;
   margin-left: 15px;
-  font-size: .8rem;
+  font-size: .9rem;
+  transition:
+    color .2s cubic-bezier(0.645, 0.045, 0.355, 1),
+    background-color .2s cubic-bezier(0.645, 0.045, 0.355, 1),
+    border-color .2s cubic-bezier(0.645, 0.045, 0.355, 1),
+    box-shadow .2s cubic-bezier(0.645, 0.045, 0.355, 1);
 
-  &:hover {}
+  &:hover {
+    background-color: #64ffda;
+    color: #0a192f;
+    box-shadow: 0 4px 6px rgba(100, 255, 218, .2);
+  }
 }
