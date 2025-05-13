@@ -1,5 +1,6 @@
 import AboutSection from "@/components/Home/AboutSection/AboutSection";
 import HeroSection from "@/components/Home/HeroSection/HeroSection";
+import ProjectsSection from "@/components/Home/ProjectsSection/ProjectsSection";
 import s from "./page.module.scss";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <main className={s.home}>
       <HeroSection />
       <AboutSection />
+      <ProjectsSection />
     </main>
   );
 }
