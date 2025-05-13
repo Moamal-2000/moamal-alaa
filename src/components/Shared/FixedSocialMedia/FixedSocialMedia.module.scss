@@ -1,0 +1,37 @@
+.socialMedia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40px;
+  position: fixed;
+  bottom: 0;
+  left: 40px;
+  z-index: 10;
+  color: #a8b2d1;
+}
+
+.socialMedia::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 90px;
+  margin: 0 auto;
+  background-color: #a8b2d1;
+}
+
+.socialMedia li:last-child {
+  margin-bottom: 20px;
+}
+
+.socialMedia a {
+  display: inline-block;
+  position: relative;
+  padding: 10px;
+}
+
+
+.socialMedia a svg {
+  width: 20px;
+  height: 20px;
+  fill: #a8b2d1;
+}

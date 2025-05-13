@@ -1,4 +1,5 @@
 import Header from "@/components/Header/Header";
+import FixedSocialMedia from "@/components/Shared/FixedSocialMedia/FixedSocialMedia";
 import "../styles/globals.scss";
 import RootProviders from "./RootProviders";
 
@@ -13,6 +14,7 @@ export default function RootLayout({ children }) {
       <html lang="en">
         <body>
           <Header />
+          <FixedSocialMedia />
           {children}
         </body>
       </html>
