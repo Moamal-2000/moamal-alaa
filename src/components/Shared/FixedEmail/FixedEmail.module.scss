@@ -1,0 +1,39 @@
+.fixedEmail {
+  width: 40px;
+  position: fixed;
+  bottom: 0;
+  right: 40px;
+  z-index: 10;
+  color: #a8b2d1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fixedEmail::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 90px;
+  margin: 0 auto;
+  background-color: #a8b2d1;
+}
+
+.fixedEmail a {
+  margin: 20px auto;
+  padding: 10px;
+  font-family: var(--font-mono);
+  font-size: .75rem;
+  line-height: 18px;
+  letter-spacing: .1em;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+  transition:
+    translate .25s cubic-bezier(0.645, 0.045, 0.355, 1),
+    color .25s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  &:hover {
+    color: #64ffda;
+    translate: 0 -3px;
+  }
+}
