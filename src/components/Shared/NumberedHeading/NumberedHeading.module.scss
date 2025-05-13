@@ -1,0 +1,30 @@
+.numberedHeading {
+  display: flex;
+  align-items: center;
+  margin: 10px 0 40px;
+  width: 100%;
+  font-size: clamp(1.6rem, 5vw, 2rem);
+  white-space: nowrap;
+  color: #ccd6f6;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.numberedHeading span {
+  margin-right: 10px;
+  color: #64ffda;
+  font-family: var(--font-mono);
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  font-weight: 400;
+}
+
+.numberedHeading::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: 3px;
+  width: 300px;
+  height: 1px;
+  margin-left: 20px;
+  background-color: #233554;
+}

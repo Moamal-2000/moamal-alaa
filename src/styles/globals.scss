@@ -18,7 +18,7 @@
 body {
   background: var(--website-bg);
   color: var(--main-text-color);
-  font-family: Calibre, Inter, "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  font-family: var(--font-sans);
   max-width: var(--website-width);
   width: 100%;
   margin: 0 auto;
