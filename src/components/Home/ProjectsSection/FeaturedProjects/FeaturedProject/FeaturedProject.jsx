@@ -3,7 +3,7 @@ import Image from "next/image";
 import s from "./FeaturedProject.module.scss";
 
 const FeaturedProject = ({ data }) => {
-  const { name, description, technologies, repoUrl, liveUrl, previewImg } =
+  const { title, description, technologies, repoUrl, liveUrl, previewImg } =
     data;
 
   return (
@@ -11,7 +11,7 @@ const FeaturedProject = ({ data }) => {
       <div className={s.content}>
         <div className={s.projectHeader}>
           <span className={s.featuredText}>Featured Project</span>
-          <h3 className={s.name}>{name}</h3>
+          <h3 className={s.title}>{title}</h3>
         </div>
 
         <p className={s.description}>{description}</p>

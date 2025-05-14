@@ -27,7 +27,7 @@ export const SOCIAL_MEDIA = [
 
 export const FEATURED_PROJECTS = [
   {
-    name: "E-Commercew",
+    title: "E-Commercew",
     description: `A full-featured e-commerce platform with user authentication, product catalog,
       shopping cart, and admin dashboard. Built with modern web technologies for
       optimal performance and user experience.`,
