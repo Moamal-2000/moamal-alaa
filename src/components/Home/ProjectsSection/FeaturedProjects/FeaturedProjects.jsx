@@ -6,7 +6,7 @@ const FeaturedProjects = () => {
   return (
     <div className={s.featuredProjects}>
       {FEATURED_PROJECTS.map((projectData) => (
-        <FeaturedProject data={projectData} />
+        <FeaturedProject data={projectData} key={projectData.id} />
       ))}
     </div>
   );
