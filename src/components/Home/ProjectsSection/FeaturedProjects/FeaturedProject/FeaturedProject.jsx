@@ -28,14 +28,14 @@ const FeaturedProject = ({ data }) => {
             Source
           </a>
           <a href={liveUrl} target="_blank" rel="noopener noreferrer">
-            <SvgIcon name="" />
+            <SvgIcon name="live" />
             Live
           </a>
         </div>
       </div>
 
       <div className={s.previewImg}>
-        <Image src={previewImg} alt={title} width={500} height={500} />
+        <Image src={previewImg} alt={title} width={628} height={435} />
       </div>
     </div>
   );
