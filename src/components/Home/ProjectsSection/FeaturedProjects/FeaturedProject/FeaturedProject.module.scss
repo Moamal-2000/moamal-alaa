@@ -5,8 +5,6 @@
   align-items: center;
 }
 
-.featuredProject .content {}
-
 .content .projectHeader {
   margin-bottom: 24px;
 }
@@ -33,13 +31,11 @@
   border: 1px solid rgba(136, 146, 176, .2);
   width: 474px;
   font-size: 1.125rem;
-  transition:
-    color .3s ease,
-    background-color .3s ease,
-    border-color .3s ease,
-    box-shadow .3s ease,
-    transform .3s ease,
-    opacity .3s ease;
+  transition: border-color .3s ease,
+}
+
+.featuredProject:hover .content .description {
+  border-color: #64ffda;
 }
 
 .content .techList {
@@ -58,13 +54,12 @@
   font-size: .875rem;
   font-weight: 500;
   color: #8892b0;
-  transition:
-    color .3s ease,
-    background-color .3s ease,
-    border-color .3s ease,
-    box-shadow .3s ease,
-    transform .3s ease,
-    opacity .3s ease;
+  cursor: pointer;
+  transition: color .3s ease;
+
+  &:hover {
+    color: #64ffda;
+  }
 }
 
 .content .projectLinks {
@@ -82,13 +77,12 @@
   padding: 8px 16px;
   border-radius: 4px;
   border: 1px solid rgba(136, 146, 176, .2);
-  transition:
-    color .3s ease,
-    background-color .3s ease,
-    border-color .3s ease,
-    box-shadow .3s ease,
-    transform .3s ease,
-    opacity .3s ease;
+  transition: color .3s ease, border-color .3s ease;
+
+  &:hover {
+    color: #64ffda;
+    border-color: #64ffda;
+  }
 }
 
 .content .projectLinks a svg {
@@ -103,9 +97,6 @@
   aspect-ratio: 13 / 9;
   position: relative;
   overflow: hidden;
-  transition:
-    transform .5s cubic-bezier(.4, 0, .2, 1),
-    filter .5s cubic-bezier(.4 0, .2, 1);
 }
 
 .featuredProject .previewImg img {
@@ -113,7 +104,9 @@
   height: 100%;
   object-fit: cover;
   filter: grayscale(100%) brightness(0.9);
-  transition:
-    transform .5s cubic-bezier(.4, 0, .2, 1),
-    filter .5s cubic-bezier(.4, 0, .2, 1);
+  transition: filter .5s cubic-bezier(.4, 0, .2, 1);
+}
+
+.featuredProject:hover .previewImg img {
+  filter: grayscale(0) brightness(1.1);
 }
