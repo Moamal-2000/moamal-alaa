@@ -38,4 +38,17 @@ export const FEATURED_PROJECTS = [
       "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=1200",
     id: 1,
   },
+  {
+    title: "Aster Information",
+    description: `This fully responsive website was built as a freelance project for a potential
+    client. The project was initiated based on an agreement to deliver a professional, user-friendly,
+    and responsive website. The development process focused on creating an interactive user
+    experience and ensuring cross-browser compatibility.`,
+    technologies: ["React", "Node.js", "MongoDB", "Express", "Redux/Toolkit"],
+    repoUrl: "https://github.com/Moamal-2000/aster-information",
+    liveUrl: "https://asterinformation.netlify.app/",
+    previewImg:
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=1200",
+    id: 2,
+  },
 ];
