@@ -46,10 +46,9 @@ export const FEATURED_PROJECTS = [
   },
   {
     title: "Aster Information",
-    description: `This fully responsive website was built as a freelance project for a potential
-    client. The project was initiated based on an agreement to deliver a professional, user-friendly,
-    and responsive website. The development process focused on creating an interactive user
-    experience and ensuring cross-browser compatibility.`,
+    description: `A fully responsive website built as a freelance project for a potential client,
+    featuring a professional design, user-friendly interface, smooth on-scroll animations,
+    and cross-browser compatibility.`,
     technologies: ["React Helmet Async", "React Router Dom", "Sass", "React"],
     repoUrl: "https://github.com/Moamal-2000/aster-information",
     liveUrl: "https://asterinformation.netlify.app/",
