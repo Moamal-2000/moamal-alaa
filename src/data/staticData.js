@@ -34,7 +34,8 @@ export const FEATURED_PROJECTS = [
     technologies: ["React", "Node.js", "MongoDB", "Express", "Redux/Toolkit"],
     repoUrl: "https://github.com/Moamal-2000/e-commerce",
     liveUrl: "https://e-commercew.netlify.app",
-    previewImg: "",
+    previewImg:
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=1200",
     id: 1,
   },
 ];
