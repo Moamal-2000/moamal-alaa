@@ -5,8 +5,12 @@ import s from "./FeaturedProjects.module.scss";
 const FeaturedProjects = () => {
   return (
     <div className={s.featuredProjects}>
-      {FEATURED_PROJECTS.map((projectData) => (
-        <FeaturedProject data={projectData} key={projectData.id} />
+      {FEATURED_PROJECTS.map((projectData, index) => (
+        <FeaturedProject
+          data={projectData}
+          key={projectData.id}
+          shouldReverse={index % 2 === 1}
+        />
       ))}
     </div>
   );

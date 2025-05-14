@@ -2,12 +2,12 @@ import SvgIcon from "@/components/Shared/SvgIcon";
 import Image from "next/image";
 import s from "./FeaturedProject.module.scss";
 
-const FeaturedProject = ({ data }) => {
+const FeaturedProject = ({ data, shouldReverse }) => {
   const { title, description, technologies, repoUrl, liveUrl, previewImg } =
     data;
 
   return (
-    <div className={s.featuredProject}>
+    <div className={s.featuredProject} dir={shouldReverse ? "rtl" : "ltr"}>
       <div className={s.content}>
         <div className={s.projectHeader}>
           <span className={s.featuredText}>Featured Project</span>
