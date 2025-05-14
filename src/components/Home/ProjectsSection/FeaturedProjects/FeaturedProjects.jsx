@@ -9,7 +9,7 @@ const FeaturedProjects = () => {
         <FeaturedProject
           data={projectData}
           key={projectData.id}
-          shouldReverse={index % 2 === 1}
+          shouldReverse={index % 2 === 0}
         />
       ))}
     </div>
