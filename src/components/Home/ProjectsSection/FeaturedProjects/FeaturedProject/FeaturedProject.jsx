@@ -35,7 +35,7 @@ const FeaturedProject = ({ data }) => {
       </div>
 
       <div className={s.previewImg}>
-        <Image src={previewImg} alt={name} width={500} height={500} />
+        <Image src={previewImg} alt={title} width={500} height={500} />
       </div>
     </div>
   );
