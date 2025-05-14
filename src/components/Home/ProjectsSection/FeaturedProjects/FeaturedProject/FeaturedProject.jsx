@@ -34,9 +34,14 @@ const FeaturedProject = ({ data, shouldReverse }) => {
         </div>
       </div>
 
-      <div className={s.previewImg}>
+      <a
+        className={s.previewImg}
+        href={liveUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <Image src={previewImg} alt={title} width={628} height={435} />
-      </div>
+      </a>
     </div>
   );
 };
