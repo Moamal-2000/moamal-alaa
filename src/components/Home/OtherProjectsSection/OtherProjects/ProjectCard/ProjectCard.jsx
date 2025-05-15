@@ -15,7 +15,7 @@ const ProjectCard = ({ data }) => {
           <a
             href={liveUrl}
             aria-label="External Link"
-            className={s.external}
+            className={s.externalLink}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -23,13 +23,13 @@ const ProjectCard = ({ data }) => {
           </a>
         </div>
 
-        <h3 className={s.projectTitle}>
+        <h3 className={s.title}>
           <a href={liveUrl} target="_blank" rel="noopener noreferrer">
             {title}
           </a>
         </h3>
 
-        <p className={s.projectDescription}>{description}</p>
+        <p className={s.description}>{description}</p>
       </header>
 
       <footer>
