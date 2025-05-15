@@ -4,7 +4,7 @@
   align-items: center;
 }
 
-.projectsSection h2 {
+.projectsSection>h2 {
   margin-bottom: 10px;
   color: #ccd6f6;
   line-height: 1.1;
@@ -12,14 +12,14 @@
   font-size: clamp(1.5rem, 5vw, 2rem);
 }
 
-.projectsSection a {
+.projectsSection>a {
   color: #64ffda;
   font-family: var(--font-mono);
   font-size: .875rem;
   position: relative;
 }
 
-.projectsSection a::after {
+.projectsSection>a::after {
   content: "";
   display: block;
   width: 0;
@@ -33,7 +33,7 @@
     opacity .25s .2s cubic-bezier(.645, .045, .355, 1);
 }
 
-.projectsSection a:hover::after {
+.projectsSection>a:hover::after {
   width: 100%;
   opacity: 1;
 }
