@@ -8,9 +8,7 @@ const ProjectCard = ({ data }) => {
     <article className={s.projectCard}>
       <header>
         <div className={s.projectTop}>
-          <div className={s.folder}>
-            <SvgIcon name="folder" />
-          </div>
+          <SvgIcon name="folder" />
 
           <a
             href={liveUrl}
@@ -33,7 +31,7 @@ const ProjectCard = ({ data }) => {
       </header>
 
       <footer>
-        <ul className={s.TechList}>
+        <ul className={s.techList}>
           {technologies.map((tech) => (
             <li key={tech}>{tech}</li>
           ))}

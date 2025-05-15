@@ -1,23 +1,71 @@
-.projectCard {}
+.projectCard {
+  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, .7);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  height: 100%;
+  padding: 32px 28px;
+  border-radius: 4px;
+  background-color: #112240;
+  overflow: auto;
+}
 
-.projectCard header {}
+.projectCard header .projectTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
 
-.projectCard header .projectTop {}
+.projectCard header .projectTop svg {
+  stroke: #64ffda;
+  width: 40px;
+  height: 40px;
+}
 
-.projectCard header .projectTop .folder {}
+.projectCard header .projectTop .externalLink {
+  display: flex;
+  align-items: center;
+  margin-right: -10px;
+  color: #a8b2d1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 7px;
+}
 
-.projectCard header .projectTop .folder svg {}
+.projectCard header .projectTop .externalLink svg {
+  width: 22px;
+  height: 22px;
+  margin-top: -4px;
+  stroke: #a8b2d1
+}
 
-.projectCard header .projectTop .externalLink {}
+.projectCard header .title {
+  margin: 0px 0px 10px;
+  color: #ccd6f6;
+  font-size: 1.375rem;
+}
 
-.projectCard header .projectTop .externalLink svg {}
+.projectCard header .description {
+  color: #a8b2d1;
+  font: 1.0625rem;
+}
 
-.projectCard header .title {}
+.projectCard footer .techList {
+  margin-top: 20px;
+  display: flex;
+  align-items: flex-end;
+  flex-grow: 1;
+  gap: 15px;
+  flex-wrap: wrap;
+  list-style: none;
+}
 
-.projectCard header .description {}
-
-.projectCard footer {}
-
-.projectCard footer .projectTechnologies {}
-
-.projectCard footer .projectTechnologies li {}
+.projectCard footer .techList li {
+  font-family: var(--font-mono);
+  font-size: .85rem;
+  line-height: 1.75;
+}
