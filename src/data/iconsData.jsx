@@ -105,8 +105,6 @@ export const iconsData = [
       <svg
         fill="none"
         stroke="currentColor"
-        strokeLinecap="round"
-        strokeLinejoin="round"
         strokeWidth="2"
         viewBox="0 0 24 24"
       >
