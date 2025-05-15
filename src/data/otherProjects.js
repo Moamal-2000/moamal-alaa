@@ -4,6 +4,7 @@ export const OTHER_PROJECTS_DATA = [
     description:
       "Building a custom multisite compatible WordPress plugin to build global search with Algolia",
     liveUrl: "",
+    repoUrl: "",
     technologies: ["React", "Redux", "Sass"],
     id: 1,
   },
@@ -12,6 +13,7 @@ export const OTHER_PROJECTS_DATA = [
     description:
       "Building a custom multisite compatible WordPress plugin to build global search with Algolia",
     liveUrl: "",
+    repoUrl: "",
     technologies: ["React", "Redux", "Sass"],
     id: 2,
   },
@@ -20,6 +22,7 @@ export const OTHER_PROJECTS_DATA = [
     description:
       "Building a custom multisite compatible WordPress plugin to build global search with Algolia",
     liveUrl: "",
+    repoUrl: "",
     technologies: ["React", "Redux", "Sass"],
     id: 3,
   },
@@ -28,6 +31,7 @@ export const OTHER_PROJECTS_DATA = [
     description:
       "Building a custom multisite compatible WordPress plugin to build global search with Algolia",
     liveUrl: "",
+    repoUrl: "",
     technologies: ["React", "Redux", "Sass"],
     id: 4,
   },
@@ -36,6 +40,7 @@ export const OTHER_PROJECTS_DATA = [
     description:
       "Building a custom multisite compatible WordPress plugin to build global search with Algolia",
     liveUrl: "",
+    repoUrl: "",
     technologies: ["React", "Redux", "Sass"],
     id: 5,
   },

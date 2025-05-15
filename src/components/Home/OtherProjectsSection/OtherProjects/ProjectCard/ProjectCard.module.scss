@@ -24,16 +24,20 @@
   margin-bottom: 35px;
 }
 
-.projectCard header .projectTop svg {
+.projectCard header .projectTop>svg {
   stroke: #64ffda;
   width: 40px;
   height: 40px;
 }
 
-.projectCard header .projectTop .externalLink {
+.projectCard header .projectTop .projectLinks {
   display: flex;
   align-items: center;
-  margin-right: -10px;
+}
+
+.projectCard header .projectTop .projectLinks>a {
+  display: flex;
+  align-items: center;
   color: #a8b2d1;
   display: flex;
   justify-content: center;
@@ -41,11 +45,11 @@
   padding: 5px 7px;
 }
 
-.projectCard header .projectTop .externalLink:hover svg {
+.projectCard header .projectTop .projectLinks>a:hover svg {
   stroke: #64ffda;
 }
 
-.projectCard header .projectTop .externalLink svg {
+.projectCard header .projectTop .projectLinks>a svg {
   width: 22px;
   height: 22px;
   margin-top: -4px;
