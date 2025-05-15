@@ -2,7 +2,7 @@ import s from "./ContactSection.module.scss";
 
 const ContactSection = () => {
   return (
-    <section className={s.contactSection}>
+    <section className={s.contactSection} id="contact">
       <h2>04. What's Next?</h2>
       <h3>Get In Touch</h3>
       <p className={s.description}>

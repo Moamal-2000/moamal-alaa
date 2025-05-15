@@ -4,7 +4,7 @@ import FeaturedProjects from "./FeaturedProjects/FeaturedProjects";
 
 const ProjectsSection = () => {
   return (
-    <section className={s.projectsSection}>
+    <section className={s.projectsSection} id="projects">
       <NumberedHeading title="Some Things I've Built" number="02" />
       <FeaturedProjects />
     </section>
