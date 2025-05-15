@@ -1,0 +1,39 @@
+.projectsSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projectsSection h2 {
+  margin-bottom: 10px;
+  color: #ccd6f6;
+  line-height: 1.1;
+  font-weight: 600;
+  font-size: clamp(1.5rem, 5vw, 2rem);
+}
+
+.projectsSection a {
+  color: #64ffda;
+  font-family: var(--font-mono);
+  font-size: .875rem;
+  position: relative;
+}
+
+.projectsSection a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  position: relative;
+  bottom: .1em;
+  background-color: #64ffda;
+  opacity: .5;
+  transition:
+    width .25s cubic-bezier(.645, .045, .355, 1),
+    opacity .25s .2s cubic-bezier(.645, .045, .355, 1);
+}
+
+.projectsSection a:hover::after {
+  width: 100%;
+  opacity: 1;
+}
