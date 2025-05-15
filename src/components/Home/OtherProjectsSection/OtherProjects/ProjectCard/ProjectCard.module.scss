@@ -10,6 +10,11 @@
   border-radius: 4px;
   background-color: #112240;
   overflow: auto;
+  transition: translate .25s cubic-bezier(.645, .045, .355, 1);
+
+  &:hover {
+    translate: 0 -5px;
+  }
 }
 
 .projectCard header .projectTop {
@@ -36,17 +41,28 @@
   padding: 5px 7px;
 }
 
+.projectCard header .projectTop .externalLink:hover svg {
+  stroke: #64ffda;
+}
+
 .projectCard header .projectTop .externalLink svg {
   width: 22px;
   height: 22px;
   margin-top: -4px;
-  stroke: #a8b2d1
+  stroke: #a8b2d1;
+  transition: stroke .25s cubic-bezier(.645, .045, .355, 1);
 }
 
 .projectCard header .title {
-  margin: 0px 0px 10px;
+  margin-bottom: 10px;
   color: #ccd6f6;
   font-size: 1.375rem;
+  line-height: 1.1;
+  transition: color .25s cubic-bezier(.645, .045, .355, 1);
+
+  &:hover {
+    color: #64ffda;
+  }
 }
 
 .projectCard header .description {
