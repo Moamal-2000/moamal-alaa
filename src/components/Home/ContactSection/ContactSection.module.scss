@@ -38,6 +38,7 @@
   display: inline-block;
   cursor: pointer;
   width: fit-content;
+  user-select: none;
   overflow: hidden;
   border: solid 1px #64ffda;
   border-image: initial;

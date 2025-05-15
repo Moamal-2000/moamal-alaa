@@ -22,6 +22,7 @@
   color: #64ffda;
   padding: 8px;
   width: fit-content;
+  user-select: none;
   transition: text-shadow .25s cubic-bezier(0.245, 0.045, 0.355, 1);
 
   &:hover {
@@ -62,6 +63,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  user-select: none;
 }
 
 .header .wrapper ol li {
@@ -104,6 +106,7 @@
   text-decoration: none;
   margin-left: 15px;
   font-size: .9rem;
+  user-select: none;
   transition:
     color .2s cubic-bezier(0.645, 0.045, 0.355, 1),
     background-color .2s cubic-bezier(0.645, 0.045, 0.355, 1),

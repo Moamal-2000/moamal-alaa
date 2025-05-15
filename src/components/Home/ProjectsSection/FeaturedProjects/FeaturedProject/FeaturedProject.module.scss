@@ -75,6 +75,7 @@
   align-items: center;
   gap: 8px;
   width: fit-content;
+  user-select: none;
 }
 
 .featuredProject[dir=rtl] .content .projectLinks {
