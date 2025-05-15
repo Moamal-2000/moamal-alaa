@@ -5,5 +5,6 @@ export const OTHER_PROJECTS_DATA = [
       "Building a custom multisite compatible WordPress plugin to build global search with Algolia",
     liveUrl: "",
     technologies: ["React", "Redux", "Sass"],
+    id: 1,
   },
 ];
