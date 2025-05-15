@@ -1,0 +1,60 @@
+.contactSection {
+  max-width: 540px;
+  margin: 0 auto 100px;
+  text-align: center;
+}
+
+.contactSection>h2 {
+  display: block;
+  margin-bottom: 20px;
+  color: #64ffda;
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.contactSection>h3 {
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #ccd6f6;
+  line-height: 1.1;
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
+}
+
+.contactSection .description {
+  font-family: var(--font-mono);
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.contactSection>a {
+  font-size: .875rem;
+  position: relative;
+  color: #64ffda;
+  font-family: var(--font-mono);
+  letter-spacing: .1em;
+  line-height: 1;
+  display: inline-block;
+  cursor: pointer;
+  width: fit-content;
+  overflow: hidden;
+  border: solid 1px #64ffda;
+  border-image: initial;
+  border-radius: 4px;
+  margin: 40px auto 0;
+  padding: 20px 28px;
+  transition: all .25s cubic-bezier(.645, .045, .355, 1);
+}
+
+.contactSection>a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, .1),
+      rgba(255, 255, 255, .3),
+      rgba(255, 255, 255, .1));
+  transition: all .5s ease-out;
+}
