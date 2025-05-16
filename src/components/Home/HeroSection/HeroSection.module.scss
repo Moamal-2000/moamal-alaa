@@ -15,13 +15,29 @@
 
 @include m.large {
   .heroSection {
-    margin: 0;
+    padding: 100px 40px;
+    margin-top: 100px;
+    min-height: auto;
   }
 }
 
-@include m.medium {
+@include m.small {
   .heroSection {
-    padding: 0 50px;
+    padding: 90px 30px;
+  }
+}
+
+@media (max-width: 520px) {
+  .heroSection {
+    padding: 70px 20px;
+  }
+}
+
+@include m.very-small {
+  .heroSection {
+    background: transparent;
+    border: none;
+    padding: 0;
   }
 }
 
@@ -29,6 +45,12 @@
   max-width: 800px;
   width: 100%;
   padding: 0 20px;
+}
+
+@include m.large {
+  .heroSection .content {
+    padding: 0;
+  }
 }
 
 .content .preHeading {
@@ -41,21 +63,52 @@
   font-size: 1rem;
 }
 
+@include m.very-small {
+  .content .preHeading {
+    margin-bottom: 20px;
+  }
+}
+
 .content .myName {
   width: max-content;
-  font-size: clamp(2.5rem, 9vw, 5rem);
+  font-size: clamp(2.5rem, 7vw, 5rem);
   line-height: .9;
   font-weight: 700;
   color: #ccd6f6;
 }
 
+@include m.small {
+  .content .myName {
+    font-size: clamp(2.5rem, 9vw, 5rem);
+  }
+}
+
 .content .whatIDo {
   margin-bottom: 16px;
   width: 80%;
-  font-size: clamp(2rem, 6vw, 5rem);
+  font-size: clamp(2rem, 7vw, 5rem);
   line-height: 1;
   font-weight: 700;
   color: #8892b0;
+}
+
+@include m.large {
+  .content .whatIDo {
+    width: 90%;
+  }
+}
+
+@include m.medium {
+  .content .whatIDo {
+    width: 75%;
+  }
+}
+
+@include m.small {
+  .content .whatIDo {
+    width: 100%;
+    font-size: clamp(2rem, 9vw, 5rem);
+  }
 }
 
 .content .description {
@@ -67,9 +120,17 @@
   color: #8892b0;
 }
 
-@include m.large {
+@include m.medium {
+  .content .description {
+    font-size: 1.1rem;
+    max-width: 520px;
+  }
+}
+
+@include m.small {
   .content .description {
     font-size: 1rem;
+    max-width: 450px;
   }
 }
 
@@ -78,6 +139,13 @@
   align-items: center;
   gap: 24px;
   user-select: none;
+}
+
+@media (max-width: 520px) {
+  .content .buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
 }
 
 .content .buttons a {
@@ -97,6 +165,13 @@
     border-color .3s ease,
     box-shadow .3s ease,
     opacity .3s ease;
+}
+
+@media (max-width: 520px) {
+  .content .buttons a {
+    text-align: center;
+    width: 100%;
+  }
 }
 
 .content .buttons .viewWorkBtn {

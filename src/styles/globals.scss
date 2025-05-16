@@ -61,6 +61,12 @@ main {
   padding-inline: 100px;
 }
 
+@include m.medium {
+  main {
+    padding-inline: 0;
+  }
+}
+
 section {
   padding-block: 100px;
 }
