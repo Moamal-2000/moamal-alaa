@@ -1,3 +1,5 @@
+@use "@/styles/mixins" as m;
+
 .socialMedia {
   display: flex;
   flex-direction: column;
@@ -8,6 +10,12 @@
   left: 40px;
   z-index: 10;
   color: #a8b2d1;
+}
+
+@include m.small {
+  .socialMedia {
+    display: none;
+  }
 }
 
 .socialMedia::after {
