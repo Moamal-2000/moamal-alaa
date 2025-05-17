@@ -8,12 +8,6 @@
 
 @include m.large {
   :root {
-    --website-width: 90%;
-  }
-}
-
-@include m.small {
-  :root {
     --website-width: 100%;
   }
 }
