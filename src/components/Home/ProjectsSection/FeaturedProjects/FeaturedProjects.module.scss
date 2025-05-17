@@ -1,5 +1,19 @@
+@use "@/styles/mixins" as m;
+
 .featuredProjects {
   display: flex;
   flex-direction: column;
   gap: 200px;
+}
+
+@include m.medium {
+  .featuredProjects {
+    gap: 150px;
+  }
+}
+
+@include m.small {
+  .featuredProjects {
+    gap: 70px;
+  }
 }

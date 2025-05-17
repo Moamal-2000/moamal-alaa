@@ -11,7 +11,11 @@ const FeaturedProject = ({ data, shouldReverse }) => {
       <div className={s.content}>
         <div className={s.projectHeader}>
           <span className={s.featuredText}>Featured Project</span>
-          <h3 className={s.title}>{title}</h3>
+          <h3 className={s.title}>
+            <a href={liveUrl} target="_blank" rel="noopener noreferrer">
+              {title}
+            </a>
+          </h3>
         </div>
 
         <p className={s.description}>{description}</p>
