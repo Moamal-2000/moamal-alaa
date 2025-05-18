@@ -1,7 +1,15 @@
+@use "@/styles/mixins" as m;
+
 .contactSection {
   max-width: 600px;
-  margin: 0 auto 100px;
+  margin: 0 auto 90px;
   text-align: center;
+}
+
+@include m.small {
+  .contactSection {
+    max-width: 460px;
+  }
 }
 
 .contactSection>h2 {
@@ -26,6 +34,12 @@
   text-align: center;
   font-size: 1.1rem;
   line-height: 1.3;
+}
+
+@include m.very-small {
+  .contactSection .description {
+    font-size: 1rem;
+  }
 }
 
 .contactSection>a {
