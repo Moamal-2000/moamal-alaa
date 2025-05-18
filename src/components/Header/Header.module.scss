@@ -12,6 +12,23 @@
   height: 100px;
   background-color: rgba(10, 25, 47, .85);
   backdrop-filter: blur(10px);
+  transition:
+    translate .25s cubic-bezier(.645, .045, .355, 1),
+    box-shadow .25s cubic-bezier(.645, .045, .355, 1),
+    height .25s cubic-bezier(.645, .045, .355, 1);
+
+  &.active {
+    height: 70px;
+    translate: 0 0;
+    background-color: rgba(10, 25, 47, 0.85);
+    box-shadow: 0 10px 30px -10px rgba(2, 12, 27, .7);
+  }
+
+  &.hidden {
+    height: 70px;
+    translate: 0 calc(70px * -1);
+    box-shadow: 0 10px 30px -10px rgba(2, 12, 27, .7);
+  }
 }
 
 .header .logo {
