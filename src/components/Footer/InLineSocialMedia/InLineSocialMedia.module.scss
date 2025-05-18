@@ -1,0 +1,41 @@
+@use "@/styles/mixins" as m;
+
+.socialMedia {
+  color: #a8b2d1;
+  gap: 10px;
+  display: none;
+}
+
+@include m.small {
+  .socialMedia {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.socialMedia a {
+  display: inline-block;
+  position: relative;
+  padding: 10px;
+}
+
+.socialMedia a:hover svg {
+  stroke: #64ffda;
+
+  &[data-type=twitter] {
+    fill: #64ffda;
+  }
+}
+
+.socialMedia a svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  transition:
+    fill .25s cubic-bezier(0.645, 0.045, 0.355, 1),
+    stroke .25s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  &[data-type=twitter] {
+    fill: #a8b2d1;
+  }
+}
