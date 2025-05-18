@@ -1,6 +1,9 @@
+@use "@/styles/mixins" as m;
+
 .numberedHeading {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   margin: 10px 0 40px;
   width: 100%;
   font-size: clamp(1.6rem, 5vw, 2rem);
@@ -8,6 +11,12 @@
   color: #ccd6f6;
   font-weight: 600;
   line-height: 1.1;
+}
+
+@include m.very-small {
+  .numberedHeading {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
 }
 
 .numberedHeading span {
@@ -25,7 +34,8 @@
   display: block;
   position: relative;
   top: -3px;
-  width: 300px;
+  max-width: 300px;
+  width: 100%;
   height: 1px;
   margin-left: 20px;
   background-color: #233554;
