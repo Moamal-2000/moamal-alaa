@@ -46,8 +46,10 @@ const ProjectCard = ({ data }) => {
 
       <footer>
         <ul className={s.techList}>
-          {technologies.map((tech) => (
-            <li key={tech}>{tech}</li>
+          {technologies.map((tech, index) => (
+            <li key={`${index}-${tech}`} className={s.tech}>
+              {tech}
+            </li>
           ))}
         </ul>
       </footer>

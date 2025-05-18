@@ -1,47 +1,26 @@
 export const OTHER_PROJECTS_DATA = [
   {
-    title: "Integrating Algolia Search with WordPress Multisite",
-    description:
-      "Building a custom multisite compatible WordPress plugin to build global search with Algolia",
+    title: "Some title",
+    description: "Description...",
     liveUrl: "",
     repoUrl: "",
-    technologies: ["React", "Redux", "Sass"],
+    technologies: ["Tech", "Tech", "Tech"],
     id: 1,
   },
   {
-    title: "Integrating Algolia Search with WordPress Multisite",
-    description:
-      "Building a custom multisite compatible WordPress plugin to build global search with Algolia",
+    title: "Some title",
+    description: "Description...",
     liveUrl: "",
     repoUrl: "",
-    technologies: ["React", "Redux", "Sass"],
+    technologies: ["Tech", "Tech", "Tech"],
     id: 2,
   },
   {
-    title: "Integrating Algolia Search with WordPress Multisite",
-    description:
-      "Building a custom multisite compatible WordPress plugin to build global search with Algolia",
+    title: "Some title",
+    description: "Description...",
     liveUrl: "",
     repoUrl: "",
-    technologies: ["React", "Redux", "Sass"],
+    technologies: ["Tech", "Tech", "Tech"],
     id: 3,
-  },
-  {
-    title: "Integrating Algolia Search with WordPress Multisite",
-    description:
-      "Building a custom multisite compatible WordPress plugin to build global search with Algolia",
-    liveUrl: "",
-    repoUrl: "",
-    technologies: ["React", "Redux", "Sass"],
-    id: 4,
-  },
-  {
-    title: "Integrating Algolia Search with WordPress Multisite",
-    description:
-      "Building a custom multisite compatible WordPress plugin to build global search with Algolia",
-    liveUrl: "",
-    repoUrl: "",
-    technologies: ["React", "Redux", "Sass"],
-    id: 5,
   },
 ];
