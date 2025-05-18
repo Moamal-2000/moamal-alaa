@@ -1,3 +1,5 @@
+@use "@/styles/mixins" as m;
+
 .otherProjects {
   list-style: none;
   margin-top: 50px;
@@ -6,4 +8,10 @@
   gap: 15px;
   position: relative;
   width: 100%;
+}
+
+@include m.small {
+  .otherProjects {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
 }

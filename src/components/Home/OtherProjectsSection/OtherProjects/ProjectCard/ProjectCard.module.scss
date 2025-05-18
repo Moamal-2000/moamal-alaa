@@ -1,3 +1,5 @@
+@use "@/styles/mixins" as m;
+
 .projectCard {
   box-shadow: 0 10px 30px -15px rgba(2, 12, 27, .7);
   display: flex;
@@ -14,6 +16,12 @@
 
   &:hover {
     translate: 0 -5px;
+  }
+}
+
+@include m.very-small {
+  .projectCard {
+    padding: 25px 20px;
   }
 }
 
