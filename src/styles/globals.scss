@@ -67,6 +67,12 @@ main {
   }
 }
 
+@include m.very-small {
+  main {
+    padding: 0 15px;
+  }
+}
+
 section {
   padding-block: 100px;
 }
