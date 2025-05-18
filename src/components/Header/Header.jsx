@@ -16,14 +16,14 @@ const Header = () => {
   const headerClasses = `${s.header} ${activeClass} ${hiddenClass}`;
 
   function handleScroll() {
+    if (scrollDirection === "down" && isMount.current) {
+      setIsHidden(true);
+      return;
+    }
+
     clearTimeout(debounceRef.current);
 
     debounceRef.current = setTimeout(() => {
-      if (scrollDirection === "down" && isMount.current) {
-        setIsHidden(true);
-        return;
-      }
-
       setIsHidden(false);
       setIsActive(window?.scrollY >= 50);
     }, 50);
