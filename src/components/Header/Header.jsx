@@ -1,5 +1,6 @@
 "use client";
 
+import { DEBOUNCE_DELAY, SCROLL_THRESHOLD } from "@/data/constants";
 import useScrollDirection from "@/hooks/helper/useScrollDirection";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -23,7 +24,7 @@ const Header = () => {
       const hide =
         scrollDirection === "down" && hasMounted.current && !navClicked.current;
       const show = scrollDirection === "up" || navClicked.current;
-      const isAtTop = window?.scrollY >= 50;
+      const isAtTop = window?.scrollY >= SCROLL_THRESHOLD;
 
       if (hide) setIsHidden(true);
 
@@ -34,7 +35,7 @@ const Header = () => {
 
       navClicked.current = false;
       hasMounted.current = true;
-    }, 50);
+    }, DEBOUNCE_DELAY);
   }, [scrollDirection]);
 
   function handleClick() {
