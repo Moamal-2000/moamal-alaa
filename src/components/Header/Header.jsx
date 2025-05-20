@@ -60,9 +60,9 @@ const Header = () => {
         <div className={s.wrapper}>
           <HeaderNavLinks navClicked={navClicked} />
 
-          <a className={s.resume} href="#">
+          <Link className={s.resume} href="/resume.pdf">
             Resume
-          </a>
+          </Link>
         </div>
       </nav>
     </header>
