@@ -2,47 +2,55 @@
 
 import useScrollDirection from "@/hooks/helper/useScrollDirection";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import s from "./Header.module.scss";
 
 const Header = () => {
-  const debounceRef = useRef();
   const [isActive, setIsActive] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
   const scrollDirection = useScrollDirection({ initialDir: "down" });
-  const isMount = useRef(false);
   const activeClass = isActive ? s.active : "";
   const hiddenClass = isHidden ? s.hidden : "";
   const headerClasses = `${s.header} ${activeClass} ${hiddenClass}`;
+  const navClicked = useRef(false);
+  const hasMounted = useRef(false);
+  const timerRef = useRef();
 
-  function handleScroll() {
-    if (scrollDirection === "down" && isMount.current) {
-      setIsHidden(true);
-      return;
-    }
+  const handleScroll = useCallback(() => {
+    clearTimeout(timerRef.current);
 
-    clearTimeout(debounceRef.current);
+    timerRef.current = setTimeout(() => {
+      const hide =
+        scrollDirection === "down" && hasMounted.current && !navClicked.current;
+      const show = scrollDirection === "up" || navClicked.current;
+      const isAtTop = window?.scrollY >= 50;
 
-    debounceRef.current = setTimeout(() => {
-      setIsHidden(false);
-      setIsActive(window?.scrollY >= 50);
+      if (hide) setIsHidden(true);
+
+      if (show) {
+        setIsHidden(false);
+        setIsActive(isAtTop);
+      }
+
+      navClicked.current = false;
+      hasMounted.current = true;
     }, 50);
+  }, [scrollDirection]);
+
+  function handleClick() {
+    navClicked.current = true;
   }
 
   useEffect(() => {
     // Invoke scroll handler on initial load
-    if (!isMount.current) {
-      handleScroll();
-      isMount.current = true;
-    }
+    if (!hasMounted.current) handleScroll();
 
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      clearTimeout(debounceRef.current);
+      clearTimeout(timerRef.current);
     };
-  }, [scrollDirection]);
+  }, [handleScroll]);
 
   return (
     <header className={headerClasses}>
@@ -54,13 +62,19 @@ const Header = () => {
         <div className={s.wrapper}>
           <ol>
             <li>
-              <a href="#about">About</a>
+              <a onClick={handleClick} href="#about">
+                About
+              </a>
             </li>
             <li>
-              <a href="#projects">Projects</a>
+              <a onClick={handleClick} href="#projects">
+                Projects
+              </a>
             </li>
             <li>
-              <a href="#contact">Contact</a>
+              <a onClick={handleClick} href="#contact">
+                Contact
+              </a>
             </li>
           </ol>
 
