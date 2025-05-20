@@ -8,9 +8,9 @@ import s from "./Header.module.scss";
 import HeaderNavLinks from "./HeaderNavLinks/HeaderNavLinks";
 
 const Header = () => {
+  const scrollDirection = useScrollDirection({ initialDir: "down" });
   const [isActive, setIsActive] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
-  const scrollDirection = useScrollDirection({ initialDir: "down" });
   const activeClass = isActive ? s.active : "";
   const hiddenClass = isHidden ? s.hidden : "";
   const headerClasses = `${s.header} ${activeClass} ${hiddenClass}`;
