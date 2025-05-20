@@ -1,3 +1,4 @@
+import { NAV_LINKS } from "@/data/staticData";
 import s from "./HeaderNavLinks.module.scss";
 
 const HeaderNavLinks = ({ navClicked }) => {
@@ -7,21 +8,13 @@ const HeaderNavLinks = ({ navClicked }) => {
 
   return (
     <ol className={s.navLinks}>
-      <li>
-        <a onClick={handleClick} href="#about">
-          About
-        </a>
-      </li>
-      <li>
-        <a onClick={handleClick} href="#projects">
-          Projects
-        </a>
-      </li>
-      <li>
-        <a onClick={handleClick} href="#contact">
-          Contact
-        </a>
-      </li>
+      {NAV_LINKS.map(({ title, id }) => (
+        <li key={id}>
+          <a onClick={handleClick} href={`#${title.toLowerCase()}`}>
+            {title}
+          </a>
+        </li>
+      ))}
     </ol>
   );
 };

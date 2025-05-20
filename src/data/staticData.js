@@ -1,3 +1,18 @@
+export const NAV_LINKS = [
+  {
+    title: "About",
+    id: 1,
+  },
+  {
+    title: "Projects",
+    id: 2,
+  },
+  {
+    title: "Contact",
+    id: 3,
+  },
+];
+
 export const SOCIAL_MEDIA = [
   {
     media: "GitHub",
