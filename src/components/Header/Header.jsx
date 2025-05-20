@@ -5,6 +5,7 @@ import useScrollDirection from "@/hooks/helper/useScrollDirection";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import s from "./Header.module.scss";
+import HeaderNavLinks from "./HeaderNavLinks/HeaderNavLinks";
 
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
@@ -61,6 +62,7 @@ const Header = () => {
         </Link>
 
         <div className={s.wrapper}>
+          <HeaderNavLinks />
           <ol>
             <li>
               <a onClick={handleClick} href="#about">
