@@ -39,10 +39,6 @@ const Header = () => {
     }, DEBOUNCE_DELAY);
   }, [scrollDirection]);
 
-  function handleClick() {
-    navClicked.current = true;
-  }
-
   useEffect(() => {
     // Invoke scroll handler on initial load
     if (!hasMounted.current) handleScroll();
@@ -62,24 +58,7 @@ const Header = () => {
         </Link>
 
         <div className={s.wrapper}>
-          <HeaderNavLinks />
-          <ol>
-            <li>
-              <a onClick={handleClick} href="#about">
-                About
-              </a>
-            </li>
-            <li>
-              <a onClick={handleClick} href="#projects">
-                Projects
-              </a>
-            </li>
-            <li>
-              <a onClick={handleClick} href="#contact">
-                Contact
-              </a>
-            </li>
-          </ol>
+          <HeaderNavLinks navClicked={navClicked} />
 
           <a className={s.resume} href="#">
             Resume

@@ -1,0 +1,35 @@
+.navLinks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+}
+
+.navLinks li {
+  margin: 0 5px;
+  position: relative;
+  counter-increment: item 1;
+  font-size: .8rem;
+}
+
+.navLinks li a {
+  display: inline-block;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  color: inherit;
+  position: relative;
+  padding: 10px;
+  transition: color .25s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  &:hover {
+    color: #64ffda;
+  }
+}
+
+.navLinks li a::before {
+  content: "0" counter(item) ".";
+  margin-right: 5px;
+  color: #64ffda;
+  font-size: .75rem;
+  text-align: right;
+}
