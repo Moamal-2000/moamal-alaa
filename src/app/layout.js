@@ -2,7 +2,6 @@ import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import FixedEmail from "@/components/Shared/FixedEmail/FixedEmail";
 import FixedSocialMedia from "@/components/Shared/FixedSocialMedia/FixedSocialMedia";
-import MobileNavBtn from "@/components/Shared/MobileNavBtn/MobileNavBtn";
 import "../styles/globals.scss";
 import RootProviders from "./RootProviders";
 
@@ -17,7 +16,6 @@ export default function RootLayout({ children }) {
       <html lang="en">
         <body>
           <Header />
-          <MobileNavBtn />
           <FixedSocialMedia />
           <FixedEmail />
           {children}

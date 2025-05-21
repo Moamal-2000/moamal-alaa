@@ -1,7 +1,11 @@
 import s from "./MobileNavBtn.module.scss";
 
 const MobileNavBtn = () => {
-  return <div className={s.mobileNavBtn}></div>;
+  return (
+    <button type="button" className={s.mobileNavBtn} aria-label="Menu Button">
+      <div className={s.icon} />
+    </button>
+  );
 };
 
 export default MobileNavBtn;
