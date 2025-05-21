@@ -31,18 +31,16 @@
   }
 }
 
-.header .logo {
-  color: #64ffda;
-  width: 42px;
-  height: 42px;
-  position: relative;
-  z-index: 1;
+@include m.small {
+  .header {
+    padding: 0 25px;
+  }
 }
 
-.header .navLinks {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+@include m.very-small {
+  .header {
+    padding: 0 15px;
+  }
 }
 
 .header .navLinks {
@@ -55,6 +53,14 @@
   font-family: var(--font-mono);
   counter-reset: item 0;
   z-index: 12;
+}
+
+.header .navLinks .logo {
+  color: #64ffda;
+  width: 42px;
+  height: 42px;
+  position: relative;
+  z-index: 1;
 }
 
 .header .navLinks .wrapper {
