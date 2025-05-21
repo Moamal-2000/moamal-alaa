@@ -8,6 +8,7 @@ import MobileNavBtn from "../Shared/MobileNavBtn/MobileNavBtn";
 import SvgIcon from "../Shared/SvgIcon";
 import s from "./Header.module.scss";
 import HeaderNavLinks from "./HeaderNavLinks/HeaderNavLinks";
+import MobileNavMenu from "./MobileNavMenu/MobileNavMenu";
 
 const Header = () => {
   const scrollDirection = useScrollDirection({ initialDir: "down" });
@@ -60,6 +61,7 @@ const Header = () => {
         </Link>
 
         <MobileNavBtn />
+        <MobileNavMenu />
 
         <div className={s.wrapper}>
           <HeaderNavLinks navClicked={navClicked} />
