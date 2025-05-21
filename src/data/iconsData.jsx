@@ -112,6 +112,29 @@ export const iconsData = [
       </svg>
     ),
   },
+  {
+    name: "logo",
+    icon: (
+      <svg viewBox="0 0 84 96">
+        <path
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="5"
+          d="M42 3 3 25v45l39 23 39-22V26z"
+        />
+        <text
+          x="26"
+          y="62"
+          fontSize="38"
+          fill="currentColor"
+          fontFamily="Arial, sans-serif"
+          fontWeight="bold"
+        >
+          M
+        </text>
+      </svg>
+    ),
+  },
   // {
   //   name: "",
   //   icon: (

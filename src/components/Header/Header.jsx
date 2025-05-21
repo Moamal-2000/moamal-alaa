@@ -4,6 +4,7 @@ import { DEBOUNCE_DELAY, SCROLL_THRESHOLD } from "@/data/constants";
 import useScrollDirection from "@/hooks/helper/useScrollDirection";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
+import SvgIcon from "../Shared/SvgIcon";
 import s from "./Header.module.scss";
 import HeaderNavLinks from "./HeaderNavLinks/HeaderNavLinks";
 
@@ -54,7 +55,7 @@ const Header = () => {
     <header className={headerClasses}>
       <nav className={s.navLinks}>
         <Link className={s.logo} href="/">
-          MA
+          <SvgIcon name="logo" />
         </Link>
 
         <div className={s.wrapper}>
