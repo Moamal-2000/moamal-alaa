@@ -6,8 +6,12 @@ import Link from "next/link";
 import s from "./MobileNavMenu.module.scss";
 
 const MobileNavMenu = () => {
-  const { isMobileNavOpen } = useGlobalStore();
+  const { isMobileNavOpen, toggleMobileNav } = useGlobalStore();
   const activeClass = isMobileNavOpen ? s.active : "";
+
+  function handleClick() {
+    toggleMobileNav(false);
+  }
 
   return (
     <aside className={`${s.mobileMenu} ${activeClass}`}>
@@ -15,7 +19,9 @@ const MobileNavMenu = () => {
         <ol>
           {NAV_LINKS.map(({ title, id }) => (
             <li key={id}>
-              <a href={`#${title.toLowerCase()}`}>{title}</a>
+              <a href={`#${title.toLowerCase()}`} onClick={handleClick}>
+                {title}
+              </a>
             </li>
           ))}
         </ol>
