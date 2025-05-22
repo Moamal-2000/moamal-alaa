@@ -10,7 +10,7 @@ const MobileNavMenu = () => {
   const activeClass = isMobileNavOpen ? s.active : "";
 
   function handleClick() {
-    updateGlobalState({ key: "isMobileNavOpen", value: !isMobileNavOpen });
+    updateGlobalState("isMobileNavOpen", !isMobileNavOpen);
   }
 
   return (
