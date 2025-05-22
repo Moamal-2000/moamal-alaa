@@ -6,11 +6,11 @@ import Link from "next/link";
 import s from "./MobileNavMenu.module.scss";
 
 const MobileNavMenu = () => {
-  const { isMobileNavOpen, toggleMobileNav } = useGlobalStore();
+  const { isMobileNavOpen, updateGlobalState } = useGlobalStore();
   const activeClass = isMobileNavOpen ? s.active : "";
 
   function handleClick() {
-    toggleMobileNav(false);
+    updateGlobalState({ key: "isMobileNavOpen", value: !isMobileNavOpen });
   }
 
   return (

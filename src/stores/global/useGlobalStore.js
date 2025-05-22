@@ -2,8 +2,8 @@ import { create } from "zustand";
 
 export const useGlobalStore = create((set) => ({
   isMobileNavOpen: false,
-  toggleMobileNav: (value) =>
-    set((state) => ({ isMobileNavOpen: value || !state.isMobileNavOpen })),
+  isGlobalOverlayOpen: false,
+  updateGlobalState: ({ key, value }) => set({ [key]: value }),
 }));
 
 export default useGlobalStore;

@@ -4,11 +4,11 @@ import useGlobalStore from "@/stores/global/useGlobalStore";
 import s from "./MobileNavBtn.module.scss";
 
 const MobileNavBtn = () => {
-  const { isMobileNavOpen, toggleMobileNav } = useGlobalStore();
+  const { isMobileNavOpen, updateGlobalState } = useGlobalStore();
   const activeClass = isMobileNavOpen ? s.active : "";
 
   function handleClick() {
-    toggleMobileNav();
+    updateGlobalState({ key: "isMobileNavOpen", value: !isMobileNavOpen });
   }
 
   return (
