@@ -4,6 +4,7 @@ import FixedEmail from "@/components/Shared/FixedEmail/FixedEmail";
 import FixedSocialMedia from "@/components/Shared/FixedSocialMedia/FixedSocialMedia";
 import GlobalOverlay from "@/components/Shared/GlobalOverlay/GlobalOverlay";
 import "../styles/globals.scss";
+import RootLayer from "./RootLayer";
 import RootProviders from "./RootProviders";
 
 export const metadata = {
@@ -17,12 +18,14 @@ export default function RootLayout({ children }) {
     <RootProviders>
       <html lang="en">
         <body>
-          <Header />
-          <FixedSocialMedia />
-          <FixedEmail />
-          {children}
-          <GlobalOverlay />
-          <Footer />
+          <RootLayer>
+            <Header />
+            <FixedSocialMedia />
+            <FixedEmail />
+            {children}
+            <GlobalOverlay />
+            <Footer />
+          </RootLayer>
         </body>
       </html>
     </RootProviders>
