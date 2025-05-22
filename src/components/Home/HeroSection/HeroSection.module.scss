@@ -85,7 +85,7 @@
 
 @include m.small {
   .content .myName {
-    font-size: clamp(2.5rem, 9vw, 5rem);
+    font-size: clamp(2.4rem, 9vw, 5rem);
   }
 }
 
@@ -108,7 +108,7 @@
 @include m.small {
   .content .whatIDo {
     width: 100%;
-    font-size: clamp(2.5rem, 9vw, 5rem);
+    font-size: clamp(2.25rem, 9vw, 5rem);
   }
 }
 
