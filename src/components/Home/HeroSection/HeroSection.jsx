@@ -18,7 +18,7 @@ const HeroSection = () => {
           <a href="#projects" className={s.viewWorkBtn}>
             View my work
           </a>
-          <a href="#contact" className={s.getInTouchBtn}>
+          <a href="mailto:moamalalaapro1@gmail.com" className={s.getInTouchBtn}>
             Get in touch
           </a>
         </div>
