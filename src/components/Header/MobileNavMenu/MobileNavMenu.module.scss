@@ -1,0 +1,90 @@
+.mobileMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: -102%;
+  padding: 50px 10px;
+  width: min(75vw, 400px);
+  height: 100dvh;
+  outline: 0;
+  background-color: #112240;
+  box-shadow: -10px 0px 30px -15px rgba(2, 12, 27, .7);
+  z-index: 9;
+  transform: translateX(0vw);
+  visibility: visible;
+  transition: right .25s cubic-bezier(.645, .045, .355, 1);
+
+  &.active {
+    right: 0;
+  }
+}
+
+.mobileMenu nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  color: #ccd6f6;
+  font-family: var(--font-mono);
+  text-align: center;
+}
+
+.mobileMenu nav ol {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobileMenu nav li {
+  margin: 0 auto 20px;
+  font-size: clamp(.875rem, 4vw, 1.125rem);
+}
+
+.mobileMenu nav li a {
+  counter-increment: item 1;
+  padding: 10px;
+  width: 160px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: color .25s cubic-bezier(.645, .045, .355, 1);
+
+  &:hover {
+    color: #64ffda;
+  }
+}
+
+.mobileMenu nav li a::before {
+  content: "0" counter(item) ".";
+  color: #64ffda;
+  font-size: .875rem;
+  padding-right: 10px;
+}
+
+.mobileMenu .resume {
+  color: #64ffda;
+  background-color: transparent;
+  border: 1px solid #64ffda;
+  border-radius: 4px;
+  font-size: .875rem;
+  font-family: var(--font-mono);
+  line-height: 1;
+  text-decoration: none;
+  padding: 18px 50px;
+  margin: 10% auto 0;
+  width: max-content;
+  transition:
+    color .25s cubic-bezier(.645, .045, .355, 1),
+    background-color .25s cubic-bezier(.645, .045, .355, 1),
+    box-shadow .25s cubic-bezier(.645, .045, .355, 1);
+
+  &:hover {
+    background-color: #64ffda;
+    color: #0a192f;
+    box-shadow: 0 4px 6px rgba(100, 255, 218, .2);
+  }
+}
