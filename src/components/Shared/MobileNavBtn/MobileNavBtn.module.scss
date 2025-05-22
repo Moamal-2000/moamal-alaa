@@ -9,6 +9,10 @@
   cursor: pointer;
   position: relative;
   display: none;
+
+  &.move.active {
+    right: 10px;
+  }
 }
 
 @include m.small {
