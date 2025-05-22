@@ -6,7 +6,8 @@ import Link from "next/link";
 import s from "./MobileNavMenu.module.scss";
 
 const MobileNavMenu = () => {
-  const { isMobileNavOpen, updateGlobalState } = useGlobalStore();
+  const { isMobileNavOpen, updateGlobalState } =
+    useGlobalStore();
   const activeClass = isMobileNavOpen ? s.active : "";
 
   function handleClick() {

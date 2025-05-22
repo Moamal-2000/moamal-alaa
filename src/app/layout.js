@@ -18,8 +18,8 @@ export default function RootLayout({ children }) {
     <RootProviders>
       <html lang="en">
         <body>
+          <Header />
           <RootLayer>
-            <Header />
             <FixedSocialMedia />
             <FixedEmail />
             {children}

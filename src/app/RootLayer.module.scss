@@ -1,0 +1,7 @@
+.layer {
+  transition: filter ease-in .2s .1s;
+
+  &.blur {
+    filter: blur(5px);
+  }
+}
