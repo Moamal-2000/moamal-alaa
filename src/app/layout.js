@@ -2,6 +2,7 @@ import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import FixedEmail from "@/components/Shared/FixedEmail/FixedEmail";
 import FixedSocialMedia from "@/components/Shared/FixedSocialMedia/FixedSocialMedia";
+import GlobalOverlay from "@/components/Shared/GlobalOverlay/GlobalOverlay";
 import "../styles/globals.scss";
 import RootProviders from "./RootProviders";
 
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
           <FixedSocialMedia />
           <FixedEmail />
           {children}
+          <GlobalOverlay />
           <Footer />
         </body>
       </html>
