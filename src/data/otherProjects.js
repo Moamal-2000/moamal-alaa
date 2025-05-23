@@ -39,4 +39,14 @@ export const OTHER_PROJECTS_DATA = [
     technologies: ["HTML", "CSS", "Sass", "JavaScript"],
     id: 4,
   },
+  {
+    title: "Static Country Info App",
+    description:
+      "A static website that allows users to search and view details about countries. Note: the data is not updated in real-time and remains static.",
+    year: "2023",
+    liveUrl: "https://moamal-2000.github.io/rest-api-countries",
+    repoUrl: "https://github.com/Moamal-2000/rest-api-countries",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    id: 5,
+  },
 ];
