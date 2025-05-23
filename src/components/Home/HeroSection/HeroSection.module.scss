@@ -53,6 +53,12 @@
   }
 }
 
+@include m.very-small {
+  .heroSection .content {
+    padding-top: 50px;
+  }
+}
+
 .content .preHeading {
   width: fit-content;
   margin-bottom: 34px;
