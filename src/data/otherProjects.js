@@ -2,6 +2,7 @@ export const OTHER_PROJECTS_DATA = [
   {
     title: "Some title",
     description: "Description...",
+    year: "2023",
     liveUrl: "",
     repoUrl: "",
     technologies: ["Tech", "Tech", "Tech"],
@@ -10,6 +11,7 @@ export const OTHER_PROJECTS_DATA = [
   {
     title: "Some title",
     description: "Description...",
+    year: "2023",
     liveUrl: "",
     repoUrl: "",
     technologies: ["Tech", "Tech", "Tech"],
@@ -18,6 +20,7 @@ export const OTHER_PROJECTS_DATA = [
   {
     title: "Some title",
     description: "Description...",
+    year: "2023",
     liveUrl: "",
     repoUrl: "",
     technologies: ["Tech", "Tech", "Tech"],
