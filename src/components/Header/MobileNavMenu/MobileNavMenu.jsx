@@ -3,14 +3,17 @@
 import { NAV_LINKS } from "@/data/staticData";
 import useGlobalStore from "@/stores/global/useGlobalStore";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import s from "./MobileNavMenu.module.scss";
 
 const MobileNavMenu = () => {
-  const { isMobileNavOpen, updateGlobalState } =
-    useGlobalStore();
+  const pathname = usePathname();
+  const router = useRouter();
+  const { isMobileNavOpen, updateGlobalState } = useGlobalStore();
   const activeClass = isMobileNavOpen ? s.active : "";
 
-  function handleClick() {
+  function handleClick(title) {
+    if (pathname !== "/") router.push(`/#${title}`);
     updateGlobalState("isMobileNavOpen", !isMobileNavOpen);
   }
 
@@ -20,7 +23,10 @@ const MobileNavMenu = () => {
         <ol>
           {NAV_LINKS.map(({ title, id }) => (
             <li key={id}>
-              <a href={`#${title.toLowerCase()}`} onClick={handleClick}>
+              <a
+                href={`#${title.toLowerCase()}`}
+                onClick={() => handleClick(title.toLowerCase())}
+              >
                 {title}
               </a>
             </li>
