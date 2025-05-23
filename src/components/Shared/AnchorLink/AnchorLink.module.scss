@@ -1,0 +1,21 @@
+.link {
+  display: inline-block;
+  position: relative;
+  color: #64ffda;
+}
+
+.link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  position: relative;
+  bottom: .37em;
+  background-color: #64ffda;
+  opacity: .5;
+  transition: width .25s cubic-bezier(.645, .045, .355, 1);
+}
+
+.link:hover::after {
+  width: 100%;
+}
