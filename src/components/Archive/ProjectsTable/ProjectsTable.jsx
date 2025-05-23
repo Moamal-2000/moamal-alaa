@@ -1,6 +1,7 @@
 import SvgIcon from "@/components/Shared/SvgIcon";
 import { OTHER_PROJECTS_DATA } from "@/data/otherProjects";
 import s from "./ProjectsTable.module.scss";
+import ProjectsTBody from "./ProjectsTBody/ProjectsTBody";
 
 const ProjectsTable = () => {
   return (
@@ -48,6 +49,7 @@ const ProjectsTable = () => {
             )
           )}
         </tbody>
+        <ProjectsTBody />
       </table>
     </div>
   );
