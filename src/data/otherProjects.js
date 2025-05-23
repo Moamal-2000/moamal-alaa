@@ -49,4 +49,14 @@ export const OTHER_PROJECTS_DATA = [
     technologies: ["HTML", "CSS", "JavaScript"],
     id: 5,
   },
+  {
+    title: "Superado Landing Page",
+    description:
+      "A single-page site designed to introduce the Superado brand. Additional sections like About and Jobs are planned but not yet implemented.",
+    year: "2023",
+    liveUrl: "https://superado-landing.netlify.app",
+    repoUrl: "https://github.com/Moamal-2000/superado-landing",
+    technologies: ["React", "Vite", "Sass"],
+    id: 6,
+  },
 ];
