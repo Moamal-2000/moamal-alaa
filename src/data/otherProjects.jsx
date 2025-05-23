@@ -1,3 +1,5 @@
+import AnchorLink from "@/components/Shared/AnchorLink/AnchorLink";
+
 export const OTHER_PROJECTS_DATA = [
   {
     title: "Challenges with JavaScript",
@@ -51,8 +53,21 @@ export const OTHER_PROJECTS_DATA = [
   },
   {
     title: "Call of Duty 2 – Jumpers Heaven Statistics Website",
-    description:
-      "A dynamic website that displays real-time statistics for Call of Duty 2 players on Jumpers Heaven servers. Still in active development, the platform aims to offer detailed insights and leaderboard data.",
+    description: (
+      <>
+        A dynamic website that displays real-time statistics for Call of Duty 2
+        players on{" "}
+        <AnchorLink
+          href="https://jumpersheaven.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Jumpers Heaven
+        </AnchorLink>{" "}
+        servers. Still in active development, the platform aims to offer
+        detailed insights and leaderboard data.
+      </>
+    ),
     year: "2025",
     liveUrl: "https://jh-leaderboard.netlify.app",
     repoUrl: "https://github.com/Moamal-2000/JHLeaderboard",
