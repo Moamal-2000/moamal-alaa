@@ -10,7 +10,6 @@ export const OTHER_PROJECTS_DATA = [
     id: 1,
   },
   {
-    id: 2,
     title: "Custom React Hooks Library",
     description:
       "A collection of reusable and well-documented custom React hooks for boosting productivity and consistency across React projects. Includes live previews and code highlighting",
@@ -18,14 +17,16 @@ export const OTHER_PROJECTS_DATA = [
     liveUrl: "https://hooks-time.netlify.app",
     repoUrl: "https://github.com/Moamal-2000/custom-hooks",
     technologies: ["React", "PWA", "JSZip", "react-syntax-highlighter"],
+    id: 2,
   },
   {
-    title: "Some title",
-    description: "Description...",
-    year: "2023",
-    liveUrl: "",
-    repoUrl: "",
-    technologies: ["Tech", "Tech", "Tech"],
+    title: "Challenges with JavaScript",
+    description:
+      "A set of JavaScript challenges focused on solving real-world interactivity problems using only HTML, CSS, and JavaScript. Built to sharpen DOM manipulation, event handling, and logic-building skills.",
+    year: "2022",
+    liveUrl: "https://moamal-2000.github.io/simple-javascript-projects/",
+    repoUrl: "https://github.com/Moamal-2000/simple-javascript-projects",
+    technologies: ["HTML", "CSS", "Sass", "JavaScript"],
     id: 3,
   },
 ];
