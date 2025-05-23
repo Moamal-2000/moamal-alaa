@@ -1,8 +1,15 @@
+"use client";
+
 import { NAV_LINKS } from "@/data/staticData";
+import { usePathname, useRouter } from "next/navigation";
 import s from "./HeaderNavLinks.module.scss";
 
 const HeaderNavLinks = ({ navClicked }) => {
-  function handleClick() {
+  const pathname = usePathname();
+  const router = useRouter();
+
+  function handleClick(title) {
+    if (pathname !== "/") router.push(`/#${title}`);
     navClicked.current = true;
   }
 
@@ -10,7 +17,10 @@ const HeaderNavLinks = ({ navClicked }) => {
     <ol className={s.navLinks}>
       {NAV_LINKS.map(({ title, id }) => (
         <li key={id}>
-          <a onClick={handleClick} href={`#${title.toLowerCase()}`}>
+          <a
+            onClick={() => handleClick(title.toLowerCase())}
+            href={`#${title.toLowerCase()}`}
+          >
             {title}
           </a>
         </li>
