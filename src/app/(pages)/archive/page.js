@@ -1,5 +1,12 @@
 import s from "./Archive.module.scss";
 
 export default function Archive() {
-  return <main className={s.archive}></main>;
+  return (
+    <main className={s.archive}>
+      <header>
+        <h1>Archive</h1>
+        <p>A list of things I’ve worked on</p>
+      </header>
+    </main>
+  );
 }

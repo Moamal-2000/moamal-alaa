@@ -1,0 +1,18 @@
+.archive {
+  padding: 200px 150px;
+}
+
+.archive>header>h1 {
+  font-weight: 600;
+  color: #ccd6f6;
+  line-height: 1.1;
+  font-size: clamp(2.5rem, 8vw, 5rem);
+}
+
+.archive>header>p {
+  color: #64ffda;
+  font-size: 1rem;
+  font-family: var(--font-mono);
+  font-weight: 400;
+  line-height: 1.5;
+}
