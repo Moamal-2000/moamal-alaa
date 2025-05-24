@@ -19,10 +19,17 @@
   color: inherit;
   position: relative;
   padding: 10px;
-  transition: color .25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition:
+    color .25s cubic-bezier(.645, .045, .355, 1),
+    outline .1s cubic-bezier(.645, .045, .355, 1);
 
   &:hover {
     color: #64ffda;
+  }
+
+  &:focus {
+    color: #64ffda;
+    outline: solid 2px #64ffda;
   }
 }
 

@@ -112,11 +112,16 @@
     color .2s cubic-bezier(0.645, 0.045, 0.355, 1),
     background-color .2s cubic-bezier(0.645, 0.045, 0.355, 1),
     border-color .2s cubic-bezier(0.645, 0.045, 0.355, 1),
-    box-shadow .2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    box-shadow .2s cubic-bezier(0.645, 0.045, 0.355, 1),
+    outline .1s cubic-bezier(.645, .045, .355, 1);
 
   &:hover {
     background-color: #64ffda;
     color: #0a192f;
     box-shadow: 0 4px 6px rgba(100, 255, 218, .2);
+  }
+
+  &:focus {
+    outline: solid 2px #64ffda;
   }
 }
