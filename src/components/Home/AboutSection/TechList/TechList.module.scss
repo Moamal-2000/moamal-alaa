@@ -28,7 +28,6 @@
   color: #8892b0;
   font-size: .85rem;
   font-family: var(--font-mono);
-  cursor: pointer;
   margin-bottom: 8px;
   padding: 4px 8px;
   border-radius: 3px;
@@ -70,4 +69,51 @@
   .techList li:nth-child(6) {
     order: 3;
   }
+}
+
+.techList .infoBox {
+  min-width: 350px;
+  max-width: 420px;
+  background-color: rgba(20, 42, 76, .7);
+  color: #e6f1ff;
+  border-radius: 6px;
+  padding: 14px 20px;
+  box-shadow: 0 4px 18px 0 rgba(20, 30, 40, .13);
+  border: 1px solid #64ffda;
+  font-family: var(--font-sans);
+  font-weight: 400;
+  letter-spacing: .01em;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  position: absolute;
+  left: 0;
+  top: 120%;
+  scale: .98;
+  pointer-events: auto;
+  user-select: text;
+  z-index: 20;
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .2s, scale .1s;
+}
+
+.techList li:hover .infoBox {
+  visibility: visible;
+  opacity: 1;
+  scale: 1;
+}
+
+.techList .infoBox>b {
+  font-size: .95rem;
+  font-weight: 500;
+  color: #64ffda;
+  letter-spacing: .03em;
+}
+
+.techList .infoBox>p {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 300;
 }
