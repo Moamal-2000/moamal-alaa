@@ -55,14 +55,15 @@
 }
 
 .header .navLinks .logo {
+  outline: none;
   width: 42px;
   height: 42px;
   position: relative;
   z-index: 1;
 
-  &:hover {
+  &:hover,
+  &:focus {
     filter: brightness(1.12) contrast(1.12) saturate(1.08);
-    outline: none;
   }
 }
 
@@ -79,6 +80,7 @@
   transition: opacity .18s cubic-bezier(.645, .045, .355, 1);
 }
 
+.header .navLinks .logo:focus::before,
 .header .navLinks .logo:hover::before {
   opacity: 1;
 }
