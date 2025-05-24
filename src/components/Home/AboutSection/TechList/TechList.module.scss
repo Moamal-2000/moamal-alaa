@@ -38,6 +38,12 @@
   }
 }
 
+@include m.small {
+  .techList li {
+    position: static;
+  }
+}
+
 @include m.very-small {
 
   // JavaScript
@@ -93,10 +99,24 @@
   pointer-events: auto;
   user-select: text;
   z-index: 20;
-  visibility: hidden;
   pointer-events: none;
+  visibility: hidden;
   opacity: 0;
   transition: opacity .2s, scale .1s;
+}
+
+@include m.small {
+  .techList .infoBox {
+    min-width: 340px;
+  }
+}
+
+@include m.very-small {
+  .techList .infoBox {
+    min-width: auto;
+    max-width: auto;
+    width: calc(100vw - 30px);
+  }
 }
 
 .techList li:hover .infoBox {
