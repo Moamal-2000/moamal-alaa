@@ -2,6 +2,7 @@
 
 import { DEBOUNCE_DELAY, SCROLL_THRESHOLD } from "@/data/constants";
 import useScrollDirection from "@/hooks/helper/useScrollDirection";
+import useGlobalStore from "@/stores/global/useGlobalStore";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import MobileNavBtn from "../Shared/MobileNavBtn/MobileNavBtn";
@@ -12,6 +13,7 @@ import MobileNavMenu from "./MobileNavMenu/MobileNavMenu";
 
 const Header = () => {
   const scrollDirection = useScrollDirection({ initialDir: "down" });
+  const isMobileNavOpen = useGlobalStore((state) => state.isMobileNavOpen);
   const [isActive, setIsActive] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
   const activeClass = isActive ? s.active : "";
@@ -26,7 +28,10 @@ const Header = () => {
 
     timerRef.current = setTimeout(() => {
       const hide =
-        scrollDirection === "down" && hasMounted.current && !navClicked.current;
+        scrollDirection === "down" &&
+        hasMounted.current &&
+        !navClicked.current &&
+        !isMobileNavOpen;
       const show = scrollDirection === "up" || navClicked.current;
       const isAtTop = window?.scrollY >= SCROLL_THRESHOLD;
 
