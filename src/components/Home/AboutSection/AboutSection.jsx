@@ -28,14 +28,6 @@ const AboutSection = () => {
         <p>Here are a few technologies I’ve been working with recently:</p>
       </div>
 
-      <ul className={s.techList}>
-        <li>JavaScript (ES6+)</li>
-        <li>Sass</li>
-        <li>React</li>
-        <li>Next</li>
-        <li>Progressive Web App</li>
-        <li>Redux/Toolkit</li>
-      </ul>
       <TechList />
     </section>
   );
