@@ -1,6 +1,7 @@
 "use client";
 
 import { NAV_LINKS } from "@/data/staticData";
+import { isMobile } from "@/functions/helper";
 import useGlobalStore from "@/stores/global/useGlobalStore";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
@@ -26,6 +27,7 @@ const MobileNavMenu = () => {
               <a
                 href={`#${title.toLowerCase()}`}
                 onClick={() => handleClick(title.toLowerCase())}
+                tabIndex={isMobile() ? 0 : -1}
               >
                 {title}
               </a>
@@ -33,7 +35,11 @@ const MobileNavMenu = () => {
           ))}
         </ol>
 
-        <Link className={s.resume} href="/resume.pdf">
+        <Link
+          className={s.resume}
+          href="/resume.pdf"
+          tabIndex={isMobile() ? 0 : -1}
+        >
           Resume
         </Link>
       </nav>
