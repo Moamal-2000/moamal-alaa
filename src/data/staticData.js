@@ -56,7 +56,7 @@ export const FEATURED_PROJECTS = [
     ],
     repoUrl: "https://github.com/Moamal-2000/e-commerce",
     liveUrl: "https://e-commercew.netlify.app",
-    previewImg: "/images/e-commercew-project.png",
+    previewImg: "/images/e-commercew-project.webp",
     id: 1,
   },
   {
@@ -67,7 +67,7 @@ export const FEATURED_PROJECTS = [
     technologies: ["React Helmet Async", "React Router Dom", "Sass", "React"],
     repoUrl: "https://github.com/Moamal-2000/aster-information",
     liveUrl: "https://asterinformation.netlify.app/",
-    previewImg: "/images/aster-information-project.png",
+    previewImg: "/images/aster-information-project.webp",
     id: 2,
   },
 ];
