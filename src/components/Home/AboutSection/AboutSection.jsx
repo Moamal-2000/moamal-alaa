@@ -1,5 +1,6 @@
 import NumberedHeading from "@/components/Shared/NumberedHeading/NumberedHeading";
 import s from "./AboutSection.module.scss";
+import TechList from "./TechList/TechList";
 
 const AboutSection = () => {
   return (
@@ -35,6 +36,7 @@ const AboutSection = () => {
         <li>Progressive Web App</li>
         <li>Redux/Toolkit</li>
       </ul>
+      <TechList />
     </section>
   );
 };
