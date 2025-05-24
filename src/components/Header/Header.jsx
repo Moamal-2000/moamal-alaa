@@ -56,7 +56,7 @@ const Header = () => {
   return (
     <header className={headerClasses}>
       <nav className={s.navLinks}>
-        <Link className={s.logo} href="/">
+        <Link className={s.logo} href="/" aria-label="Go to homepage">
           <SvgIcon name="logo" />
         </Link>
 
