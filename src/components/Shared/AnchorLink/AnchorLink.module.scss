@@ -3,7 +3,7 @@
   position: relative;
   color: #64ffda;
 
-  &:focus {
+  &:focus-visible {
     outline: none;
   }
 }
@@ -22,7 +22,7 @@
     opacity .25s .15s cubic-bezier(.645, .045, .355, 1);
 }
 
-.link:where(:hover, :focus)::after {
+.link:where(:hover, :focus-visible)::after {
   width: 100%;
   opacity: 1;
 }

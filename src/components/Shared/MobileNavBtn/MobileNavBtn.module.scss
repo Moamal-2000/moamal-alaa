@@ -19,12 +19,12 @@
     right: 10px;
   }
 
-  &:focus {
+  &:focus-visible {
     outline: dashed 2px #ccd6f6;
     outline-offset: 3px;
   }
 
-  &.active:focus {
+  &.active:focus-visible {
     outline: dashed 2px #64ffda;
   }
 }
