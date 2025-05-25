@@ -2,6 +2,10 @@
   display: inline-block;
   position: relative;
   color: #64ffda;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .link::after {
@@ -13,9 +17,12 @@
   bottom: .37em;
   background-color: #64ffda;
   opacity: .5;
-  transition: width .25s cubic-bezier(.645, .045, .355, 1);
+  transition:
+    width .25s cubic-bezier(.645, .045, .355, 1),
+    opacity .25s .15s cubic-bezier(.645, .045, .355, 1);
 }
 
-.link:hover::after {
+.link:where(:hover, :focus)::after {
   width: 100%;
+  opacity: 1;
 }
