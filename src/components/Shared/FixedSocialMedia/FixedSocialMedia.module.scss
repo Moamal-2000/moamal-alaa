@@ -35,11 +35,18 @@
   display: inline-block;
   position: relative;
   padding: 10px;
-  transition: translate .25s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
+  transition: translate .25s cubic-bezier(.645, .045, .355, 1),
+    color .25s cubic-bezier(.645, .045, .355, 1),
+    outline .1s cubic-bezier(.645, .045, .355, 1);
 
-.socialMedia a:hover {
-  translate: 0 -3px;
+  &:hover {
+    translate: 0 -3px;
+  }
+
+  &:focus-visible {
+    color: #64ffda;
+    outline: solid 2px #64ffda;
+  }
 }
 
 .socialMedia a:hover svg {
@@ -48,6 +55,10 @@
   &[data-type=twitter] {
     fill: #64ffda;
   }
+}
+
+.socialMedia a:focus-visible svg[data-type=twitter] {
+  fill: #64ffda;
 }
 
 .socialMedia a svg {
