@@ -28,6 +28,7 @@
   position: relative;
   grid-area: 1 / 1 / -1 / 7;
   z-index: 2;
+  pointer-events: none;
 }
 
 @include m.small {
@@ -50,6 +51,8 @@
 
 .content .projectHeader {
   margin-bottom: 24px;
+  width: fit-content;
+  pointer-events: all;
 }
 
 .content .projectHeader .featuredText {
@@ -105,6 +108,7 @@
   font-size: 1.125rem;
   position: relative;
   text-wrap: pretty;
+  pointer-events: all;
 }
 
 @include m.medium {
@@ -171,6 +175,7 @@
   font-weight: 500;
   color: #a8b2d1;
   cursor: pointer;
+  pointer-events: all;
   transition: color .3s ease;
 
   &:hover {
@@ -196,6 +201,7 @@
   gap: 8px;
   width: fit-content;
   user-select: none;
+  pointer-events: all;
 }
 
 @include m.medium {
@@ -207,7 +213,7 @@
   }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 880px) {
   .content .projectLinks {
     display: flex;
     top: 0;
