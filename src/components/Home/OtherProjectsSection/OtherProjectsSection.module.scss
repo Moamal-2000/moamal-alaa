@@ -13,6 +13,7 @@
 }
 
 .projectsSection>a {
+  outline: none;
   color: #64ffda;
   font-family: var(--font-mono);
   font-size: .875rem;
@@ -33,7 +34,7 @@
     opacity .25s .2s cubic-bezier(.645, .045, .355, 1);
 }
 
-.projectsSection>a:hover::after {
+.projectsSection>a:where(:hover, :focus-visible)::after {
   width: 100%;
   opacity: 1;
 }
