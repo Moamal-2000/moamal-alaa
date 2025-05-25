@@ -14,7 +14,7 @@ const RootProviders = ({ children }) => {
   return (
     <html lang="en">
       <body className={isMobileNavOpen ? "noScroll" : ""}>
-        <SkipContentLink scrollTo="hero" />
+        <SkipContentLink />
         <Header />
         <RootLayer>
           <FixedSocialMedia />
