@@ -6,6 +6,10 @@
   }
 }
 
+.tbody tr:has(:focus-visible, :hover) {
+  background-color: #112240;
+}
+
 .tbody tr td {
   padding: 10px;
   text-align: left;
@@ -86,11 +90,22 @@
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
+  transition: outline-color .25s cubic-bezier(.645, .045, .355, 1);
+
+  &:focus-visible {
+    outline: 2px solid #64ffda;
+    outline-offset: 5px;
+  }
 }
 
 .tbody tr td.links a>svg {
   width: 20px;
   height: 20px;
+  transition: stroke .25s cubic-bezier(.645, .045, .355, 1);
+}
+
+.tbody tr td.links a:where(:hover, :focus-visible)>svg {
+  stroke: #64ffda;
 }
 
 @include m.very-small {
