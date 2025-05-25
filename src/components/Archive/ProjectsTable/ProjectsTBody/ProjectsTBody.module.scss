@@ -1,6 +1,6 @@
 @use "@/styles/mixins" as m;
 
-@include m.small {
+@include m.medium {
   .hideOnMobile {
     display: none;
   }
@@ -19,6 +19,19 @@
   font-weight: 400;
 }
 
+@include m.small {
+  .tbody tr td.year {
+    font-size: .9rem;
+  }
+}
+
+@include m.very-small {
+  .tbody tr td.year {
+    font-size: .8rem;
+    padding-inline: 10px;
+  }
+}
+
 .tbody tr td.title {
   padding-top: 15px;
   padding-right: 20px;
@@ -26,6 +39,18 @@
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.25;
+}
+
+@include m.small {
+  .tbody tr td.title {
+    font-size: 1.1rem;
+  }
+}
+
+@include m.very-small {
+  .tbody tr td.title {
+    font-size: .9rem;
+  }
 }
 
 .tbody tr td.tech {
@@ -44,11 +69,16 @@
 }
 
 .tbody tr td.links {
-  min-width: 100px;
   padding-right: 20px;
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+@include m.very-small {
+  .tbody tr td.links {
+    padding-inline: 10px;
+  }
 }
 
 .tbody tr td.links a {
@@ -61,4 +91,11 @@
 .tbody tr td.links a>svg {
   width: 20px;
   height: 20px;
+}
+
+@include m.very-small {
+  .tbody tr td.links a>svg {
+    width: 18px;
+    height: 18px;
+  }
 }

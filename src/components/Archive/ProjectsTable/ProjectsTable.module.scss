@@ -1,6 +1,6 @@
 @use "@/styles/mixins" as m;
 
-@include m.small {
+@include m.medium {
   .hideOnMobile {
     display: none;
   }
@@ -28,7 +28,20 @@
   font-size: 1.2rem;
 }
 
+@include m.very-small {
+  .table thead tr th {
+    font-size: 1rem;
+  }
+}
+
 .table thead tr th:first-child,
 .table thead tr th:last-child {
   padding-left: 20px;
+}
+
+@include m.very-small {
+  .table thead tr th:first-child,
+  .table thead tr th:last-child {
+    padding-left: 10px;
+  }
 }

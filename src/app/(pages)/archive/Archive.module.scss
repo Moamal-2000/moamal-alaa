@@ -1,5 +1,25 @@
+@use "@/styles/mixins" as m;
+
 .archive {
-  padding: 200px 150px;
+  padding: 200px 140px;
+}
+
+@include m.large {
+  .archive {
+    padding: 200px 110px;
+  }
+}
+
+@include m.small {
+  .archive {
+    padding: 150px 25px;
+  }
+}
+
+@include m.very-small {
+  .archive {
+    padding: 150px 15px;
+  }
 }
 
 .archive>header>h1 {
@@ -15,4 +35,10 @@
   font-family: var(--font-mono);
   font-weight: 400;
   line-height: 1.5;
+}
+
+@include m.small {
+  .archive>header>p {
+    font-size: .9rem;
+  }
 }
