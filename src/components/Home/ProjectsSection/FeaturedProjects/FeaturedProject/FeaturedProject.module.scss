@@ -296,8 +296,7 @@
   }
 }
 
-.featuredProject .previewImg:hover::before,
-.featuredProject .previewImg:focus-visible::before {
+.featuredProject .previewImg:where(:hover, :focus-visible)::before {
   mix-blend-mode: screen;
   filter: grayscale(100%) contrast(2) brightness(90%);
 }
@@ -310,7 +309,6 @@
   transition: filter .1s .1s cubic-bezier(.4, 0, .2, 1);
 }
 
-.featuredProject .previewImg:hover img,
-.featuredProject .previewImg:focus-visible img {
+.featuredProject .previewImg:where(:hover, :focus-visible) img {
   filter: grayscale(0) brightness(.9);
 }
