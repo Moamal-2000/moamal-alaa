@@ -13,7 +13,7 @@ import MobileNavMenu from "./MobileNavMenu/MobileNavMenu";
 
 const Header = () => {
   const scrollDirection = useScrollDirection({ initialDir: "down" });
-  const isMobileNavOpen = useGlobalStore((state) => state.isMobileNavOpen);
+  const { isMobileNavOpen, updateGlobalState } = useGlobalStore();
   const [isActive, setIsActive] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
   const activeClass = isActive ? s.active : "";
@@ -22,6 +22,11 @@ const Header = () => {
   const navClicked = useRef(false);
   const hasMounted = useRef(false);
   const timerRef = useRef();
+
+  function handleHeaderClick() {
+    if (!isMobileNavOpen) return;
+    updateGlobalState("isMobileNavOpen", false);
+  }
 
   const handleScroll = useCallback(() => {
     clearTimeout(timerRef.current);
@@ -59,7 +64,7 @@ const Header = () => {
   }, [handleScroll]);
 
   return (
-    <header className={headerClasses}>
+    <header className={headerClasses} onClick={handleHeaderClick}>
       <nav className={s.navLinks}>
         <Link className={s.logo} href="/" aria-label="Go to homepage">
           <SvgIcon name="logo" />
