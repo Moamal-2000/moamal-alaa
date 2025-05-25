@@ -69,10 +69,22 @@
   font-weight: 700;
   color: #ccd6f6;
   margin: 2px 0 16px;
-  transition: color .3s ease;
+  width: fit-content;
+
+}
+
+.content .projectHeader .title>a {
+  outline: none;
+  border-bottom: solid 2px transparent;
+  transition: color .3s ease, border-color .3s ease;
 
   &:hover {
     color: #64ffda;
+  }
+
+  &:focus-visible {
+    color: #64ffda;
+    border-bottom: solid 2px #64ffda;
   }
 }
 
@@ -216,11 +228,21 @@
   padding-top: 11px;
   border-radius: 4px;
   border: 1px solid rgba(136, 146, 176, .2);
-  transition: color .3s ease, border-color .3s ease;
+  outline: solid 2px transparent;
+  transition:
+    color .3s ease,
+    border-color .3s ease,
+    outline-color .3s ease;
 
   &:hover {
     color: #64ffda;
     border-color: #64ffda;
+  }
+
+  &:focus-visible {
+    color: #64ffda;
+    outline-color: #64ffda;
+    outline-offset: -2px;
   }
 }
 
@@ -237,6 +259,16 @@
   overflow: hidden;
   grid-area: 1 / 6 / -1 / -1;
   z-index: 1;
+  outline: solid 0 #64ffda;
+  outline-offset: 0;
+  transition:
+    outline .2s ease,
+    outline-offset .2s ease;
+
+  &:focus-visible {
+    outline: solid 3px #64ffda;
+    outline-offset: 3px;
+  }
 }
 
 @include m.small {
@@ -264,7 +296,8 @@
   }
 }
 
-.featuredProject .previewImg:hover::before {
+.featuredProject .previewImg:hover::before,
+.featuredProject .previewImg:focus-visible::before {
   mix-blend-mode: screen;
   filter: grayscale(100%) contrast(2) brightness(90%);
 }
@@ -277,6 +310,7 @@
   transition: filter .1s .1s cubic-bezier(.4, 0, .2, 1);
 }
 
-.featuredProject .previewImg:hover img {
+.featuredProject .previewImg:hover img,
+.featuredProject .previewImg:focus-visible img {
   filter: grayscale(0) brightness(.9);
 }
