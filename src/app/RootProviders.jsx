@@ -9,7 +9,7 @@ import useGlobalStore from "@/stores/global/useGlobalStore";
 import RootLayer from "./RootLayer";
 
 const RootProviders = ({ children }) => {
-  const { isMobileNavOpen } = useGlobalStore();
+  const isMobileNavOpen = useGlobalStore((s) => s.isMobileNavOpen);
 
   return (
     <html lang="en">
