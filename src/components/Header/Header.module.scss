@@ -123,5 +123,6 @@
 
   &:focus-visible {
     outline: solid 2px #64ffda;
+    outline-offset: -1px;
   }
 }
