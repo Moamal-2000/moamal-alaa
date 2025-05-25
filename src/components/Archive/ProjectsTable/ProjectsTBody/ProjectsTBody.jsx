@@ -22,13 +22,23 @@ const ProjectsTBody = () => {
             </td>
             <td className={s.links}>
               {liveUrl && (
-                <a href={liveUrl} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={liveUrl}
+                  title="Live"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <SvgIcon name="live" />
                 </a>
               )}
 
               {repoUrl && (
-                <a href={liveUrl} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={liveUrl}
+                  title="Github"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <SvgIcon name="github" />
                 </a>
               )}
