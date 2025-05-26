@@ -1,9 +1,3 @@
-<div align="center">
-  <img alt="Moamal Logo" src="https://github.com/user-attachments/assets/2dab7cc0-8572-492a-9087-298cf77070bb" width="100" />
-</div>
-
-
-
 <h1 align="center">
   My Personal Portfolio
 </h1>
@@ -18,7 +12,9 @@
 
 <br/>
 
-![Demo]()
+<div align="center">
+  <img alt="Moamal's Portfolio Website" src="https://github.com/user-attachments/assets/2dab7cc0-8572-492a-9087-298cf77070bb" />
+</div>
 
 ## Forking this repo
 
