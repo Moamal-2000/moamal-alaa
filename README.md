@@ -13,7 +13,7 @@
 <br/>
 
 <div align="center">
-  <img alt="Moamal's Portfolio Website" src="https://github.com/user-attachments/assets/2dab7cc0-8572-492a-9087-298cf77070bb" />
+  <img alt="Moamal's Portfolio Website" src="https://github.com/user-attachments/assets/ecd3d987-3eb5-4ca8-b00f-0c0670a5bc1f" />
 </div>
 
 ## Forking this repo
