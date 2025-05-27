@@ -35,3 +35,11 @@ export function fixedItemsMotionProps() {
     transition: { duration: 0.2, delay: 2.5 },
   };
 }
+
+export function navLinkMotionProps(index) {
+  return {
+    initial: { opacity: 0, y: -40 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.4, delay: index * 0.1 },
+  };
+}
