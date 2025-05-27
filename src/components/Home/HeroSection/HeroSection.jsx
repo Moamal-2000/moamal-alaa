@@ -1,44 +1,32 @@
 "use client";
 
-import { NAV_LINKS } from "@/data/staticData";
+import { getHeroMotionConfig } from "@/functions/motionConfig";
 import { motion } from "motion/react";
 import s from "./HeroSection.module.scss";
+
+const { initial, animate, transition } = getHeroMotionConfig();
+
+const motionProps = () => ({
+  initial,
+  animate,
+  transition: transition(),
+});
 
 const HeroSection = () => {
   return (
     <section className={s.heroSection} id="hero">
       <div className={s.content}>
-        <motion.p
-          className={s.preHeading}
-          initial={initial}
-          animate={animate}
-          transition={transition()}
-        >
+        <motion.p className={s.preHeading} {...motionProps()}>
           Hi, my name is
         </motion.p>
-        <motion.h1
-          className={s.myName}
-          initial={initial}
-          animate={animate}
-          transition={transition()}
-        >
+        <motion.h1 className={s.myName} {...motionProps()}>
           Moamal Alaa.
         </motion.h1>
-        <motion.h2
-          className={s.whatIDo}
-          initial={initial}
-          animate={animate}
-          transition={transition()}
-        >
+        <motion.h2 className={s.whatIDo} {...motionProps()}>
           I make the internet less boring.
         </motion.h2>
 
-        <motion.p
-          className={s.description}
-          initial={initial}
-          animate={animate}
-          transition={transition()}
-        >
+        <motion.p className={s.description} {...motionProps()}>
           I'm a front-end developer passionate about creating engaging and
           intuitive user interfaces. I focus on building responsive, performant,
           and accessible websites that leave a lasting impression.
@@ -63,23 +51,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-
-const initial = { opacity: 0, y: 20 };
-const animate = { opacity: 1, y: 0 };
-
-function getStaggeredTransition(addBy = 0.1) {
-  let addedDelay = 0;
-
-  return () => {
-    const baseDelay = NAV_LINKS.length * 0.1;
-    const currentDelay = baseDelay + addedDelay;
-    addedDelay += addBy;
-
-    return {
-      duration: 0.5,
-      delay: currentDelay + addBy,
-    };
-  };
-}
-
-const transition = getStaggeredTransition(0.1);
