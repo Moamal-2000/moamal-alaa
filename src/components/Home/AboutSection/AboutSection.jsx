@@ -11,7 +11,7 @@ const AboutSection = () => {
     <motion.section
       className={s.aboutSection}
       id="about"
-      {...fadeInOnViewMotionProps()}
+      {...fadeInOnViewMotionProps({})}
     >
       <NumberedHeading title="About" number="01" />
 

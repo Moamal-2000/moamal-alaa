@@ -1,4 +1,8 @@
+"use client";
+
 import SvgIcon from "@/components/Shared/SvgIcon";
+import { fadeInOnViewMotionProps } from "@/functions/motionConfig";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import s from "./FeaturedProject.module.scss";
 
@@ -7,7 +11,16 @@ const FeaturedProject = ({ data, shouldReverse }) => {
     data;
 
   return (
-    <div className={s.featuredProject} dir={shouldReverse ? "rtl" : "ltr"}>
+    <motion.div
+      className={s.featuredProject}
+      dir={shouldReverse ? "rtl" : "ltr"}
+      {...fadeInOnViewMotionProps({
+        visibilityThreshold: 0.1,
+        duration: 0.5,
+        delay: 0.1,
+        initialY: 40,
+      })}
+    >
       <div className={s.content}>
         <div className={s.projectHeader}>
           <span className={s.featuredText}>Featured Project</span>
@@ -46,7 +59,7 @@ const FeaturedProject = ({ data, shouldReverse }) => {
       >
         <Image src={previewImg} alt={title} width={628} height={435} />
       </a>
-    </div>
+    </motion.div>
   );
 };
 

@@ -11,7 +11,7 @@ const ProjectsSection = () => {
       <NumberedHeading
         title="Some Things I've Built"
         number="02"
-        animationProps={fadeInOnViewMotionProps(0)}
+        animationProps={fadeInOnViewMotionProps({ visibilityThreshold: 0 })}
       />
       <FeaturedProjects />
     </section>
