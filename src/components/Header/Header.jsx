@@ -2,6 +2,7 @@
 
 import { DEBOUNCE_DELAY, SCROLL_THRESHOLD } from "@/data/constants";
 import { NAV_LINKS } from "@/data/staticData";
+import { navLinkMotionProps } from "@/functions/motionConfig";
 import useScrollDirection from "@/hooks/helper/useScrollDirection";
 import useGlobalStore from "@/stores/global/useGlobalStore";
 import { motion } from "motion/react";
@@ -78,11 +79,7 @@ const Header = () => {
         <div className={s.wrapper}>
           <HeaderNavLinks navClicked={navClicked} />
 
-          <motion.div
-            initial={{ opacity: 0, y: -40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: NAV_LINKS.length * 0.1 }}
-          >
+          <motion.div {...navLinkMotionProps(NAV_LINKS.length)}>
             <Link className={s.resume} href="/resume.pdf">
               Resume
             </Link>
