@@ -1,11 +1,14 @@
+"use client";
+
+import { motion } from "motion/react";
 import s from "./NumberedHeading.module.scss";
 
-const NumberedHeading = ({ title, number }) => {
+const NumberedHeading = ({ title, number, animationProps = {} }) => {
   return (
-    <h2 className={s.numberedHeading}>
+    <motion.h2 className={s.numberedHeading} {...animationProps}>
       <span>{number}.</span>
       {title}
-    </h2>
+    </motion.h2>
   );
 };
 
