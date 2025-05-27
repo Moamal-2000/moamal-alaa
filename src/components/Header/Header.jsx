@@ -1,8 +1,10 @@
 "use client";
 
 import { DEBOUNCE_DELAY, SCROLL_THRESHOLD } from "@/data/constants";
+import { NAV_LINKS } from "@/data/staticData";
 import useScrollDirection from "@/hooks/helper/useScrollDirection";
 import useGlobalStore from "@/stores/global/useGlobalStore";
+import { motion } from "motion/react";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import MobileNavBtn from "../Shared/MobileNavBtn/MobileNavBtn";
@@ -76,9 +78,15 @@ const Header = () => {
         <div className={s.wrapper}>
           <HeaderNavLinks navClicked={navClicked} />
 
-          <Link className={s.resume} href="/resume.pdf">
-            Resume
-          </Link>
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: NAV_LINKS.length * 0.1 }}
+          >
+            <Link className={s.resume} href="/resume.pdf">
+              Resume
+            </Link>
+          </motion.div>
         </div>
       </nav>
     </header>

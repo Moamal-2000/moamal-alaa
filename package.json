@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "motion": "^12.14.0",
     "next": "15.3.2",
     "npm-check-updates": "^18.0.1",
     "react": "^19.1.0",

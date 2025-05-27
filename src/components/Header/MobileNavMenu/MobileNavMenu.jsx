@@ -22,17 +22,19 @@ const MobileNavMenu = () => {
     <aside className={`${s.mobileMenu} ${activeClass}`}>
       <nav>
         <ol>
-          {NAV_LINKS.map(({ title, id }) => (
-            <li key={id}>
-              <a
-                href={`#${title.toLowerCase()}`}
-                onClick={() => handleClick(title.toLowerCase())}
-                tabIndex={isMobile() ? 0 : -1}
-              >
-                {title}
-              </a>
-            </li>
-          ))}
+          {NAV_LINKS.map(({ title, id }, index) => {
+            return (
+              <li key={id}>
+                <a
+                  href={`#${title.toLowerCase()}`}
+                  onClick={() => handleClick(title.toLowerCase())}
+                  tabIndex={isMobile() ? 0 : -1}
+                >
+                  {title}
+                </a>
+              </li>
+            );
+          })}
         </ol>
 
         <Link
