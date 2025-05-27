@@ -1,10 +1,10 @@
 "use client";
 
-import { getHeroMotionConfig } from "@/functions/motionConfig";
+import { heroMotionConfig } from "@/functions/motionConfig";
 import { motion } from "motion/react";
 import s from "./HeroSection.module.scss";
 
-const { initial, animate, transition } = getHeroMotionConfig();
+const { initial, animate, transition } = heroMotionConfig();
 
 const motionProps = () => ({
   initial,

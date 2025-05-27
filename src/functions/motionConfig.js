@@ -1,6 +1,6 @@
 import { NAV_LINKS } from "@/data/staticData";
 
-export function getHeroMotionConfig() {
+export function heroMotionConfig() {
   const initial = { opacity: 0, y: 20 };
   const animate = { opacity: 1, y: 0 };
 
