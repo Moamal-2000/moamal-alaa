@@ -18,7 +18,7 @@ html {
   scroll-behavior: smooth;
   color-scheme: dark;
   scrollbar-width: thin;
-  scrollbar-color: #495670 #0a192f;
+  scrollbar-color: #495670 var(--website-bg);
 }
 
 body {
@@ -41,7 +41,7 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-thumb {
   background-color: #495670;
-  border: 3px solid #0a192f;
+  border: 3px solid var(--website-bg);
   border-radius: 10px;
 
   &:hover {
@@ -50,7 +50,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 body::-webkit-scrollbar-track {
-  background: #0a192f;
+  background: var(--website-bg);
 }
 
 main {
