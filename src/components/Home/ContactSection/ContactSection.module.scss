@@ -46,7 +46,6 @@
   position: relative;
   color: #64ffda;
   font-family: var(--font-mono);
-  letter-spacing: .1em;
   line-height: 1;
   display: inline-block;
   cursor: pointer;
@@ -57,7 +56,7 @@
   border-image: initial;
   border-radius: 4px;
   margin: 40px auto 0;
-  padding: 18px 24px;
+  padding: 18px 26px;
   transition:
     color .25s cubic-bezier(.645, .045, .355, 1),
     box-shadow .25s cubic-bezier(.645, .045, .355, 1),
