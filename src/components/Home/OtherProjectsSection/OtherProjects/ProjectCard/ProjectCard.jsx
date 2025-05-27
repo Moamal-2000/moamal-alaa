@@ -1,11 +1,21 @@
+"use client";
+
 import SvgIcon from "@/components/Shared/SvgIcon";
+import { fadeInOnViewMotionProps } from "@/functions/motionConfig";
+import { motion } from "framer-motion";
 import s from "./ProjectCard.module.scss";
 
-const ProjectCard = ({ data }) => {
+const ProjectCard = ({ data, index }) => {
   const { title, description, technologies, liveUrl, repoUrl } = data;
 
   return (
-    <article className={s.projectCard}>
+    <motion.article
+      className={s.projectCard}
+      {...fadeInOnViewMotionProps({
+        visibilityThreshold: 0.6,
+        delay: index * 0.1,
+      })}
+    >
       <header>
         <div className={s.projectTop}>
           <SvgIcon name="folder" />
@@ -53,7 +63,7 @@ const ProjectCard = ({ data }) => {
           ))}
         </ul>
       </footer>
-    </article>
+    </motion.article>
   );
 };
 

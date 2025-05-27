@@ -5,8 +5,8 @@ import ProjectCard from "./ProjectCard/ProjectCard";
 const OtherProjects = () => {
   return (
     <div className={s.otherProjects}>
-      {OTHER_PROJECTS_DATA.map((projectData) => (
-        <ProjectCard key={projectData.id} data={projectData} />
+      {OTHER_PROJECTS_DATA.map((projectData, index) => (
+        <ProjectCard key={projectData.id} data={projectData} index={index} />
       ))}
     </div>
   );
