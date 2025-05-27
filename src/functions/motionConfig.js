@@ -1,7 +1,7 @@
 import { NAV_LINKS } from "@/data/staticData";
 
 export function heroMotionConfig() {
-  const initial = { opacity: 0, y: 20 };
+  const initial = { opacity: 0, y: 30 };
   const animate = { opacity: 1, y: 0 };
 
   function getStaggeredTransition(addBy = 0.1) {
@@ -19,7 +19,7 @@ export function heroMotionConfig() {
     };
   }
 
-  const transition = getStaggeredTransition(0.1);
+  const transition = getStaggeredTransition(0.15);
 
   return {
     initial,
@@ -30,8 +30,8 @@ export function heroMotionConfig() {
 
 export function fixedItemsMotionProps() {
   return {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.2, delay: 2 },
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+    transition: { duration: 0.2, delay: 2.5 },
   };
 }
