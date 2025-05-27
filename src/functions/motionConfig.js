@@ -43,3 +43,12 @@ export function navLinkMotionProps(index) {
     transition: { duration: 0.4, delay: index * 0.1 },
   };
 }
+
+export function fadeInOnViewMotionProps(visibilityThreshold = 0.7) {
+  return {
+    initial: { opacity: 0, y: 30 },
+    whileInView: { opacity: 1, y: 0 },
+    transition: { duration: 0.3 },
+    viewport: { once: true, visibilityThreshold },
+  };
+}

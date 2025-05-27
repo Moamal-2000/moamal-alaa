@@ -1,10 +1,18 @@
+"use client";
+
 import NumberedHeading from "@/components/Shared/NumberedHeading/NumberedHeading";
+import { fadeInOnViewMotionProps } from "@/functions/motionConfig";
+import { motion } from "motion/react";
 import s from "./AboutSection.module.scss";
 import TechList from "./TechList/TechList";
 
 const AboutSection = () => {
   return (
-    <section className={s.aboutSection} id="about">
+    <motion.section
+      className={s.aboutSection}
+      id="about"
+      {...fadeInOnViewMotionProps()}
+    >
       <NumberedHeading title="About" number="01" />
 
       <div className={s.content}>
@@ -29,7 +37,7 @@ const AboutSection = () => {
       </div>
 
       <TechList />
-    </section>
+    </motion.section>
   );
 };
 
