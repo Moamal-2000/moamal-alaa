@@ -3,11 +3,10 @@ import ContactSection from "@/components/Home/ContactSection/ContactSection";
 import HeroSection from "@/components/Home/HeroSection/HeroSection";
 import OtherProjectsSection from "@/components/Home/OtherProjectsSection/OtherProjectsSection";
 import ProjectsSection from "@/components/Home/ProjectsSection/ProjectsSection";
-import s from "./page.module.scss";
 
 export default function Home() {
   return (
-    <main className={s.home}>
+    <main>
       <HeroSection />
       <AboutSection />
       <ProjectsSection />
