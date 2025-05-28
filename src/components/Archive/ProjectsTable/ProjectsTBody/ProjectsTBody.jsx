@@ -1,5 +1,9 @@
+"use client";
+
 import SvgIcon from "@/components/Shared/SvgIcon";
 import { OTHER_PROJECTS_DATA } from "@/data/otherProjects";
+import { fadeInOnViewMotionProps } from "@/functions/motionConfig";
+import { motion } from "motion/react";
 import s from "./ProjectsTBody.module.scss";
 
 const ProjectsTBody = () => {
@@ -7,7 +11,12 @@ const ProjectsTBody = () => {
     <tbody className={s.tbody}>
       {OTHER_PROJECTS_DATA.map(
         ({ id, year, title, technologies, liveUrl, repoUrl }) => (
-          <tr key={id}>
+          <motion.tr
+            key={id}
+            {...fadeInOnViewMotionProps({
+              duration: 0.4,
+            })}
+          >
             <td className={s.year}>{year}</td>
             <td className={s.title}>{title}</td>
             <td className={`${s.tech} ${s.hideOnMobile}`}>
@@ -43,7 +52,7 @@ const ProjectsTBody = () => {
                 </a>
               )}
             </td>
-          </tr>
+          </motion.tr>
         )
       )}
     </tbody>
