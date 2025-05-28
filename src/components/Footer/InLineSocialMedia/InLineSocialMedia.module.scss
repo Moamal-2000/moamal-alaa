@@ -15,11 +15,12 @@
 
 .socialMedia a {
   display: inline-block;
-  position: relative;
   padding: 10px;
+  outline-offset: -5px;
   transition: translate .25s var(--ease-main),
     color .25s var(--ease-main),
-    outline .1s var(--ease-main);
+    outline .1s var(--ease-main),
+    outline-offset .1s var(--ease-main);
 
   &:hover {
     translate: 0 -3px;
@@ -28,6 +29,7 @@
   &:focus-visible {
     color: #64ffda;
     outline: solid 2px #64ffda;
+    outline-offset: -2px;
   }
 }
 
@@ -42,7 +44,6 @@
 .socialMedia a svg {
   width: 20px;
   height: 20px;
-  fill: none;
   transition:
     fill .25s var(--ease-main),
     stroke .25s var(--ease-main);

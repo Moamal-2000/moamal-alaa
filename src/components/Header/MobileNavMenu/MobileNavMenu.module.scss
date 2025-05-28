@@ -11,9 +11,8 @@
   height: 100dvh;
   outline: 0;
   background-color: #112240;
-  box-shadow: -10px 0px 30px -15px rgba(2, 12, 27, .7);
+  box-shadow: -10px 0 30px -15px rgba(2, 12, 27, .7);
   z-index: 9;
-  transform: translateX(0vw);
   visibility: visible;
   transition: right .25s var(--ease-main);
 

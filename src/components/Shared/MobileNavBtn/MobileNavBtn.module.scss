@@ -43,8 +43,7 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  transition:
-    background-color .25s var(--ease-main);
+  transition: background-color .25s var(--ease-main);
 }
 
 .mobileNavBtn:where(:hover, .active) .icon {

@@ -27,8 +27,8 @@
 .techList li {
   position: relative;
   color: var(--main-text-color);
-  font-size: .85rem;
   font-family: var(--font-mono);
+  font-size: .85rem;
   text-wrap: nowrap;
   padding: 10px 8px;
   border-radius: 3px;
@@ -97,13 +97,13 @@
   position: absolute;
   left: 0;
   top: 120%;
-  scale: .98;
   pointer-events: auto;
   user-select: text;
   z-index: 20;
   pointer-events: none;
   visibility: hidden;
   opacity: 0;
+  scale: .98;
   transition: opacity .2s, scale .1s;
 }
 

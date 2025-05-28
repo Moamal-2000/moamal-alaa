@@ -1,10 +1,10 @@
 @use "@/styles/mixins" as m;
 
 .fixedEmail {
-  width: 40px;
   position: fixed;
   bottom: 0;
   right: 40px;
+  width: 40px;
   z-index: 10;
   color: #a8b2d1;
   display: flex;
@@ -34,7 +34,6 @@
   font-size: .75rem;
   line-height: 18px;
   letter-spacing: .1em;
-  -webkit-writing-mode: vertical-rl;
   writing-mode: vertical-rl;
   outline-offset: -2px;
   transition:

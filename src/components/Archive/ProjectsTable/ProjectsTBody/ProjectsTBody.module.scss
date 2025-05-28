@@ -86,9 +86,7 @@
 }
 
 .tbody tr td.links .wrapper a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include m.center-x-y;
   flex-shrink: 0;
   transition: outline-color .25s var(--ease-main);
 
