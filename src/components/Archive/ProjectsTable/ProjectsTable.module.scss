@@ -20,28 +20,3 @@
   width: 100%;
   border-collapse: collapse;
 }
-
-.table thead tr th {
-  padding-left: 20px;
-  padding: 10px;
-  text-align: left;
-  font-size: 1.2rem;
-}
-
-@include m.very-small {
-  .table thead tr th {
-    font-size: 1rem;
-  }
-}
-
-.table thead tr th:first-child,
-.table thead tr th:last-child {
-  padding-left: 20px;
-}
-
-@include m.very-small {
-  .table thead tr th:first-child,
-  .table thead tr th:last-child {
-    padding-left: 10px;
-  }
-}
