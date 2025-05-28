@@ -30,27 +30,29 @@ const ProjectsTBody = () => {
               ))}
             </td>
             <td className={s.links}>
-              {liveUrl && (
-                <a
-                  href={liveUrl}
-                  title="Live"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <SvgIcon name="live" />
-                </a>
-              )}
+              <div className={s.wrapper}>
+                {liveUrl && (
+                  <a
+                    href={liveUrl}
+                    title="Live"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <SvgIcon name="live" />
+                  </a>
+                )}
 
-              {repoUrl && (
-                <a
-                  href={liveUrl}
-                  title="Github"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <SvgIcon name="github" />
-                </a>
-              )}
+                {repoUrl && (
+                  <a
+                    href={liveUrl}
+                    title="Github"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <SvgIcon name="github" />
+                  </a>
+                )}
+              </div>
             </td>
           </motion.tr>
         )

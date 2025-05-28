@@ -69,10 +69,10 @@
 
 .tbody tr td.tech>span .separator {
   display: inline-block;
-  margin: 0px 5px;
+  margin-inline: 5px;
 }
 
-.tbody tr td.links {
+.tbody tr td.links .wrapper {
   padding-right: 20px;
   display: flex;
   align-items: center;
@@ -80,12 +80,12 @@
 }
 
 @include m.very-small {
-  .tbody tr td.links {
+  .tbody tr td.links .wrapper {
     padding-inline: 10px;
   }
 }
 
-.tbody tr td.links a {
+.tbody tr td.links .wrapper a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,18 +98,18 @@
   }
 }
 
-.tbody tr td.links a>svg {
+.tbody tr td.links .wrapper>a>svg {
   width: 20px;
   height: 20px;
   transition: stroke .25s var(--ease-main);
 }
 
-.tbody tr td.links a:where(:hover, :focus-visible)>svg {
+.tbody tr td.links .wrapper>a:where(:hover, :focus-visible)>svg {
   stroke: #64ffda;
 }
 
 @include m.very-small {
-  .tbody tr td.links a>svg {
+  .tbody tr td.links .wrapper>a>svg {
     width: 18px;
     height: 18px;
   }

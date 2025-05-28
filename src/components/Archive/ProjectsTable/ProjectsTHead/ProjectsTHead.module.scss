@@ -1,5 +1,11 @@
 @use "@/styles/mixins" as m;
 
+@include m.medium {
+  .hideOnMobile {
+    display: none;
+  }
+}
+
 .thead tr th {
   padding-left: 20px;
   padding: 10px;
@@ -13,15 +19,21 @@
   }
 }
 
-.thead tr th:first-child,
-.thead tr th:last-child {
+.thead tr th:first-child {
   padding-left: 20px;
 }
 
-@include m.very-small {
+.thead tr th:last-child {
+  padding-right: 20px;
+}
 
-  .thead tr th:first-child,
-  .thead tr th:last-child {
+@include m.very-small {
+  .thead tr th:first-child {
     padding-left: 10px;
+  }
+
+  .thead tr th:last-child {
+    padding-right: 10px;
+    text-align: center;
   }
 }
