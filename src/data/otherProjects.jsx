@@ -22,16 +22,6 @@ export const OTHER_PROJECTS_DATA = [
     id: 2,
   },
   {
-    title: "Static Country Info App",
-    description:
-      "A static website that allows users to search and view details about countries. Note: the data is not updated in real-time and remains static.",
-    year: "2023",
-    liveUrl: "https://moamal-2000.github.io/rest-api-countries",
-    repoUrl: "https://github.com/Moamal-2000/rest-api-countries",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    id: 3,
-  },
-  {
     title: "Superado Landing Page",
     description:
       "A single-page site designed to introduce the Superado brand. Additional sections like About and Jobs are planned but not yet implemented.",
@@ -39,7 +29,7 @@ export const OTHER_PROJECTS_DATA = [
     liveUrl: "https://superado-landing.netlify.app",
     repoUrl: "https://github.com/Moamal-2000/superado-landing",
     technologies: ["React", "Vite", "Sass"],
-    id: 4,
+    id: 3,
   },
   {
     title: "Custom React Hooks Library",
@@ -49,7 +39,7 @@ export const OTHER_PROJECTS_DATA = [
     liveUrl: "https://hooks-time.netlify.app",
     repoUrl: "https://github.com/Moamal-2000/custom-hooks",
     technologies: ["React", "PWA", "JSZip", "syntax highlighter"],
-    id: 5,
+    id: 4,
   },
   {
     title: "Call of Duty 2 – Jumpers Heaven Statistics Website",
@@ -58,7 +48,7 @@ export const OTHER_PROJECTS_DATA = [
         A dynamic website that displays real-time statistics for Call of Duty 2
         players on{" "}
         <AnchorLink
-          href="https://jumpersheaven.com/"
+          href="https://jumpersheaven.com"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -72,6 +62,6 @@ export const OTHER_PROJECTS_DATA = [
     liveUrl: "https://jh-leaderboard.netlify.app",
     repoUrl: "https://github.com/Moamal-2000/JHLeaderboard",
     technologies: ["Next.js", "MessagePack", "Sass", "Redux Toolkit"],
-    id: 6,
+    id: 5,
   },
 ].reverse();
