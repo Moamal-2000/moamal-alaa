@@ -4,6 +4,7 @@ import { fadeInOnViewMotionProps } from "@/functions/motionConfig";
 import { motion } from "framer-motion";
 import s from "./ProjectsTable.module.scss";
 import ProjectsTBody from "./ProjectsTBody/ProjectsTBody";
+import ProjectsTHead from "./ProjectsTHead/ProjectsTHead";
 
 const ProjectsTable = () => {
   return (
@@ -22,6 +23,7 @@ const ProjectsTable = () => {
           </tr>
         </motion.thead>
 
+        <ProjectsTHead />
         <ProjectsTBody />
       </table>
     </div>
