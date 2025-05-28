@@ -2,7 +2,10 @@
 
 import { DEBOUNCE_DELAY, SCROLL_THRESHOLD } from "@/data/constants";
 import { NAV_LINKS } from "@/data/staticData";
-import { navLinkMotionProps } from "@/functions/motionConfig";
+import {
+  fadeInOnViewMotionProps,
+  navLinkMotionProps,
+} from "@/functions/motionConfig";
 import useScrollDirection from "@/hooks/helper/useScrollDirection";
 import useGlobalStore from "@/stores/global/useGlobalStore";
 import { motion } from "motion/react";
@@ -68,7 +71,10 @@ const Header = () => {
 
   return (
     <header className={headerClasses} onClick={handleHeaderClick}>
-      <nav className={s.navLinks}>
+      <motion.nav
+        className={s.navLinks}
+        {...fadeInOnViewMotionProps({ initialY: 0 })}
+      >
         <Link className={s.logo} href="/" aria-label="Go to homepage">
           <SvgIcon name="logo" />
         </Link>
@@ -85,7 +91,7 @@ const Header = () => {
             </Link>
           </motion.div>
         </div>
-      </nav>
+      </motion.nav>
     </header>
   );
 };
