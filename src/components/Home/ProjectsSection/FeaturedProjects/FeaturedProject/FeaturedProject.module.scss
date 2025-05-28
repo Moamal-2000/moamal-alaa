@@ -168,6 +168,7 @@
 }
 
 .content .techList li {
+  -webkit-tap-highlight-color: transparent;
   padding: 6px 13px;
   border-radius: 20px;
   font-family: var(--font-mono);
@@ -226,6 +227,7 @@
 }
 
 .content .projectLinks a {
+  -webkit-tap-highlight-color: transparent;
   display: flex;
   gap: 8px;
   color: #ccd6f6;
@@ -257,6 +259,7 @@
 }
 
 .featuredProject .previewImg {
+  -webkit-tap-highlight-color: transparent;
   border-radius: 6px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, .3);
   cursor: pointer;

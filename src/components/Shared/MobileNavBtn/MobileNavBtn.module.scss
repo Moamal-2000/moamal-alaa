@@ -1,6 +1,7 @@
 @use "@/styles/mixins" as m;
 
 .mobileNavBtn {
+  -webkit-tap-highlight-color: transparent;
   background-color: transparent;
   border: none;
   width: 36px;
