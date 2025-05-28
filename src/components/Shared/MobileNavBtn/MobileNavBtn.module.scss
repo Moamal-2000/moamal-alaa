@@ -12,8 +12,8 @@
   outline: dashed 0 #ccd6f6;
   outline-offset: 0;
   transition:
-    outline .1s cubic-bezier(.645, .045, .355, 1),
-    outline-offset .1s cubic-bezier(.645, .045, .355, 1);
+    outline .1s var(--ease-main),
+    outline-offset .1s var(--ease-main);
 
   &.move.active {
     right: 10px;
@@ -44,7 +44,7 @@
   bottom: 0;
   right: 0;
   transition:
-    background-color .25s cubic-bezier(.645, .045, .355, 1);
+    background-color .25s var(--ease-main);
 }
 
 .mobileNavBtn:where(:hover, .active) .icon {

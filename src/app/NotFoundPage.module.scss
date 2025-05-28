@@ -34,9 +34,9 @@
   margin-top: 40px;
   position: relative;
   transition:
-    color .25s cubic-bezier(.645, .045, .355, 1),
-    box-shadow .25s cubic-bezier(.645, .045, .355, 1),
-    background .25s cubic-bezier(.645, .045, .355, 1);
+    color .25s var(--ease-main),
+    box-shadow .25s var(--ease-main),
+    background .25s var(--ease-main);
 
   &:hover {
     color: var(--website-bg);

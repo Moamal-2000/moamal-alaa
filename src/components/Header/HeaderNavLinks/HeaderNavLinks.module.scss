@@ -20,8 +20,8 @@
   position: relative;
   padding: 10px;
   transition:
-    color .25s cubic-bezier(.645, .045, .355, 1),
-    outline .1s cubic-bezier(.645, .045, .355, 1);
+    color .25s var(--ease-main),
+    outline .1s var(--ease-main);
 
   &:hover {
     color: #64ffda;

@@ -13,9 +13,9 @@
   background-color: rgba(10, 25, 47, .85);
   backdrop-filter: blur(10px);
   transition:
-    translate .25s cubic-bezier(.645, .045, .355, 1),
-    box-shadow .25s cubic-bezier(.645, .045, .355, 1),
-    height .25s cubic-bezier(.645, .045, .355, 1);
+    translate .25s var(--ease-main),
+    box-shadow .25s var(--ease-main),
+    height .25s var(--ease-main);
 
   &.active {
     height: 70px;
@@ -77,7 +77,7 @@
   z-index: 2;
   opacity: 0;
   background: linear-gradient(120deg, transparent 40%, rgba(255, 255, 255, .53) 50%, transparent 60%);
-  transition: opacity .18s cubic-bezier(.645, .045, .355, 1);
+  transition: opacity .18s var(--ease-main);
 }
 
 .header .navLinks .logo:focus-visible::before,
@@ -109,11 +109,11 @@
   font-size: .8rem;
   user-select: none;
   transition:
-    color .2s cubic-bezier(0.645, 0.045, 0.355, 1),
-    background-color .2s cubic-bezier(0.645, 0.045, 0.355, 1),
-    border-color .2s cubic-bezier(0.645, 0.045, 0.355, 1),
-    box-shadow .2s cubic-bezier(0.645, 0.045, 0.355, 1),
-    outline .1s cubic-bezier(.645, .045, .355, 1);
+    color .2s var(--ease-main),
+    background-color .2s var(--ease-main),
+    border-color .2s var(--ease-main),
+    box-shadow .2s var(--ease-main),
+    outline .1s var(--ease-main);
 
   &:hover {
     background-color: #64ffda;

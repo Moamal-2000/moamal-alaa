@@ -36,10 +36,10 @@
   position: relative;
   padding: 10px;
   outline-offset: -5px;
-  transition: translate .25s cubic-bezier(.645, .045, .355, 1),
-    color .25s cubic-bezier(.645, .045, .355, 1),
-    outline .1s cubic-bezier(.645, .045, .355, 1),
-    outline-offset .1s cubic-bezier(.645, .045, .355, 1);
+  transition: translate .25s var(--ease-main),
+    color .25s var(--ease-main),
+    outline .1s var(--ease-main),
+    outline-offset .1s var(--ease-main);
 
   &:hover,
   &:focus-visible {
@@ -70,8 +70,8 @@
   height: 20px;
   fill: none;
   transition:
-    fill .25s cubic-bezier(0.645, 0.045, 0.355, 1),
-    stroke .25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    fill .25s var(--ease-main),
+    stroke .25s var(--ease-main);
 
   &[data-type=twitter] {
     fill: #a8b2d1;

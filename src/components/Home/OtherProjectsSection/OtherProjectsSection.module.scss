@@ -37,8 +37,8 @@
   background-color: #64ffda;
   opacity: .5;
   transition:
-    width .25s cubic-bezier(.645, .045, .355, 1),
-    opacity .25s .2s cubic-bezier(.645, .045, .355, 1);
+    width .25s var(--ease-main),
+    opacity .25s .2s var(--ease-main);
 }
 
 .projectsSection .viewArchiveBtn:where(:hover, :focus-visible)::after {

@@ -12,7 +12,7 @@
   top: 0;
   left: -999px;
   z-index: -99;
-  transition: left .25s cubic-bezier(.645, .045, .355, 1);
+  transition: left .25s var(--ease-main);
 
   &:focus {
     left: 0;

@@ -18,8 +18,8 @@
   background-color: #64ffda;
   opacity: .5;
   transition:
-    width .25s cubic-bezier(.645, .045, .355, 1),
-    opacity .25s .15s cubic-bezier(.645, .045, .355, 1);
+    width .25s var(--ease-main),
+    opacity .25s .15s var(--ease-main);
 }
 
 .link:where(:hover, :focus-visible)::after {

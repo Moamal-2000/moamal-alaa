@@ -189,7 +189,7 @@
   padding: 13px 32px;
   box-shadow: 0 4px 15px rgba(100, 255, 218, .2);
   overflow: hidden;
-  transition: outline .1s cubic-bezier(.645, .045, .355, 1);
+  transition: outline .1s var(--ease-main);
 
   &:hover,
   &:focus-visible {
@@ -228,7 +228,7 @@
   border: 1px solid var(--main-text-color);
   box-shadow: 0 4px 10px rgba(136, 146, 176, .1);
   transition:
-    outline .1s cubic-bezier(.645, .045, .355, 1),
+    outline .1s var(--ease-main),
     color .3s ease,
     border-color .3s ease,
     box-shadow .3s ease;

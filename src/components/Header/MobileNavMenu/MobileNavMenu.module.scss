@@ -15,7 +15,7 @@
   z-index: 9;
   transform: translateX(0vw);
   visibility: visible;
-  transition: right .25s cubic-bezier(.645, .045, .355, 1);
+  transition: right .25s var(--ease-main);
 
   &.active {
     right: 0;
@@ -52,7 +52,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  transition: color .25s cubic-bezier(.645, .045, .355, 1);
+  transition: color .25s var(--ease-main);
 
   &:hover {
     color: #64ffda;
@@ -79,9 +79,9 @@
   margin: 10% auto 0;
   width: max-content;
   transition:
-    color .25s cubic-bezier(.645, .045, .355, 1),
-    background-color .25s cubic-bezier(.645, .045, .355, 1),
-    box-shadow .25s cubic-bezier(.645, .045, .355, 1);
+    color .25s var(--ease-main),
+    background-color .25s var(--ease-main),
+    box-shadow .25s var(--ease-main);
 
   &:hover {
     background-color: #64ffda;

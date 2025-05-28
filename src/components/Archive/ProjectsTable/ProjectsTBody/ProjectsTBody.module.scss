@@ -90,7 +90,7 @@
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  transition: outline-color .25s cubic-bezier(.645, .045, .355, 1);
+  transition: outline-color .25s var(--ease-main);
 
   &:focus-visible {
     outline: 2px solid #64ffda;
@@ -101,7 +101,7 @@
 .tbody tr td.links a>svg {
   width: 20px;
   height: 20px;
-  transition: stroke .25s cubic-bezier(.645, .045, .355, 1);
+  transition: stroke .25s var(--ease-main);
 }
 
 .tbody tr td.links a:where(:hover, :focus-visible)>svg {
