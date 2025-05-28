@@ -1,6 +1,6 @@
 @use "@/styles/mixins" as m;
 
-.table thead tr th {
+.thead tr th {
   padding-left: 20px;
   padding: 10px;
   text-align: left;
@@ -8,20 +8,20 @@
 }
 
 @include m.very-small {
-  .table thead tr th {
+  .thead tr th {
     font-size: 1rem;
   }
 }
 
-.table thead tr th:first-child,
-.table thead tr th:last-child {
+.thead tr th:first-child,
+.thead tr th:last-child {
   padding-left: 20px;
 }
 
 @include m.very-small {
 
-  .table thead tr th:first-child,
-  .table thead tr th:last-child {
+  .thead tr th:first-child,
+  .thead tr th:last-child {
     padding-left: 10px;
   }
 }

@@ -6,7 +6,10 @@ import s from "./ProjectsTHead.module.scss";
 
 const ProjectsTHead = () => {
   return (
-    <motion.thead {...fadeInOnViewMotionProps({ duration: 0.4 })}>
+    <motion.thead
+      className={s.thead}
+      {...fadeInOnViewMotionProps({ duration: 0.4 })}
+    >
       <tr>
         <th>Year</th>
         <th>Title</th>

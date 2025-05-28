@@ -29,10 +29,10 @@ body {
   width: 100%;
   margin: 0 auto;
   position: relative;
-}
 
-body.noScroll {
-  overflow: hidden;
+  &.noScroll {
+    overflow: hidden;
+  }
 }
 
 body::-webkit-scrollbar {
