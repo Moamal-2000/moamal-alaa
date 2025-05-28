@@ -35,17 +35,21 @@
   display: inline-block;
   position: relative;
   padding: 10px;
+  outline-offset: -5px;
   transition: translate .25s cubic-bezier(.645, .045, .355, 1),
     color .25s cubic-bezier(.645, .045, .355, 1),
-    outline .1s cubic-bezier(.645, .045, .355, 1);
+    outline .1s cubic-bezier(.645, .045, .355, 1),
+    outline-offset .1s cubic-bezier(.645, .045, .355, 1);
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     translate: 0 -3px;
   }
 
   &:focus-visible {
     color: #64ffda;
     outline: solid 2px #64ffda;
+    outline-offset: -2px;
   }
 }
 
