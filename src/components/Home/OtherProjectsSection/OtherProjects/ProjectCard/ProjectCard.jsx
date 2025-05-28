@@ -12,8 +12,8 @@ const ProjectCard = ({ data, index }) => {
     <motion.article
       className={s.projectCard}
       {...fadeInOnViewMotionProps({
-        visibilityThreshold: 0.6,
         delay: index * 0.1,
+        duration: 0.4,
       })}
     >
       <header>
