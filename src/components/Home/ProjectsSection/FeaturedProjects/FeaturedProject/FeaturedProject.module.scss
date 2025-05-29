@@ -309,6 +309,13 @@
   filter: grayscale(100%) contrast(2) brightness(90%);
 }
 
+@include m.small {
+  .featuredProject:hover .previewImg::before {
+    mix-blend-mode: screen;
+    filter: grayscale(100%) contrast(2) brightness(90%);
+  }
+}
+
 .featuredProject .previewImg img {
   filter: grayscale(100%) brightness(.9);
   transition: filter .1s .1s cubic-bezier(.4, 0, .2, 1);
