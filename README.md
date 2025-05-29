@@ -85,3 +85,10 @@ npm run start
 | Slate       | ![#8892b0](https://placehold.co/1x1/8892b0/8892b0.png) `#8892b0` |
 | White       | ![#e6f1ff](https://placehold.co/1x1/e6f1ff/e6f1ff.png) `#e6f1ff` |
 | Green       | ![#64ffda](https://placehold.co/1x1/64ffda/64ffda.png) `#64ffda` |
+
+## 2. Fonts
+
+| Font                                                 | Weights                                |
+| ---------------------------------------------------- | -------------------------------------- |
+| [Calibre](https://befonts.com/calibre-font-family.html)     | Light, Medium, Regular, SemiBold |
+| [SFMono](https://font.download/font/sf-mono)     | Medium, Regular, SemiBold |
