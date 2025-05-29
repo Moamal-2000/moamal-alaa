@@ -39,7 +39,10 @@ Thanks for understanding!
 
    ```bash
    git clone git@github.com:Moamal-2000/moamal-alaa.git
+   ```
 
+   Navigate into the project directory:
+   ```bash
    cd moamal-alaa
    ```
 
@@ -78,7 +81,7 @@ npm run start
 
 ## Colors & Fonts
 
-<table border="0">
+<table>
   <tr>
     <td>
 
