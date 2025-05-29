@@ -73,6 +73,7 @@ npm run start
 
 - `About` – A brief introduction about me and the technologies I work with.
 - `Projects` – A few cool things I've built, plus what I used to build them.
+- `Archive` – A list of other noteworthy projects I’ve worked on over the years.
 - `Contact` – Want to say hi? Here's how to reach me!
 
 ## Color Palette
