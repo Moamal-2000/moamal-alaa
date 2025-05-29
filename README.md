@@ -78,7 +78,7 @@ npm run start
 
 ## Colors & Fonts
 
-<table>
+<table border="0">
   <tr>
     <td>
 
