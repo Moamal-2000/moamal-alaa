@@ -32,12 +32,7 @@ const HeroSection = () => {
           and accessible websites that leave a lasting impression.
         </motion.p>
 
-        <motion.div
-          className={s.buttons}
-          initial={initial}
-          animate={animate}
-          transition={transition()}
-        >
+        <motion.div className={s.buttons} {...motionProps()}>
           <a href="#projects" className={s.viewWorkBtn}>
             View my work
           </a>
