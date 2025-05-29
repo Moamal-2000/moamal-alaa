@@ -2,12 +2,16 @@
   My Personal Portfolio
 </h1>
 
-<p align="center" style="width: 500px; margin: 0 auto; font-size: 18px">
-  A sleek and modern portfolio website built with <a href="https://nextjs.org" target="_blank">Next.js</a> to showcase my front-end development work, skills, and resume.
+<p align="center">
+<strong>
+  A sleek and modern portfolio website built with <a href="https://nextjs.org" target="_blank">Next.js</a> to <br/> showcase my front-end development work, skills, and resume.
+</strong>
 </p>
 
-<p align="center" style="font-size: 18px">
+<p align="center">
+<strong>
   Designed by <a href="https://www.linkedin.com/in/bchiang7" target="_blank">Brittany Chiang</a> · Built by <a href="https://www.linkedin.com/in/moamal-alaa" target="_blank">Moamal Alaa</a>
+</strong>
 </p>
 
 <br/>
@@ -73,8 +77,8 @@ npm run start
 
 ## Color Palette
 
-| Color       | Hex Code  |
-| ----------- | --------- |
+| Color       | Hex Code                                                         |
+| ----------- | ---------------------------------------------------------------- |
 | Navy        | ![#0a192f](https://placehold.co/1x1/0a192f/0a192f.png) `#0a192f` |
 | Accent Blue | ![#233554](https://placehold.co/1x1/233554/233554.png) `#233554` |
 | Slate       | ![#8892b0](https://placehold.co/1x1/8892b0/8892b0.png) `#8892b0` |
