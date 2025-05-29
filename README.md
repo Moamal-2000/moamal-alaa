@@ -2,11 +2,11 @@
   My Personal Portfolio
 </h1>
 
-<p align="center">
+<p align="center" style="width: 500px; margin: 0 auto; font-size: 18px">
   A sleek and modern portfolio website built with <a href="https://nextjs.org" target="_blank">Next.js</a> to showcase my front-end development work, skills, and resume.
 </p>
 
-<p align="center">
+<p align="center" style="font-size: 18px">
   Designed by <a href="https://www.linkedin.com/in/bchiang7" target="_blank">Brittany Chiang</a> · Built by <a href="https://www.linkedin.com/in/moamal-alaa" target="_blank">Moamal Alaa</a>
 </p>
 
@@ -25,9 +25,9 @@ Thanks for understanding!
 ## Tech Stack
 
 - **Framework:** [Next.js](https://nextjs.org/)
-- **Styling:** SCSS (Sass)
-- **State Management:** Zustand
-- **Animations:** CSS Transitions
+- **Styling:** [SCSS (Sass)](https://sass-lang.com)
+- **State Management:** [Zustand](https://zustand-demo.pmnd.rs)
+- **Animations:** [Framer Motion](https://motion.dev)
 
 ## Installation & Setup
 
@@ -36,7 +36,7 @@ Thanks for understanding!
    ```bash
    git clone git@github.com:Moamal-2000/moamal-alaa.git
 
-   cd portfolio
+   cd moamal-alaa
    ```
 
 2. **Install dependencies**
@@ -67,16 +67,16 @@ npm run start
 
 ## Project Sections
 
-- `About` – A short introduction and Technologies.
-- `Projects` – Featured and side projects with descriptions and technologies used.
-- `Contact` – A contact section for opportunities.
+- `About` – A brief introduction about me and the technologies I work with.
+- `Projects` – A few cool things I've built, plus what I used to build them.
+- `Contact` – Want to say hi? Here's how to reach me!
 
 ## Color Palette
 
 | Color       | Hex Code  |
 | ----------- | --------- |
-| Navy        | `#0a192f` |
-| Slate       | `#8892b0` |
-| Green       | `#64ffda` |
-| White       | `#e6f1ff` |
-| Accent Blue | `#233554` |
+| Navy        | ![#0a192f](https://placehold.co/1x1/0a192f/0a192f.png) `#0a192f` |
+| Accent Blue | ![#233554](https://placehold.co/1x1/233554/233554.png) `#233554` |
+| Slate       | ![#8892b0](https://placehold.co/1x1/8892b0/8892b0.png) `#8892b0` |
+| White       | ![#e6f1ff](https://placehold.co/1x1/e6f1ff/e6f1ff.png) `#e6f1ff` |
+| Green       | ![#64ffda](https://placehold.co/1x1/64ffda/64ffda.png) `#64ffda` |
