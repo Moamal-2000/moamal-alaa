@@ -64,4 +64,14 @@ export const OTHER_PROJECTS_DATA = [
     technologies: ["Next.js", "MessagePack", "Sass", "Redux Toolkit"],
     id: 5,
   },
+  {
+    title: "CSS Arts Gallery",
+    description:
+      "A personal gallery of creative CSS-based visual artworks built during my front-end learning journey. Each piece explores animations, shapes, and UI tricks using CSS (and sometimes JavaScript) to push the limits of what's possible in the browser.",
+    year: "2025",
+    liveUrl: "https://css-arts-gallery.netlify.app",
+    repoUrl: "https://github.com/Moamal-2000/css-arts-gallery",
+    technologies: ["Next.js", "Sass"],
+    id: 6,
+  },
 ].reverse();
