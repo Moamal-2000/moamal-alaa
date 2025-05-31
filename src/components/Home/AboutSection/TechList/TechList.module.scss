@@ -6,6 +6,12 @@
   gap: 30px;
 }
 
+@include m.medium {
+  .wrapper {
+    flex-direction: column;
+  }
+}
+
 .techList {
   display: grid;
   grid-template-columns: repeat(2, auto);
@@ -107,8 +113,9 @@
   .infoBox {
     min-width: auto;
     max-width: auto;
+    min-height: 100px;
     width: calc(100vw - 30px);
-    top: 102%;
+    padding: 15px;
   }
 }
 
@@ -117,4 +124,10 @@
   font-size: 1.125rem;
   line-height: 1.3;
   font-weight: 400;
+}
+
+@include m.very-small {
+  .infoBox>p {
+    font-size: 1rem;
+  }
 }
