@@ -1,13 +1,17 @@
 @use "@/styles/mixins" as m;
 
+.wrapper {
+  margin-top: 20px;
+  display: flex;
+  gap: 30px;
+}
+
 .techList {
   display: grid;
   grid-template-columns: repeat(2, auto);
   gap: 1px 38px;
   list-style: none;
   width: fit-content;
-  margin-top: 20px;
-  position: relative;
   left: -8px;
 }
 
@@ -25,7 +29,7 @@
 }
 
 .techList li {
-  position: relative;
+  width: fit-content;
   color: var(--main-text-color);
   font-family: var(--font-mono);
   font-size: .85rem;
@@ -34,7 +38,8 @@
   border-radius: 3px;
   transition: color .1s ease;
 
-  &:hover {
+  &:hover,
+  &.active {
     color: #64ffda;
   }
 }
@@ -78,43 +83,28 @@
   }
 }
 
-.techList .infoBox {
+.infoBox {
   text-wrap: initial;
   min-width: 350px;
   max-width: 420px;
-  background-color: rgba(20, 42, 76, .7);
-  color: #e6f1ff;
-  border-radius: 6px;
-  padding: 14px 20px;
-  box-shadow: 0 4px 18px 0 rgba(20, 30, 40, .13);
-  border: 1px solid #64ffda;
-  font-family: var(--font-sans);
-  font-weight: 400;
-  letter-spacing: .01em;
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-  position: absolute;
-  left: 0;
-  top: 120%;
-  pointer-events: auto;
-  user-select: text;
-  z-index: 20;
-  pointer-events: none;
-  visibility: hidden;
-  opacity: 0;
-  scale: .98;
+  min-height: 140px;
+  color: #a8b2d1;
+  text-wrap: pretty;
+  background: #112240;
+  border: 1px solid #8892b0d6;
+  border-radius: 8px;
+  padding: 21px;
   transition: opacity .2s, scale .1s;
 }
 
 @include m.small {
-  .techList .infoBox {
+  .infoBox {
     min-width: 340px;
   }
 }
 
 @include m.very-small {
-  .techList .infoBox {
+  .infoBox {
     min-width: auto;
     max-width: auto;
     width: calc(100vw - 30px);
@@ -122,21 +112,9 @@
   }
 }
 
-.techList li:hover .infoBox {
-  visibility: visible;
-  opacity: 1;
-  scale: 1;
-}
-
-.techList .infoBox>b {
-  font-size: .95rem;
-  font-weight: 500;
-  color: #64ffda;
-  letter-spacing: .03em;
-}
-
-.techList .infoBox>p {
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 300;
+.infoBox>p {
+  color: #ccd6f6;
+  font-size: 1.125rem;
+  line-height: 1.3;
+  font-weight: 400;
 }
