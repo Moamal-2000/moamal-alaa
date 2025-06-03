@@ -1,0 +1,44 @@
+.offlinePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
+  background: var(--navy);
+  color: var(--slate);
+
+  h1 {
+    color: var(--lightest-slate);
+    margin-bottom: 1rem;
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+
+  p {
+    margin-bottom: 2rem;
+    font-size: clamp(1rem, 3vw, 1.25rem);
+  }
+
+  .icon {
+    font-size: 3rem;
+    animation: pulse 2s infinite;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

@@ -1,26 +1,21 @@
+import PWAInit from "@/components/PWA/PWAInit";
+import { METADATA } from "@/data/metadata";
 import "../styles/globals.scss";
 import RootProviders from "./RootProviders";
 
-export const metadata = {
-  title: "Moamal Alaa",
-  description:
-    "Moamal Alaa – Front-End Developer specializing in modern, responsive websites using React or Next.js. Passionate about clean UI, performance, and user-friendly design. Let's create something great together!",
-  keywords: [
-    "Moamal Alaa",
-    "Moamal Alaa CV",
-    "Moamal Alaa Resume",
-    "Front-End Developer",
-    "React Developer",
-    "Next.js Developer",
-    "React developer portfolio",
-    "Freelance Front-End Developer",
-    "Web Developer Iraq",
-    "Responsive Web Design",
-    "Modern UI",
-    "Portfolio",
-  ],
+export const metadata = METADATA;
+
+export const viewport = {
+  themeColor: "#012260",
+  viewport:
+    "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no",
 };
 
 export default function RootLayout({ children }) {
-  return <RootProviders>{children}</RootProviders>;
+  return (
+    <RootProviders>
+      {children}
+      <PWAInit />
+    </RootProviders>
+  );
 }
