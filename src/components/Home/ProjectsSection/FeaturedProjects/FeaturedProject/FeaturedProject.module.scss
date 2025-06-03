@@ -24,11 +24,32 @@
   }
 }
 
+@include m.very-small {
+  .featuredProject:hover {
+
+    & .description,
+    & .content .techList li {
+      color: #fff;
+    }
+
+    & .content .projectLinks a {
+      color: #fff;
+      border-color: rgba(255, 255, 255, .4);
+    }
+  }
+}
+
 .featuredProject .content {
   position: relative;
   grid-area: 1 / 1 / -1 / 7;
   z-index: 2;
   pointer-events: none;
+}
+
+@include m.large {
+  .featuredProject .content {
+    grid-area: 1 / 1 / -1 / 8;
+  }
 }
 
 @include m.small {
@@ -45,7 +66,7 @@
 
 @include m.very-small {
   .featuredProject .content {
-    padding: 25px;
+    padding: 16px;
   }
 }
 
@@ -73,7 +94,6 @@
   color: #ccd6f6;
   margin: 2px 0 16px;
   width: fit-content;
-
 }
 
 .content .projectHeader .title>a {
@@ -145,7 +165,7 @@
 
 @include m.large {
   .content .techList {
-    width: 320px;
+    width: 400px;
   }
 }
 
@@ -193,6 +213,7 @@
 @include m.very-small {
   .content .techList li {
     font-size: .8rem;
+    transition: none;
   }
 }
 
@@ -253,6 +274,23 @@
   }
 }
 
+@include m.very-small {
+  .featuredProject .content .projectLinks a {
+    transition: color 0s, border-color .3s ease, outline-color .3s ease;
+
+    &:hover {
+      color: #64ffda;
+      border-color: #64ffda;
+    }
+
+    &:focus-visible {
+      color: #64ffda;
+      outline-color: #64ffda;
+      outline-offset: -2px;
+    }
+  }
+}
+
 .content .projectLinks a svg {
   width: 15px;
   height: 15px;
@@ -276,6 +314,12 @@
   &:focus-visible {
     outline: solid 3px #64ffda;
     outline-offset: 3px;
+  }
+}
+
+@include m.large {
+  .featuredProject .previewImg {
+    grid-area: 1 / 6 / -1 / -1;
   }
 }
 
