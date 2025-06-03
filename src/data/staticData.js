@@ -34,9 +34,10 @@ export const SOCIAL_MEDIA = [
 export const FEATURED_PROJECTS = [
   {
     title: "E-Commercew",
-    description: `A full-featured e-commerce platform with user authentication, product catalog,
-      shopping cart, and admin dashboard. Built with modern web technologies for
-      optimal performance and user experience.`,
+    description: `A responsive and modern e-commerce web application built with React and Redux Toolkit. 
+    It supports multi-language functionality, a dynamic shopping cart, 
+    wishlist, product search, order tracking, and zoomable product details. Designed with a clean UI, 
+    optimized for SEO, and built as a Progressive Web App for an app-like experience across all devices`,
     technologies: [
       "React",
       "Sass",
