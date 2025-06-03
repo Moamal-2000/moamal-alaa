@@ -1,8 +1,7 @@
 {
   "name": "Moamal Alaa Portfolio",
   "short_name": "Moamal Alaa",
-  "description": "Moamal Alaa – Front-End Developer specializing in modern, responsive websites using React or Next.js",
-  "start_url": "/",
+  "description": "Install to access my portfolio anytime: fast loading, offline viewing, smooth navigation, and exclusive access to my latest projects and skills.",
   "display": "standalone",
   "background_color": "#112240",
   "theme_color": "#112240",
@@ -24,6 +23,20 @@
       "src": "/images/maskable-icon.webp",
       "sizes": "180x180",
       "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/install-app-image.webp",
+      "sizes": "1918x1078",
+      "type": "image/webp",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/install-app-image-mobile.webp",
+      "sizes": "455x751",
+      "type": "image/webp",
+      "form_factor": "narrow"
     }
   ]
 }
