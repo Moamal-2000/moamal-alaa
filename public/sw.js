@@ -1,4 +1,4 @@
-const CACHE_NAME = "moamal-alaa-v1";
+const CACHE_NAME = "moamal-alaa-v2";
 
 const urlsToCache = [
   "/",
