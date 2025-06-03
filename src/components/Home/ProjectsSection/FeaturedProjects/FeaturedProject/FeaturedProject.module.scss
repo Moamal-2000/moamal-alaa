@@ -22,9 +22,7 @@
     grid-template-columns: repeat(12, 1fr);
     direction: ltr;
   }
-}
 
-@include m.very-small {
   .featuredProject:hover {
 
     & .description,
@@ -129,6 +127,7 @@
   position: relative;
   text-wrap: pretty;
   pointer-events: all;
+  transition: color .3s .1s ease;
 }
 
 @include m.medium {
@@ -195,25 +194,20 @@
   font-size: .875rem;
   font-weight: 500;
   color: #a8b2d1;
-  cursor: pointer;
   pointer-events: all;
   transition: color .3s ease;
-
-  &:hover {
-    color: #64ffda;
-  }
 }
 
 @include m.small {
   .content .techList li {
     color: #ccd6f6;
+    transition: color .3s .1s ease;
   }
 }
 
 @include m.very-small {
   .content .techList li {
     font-size: .8rem;
-    transition: none;
   }
 }
 
@@ -274,9 +268,20 @@
   }
 }
 
-@include m.very-small {
+@include m.small {
   .featuredProject .content .projectLinks a {
-    transition: color 0s, border-color .3s ease, outline-color .3s ease;
+    transition:
+      color .3s .1s ease,
+      border-color .3s .1s ease,
+      outline-color .3s .1s ease;
+
+    &:hover,
+    &:focus-visible {
+      transition:
+        color .3s ease,
+        border-color .3s ease,
+        outline-color .3s ease;
+    }
 
     &:hover {
       color: #64ffda;
