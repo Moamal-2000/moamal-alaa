@@ -8,7 +8,7 @@ const urlsToCache = [
   "/resume.pdf",
   "/images/aster-information-project.webp",
   "/images/e-commercew-project.webp",
-  "/images/maskable-icon.webp",
+  "/PWA/icons/maskable-icon.webp",
 ];
 
 async function installServiceWorker() {

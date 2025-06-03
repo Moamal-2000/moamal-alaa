@@ -9,32 +9,32 @@
   "start_url": "/",
   "icons": [
     {
-      "src": "/images/maskable-icon.webp",
+      "src": "/PWA/icons/maskable-icon.webp",
       "sizes": "192x192",
       "type": "image/webp",
       "purpose": "any maskable"
     },
     {
-      "src": "/images/maskable-icon.webp",
+      "src": "/PWA/icons/maskable-icon.webp",
       "sizes": "512x512",
       "type": "image/webp",
       "purpose": "any"
     },
     {
-      "src": "/images/maskable-icon.webp",
+      "src": "/PWA/icons/maskable-icon.webp",
       "sizes": "180x180",
       "type": "image/webp"
     }
   ],
   "screenshots": [
     {
-      "src": "/install-app-image.webp",
+      "src": "/PWA/install-app-image.webp",
       "sizes": "1918x1078",
       "type": "image/webp",
       "form_factor": "wide"
     },
     {
-      "src": "/install-app-image-mobile.webp",
+      "src": "/PWA/install-app-image-mobile.webp",
       "sizes": "455x751",
       "type": "image/webp",
       "form_factor": "narrow"
