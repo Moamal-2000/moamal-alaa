@@ -64,6 +64,7 @@ async function cleanupOldCaches() {
 }
 
 self.addEventListener("install", (event) => {
+    self.skipWaiting();
   event.waitUntil(installServiceWorker());
 });
 
@@ -72,5 +73,6 @@ self.addEventListener("fetch", (event) => {
 });
 
 self.addEventListener("activate", (event) => {
+  clients.claim();
   event.waitUntil(cleanupOldCaches());
 });
