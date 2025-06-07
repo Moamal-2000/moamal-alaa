@@ -3,8 +3,8 @@
   "short_name": "Moamal Alaa",
   "description": "Install to access my portfolio anytime: fast loading, offline viewing, smooth navigation, and exclusive access to my latest projects and skills.",
   "display": "standalone",
-  "background_color": "#112240",
-  "theme_color": "#112240",
+  "background_color": "#012260",
+  "theme_color": "#012260",
   "orientation": "any",
   "start_url": "/",
   "icons": [
