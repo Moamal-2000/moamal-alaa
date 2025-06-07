@@ -1,11 +1,5 @@
-import s from "./InstallPWAButton.module.scss";
-
 const InstallPWAButton = () => {
-  return (
-    <button type="button" className={s.pwaButton}>
-      InstallPWAButton
-    </button>
-  );
+  return <button type="button">Install</button>;
 };
 
 export default InstallPWAButton;
