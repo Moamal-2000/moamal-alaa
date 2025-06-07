@@ -87,6 +87,22 @@
   }
 }
 
+.projectCard header .title>a .featured {
+  all: initial;
+  font-family: var(--font-mono);
+  display: inline-block;
+  color: #64ffda;
+  font-weight: 400;
+  font-size: .6rem;
+  margin-left: 10px;
+  border: 1px solid #64ffda;
+  border-radius: 10px;
+  padding: 4px 6px;
+  position: relative;
+  bottom: 2px;
+  pointer-events: none;
+}
+
 .projectCard header .description {
   color: #a8b2d1;
   font: 1.0625rem;

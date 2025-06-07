@@ -6,7 +6,8 @@ import { motion } from "framer-motion";
 import s from "./ProjectCard.module.scss";
 
 const ProjectCard = ({ data, index }) => {
-  const { title, description, technologies, liveUrl, repoUrl } = data;
+  const { title, description, technologies, liveUrl, repoUrl, isFeatured } =
+    data;
 
   return (
     <motion.article
@@ -48,6 +49,7 @@ const ProjectCard = ({ data, index }) => {
         <h3 className={s.title}>
           <a href={liveUrl || "#"} target="_blank" rel="noopener noreferrer">
             {title}
+            {isFeatured && <span className={s.featured}>Featured</span>}
           </a>
         </h3>
 
