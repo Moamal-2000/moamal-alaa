@@ -5,6 +5,7 @@ import { isMobile } from "@/functions/helper";
 import useGlobalStore from "@/stores/global/useGlobalStore";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
+import InstallPWAButton from "./InstallPWAButton/InstallPWAButton";
 import s from "./MobileNavMenu.module.scss";
 
 const MobileNavMenu = () => {
@@ -37,13 +38,17 @@ const MobileNavMenu = () => {
           })}
         </ol>
 
-        <Link
-          className={s.resume}
-          href="/resume.pdf"
-          tabIndex={isMobile() ? 0 : -1}
-        >
-          Resume
-        </Link>
+        <div className={s.buttons}>
+          <Link
+            className={s.resume}
+            href="/resume.pdf"
+            tabIndex={isMobile() ? 0 : -1}
+          >
+            Resume
+          </Link>
+
+          <InstallPWAButton />
+        </div>
       </nav>
     </aside>
   );
