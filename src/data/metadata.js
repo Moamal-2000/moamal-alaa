@@ -25,10 +25,24 @@ const PWA_METADATA = {
   formatDetection: { telephone: false },
   icons: {
     icon: [
-      { url: "/images/icon.webp", sizes: "192x192", type: "image/webp" },
-      { url: "/images/icon.webp", sizes: "512x512", type: "image/webp" },
+      {
+        url: "/PWA/icons/maskable-icon.webp",
+        sizes: "192x192",
+        type: "image/webp",
+      },
+      {
+        url: "/PWA/icons/maskable-icon.webp",
+        sizes: "512x512",
+        type: "image/webp",
+      },
     ],
-    apple: [{ url: "/images/icon.png", sizes: "180x180", type: "image/webp" }],
+    apple: [
+      {
+        url: "/PWA/icons/maskable-icon.webp",
+        sizes: "180x180",
+        type: "image/webp",
+      },
+    ],
   },
 };
 
