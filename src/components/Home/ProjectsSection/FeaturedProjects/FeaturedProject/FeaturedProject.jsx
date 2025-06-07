@@ -56,6 +56,7 @@ const FeaturedProject = ({ data, shouldReverse }) => {
         href={liveUrl}
         target="_blank"
         rel="noopener noreferrer"
+        title={`View ${title}`}
       >
         <Image src={previewImg} alt={title} width={628} height={435} />
       </a>

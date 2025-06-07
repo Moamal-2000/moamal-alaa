@@ -25,7 +25,7 @@ const ProjectCard = ({ data, index }) => {
             {repoUrl && (
               <a
                 href={repoUrl}
-                aria-label="GitHub Link"
+                title="GitHub Link"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -36,7 +36,7 @@ const ProjectCard = ({ data, index }) => {
             {liveUrl && (
               <a
                 href={liveUrl}
-                aria-label="External Link"
+                title="External Link"
                 target="_blank"
                 rel="noopener noreferrer"
               >

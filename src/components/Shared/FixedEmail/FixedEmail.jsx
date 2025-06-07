@@ -5,7 +5,9 @@ import s from "./FixedEmail.module.scss";
 const FixedEmail = () => {
   return (
     <motion.div className={s.fixedEmail} {...fixedItemsMotionProps()}>
-      <a href="mailto:moamalalaapro1@gmail.com">moamalalaapro1@gmail.com</a>
+      <a href="mailto:moamalalaapro1@gmail.com" title="Send me an email">
+        moamalalaapro1@gmail.com
+      </a>
     </motion.div>
   );
 };

@@ -34,7 +34,7 @@ const ProjectsTBody = () => {
                 {liveUrl && (
                   <a
                     href={liveUrl}
-                    title="Live"
+                    title="External Link"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -45,7 +45,7 @@ const ProjectsTBody = () => {
                 {repoUrl && (
                   <a
                     href={liveUrl}
-                    title="Github"
+                    title="GitHub Link"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

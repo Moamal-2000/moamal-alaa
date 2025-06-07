@@ -86,7 +86,11 @@ const Header = () => {
           <HeaderNavLinks navClicked={navClicked} />
 
           <motion.div {...navLinkMotionProps(NAV_LINKS.length)}>
-            <Link className={s.resume} href="/resume.pdf">
+            <Link
+              className={s.resume}
+              href="/resume.pdf"
+              title="Show my resume"
+            >
               Resume
             </Link>
           </motion.div>

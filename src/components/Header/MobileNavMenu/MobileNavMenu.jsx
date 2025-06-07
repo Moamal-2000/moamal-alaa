@@ -42,6 +42,7 @@ const MobileNavMenu = () => {
           <Link
             className={s.resume}
             href="/resume.pdf"
+            title="Show my resume"
             tabIndex={isMobile() ? 0 : -1}
           >
             Resume

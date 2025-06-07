@@ -19,7 +19,9 @@ const ContactSection = () => {
         I'm currently looking for new opportunities. Whether you have a question
         or just want to say hi, I'll get back to you as soon as possible!
       </p>
-      <a href="mailto:moamalalaapro1@gmail.com">Say Hello</a>
+      <a href="mailto:moamalalaapro1@gmail.com" title="Send me an email">
+        Say Hello
+      </a>
     </motion.section>
   );
 };

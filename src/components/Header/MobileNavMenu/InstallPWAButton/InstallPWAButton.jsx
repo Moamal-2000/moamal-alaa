@@ -38,7 +38,11 @@ const InstallPWAButton = () => {
   if (!showButton) return null;
 
   return (
-    <button type="button" onClick={handleInstallClick}>
+    <button
+      type="button"
+      onClick={handleInstallClick}
+      title="Install the app to your device"
+    >
       Install
     </button>
   );
