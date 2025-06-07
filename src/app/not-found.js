@@ -1,5 +1,5 @@
 import Link from "next/link";
-import s from "./NotFoundPage.module.scss";
+import s from "../styles/NotFoundPage.module.scss";
 
 const NotFoundPage = () => {
   return (

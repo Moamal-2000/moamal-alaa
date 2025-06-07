@@ -1,7 +1,7 @@
 import PWAInit from "@/components/PWA/PWAInit";
 import { METADATA } from "@/data/metadata";
+import RootProviders from "../components/Shared/RootProviders";
 import "../styles/globals.scss";
-import RootProviders from "./RootProviders";
 
 export const metadata = METADATA;
 

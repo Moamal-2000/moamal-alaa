@@ -6,7 +6,7 @@ import FixedEmail from "@/components/Shared/FixedEmail/FixedEmail";
 import FixedSocialMedia from "@/components/Shared/FixedSocialMedia/FixedSocialMedia";
 import SkipContentLink from "@/components/Shared/SkipContentLink/SkipContentLink";
 import useGlobalStore from "@/stores/global/useGlobalStore";
-import RootLayer from "./RootLayer";
+import RootLayer from "./RootLayer/RootLayer";
 
 const RootProviders = ({ children }) => {
   const isMobileNavOpen = useGlobalStore((s) => s.isMobileNavOpen);
