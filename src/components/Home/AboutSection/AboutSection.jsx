@@ -16,7 +16,7 @@ const AboutSection = () => {
         delay: 0.2,
       })}
     >
-      <NumberedHeading title="About" number="01" />
+      <NumberedHeading title="About Me" number="01" />
 
       <div className={s.content}>
         <p className={s.firstParagraph}>
