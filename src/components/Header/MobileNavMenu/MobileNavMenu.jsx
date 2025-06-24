@@ -5,7 +5,7 @@ import { isMobile } from "@/functions/helper";
 import useGlobalStore from "@/stores/global/useGlobalStore";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import InstallPWAButton from "./InstallPWAButton/InstallPWAButton";
+import InstallPWAButton from "../../PWA/InstallPWAButton";
 import s from "./MobileNavMenu.module.scss";
 
 const MobileNavMenu = () => {
