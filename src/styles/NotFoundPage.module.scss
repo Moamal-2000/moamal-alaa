@@ -40,7 +40,7 @@
 
   &:hover {
     color: var(--website-bg);
-    box-shadow: rgba(100, 255, 218, .2) 0 5px 15px;
+    box-shadow: 0 5px 15px rgba(100, 255, 218, .2);
     background: #64ffda;
   }
 }

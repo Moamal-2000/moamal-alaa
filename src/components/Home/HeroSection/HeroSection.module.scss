@@ -1,9 +1,7 @@
 @use "@/styles/mixins" as m;
 
 .heroSection {
-  background: linear-gradient(-170deg,
-      #1122406e 5%,
-      var(--website-bg) 95%);
+  background: linear-gradient(-170deg, #1122406e 5%, var(--website-bg) 95%);
   border: solid 2px #112240;
   min-height: 100dvh;
   margin-block: 101px 100px;
@@ -189,12 +187,13 @@
   padding: 13px 32px;
   box-shadow: 0 4px 15px rgba(100, 255, 218, .2);
   overflow: hidden;
-  transition: outline .1s var(--ease-main);
+  transition:
+    outline .1s var(--ease-main),
+    box-shadow .05s .1s var(--ease-main);
 
   &:hover,
   &:focus-visible {
     background: linear-gradient(135deg, #64ffda, #64ffda);
-    color: var(--website-bg);
     box-shadow: 0 5px 20px rgba(100, 255, 218, .3);
 
     &::before {

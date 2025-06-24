@@ -1,9 +1,7 @@
 @use "@/styles/mixins" as m;
 
 .mobileMenu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include m.center-x-y;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -68,9 +66,7 @@
 }
 
 .mobileMenu .buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include m.center-x-y;
   gap: 10px;
   width: 100%;
   margin-top: 10%;
