@@ -6,7 +6,7 @@ import {
   fadeInOnViewMotionProps,
   navLinkMotionProps,
 } from "@/functions/motionConfig";
-import useScrollDirection from "@/hooks/helper/useScrollDirection";
+import useScrollDirection from "@/hooks/useScrollDirection";
 import useGlobalStore from "@/stores/global/useGlobalStore";
 import { motion } from "motion/react";
 import Link from "next/link";
