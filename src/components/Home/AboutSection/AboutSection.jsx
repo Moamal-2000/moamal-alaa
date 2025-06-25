@@ -20,20 +20,18 @@ const AboutSection = () => {
 
       <div className={s.content}>
         <p className={s.firstParagraph}>
-          Hello! I'm Moamal, a front-end developer with a passion for creating
-          beautiful, functional, and accessible web experiences. I specialize in
-          building responsive, performant, and accessible user interfaces that
-          leave a lasting impression.
+          Hi, I’m Moamal, I enjoy building things for the web. I believe
+          websites should feel smooth, look great, and work for everyone. That’s
+          why I focus on creating interfaces that are not only functional but
+          also enjoyable to interact with.
         </p>
 
         <p>
-          My approach combines technical expertise with a keen eye for design,
-          ensuring that every project I work on is visually appealing,
-          user-friendly, and technically sound. I believe in writing clean,
-          maintainable code, staying up-to-date with the latest web technologies
-          and best practices, and optimizing for technical SEO. Additionally,
-          I'm committed to creating accessible web experiences that are
-          inclusive for all users.
+          I’ve been exploring front-end development for over four years now. It
+          all started with writing HTML and CSS, which felt like drawing with
+          code, I loved bringing designs to life on the screen. That curiosity
+          led me to JavaScript and, eventually, to the world of modern front-end
+          technologies I work with today.
         </p>
 
         <p>Here are a few technologies I’ve been working with recently:</p>
