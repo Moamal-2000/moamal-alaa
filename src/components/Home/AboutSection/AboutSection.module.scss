@@ -10,3 +10,15 @@
     "techList techList techList";
   gap: 0 50px;
 }
+
+@include m.medium {
+  .aboutSection {
+    grid-template-areas:
+      "heading"
+      "aboutContent"
+      "techList"
+      "frame";
+    gap: 0;
+    width: 100%;
+  }
+}

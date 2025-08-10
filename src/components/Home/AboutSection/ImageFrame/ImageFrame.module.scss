@@ -1,3 +1,5 @@
+@use "@/styles/mixins" as m;
+
 .imageFrame {
   background-color: #64ffda;
   border-radius: 4px;
@@ -6,6 +8,23 @@
 
   &:hover {
     translate: -5px -5px;
+  }
+}
+
+@include m.medium {
+  .imageFrame {
+    margin: 0 auto;
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 420px) {
+  .imageFrame {
+    width: auto !important;
+    height: auto !important;
+    min-width: 80%;
+    min-height: 80%;
+    margin-left: 16px;
   }
 }
 

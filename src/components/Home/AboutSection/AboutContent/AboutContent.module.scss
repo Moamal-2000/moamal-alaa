@@ -7,6 +7,12 @@
   grid-area: aboutContent;
 }
 
+@include m.medium {
+  .content {
+    max-width: 100%;
+  }
+}
+
 .content p {
   color: var(--main-text-color);
   line-height: 1.3;
