@@ -1,4 +1,4 @@
-const CACHE_NAME = "moamal-alaa-v14";
+const CACHE_NAME = "moamal-alaa-v15";
 
 const urlsToCache = [
   "/",
@@ -8,6 +8,7 @@ const urlsToCache = [
   "/resume.pdf",
   "/images/aster-information-project.webp",
   "/images/e-commercew-project.webp",
+  "/images/me.png",
   "/PWA/icons/maskable-icon.webp",
 ];
 
@@ -64,7 +65,7 @@ async function cleanupOldCaches() {
 }
 
 self.addEventListener("install", (event) => {
-    self.skipWaiting();
+  self.skipWaiting();
   event.waitUntil(installServiceWorker());
 });
 
