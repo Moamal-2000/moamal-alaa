@@ -1,7 +1,11 @@
 import s from "./ImageFrame.module.scss";
 
-const ImageFrame = ({ children }) => {
-  return <div className={s.imageFrame}>{children}</div>;
+const ImageFrame = ({ children, width, height }) => {
+  return (
+    <div className={s.imageFrame} style={{ width, height }}>
+      {children}
+    </div>
+  );
 };
 
 export default ImageFrame;
