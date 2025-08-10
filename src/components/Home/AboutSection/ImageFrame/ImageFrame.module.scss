@@ -1,0 +1,7 @@
+.imageFrame {}
+
+.imageFrame>img {
+  width: 300px;
+  height: 300px;
+  grid-area: frame;
+}

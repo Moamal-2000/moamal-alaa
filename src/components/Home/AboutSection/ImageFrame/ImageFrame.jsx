@@ -1,9 +1,7 @@
-import s from './ImageFrame.module.scss'
+import s from "./ImageFrame.module.scss";
 
-const ImageFrame = () => {
-  return (
-    <div>ImageFrame</div>
-  )
-}
+const ImageFrame = ({ children }) => {
+  return <div className={s.imageFrame}>{children}</div>;
+};
 
-export default ImageFrame
+export default ImageFrame;

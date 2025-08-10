@@ -1,9 +1,10 @@
 @use "@/styles/mixins" as m;
 
 .content {
-  max-width: 720px;
+  max-width: 550px;
   width: 100%;
   text-wrap: pretty;
+  grid-area: aboutContent;
 }
 
 .content p {

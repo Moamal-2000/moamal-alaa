@@ -3,4 +3,10 @@
 .aboutSection {
   width: fit-content;
   margin: 0 auto;
+  display: grid;
+  grid-template-areas:
+    "heading heading heading"
+    "aboutContent aboutContent frame"
+    "techList techList techList";
+  gap: 0 50px;
 }
