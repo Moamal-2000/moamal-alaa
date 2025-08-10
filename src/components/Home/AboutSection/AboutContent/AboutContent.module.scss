@@ -1,0 +1,46 @@
+@use "@/styles/mixins" as m;
+
+.content {
+  max-width: 720px;
+  width: 100%;
+  text-wrap: pretty;
+}
+
+.content p {
+  color: var(--main-text-color);
+  line-height: 1.3;
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+}
+
+@include m.small {
+  .content p {
+    font-size: 1.15rem;
+  }
+}
+
+@include m.very-small {
+  .content p {
+    font-size: 1rem;
+    text-wrap: pretty;
+  }
+}
+
+.content p.firstParagraph {
+  color: #ccd6f6;
+  font-size: 1.35rem;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+@include m.small {
+  .content p.firstParagraph {
+    font-size: 1.25rem;
+  }
+}
+
+@include m.very-small {
+  .content p.firstParagraph {
+    font-size: 1.05rem;
+  }
+}
