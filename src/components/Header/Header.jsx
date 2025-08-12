@@ -1,21 +1,16 @@
 "use client";
 
 import { DEBOUNCE_DELAY, SCROLL_THRESHOLD } from "@/data/constants";
-import { NAV_LINKS } from "@/data/staticData";
-import {
-  fadeInOnViewMotionProps,
-  navLinkMotionProps,
-} from "@/functions/motionConfig";
+import { fadeInOnViewMotionProps } from "@/functions/motionConfig";
 import useScrollDirection from "@/hooks/useScrollDirection";
 import useGlobalStore from "@/stores/global/useGlobalStore";
 import { motion } from "motion/react";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
-import InstallPWAButton from "../PWA/InstallPWAButton";
 import MobileNavBtn from "../Shared/MobileNavBtn/MobileNavBtn";
 import SvgIcon from "../Shared/SvgIcon";
 import s from "./Header.module.scss";
-import HeaderNavLinks from "./HeaderNavLinks/HeaderNavLinks";
+import HeaderButtons from "./HeaderButtons/HeaderButtons";
 import MobileNavMenu from "./MobileNavMenu/MobileNavMenu";
 
 const Header = () => {
@@ -82,27 +77,7 @@ const Header = () => {
 
         <MobileNavBtn />
         <MobileNavMenu />
-
-        <div className={s.buttons}>
-          <HeaderNavLinks navClicked={navClicked} />
-
-          <motion.div {...navLinkMotionProps(NAV_LINKS.length)}>
-            <Link
-              className={s.resume}
-              href="/resume.pdf"
-              title="Show my resume"
-            >
-              Resume
-            </Link>
-          </motion.div>
-
-          <motion.div
-            className={s.installPWA}
-            {...navLinkMotionProps(NAV_LINKS.length + 1)}
-          >
-            <InstallPWAButton />
-          </motion.div>
-        </div>
+        <HeaderButtons navClicked={navClicked} />
       </motion.nav>
     </header>
   );
