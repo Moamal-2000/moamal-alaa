@@ -88,19 +88,19 @@
   opacity: 1;
 }
 
-.header .navLinks .wrapper {
+.header .navLinks .buttons {
   display: flex;
   align-items: center;
 }
 
 @include m.small {
-  .header .navLinks .wrapper {
+  .header .navLinks .buttons {
     display: none;
   }
 }
 
-.header .wrapper .resume,
-.header .wrapper .installPWA>button {
+.header .buttons .resume,
+.header .buttons .installPWA>button {
   color: #5ff1cf;
   background-color: transparent;
   border: 1px solid #5ff1cf;

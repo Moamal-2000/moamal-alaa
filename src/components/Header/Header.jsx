@@ -83,7 +83,7 @@ const Header = () => {
         <MobileNavBtn />
         <MobileNavMenu />
 
-        <div className={s.wrapper}>
+        <div className={s.buttons}>
           <HeaderNavLinks navClicked={navClicked} />
 
           <motion.div {...navLinkMotionProps(NAV_LINKS.length)}>
