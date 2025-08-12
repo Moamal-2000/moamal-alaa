@@ -11,6 +11,7 @@ import useGlobalStore from "@/stores/global/useGlobalStore";
 import { motion } from "motion/react";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
+import InstallPWAButton from "../PWA/InstallPWAButton";
 import MobileNavBtn from "../Shared/MobileNavBtn/MobileNavBtn";
 import SvgIcon from "../Shared/SvgIcon";
 import s from "./Header.module.scss";
@@ -93,6 +94,13 @@ const Header = () => {
             >
               Resume
             </Link>
+          </motion.div>
+
+          <motion.div
+            className={s.installPWA}
+            {...navLinkMotionProps(NAV_LINKS.length + 1)}
+          >
+            <InstallPWAButton />
           </motion.div>
         </div>
       </motion.nav>
