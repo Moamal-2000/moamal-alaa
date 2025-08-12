@@ -22,16 +22,6 @@ export const OTHER_PROJECTS_DATA = [
     id: 2,
   },
   {
-    title: "Superado Landing Page",
-    description:
-      "A single-page site designed to introduce the Superado brand. Additional sections like About and Jobs are planned but not yet implemented.",
-    year: "2023",
-    liveUrl: "https://superado-landing.netlify.app",
-    repoUrl: "https://github.com/Moamal-2000/superado-landing",
-    technologies: ["React", "Vite", "Sass"],
-    id: 3,
-  },
-  {
     title: "Custom React Hooks Library",
     description:
       "A collection of reusable and well-documented custom React hooks for boosting productivity and consistency across React projects. Includes live previews and code highlighting",
