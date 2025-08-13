@@ -4,3 +4,7 @@ export function isMobile() {
   const mobilesType = /Mobi|Android|iPhone|iPad|iPod/i;
   return mobilesType.test(navigator.userAgent);
 }
+
+export function refreshPage() {
+  window.location.reload();
+}

@@ -1,0 +1,111 @@
+@use "@/styles/keyframes" as keyframe;
+@include keyframe.fade-slide-up;
+
+.notification {
+  position: fixed;
+  bottom: 32px;
+  left: 50%;
+  translate: -50% 100%;
+  z-index: 1200;
+  font-family: var(--font-sans);
+  min-width: 320px;
+  background: #0a192f;
+  color: #ccd6f6;
+  padding: 18px 32px 18px 20px;
+  border-radius: 6px;
+  border: solid 1px #8892b0;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  animation: fade-slide-up .35s cubic-bezier(.645, .045, .355, 1) forwards;
+}
+
+@media (max-width: 520px) {
+  .notification {
+    min-width: 0;
+    width: 98vw;
+    padding: 12px 8px 12px 8px;
+    font-size: 0.92rem;
+    border-radius: 8px;
+    border-left-width: 3px;
+    gap: 10px;
+  }
+}
+
+.notificationIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  color: #64ffda;
+  margin-right: 6px;
+  margin-left: 2px;
+}
+
+@media (max-width: 520px) {
+  .notification {
+    padding: 12px 8px;
+    font-size: 0.92rem;
+    border-radius: 7px;
+  }
+}
+
+.message {
+  color: #ccd6f6;
+  font-size: 1.2em;
+  font-weight: 400;
+  letter-spacing: .01em;
+  width: max-content;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.refreshButton {
+  -webkit-tap-highlight-color: transparent;
+  border: none;
+  display: inline-block;
+  background: linear-gradient(135deg, #64ffda, #64ffda);
+  color: var(--website-bg);
+  box-shadow: 0 4px 15px rgba(100, 255, 218, .2);
+  padding: 12px 28px;
+  border-radius: 4px;
+  text-transform: capitalize;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  letter-spacing: .5px;
+  font-size: .85rem;
+  overflow: hidden;
+  position: relative;
+  transition:
+    outline .1s var(--ease-main),
+    box-shadow .05s .1s var(--ease-main);
+
+  &:hover,
+  &:focus-visible {
+    background: linear-gradient(135deg, #64ffda, #64ffda);
+    box-shadow: 0 5px 20px rgba(100, 255, 218, .3);
+
+    &::before {
+      left: 100%;
+    }
+  }
+
+  &:focus-visible {
+    outline: solid 2px #fff;
+    outline-offset: -1px;
+  }
+}
+
+.refreshButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, .1),
+      rgba(255, 255, 255, .3),
+      rgba(255, 255, 255, .1));
+  transition: left .5s ease-out;
+}

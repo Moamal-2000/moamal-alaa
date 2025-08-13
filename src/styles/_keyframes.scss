@@ -1,0 +1,13 @@
+@mixin fade-slide-up {
+  @keyframes fade-slide-up {
+    from {
+      translate: -50% 100%;
+      opacity: 0;
+    }
+
+    to {
+      translate: -50% 0;
+      opacity: 1;
+    }
+  }
+}
