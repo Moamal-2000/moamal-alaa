@@ -45,6 +45,10 @@ async function handleFetchRequest(event) {
 async function storeResponseInCache(request, response) {
   try {
     const cache = await caches.open(CACHE_NAME);
+    const isPostRequest = request.method === "POST";
+
+    if (isPostRequest) return;
+
     await cache.put(request, response);
   } catch (error) {
     console.error("Failed to cache response for request:", request.url, error);
