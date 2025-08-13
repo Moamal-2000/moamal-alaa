@@ -11,3 +11,17 @@
     }
   }
 }
+
+@mixin fade-slide-up-mobile {
+  @keyframes fade-slide-up-mobile {
+    from {
+      translate: -50% 100%;
+      opacity: 0;
+    }
+
+    to {
+      translate: -50% 34px;
+      opacity: 1;
+    }
+  }
+}
