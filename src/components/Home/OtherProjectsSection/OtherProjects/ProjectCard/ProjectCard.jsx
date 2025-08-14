@@ -1,13 +1,12 @@
 "use client";
 
-import SvgIcon from "@/components/Shared/SvgIcon";
 import { fadeInOnViewMotionProps } from "@/functions/motionConfig";
 import { motion } from "framer-motion";
 import s from "./ProjectCard.module.scss";
+import ProjectHeader from "./ProjectHeader/ProjectHeader";
 
 const ProjectCard = ({ data, index }) => {
-  const { title, description, technologies, liveUrl, repoUrl, isFeatured } =
-    data;
+  const { technologies } = data;
 
   return (
     <motion.article
@@ -17,44 +16,7 @@ const ProjectCard = ({ data, index }) => {
         duration: 0.4,
       })}
     >
-      <header>
-        <div className={s.projectTop}>
-          <SvgIcon name="folder" />
-
-          <div className={s.projectLinks}>
-            {repoUrl && (
-              <a
-                href={repoUrl}
-                title="GitHub Link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <SvgIcon name="github" />
-              </a>
-            )}
-
-            {liveUrl && (
-              <a
-                href={liveUrl}
-                title="External Link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <SvgIcon name="live" />
-              </a>
-            )}
-          </div>
-        </div>
-
-        <h3 className={s.title}>
-          <a href={liveUrl || "#"} target="_blank" rel="noopener noreferrer">
-            {title}
-            {isFeatured && <span className={s.featured}>Featured</span>}
-          </a>
-        </h3>
-
-        <p className={s.description}>{description}</p>
-      </header>
+      <ProjectHeader data={data} />
 
       <footer>
         <ul className={s.techList}>
