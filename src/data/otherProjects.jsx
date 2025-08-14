@@ -69,10 +69,26 @@ export const OTHER_PROJECTS_DATA = [
     description:
       "An upgraded version of the classic Tic Tac Toe featuring exciting power-ups like Freeze, Bomb, and Swap to make gameplay more strategic and fun. Supports 3 board sizes: classic 3x3, 4x4 and 5x5 with abilities. Includes responsive modern UI/UX, animations, sound effects, and an in-game tutorial. Future updates planned for AI single-player mode and online multiplayer.",
     year: "2025",
-    liveUrl: "https://tictactoe-4x4.netlify.app/",
+    liveUrl: "https://tictactoe-4x4.netlify.app",
     repoUrl: "https://github.com/Moamal-2000/tic-tac-toe",
     technologies: ["Next.js", "Sass", "Zustand", "PWA"],
     isFeatured: true,
     id: 7,
+  },
+  {
+    title: "Resume Builder",
+    description: "Currently in development...",
+    year: "2025",
+    liveUrl: "https://resume-builder-easy.netlify.app",
+    repoUrl: "https://github.com/Moamal-2000/resume-builder",
+    technologies: [
+      "Next.js",
+      "Sass",
+      "Zustand",
+      "HTML to PDF",
+      "React Datepicker",
+    ],
+    isFeatured: true,
+    id: 8,
   },
 ].reverse();
