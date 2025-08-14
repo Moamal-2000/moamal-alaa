@@ -23,7 +23,7 @@ const AboutSection = () => {
       <AboutContent />
       <ImageFrame width={300} height={300}>
         <Image
-          src="/images/me.jpg"
+          src="/images/me.png"
           alt="Professional headshot of a young man with short, slightly spiked hair, wearing black rectangular eyeglasses and a muted blue-gray t-shirt, smiling warmly against a neutral light-gray background."
           width={300}
           height={300}
