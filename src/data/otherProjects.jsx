@@ -62,7 +62,6 @@ export const OTHER_PROJECTS_DATA = [
     liveUrl: "https://css-arts-gallery.netlify.app",
     repoUrl: "https://github.com/Moamal-2000/css-arts-gallery",
     technologies: ["Next.js", "Sass"],
-    isFeatured: true,
     id: 6,
   },
   {
