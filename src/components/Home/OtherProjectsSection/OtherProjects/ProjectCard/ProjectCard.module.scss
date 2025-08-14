@@ -24,19 +24,3 @@
     padding: 25px 20px;
   }
 }
-
-.projectCard footer .techList {
-  margin-top: 20px;
-  display: flex;
-  align-items: flex-end;
-  flex-grow: 1;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-.projectCard footer .techList li {
-  font-family: var(--font-mono);
-  font-size: .85rem;
-  line-height: 1;
-  word-spacing: -3px;
-}

@@ -1,9 +1,17 @@
-import s from './ProjectFooter.module.scss'
+import s from "./ProjectFooter.module.scss";
 
-const ProjectFooter = () => {
+const ProjectFooter = ({ technologies }) => {
   return (
-    <div>ProjectFooter</div>
-  )
-}
+    <footer className={s.projectFooter}>
+      <ul className={s.techList}>
+        {technologies.map((tech, index) => (
+          <li key={`${index}-${tech}`} className={s.tech}>
+            {tech}
+          </li>
+        ))}
+      </ul>
+    </footer>
+  );
+};
 
-export default ProjectFooter
+export default ProjectFooter;
