@@ -24,6 +24,10 @@
   }
 }
 
+.projectCard header {
+  width: 100%;
+}
+
 .projectCard header .projectTop {
   display: flex;
   justify-content: space-between;
@@ -120,5 +124,6 @@
 .projectCard footer .techList li {
   font-family: var(--font-mono);
   font-size: .85rem;
-  line-height: 1.75;
+  line-height: 1;
+  word-spacing: -3px;
 }
