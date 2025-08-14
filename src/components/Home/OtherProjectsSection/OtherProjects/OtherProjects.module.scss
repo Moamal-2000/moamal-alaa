@@ -4,14 +4,20 @@
   list-style: none;
   margin-top: 50px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 15px;
   position: relative;
   width: 100%;
 }
 
-@include m.small {
+@media (max-width: 900px) {
   .otherProjects {
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  }
+}
+
+@include m.very-small {
+  .otherProjects {
+    grid-template-columns: 1fr;
   }
 }
