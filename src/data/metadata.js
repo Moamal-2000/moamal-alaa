@@ -13,14 +13,14 @@ const keywords = [
   "Portfolio",
 ];
 const description =
-  "Moamal Alaa - Front-End Developer specializing in modern, responsive websites using React or Next.js. Passionate about clean UI, performance, and user-friendly design. Let's create something great together!";
+  "Moamal Alaa - Front-End Developer creating responsive, accessible, and high-performance websites with React & Next.js. Focused on clean UI, SEO, and great user experiences.";
 const GLOBAL_METADATA = { title: "Moamal Alaa", description, keywords };
 const PWA_METADATA = {
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "Moamal Alaa",
+    title: "Moamal Alaa | Front-End Developer",
   },
   formatDetection: { telephone: false },
   icons: {
