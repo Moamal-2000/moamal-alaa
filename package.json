@@ -13,7 +13,6 @@
     "next": "15.5.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "sass": "^1.90.0",
     "zustand": "^5.0.8"
   },
   "devDependencies": {
@@ -21,6 +20,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.5.0",
     "npm-check-updates": "^18.0.2",
+    "sass": "^1.91.0",
     "sharp": "^0.34.3"
   }
 }
