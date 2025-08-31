@@ -4,7 +4,7 @@ import NumberedHeading from "@/components/Shared/NumberedHeading/NumberedHeading
 import { fadeInOnViewMotionProps } from "@/functions/motionConfig";
 import FeaturedProjects from "./FeaturedProjects/FeaturedProjects";
 
-const ProjectsSection = () => {
+const ProjectsSection = ({ projectsData }) => {
   return (
     <section id="projects">
       <NumberedHeading
@@ -12,7 +12,7 @@ const ProjectsSection = () => {
         number="02"
         animationProps={fadeInOnViewMotionProps({ visibilityThreshold: 0 })}
       />
-      <FeaturedProjects />
+      <FeaturedProjects projectsData={projectsData} />
     </section>
   );
 };

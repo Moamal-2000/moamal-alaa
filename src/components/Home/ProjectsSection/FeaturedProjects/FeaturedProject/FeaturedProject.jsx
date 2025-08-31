@@ -6,17 +6,9 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import s from "./FeaturedProject.module.scss";
 
-const FeaturedProject = ({ data, shouldReverse }) => {
-  const {
-    title,
-    description,
-    technologies,
-    repoUrl,
-    liveUrl,
-    previewImg,
-    stars = 0,
-    forks = 0,
-  } = data;
+const FeaturedProject = ({ data, fetchedData, shouldReverse }) => {
+  const { title, description, technologies, repoUrl, liveUrl, previewImg } =
+    data;
 
   return (
     <motion.div
@@ -67,12 +59,12 @@ const FeaturedProject = ({ data, shouldReverse }) => {
           <div className={s.projectStats}>
             <span className={s.stat}>
               <SvgIcon name="star" />
-              {stars}
+              {fetchedData.stars || 0}
             </span>
 
             <span className={s.stat}>
               <SvgIcon name="fork" />
-              {forks}
+              {fetchedData.forks || 0}
             </span>
           </div>
         </div>
