@@ -7,8 +7,7 @@ import Image from "next/image";
 import s from "./FeaturedProject.module.scss";
 
 const FeaturedProject = ({ data, fetchedData, shouldReverse }) => {
-  const { title, description, technologies, repoUrl, liveUrl, previewImg } =
-    data;
+  const { title, description, technologies, previewImg } = data;
 
   return (
     <motion.div
@@ -25,7 +24,11 @@ const FeaturedProject = ({ data, fetchedData, shouldReverse }) => {
         <div className={s.projectHeader}>
           <span className={s.featuredText}>Featured Project</span>
           <h3 className={s.title}>
-            <a href={liveUrl} target="_blank" rel="noopener noreferrer">
+            <a
+              href={fetchedData.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {title}
             </a>
           </h3>
@@ -42,7 +45,7 @@ const FeaturedProject = ({ data, fetchedData, shouldReverse }) => {
         <div className={s.wrapper}>
           <div className={s.projectLinks}>
             <a
-              href={repoUrl}
+              href={fetchedData.repoUrl}
               target="_blank"
               rel="noopener noreferrer"
               className={s.githubLink}
@@ -50,7 +53,11 @@ const FeaturedProject = ({ data, fetchedData, shouldReverse }) => {
               <SvgIcon name="github" />
               <span className={s.linkText}>Source</span>
             </a>
-            <a href={liveUrl} target="_blank" rel="noopener noreferrer">
+            <a
+              href={fetchedData.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <SvgIcon name="live" />
               Live
             </a>
@@ -72,7 +79,7 @@ const FeaturedProject = ({ data, fetchedData, shouldReverse }) => {
 
       <a
         className={s.previewImg}
-        href={liveUrl}
+        href={fetchedData.liveUrl}
         target="_blank"
         rel="noopener noreferrer"
         title={`View ${title}`}

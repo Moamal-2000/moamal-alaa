@@ -24,6 +24,8 @@ export async function fetchFeaturedProjects() {
     return {
       stars: repo.stargazers_count,
       forks: repo.forks_count,
+      repoUrl: repo.html_url,
+      liveUrl: repo.homepage,
     };
   });
 }
