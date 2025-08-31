@@ -11,10 +11,8 @@ export async function fetchMyGithubRepos() {
 }
 
 export function getFeaturedProjects(repos) {
-  return repos.filter((repo) => {
-    return FEATURED_PROJECTS.find(
-      (project) => project.repoUrl === repo.html_url
-    );
+  return FEATURED_PROJECTS.map((project) => {
+    return repos.find((repo) => repo.html_url === project.repoUrl);
   });
 }
 
