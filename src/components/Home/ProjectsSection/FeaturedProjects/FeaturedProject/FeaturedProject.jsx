@@ -7,8 +7,16 @@ import Image from "next/image";
 import s from "./FeaturedProject.module.scss";
 
 const FeaturedProject = ({ data, shouldReverse }) => {
-  const { title, description, technologies, repoUrl, liveUrl, previewImg } =
-    data;
+  const {
+    title,
+    description,
+    technologies,
+    repoUrl,
+    liveUrl,
+    previewImg,
+    stars = 0,
+    forks = 0,
+  } = data;
 
   return (
     <motion.div
@@ -39,15 +47,34 @@ const FeaturedProject = ({ data, shouldReverse }) => {
           ))}
         </ul>
 
-        <div className={s.projectLinks}>
-          <a href={repoUrl} target="_blank" rel="noopener noreferrer">
-            <SvgIcon name="github" />
-            Source
-          </a>
-          <a href={liveUrl} target="_blank" rel="noopener noreferrer">
-            <SvgIcon name="live" />
-            Live
-          </a>
+        <div className={s.wrapper}>
+          <div className={s.projectLinks}>
+            <a
+              href={repoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={s.githubLink}
+            >
+              <SvgIcon name="github" />
+              <span className={s.linkText}>Source</span>
+            </a>
+            <a href={liveUrl} target="_blank" rel="noopener noreferrer">
+              <SvgIcon name="live" />
+              Live
+            </a>
+          </div>
+
+          <div className={s.projectStats}>
+            <span className={s.stat}>
+              <SvgIcon name="star" />
+              {stars}
+            </span>
+
+            <span className={s.stat}>
+              <SvgIcon name="fork" />
+              {forks}
+            </span>
+          </div>
         </div>
       </div>
 
