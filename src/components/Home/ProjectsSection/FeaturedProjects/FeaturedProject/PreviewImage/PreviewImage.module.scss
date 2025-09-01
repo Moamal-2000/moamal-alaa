@@ -1,0 +1,75 @@
+@use "@/styles/mixins" as m;
+
+.previewImg {
+  -webkit-tap-highlight-color: transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  grid-area: 1 / 6 / -1 / -1;
+  z-index: 1;
+  outline: solid 0 #64ffda;
+  outline-offset: 0;
+  transition:
+    outline .2s ease,
+    outline-offset .2s ease;
+
+  &:focus-visible {
+    outline: solid 3px #64ffda;
+    outline-offset: 3px;
+  }
+}
+
+@include m.large {
+  .previewImg {
+    grid-area: 1 / 6 / -1 / -1;
+  }
+}
+
+@include m.small {
+  .previewImg {
+    grid-column: 1 / -1;
+    height: 100%;
+    opacity: .25;
+  }
+}
+
+.previewImg::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  z-index: 3;
+  background-color: #00ff77;
+  opacity: .318;
+  transition: filter .15s var(--ease-main);
+}
+
+@include m.small {
+  .previewImg::before {
+    background-color: rgb(11, 28, 49);
+    opacity: .2;
+  }
+}
+
+.previewImg:where(:hover, :focus-visible)::before {
+  mix-blend-mode: screen;
+  filter: grayscale(100%) contrast(2) brightness(90%);
+}
+
+@include m.small {
+  .featuredProject:hover .previewImg::before {
+    mix-blend-mode: screen;
+    filter: grayscale(100%) contrast(2) brightness(90%);
+  }
+}
+
+.previewImg img {
+  filter: grayscale(100%) brightness(.9);
+  transition: filter .1s .1s cubic-bezier(.4, 0, .2, 1);
+}
+
+.previewImg:where(:hover, :focus-visible) img {
+  filter: grayscale(0) brightness(.9);
+}

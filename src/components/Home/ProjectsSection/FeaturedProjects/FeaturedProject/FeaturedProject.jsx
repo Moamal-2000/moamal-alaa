@@ -3,8 +3,8 @@
 import SvgIcon from "@/components/Shared/SvgIcon";
 import { fadeInOnViewMotionProps } from "@/functions/motionConfig";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import s from "./FeaturedProject.module.scss";
+import PreviewImage from "./PreviewImage/PreviewImage";
 
 const FeaturedProject = ({ data, fetchedData, shouldReverse }) => {
   const { title, description, technologies, previewImg } = data;
@@ -77,16 +77,11 @@ const FeaturedProject = ({ data, fetchedData, shouldReverse }) => {
         </div>
       </div>
 
-      <a
-        className={s.previewImg}
-        href={fetchedData.liveUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        title={`View ${title}`}
-      >
-        <Image src={previewImg} alt={title} width={628} height={435} />
-      </a>
-
+      <PreviewImage
+        src={previewImg}
+        liveUrl={fetchedData.liveUrl}
+        title={title}
+      />
     </motion.div>
   );
 };
