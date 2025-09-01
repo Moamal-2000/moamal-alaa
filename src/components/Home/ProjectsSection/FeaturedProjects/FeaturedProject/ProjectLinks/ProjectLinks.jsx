@@ -1,5 +1,5 @@
 import SvgIcon from "@/components/Shared/SvgIcon";
-import ProjectStats from "../ProjectStats/ProjectStats";
+import ProjectStats from "./ProjectStats/ProjectStats";
 import s from "./ProjectLinks.module.scss";
 
 const ProjectLinks = ({ fetchedData: { repoUrl, liveUrl, stars, forks } }) => {
