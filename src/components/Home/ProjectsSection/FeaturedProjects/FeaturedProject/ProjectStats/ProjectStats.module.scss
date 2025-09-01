@@ -1,0 +1,16 @@
+.projectStats {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.projectStats .stat {
+  display: flex;
+  gap: 4px;
+  transition: color .3s ease;
+}
+
+.projectStats .stat>svg {
+  width: 16px;
+  height: 16px;
+}

@@ -35,7 +35,7 @@
       border-color: #808690;
     }
 
-    & .content .projectStats .stat {
+    & .content [data-type=stats] {
       color: #fff;
     }
   }
@@ -317,21 +317,4 @@
 .content .projectLinks a svg {
   width: 15px;
   height: 15px;
-}
-
-.content .projectStats {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.content .projectStats .stat {
-  display: flex;
-  gap: 4px;
-  transition: color .3s ease;
-}
-
-.content .projectStats .stat>svg {
-  width: 16px;
-  height: 16px;
 }

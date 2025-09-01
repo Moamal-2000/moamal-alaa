@@ -5,6 +5,7 @@ import { fadeInOnViewMotionProps } from "@/functions/motionConfig";
 import { motion } from "framer-motion";
 import s from "./FeaturedProject.module.scss";
 import PreviewImage from "./PreviewImage/PreviewImage";
+import ProjectStats from "./ProjectStats/ProjectStats";
 
 const FeaturedProject = ({ data, fetchedData, shouldReverse }) => {
   const { title, description, technologies, previewImg } = data;
@@ -63,17 +64,7 @@ const FeaturedProject = ({ data, fetchedData, shouldReverse }) => {
             </a>
           </div>
 
-          <div className={s.projectStats}>
-            <span className={s.stat}>
-              <SvgIcon name="star" />
-              {fetchedData.stars || 0}
-            </span>
-
-            <span className={s.stat}>
-              <SvgIcon name="fork" />
-              {fetchedData.forks || 0}
-            </span>
-          </div>
+          <ProjectStats stars={fetchedData.stars} forks={fetchedData.forks} />
         </div>
       </div>
 
