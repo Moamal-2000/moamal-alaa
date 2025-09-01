@@ -30,13 +30,9 @@
       color: #fff;
     }
 
-    & .content .projectLinks a {
+    & .content [data-type=project-links] a {
       color: #fff;
       border-color: #808690;
-    }
-
-    & .content [data-type=stats] {
-      color: #fff;
     }
   }
 }

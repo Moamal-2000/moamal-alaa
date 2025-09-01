@@ -4,7 +4,7 @@ import s from "./ProjectLinks.module.scss";
 
 const ProjectLinks = ({ fetchedData: { repoUrl, liveUrl, stars, forks } }) => {
   return (
-    <div className={s.projectLinks}>
+    <div className={s.projectLinks} data-type="project-links">
       <a
         href={repoUrl}
         target="_blank"

@@ -38,42 +38,14 @@
     outline-color .3s ease;
 
   &:hover {
-    color: #64ffda;
-    border-color: #64ffda;
+    color: #64ffda !important;
+    border-color: #64ffda !important;
   }
 
   &:focus-visible {
-    color: #64ffda;
-    outline-color: #64ffda;
-    outline-offset: -2px;
-  }
-}
-
-@include m.small {
-  .featuredProject .projectLinks a {
-    transition:
-      color .3s .1s ease,
-      border-color .3s .1s ease,
-      outline-color .3s .1s ease;
-
-    &:hover,
-    &:focus-visible {
-      transition:
-        color .3s ease,
-        border-color .3s ease,
-        outline-color .3s ease;
-    }
-
-    &:hover {
-      color: #64ffda;
-      border-color: #64ffda;
-    }
-
-    &:focus-visible {
-      color: #64ffda;
-      outline-color: #64ffda;
-      outline-offset: -2px;
-    }
+    color: #64ffda !important;
+    outline-color: #64ffda !important;
+    outline-offset: -2px !important;
   }
 }
 
