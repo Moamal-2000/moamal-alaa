@@ -1,16 +1,9 @@
 import SvgIcon from "@/components/Shared/SvgIcon";
 import s from "./ProjectStats.module.scss";
 
-const ProjectStats = ({ stars, forks, repoUrl }) => {
+const ProjectStats = ({ stars, forks }) => {
   return (
-    <a
-      href={repoUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={s.projectStats}
-      data-type="stats"
-      title="GitHub repo"
-    >
+    <div className={s.projectStats}>
       <span className={s.stat}>
         <SvgIcon name="star" /> {stars || 0}
       </span>
@@ -18,7 +11,7 @@ const ProjectStats = ({ stars, forks, repoUrl }) => {
       <span className={s.stat}>
         <SvgIcon name="fork" /> {forks || 0}
       </span>
-    </a>
+    </div>
   );
 };
 

@@ -43,32 +43,25 @@ const FeaturedProject = ({ data, fetchedData, shouldReverse }) => {
           ))}
         </ul>
 
-        <div className={s.wrapper}>
-          <div className={s.projectLinks}>
-            <a
-              href={fetchedData.repoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={s.githubLink}
-            >
-              <SvgIcon name="github" />
-              <span className={s.linkText}>Source</span>
-            </a>
-            <a
-              href={fetchedData.liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <SvgIcon name="live" />
-              Live
-            </a>
-          </div>
-
-          <ProjectStats
-            stars={fetchedData.stars}
-            forks={fetchedData.forks}
-            repoUrl={fetchedData.repoUrl}
-          />
+        <div className={s.projectLinks}>
+          <a
+            href={fetchedData.repoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={s.githubLink}
+          >
+            <SvgIcon name="github" />
+            Source
+            <ProjectStats stars={fetchedData.stars} forks={fetchedData.forks} />
+          </a>
+          <a
+            href={fetchedData.liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SvgIcon name="live" />
+            Live
+          </a>
         </div>
       </div>
 

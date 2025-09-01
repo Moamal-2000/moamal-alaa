@@ -215,35 +215,13 @@
   }
 }
 
-.content .wrapper {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-
-@include m.medium {
-  .content .wrapper {
-    display: inline-flex;
-    margin: 12px 0;
-    position: relative;
-    top: 4px;
-    gap: 30px;
-  }
-}
-
-@include m.small {
-  .content .wrapper {
-    flex-wrap: wrap;
-    gap: 18px;
-  }
-}
-
 .content .projectLinks {
   display: flex;
   align-items: center;
   gap: 8px;
   width: fit-content;
   user-select: none;
+  direction: ltr;
   pointer-events: all;
 }
 
