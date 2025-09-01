@@ -64,7 +64,11 @@ const FeaturedProject = ({ data, fetchedData, shouldReverse }) => {
             </a>
           </div>
 
-          <ProjectStats stars={fetchedData.stars} forks={fetchedData.forks} />
+          <ProjectStats
+            stars={fetchedData.stars}
+            forks={fetchedData.forks}
+            repoUrl={fetchedData.repoUrl}
+          />
         </div>
       </div>
 

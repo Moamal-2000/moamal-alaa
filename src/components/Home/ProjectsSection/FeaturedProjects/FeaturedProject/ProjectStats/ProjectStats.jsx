@@ -1,9 +1,15 @@
 import SvgIcon from "@/components/Shared/SvgIcon";
 import s from "./ProjectStats.module.scss";
 
-const ProjectStats = ({ stars, forks }) => {
+const ProjectStats = ({ stars, forks, repoUrl }) => {
   return (
-    <div className={s.projectStats} data-type="stats">
+    <a
+      href={repoUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={s.projectStats}
+      data-type="stats"
+    >
       <span className={s.stat}>
         <SvgIcon name="star" />
         {stars || 0}
@@ -13,7 +19,7 @@ const ProjectStats = ({ stars, forks }) => {
         <SvgIcon name="fork" />
         {forks || 0}
       </span>
-    </div>
+    </a>
   );
 };
 
