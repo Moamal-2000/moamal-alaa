@@ -9,15 +9,14 @@ const ProjectStats = ({ stars, forks, repoUrl }) => {
       rel="noopener noreferrer"
       className={s.projectStats}
       data-type="stats"
+      title="GitHub repo"
     >
       <span className={s.stat}>
-        <SvgIcon name="star" />
-        {stars || 0}
+        <SvgIcon name="star" /> {stars || 0}
       </span>
 
       <span className={s.stat}>
-        <SvgIcon name="fork" />
-        {forks || 0}
+        <SvgIcon name="fork" /> {forks || 0}
       </span>
     </a>
   );
