@@ -1,11 +1,10 @@
 "use client";
 
-import SvgIcon from "@/components/Shared/SvgIcon";
 import { fadeInOnViewMotionProps } from "@/functions/motionConfig";
 import { motion } from "framer-motion";
 import s from "./FeaturedProject.module.scss";
 import PreviewImage from "./PreviewImage/PreviewImage";
-import ProjectStats from "./ProjectStats/ProjectStats";
+import ProjectLinks from "./ProjectLinks/ProjectLinks";
 
 const FeaturedProject = ({ data, fetchedData, shouldReverse }) => {
   const { title, description, technologies, previewImg } = data;
@@ -43,26 +42,7 @@ const FeaturedProject = ({ data, fetchedData, shouldReverse }) => {
           ))}
         </ul>
 
-        <div className={s.projectLinks}>
-          <a
-            href={fetchedData.repoUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={s.githubLink}
-          >
-            <SvgIcon name="github" />
-            Source
-            <ProjectStats stars={fetchedData.stars} forks={fetchedData.forks} />
-          </a>
-          <a
-            href={fetchedData.liveUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <SvgIcon name="live" />
-            Live
-          </a>
-        </div>
+        <ProjectLinks fetchedData={fetchedData} />
       </div>
 
       <PreviewImage
