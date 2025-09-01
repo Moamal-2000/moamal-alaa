@@ -86,6 +86,7 @@ const FeaturedProject = ({ data, fetchedData, shouldReverse }) => {
       >
         <Image src={previewImg} alt={title} width={628} height={435} />
       </a>
+
     </motion.div>
   );
 };
