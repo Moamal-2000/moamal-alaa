@@ -19,9 +19,11 @@ const HeroSection = () => {
         <motion.p className={s.preHeading} {...motionProps()}>
           Hi, my name is
         </motion.p>
+
         <motion.h1 className={s.myName} {...motionProps()}>
           Moamal Alaa.
         </motion.h1>
+
         <motion.h2 className={s.whatIDo} {...motionProps()}>
           I make the internet less boring.
         </motion.h2>
@@ -36,6 +38,7 @@ const HeroSection = () => {
           <a href="#projects" className={s.viewWorkBtn}>
             View my work
           </a>
+
           <a href="mailto:moamalalaapro1@gmail.com" className={s.getInTouchBtn}>
             Get in touch
           </a>
