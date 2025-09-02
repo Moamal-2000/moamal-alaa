@@ -4,6 +4,7 @@ import { fadeInOnViewMotionProps } from "@/functions/motionConfig";
 import { motion } from "framer-motion";
 import s from "./FeaturedProject.module.scss";
 import PreviewImage from "./PreviewImage/PreviewImage";
+import ProjectHeader from "./ProjectHeader/ProjectHeader";
 import ProjectLinks from "./ProjectLinks/ProjectLinks";
 import ProjectTechList from "./ProjectTechList/ProjectTechList";
 
@@ -22,18 +23,7 @@ const FeaturedProject = ({ data, fetchedData, shouldReverse }) => {
       })}
     >
       <div className={s.content}>
-        <div className={s.projectHeader}>
-          <span className={s.featuredText}>Featured Project</span>
-          <h3 className={s.title}>
-            <a
-              href={fetchedData.liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {title}
-            </a>
-          </h3>
-        </div>
+        <ProjectHeader title={title} liveUrl={fetchedData.liveUrl} />
 
         <p className={s.description}>{description}</p>
 

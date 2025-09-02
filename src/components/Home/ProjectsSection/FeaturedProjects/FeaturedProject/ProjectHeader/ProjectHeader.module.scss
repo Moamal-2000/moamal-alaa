@@ -1,0 +1,49 @@
+@use "@/styles/mixins" as m;
+
+.projectHeader {
+  margin-bottom: 24px;
+  width: fit-content;
+  pointer-events: all;
+}
+
+.projectHeader .featuredText {
+  font-family: var(--font-mono);
+  font-size: .9rem;
+  color: #64ffda;
+}
+
+@include m.very-small {
+  .projectHeader .featuredText {
+    font-size: .85rem;
+  }
+}
+
+.projectHeader .title {
+  font-size: clamp(1.5rem, 5vw, 1.75rem);
+  font-weight: 700;
+  color: #ccd6f6;
+  margin: 2px 0 16px;
+  width: fit-content;
+}
+
+.projectHeader .title>a {
+  outline: none;
+  border-bottom: solid 2px transparent;
+  transition: color .3s ease, border-color .3s ease;
+
+  &:hover {
+    color: #64ffda;
+  }
+
+  &:focus-visible {
+    color: #64ffda;
+    border-bottom: solid 2px #64ffda;
+  }
+}
+
+@include m.small {
+  .projectHeader .title {
+    margin-bottom: 0;
+    color: #e6f1ff;
+  }
+}
