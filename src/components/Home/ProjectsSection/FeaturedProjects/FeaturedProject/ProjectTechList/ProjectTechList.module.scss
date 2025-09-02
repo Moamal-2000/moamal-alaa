@@ -1,0 +1,59 @@
+@use "@/styles/mixins" as m;
+
+.techList {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 12px 0;
+  position: relative;
+  left: -13px;
+  width: 440px;
+}
+
+@include m.large {
+  .techList {
+    width: 400px;
+  }
+}
+
+@include m.medium {
+  .techList {
+    width: fit-content;
+    display: inline-flex;
+  }
+}
+
+[dir=rtl] .techList {
+  left: auto;
+  right: -13px;
+}
+
+@include m.small {
+  [dir=rtl] .techList {
+    left: -13px;
+  }
+}
+
+.techList li {
+  -webkit-tap-highlight-color: transparent;
+  padding: 6px 13px;
+  border-radius: 20px;
+  font-family: var(--font-mono);
+  font-size: .875rem;
+  font-weight: 500;
+  color: #a8b2d1;
+  pointer-events: all;
+  transition: color .3s ease;
+}
+
+@include m.small {
+  .techList li {
+    color: #ccd6f6;
+    transition: color .3s .1s ease;
+  }
+}
+
+@include m.very-small {
+  .techList li {
+    font-size: .8rem;
+  }
+}

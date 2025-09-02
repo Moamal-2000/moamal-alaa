@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import s from "./FeaturedProject.module.scss";
 import PreviewImage from "./PreviewImage/PreviewImage";
 import ProjectLinks from "./ProjectLinks/ProjectLinks";
+import ProjectTechList from "./ProjectTechList/ProjectTechList";
 
 const FeaturedProject = ({ data, fetchedData, shouldReverse }) => {
   const { title, description, technologies, previewImg } = data;
@@ -36,12 +37,7 @@ const FeaturedProject = ({ data, fetchedData, shouldReverse }) => {
 
         <p className={s.description}>{description}</p>
 
-        <ul className={s.techList}>
-          {technologies.map((tech, index) => (
-            <li key={`${index}-${tech}`}>{tech}</li>
-          ))}
-        </ul>
-
+        <ProjectTechList technologies={technologies} />
         <ProjectLinks fetchedData={fetchedData} />
       </div>
 

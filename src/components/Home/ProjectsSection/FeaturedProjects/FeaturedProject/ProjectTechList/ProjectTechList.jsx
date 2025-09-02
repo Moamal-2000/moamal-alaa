@@ -1,9 +1,13 @@
-import s from './ProjectTechList.module.scss'
+import s from "./ProjectTechList.module.scss";
 
-const ProjectTechList = () => {
+const ProjectTechList = ({ technologies }) => {
   return (
-    <div>ProjectTechList</div>
-  )
-}
+    <ul className={s.techList} data-type="tech-list">
+      {technologies.map((tech, index) => (
+        <li key={`${index}-${tech}`}>{tech}</li>
+      ))}
+    </ul>
+  );
+};
 
-export default ProjectTechList
+export default ProjectTechList;
