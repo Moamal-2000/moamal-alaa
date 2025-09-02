@@ -17,34 +17,6 @@
   height: 40px;
 }
 
-.projectHeader .projectTop .projectLinks {
-  display: flex;
-  align-items: center;
-}
-
-.projectHeader .projectTop .projectLinks>a {
-  -webkit-tap-highlight-color: transparent;
-  color: #a8b2d1;
-  padding: 5px 7px;
-  transition: outline-color .25s var(--ease-main);
-
-  &:focus-visible {
-    outline: 2px solid #64ffda;
-    outline-offset: -1px;
-  }
-}
-
-.projectHeader .projectTop .projectLinks>a svg {
-  width: 20px;
-  height: 20px;
-  stroke: #a8b2d1;
-  transition: stroke .25s var(--ease-main);
-}
-
-.projectHeader .projectTop .projectLinks>a:where(:hover, :focus-visible) svg {
-  stroke: #64ffda;
-}
-
 .projectHeader .title {
   margin-bottom: 10px;
   color: #ccd6f6;

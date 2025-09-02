@@ -1,5 +1,6 @@
 import SvgIcon from "@/components/Shared/SvgIcon";
 import s from "./ProjectHeader.module.scss";
+import ProjectLinks from "./ProjectLinks/ProjectLinks";
 
 const ProjectHeader = ({
   data: { title, description, repoUrl, liveUrl, isFeatured },
@@ -8,30 +9,7 @@ const ProjectHeader = ({
     <header className={s.projectHeader}>
       <div className={s.projectTop}>
         <SvgIcon name="folder" />
-
-        <div className={s.projectLinks}>
-          {repoUrl && (
-            <a
-              href={repoUrl}
-              title="GitHub Link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <SvgIcon name="github" />
-            </a>
-          )}
-
-          {liveUrl && (
-            <a
-              href={liveUrl}
-              title="External Link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <SvgIcon name="live" />
-            </a>
-          )}
-        </div>
+        <ProjectLinks repoUrl={repoUrl} liveUrl={liveUrl} />
       </div>
 
       <h3 className={s.title}>

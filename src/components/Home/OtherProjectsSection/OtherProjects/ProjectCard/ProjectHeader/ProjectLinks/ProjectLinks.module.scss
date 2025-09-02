@@ -1,0 +1,27 @@
+.projectLinks {
+  display: flex;
+  align-items: center;
+}
+
+.projectLinks>a {
+  -webkit-tap-highlight-color: transparent;
+  color: #a8b2d1;
+  padding: 5px 7px;
+  transition: outline-color .25s var(--ease-main);
+
+  &:focus-visible {
+    outline: 2px solid #64ffda;
+    outline-offset: -1px;
+  }
+}
+
+.projectLinks>a svg {
+  width: 20px;
+  height: 20px;
+  stroke: #a8b2d1;
+  transition: stroke .25s var(--ease-main);
+}
+
+.projectLinks>a:where(:hover, :focus-visible) svg {
+  stroke: #64ffda;
+}
