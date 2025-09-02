@@ -1,9 +1,14 @@
-import s from './ProjectTitle.module.scss'
+import s from "./ProjectTitle.module.scss";
 
-const ProjectTitle = () => {
+const ProjectTitle = ({ children, liveUrl, isFeatured }) => {
   return (
-    <div>ProjectTitle</div>
-  )
-}
+    <h3 className={s.title}>
+      <a href={liveUrl || "#"} target="_blank" rel="noopener noreferrer">
+        {children}
+        {isFeatured && <span className={s.featured}>Featured</span>}
+      </a>
+    </h3>
+  );
+};
 
-export default ProjectTitle
+export default ProjectTitle;
