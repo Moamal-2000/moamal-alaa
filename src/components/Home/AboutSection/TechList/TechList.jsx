@@ -1,8 +1,8 @@
 "use client";
 
 import { TECHNOLOGIES } from "@/data/staticData";
-import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
+import TechInfoBox from "./TechInfoBox/TechInfoBox";
 import s from "./TechList.module.scss";
 
 const TechList = () => {
@@ -22,18 +22,7 @@ const TechList = () => {
         ))}
       </ul>
 
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={activeIndex}
-          className={s.infoBox}
-          initial={{ opacity: 0, y: 5 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -5 }}
-          transition={{ duration: 0.2, ease: "easeInOut" }}
-        >
-          <p>{TECHNOLOGIES[activeIndex].description}</p>
-        </motion.div>
-      </AnimatePresence>
+      <TechInfoBox activeIndex={activeIndex} />
     </div>
   );
 };
