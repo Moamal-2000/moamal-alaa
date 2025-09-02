@@ -1,9 +1,18 @@
-import s from './HeroButtons.module.scss'
+import { motion } from "motion/react";
+import s from "./HeroButtons.module.scss";
 
-const HeroButtons = () => {
+const HeroButtons = ({ motionProps }) => {
   return (
-    <div>HeroButtons</div>
-  )
-}
+    <motion.div className={s.buttons} {...motionProps()}>
+      <a href="#projects" className={s.viewWorkBtn}>
+        View my work
+      </a>
 
-export default HeroButtons
+      <a href="mailto:moamalalaapro1@gmail.com" className={s.getInTouchBtn}>
+        Get in touch
+      </a>
+    </motion.div>
+  );
+};
+
+export default HeroButtons;

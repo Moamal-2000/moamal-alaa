@@ -2,6 +2,7 @@
 
 import { heroMotionConfig } from "@/functions/motionConfig";
 import { motion } from "motion/react";
+import HeroButtons from "./HeroButtons/HeroButtons";
 import s from "./HeroSection.module.scss";
 
 const { initial, animate, transition } = heroMotionConfig();
@@ -34,15 +35,7 @@ const HeroSection = () => {
           and accessible websites that leave a lasting impression.
         </motion.p>
 
-        <motion.div className={s.buttons} {...motionProps()}>
-          <a href="#projects" className={s.viewWorkBtn}>
-            View my work
-          </a>
-
-          <a href="mailto:moamalalaapro1@gmail.com" className={s.getInTouchBtn}>
-            Get in touch
-          </a>
-        </motion.div>
+        <HeroButtons motionProps={motionProps} />
       </div>
     </section>
   );
