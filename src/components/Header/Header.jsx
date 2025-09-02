@@ -1,6 +1,7 @@
 "use client";
 
 import { DEBOUNCE_DELAY, SCROLL_THRESHOLD } from "@/data/constants";
+import { getHeaderClasses } from "@/functions/classNames";
 import { fadeInOnViewMotionProps } from "@/functions/motionConfig";
 import useScrollDirection from "@/hooks/useScrollDirection";
 import useGlobalStore from "@/stores/global/useGlobalStore";
@@ -16,14 +17,15 @@ import MobileNavMenu from "./MobileNavMenu/MobileNavMenu";
 const Header = () => {
   const scrollDirection = useScrollDirection({ initialDir: "down" });
   const { isMobileNavOpen, updateGlobalState } = useGlobalStore();
+
   const [isActive, setIsActive] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
-  const activeClass = isActive ? s.active : "";
-  const hiddenClass = isHidden ? s.hidden : "";
-  const headerClasses = `${s.header} ${activeClass} ${hiddenClass}`;
+
   const navClicked = useRef(false);
   const hasMounted = useRef(false);
   const timerRef = useRef();
+
+  const headerClasses = getHeaderClasses({ cssModule: s, isActive, isHidden });
 
   function handleHeaderClick() {
     if (!isMobileNavOpen) return;
