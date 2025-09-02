@@ -28,8 +28,7 @@ const Header = () => {
   const headerClasses = getHeaderClasses({ cssModule: s, isActive, isHidden });
 
   function handleHeaderClick() {
-    if (!isMobileNavOpen) return;
-    updateGlobalState({ isMobileNavOpen: false });
+    if (isMobileNavOpen) updateGlobalState({ isMobileNavOpen: false });
   }
 
   const handleScroll = useCallback(() => {
