@@ -27,7 +27,7 @@ const Header = () => {
 
   function handleHeaderClick() {
     if (!isMobileNavOpen) return;
-    updateGlobalState("isMobileNavOpen", false);
+    updateGlobalState({ isMobileNavOpen: false });
   }
 
   const handleScroll = useCallback(() => {

@@ -17,7 +17,7 @@ const MobileNavBtn = () => {
   }, []);
 
   function handleClick() {
-    updateGlobalState("isMobileNavOpen", !isMobileNavOpen);
+    updateGlobalState({ isMobileNavOpen: !isMobileNavOpen });
   }
 
   return (

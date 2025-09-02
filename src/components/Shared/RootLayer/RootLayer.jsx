@@ -10,7 +10,7 @@ const RootLayer = ({ children }) => {
   function handleClick() {
     if (!isMobileNavOpen) return;
 
-    updateGlobalState("isMobileNavOpen", false);
+    updateGlobalState({ isMobileNavOpen: false });
   }
 
   return (

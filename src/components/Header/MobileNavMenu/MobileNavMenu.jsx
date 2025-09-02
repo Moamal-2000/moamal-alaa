@@ -16,7 +16,7 @@ const MobileNavMenu = () => {
 
   function handleClick(title) {
     if (pathname !== "/") router.push(`/#${title}`);
-    updateGlobalState("isMobileNavOpen", !isMobileNavOpen);
+    updateGlobalState({ isMobileNavOpen: !isMobileNavOpen });
   }
 
   return (
