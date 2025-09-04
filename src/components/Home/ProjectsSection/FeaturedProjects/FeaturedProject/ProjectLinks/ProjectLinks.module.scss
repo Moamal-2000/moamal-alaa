@@ -3,6 +3,7 @@
 .projectLinks {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 8px;
   width: fit-content;
   user-select: none;
