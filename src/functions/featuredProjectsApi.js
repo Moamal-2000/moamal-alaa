@@ -2,12 +2,27 @@ import { MY_REPOS_URL } from "@/data/constants";
 import { FEATURED_PROJECTS } from "@/data/staticData";
 
 export async function fetchMyGithubRepos() {
-  const myReposResponse = await fetch(MY_REPOS_URL, {
-    cache: "force-cache",
-    next: { revalidate: 1000 * 60 * 60 },
-  });
+  try {
+    const response = await fetch(MY_REPOS_URL, {
+      cache: "force-cache",
+      next: { revalidate: 1000 * 60 * 60 },
+    });
 
-  return await myReposResponse.json();
+    if (!response.ok) {
+      console.error(
+        "GitHub API returned error:",
+        response.status,
+        response.statusText
+      );
+
+      return [];
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.error("Failed to fetch my GitHub repositories:", error);
+    return [];
+  }
 }
 
 export function getFeaturedProjects(repos) {
@@ -22,10 +37,10 @@ export async function fetchFeaturedProjects() {
 
   return featuredProjects.map((repo) => {
     return {
-      stars: repo.stargazers_count,
-      forks: repo.forks_count,
-      repoUrl: repo.html_url,
-      liveUrl: repo.homepage,
+      stars: repo?.stargazers_count || 0,
+      forks: repo?.forks_count || 0,
+      repoUrl: repo?.html_url || "",
+      liveUrl: repo?.homepage || "",
     };
   });
 }
