@@ -3,3 +3,39 @@
   flex-direction: column;
   align-items: center;
 }
+
+.otherProjectsHeader .title {
+  margin-bottom: 10px;
+  color: #ccd6f6;
+  line-height: 1.1;
+  font-weight: 600;
+  font-size: clamp(1.5rem, 5vw, 2rem);
+}
+
+.otherProjectsHeader .viewArchiveBtn {
+  outline: none;
+  text-align: center;
+  color: #64ffda;
+  font-family: var(--font-mono);
+  font-size: .875rem;
+  position: relative;
+}
+
+.otherProjectsHeader .viewArchiveBtn::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  position: relative;
+  bottom: .1em;
+  background-color: #64ffda;
+  opacity: .5;
+  transition:
+    width .25s var(--ease-main),
+    opacity .25s .2s var(--ease-main);
+}
+
+.otherProjectsHeader .viewArchiveBtn:where(:hover, :focus-visible)::after {
+  width: 100%;
+  opacity: 1;
+}
