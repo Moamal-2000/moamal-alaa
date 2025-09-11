@@ -1,9 +1,12 @@
-import s from './LinkButton.module.scss'
+import Link from "next/link";
+import s from "./LinkButton.module.scss";
 
-const LinkButton = () => {
+const LinkButton = ({ children, ...props }) => {
   return (
-    <div>LinkButton</div>
-  )
-}
+    <Link className={s.button} {...props}>
+      {children}
+    </Link>
+  );
+};
 
-export default LinkButton
+export default LinkButton;
