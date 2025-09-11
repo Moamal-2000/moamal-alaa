@@ -54,10 +54,14 @@
       rgba(255, 255, 255, .1),
       rgba(255, 255, 255, .3),
       rgba(255, 255, 255, .1));
-  transition: opacity .5s ease-out, left .5s ease-out;
+  transition:
+    opacity .5s ease-out,
+    scale .5s ease-out,
+    translate .5s ease-out;
 }
 
 .notFoundPage .homeButton:hover::before {
   opacity: 1;
-  left: 100%;
+  translate: 50%;
+  scale: 0 1;
 }
