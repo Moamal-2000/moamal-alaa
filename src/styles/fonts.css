@@ -1,5 +1,4 @@
 /* Calibre Font */
-
 @font-face {
   font-family: "Calibre";
   src: url('../fonts/Calibre/Calibre-Light.woff2') format('woff2');
@@ -33,7 +32,6 @@
 }
 
 /* SFMono Font */
-
 @font-face {
   font-family: "SF Mono";
   src: url('../fonts/SFMono/SFMono-Regular.woff2') format('woff2');
