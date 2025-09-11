@@ -1,5 +1,6 @@
 "use client";
 
+import LinkButton from "@/components/Shared/Buttons/LinkButton/LinkButton";
 import { fadeInOnViewMotionProps } from "@/functions/motionConfig";
 import { motion } from "framer-motion";
 import s from "./ContactSection.module.scss";
@@ -19,9 +20,12 @@ const ContactSection = () => {
         I'm currently looking for new opportunities. Whether you have a question
         or just want to say hi, I'll get back to you as soon as possible!
       </p>
-      <a href="mailto:moamalalaapro1@gmail.com" title="Send me an email">
+      <LinkButton
+        href="mailto:moamalalaapro1@gmail.com"
+        title="Send me an email"
+      >
         Say Hello
-      </a>
+      </LinkButton>
     </motion.section>
   );
 };
