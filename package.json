@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "motion": "^12.23.12",
-    "next": "15.5.0",
+    "next": "15.5.3",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "zustand": "^5.0.8"
@@ -18,9 +18,9 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "eslint": "^9",
-    "eslint-config-next": "15.5.0",
-    "npm-check-updates": "^18.0.2",
-    "sass": "^1.91.0",
+    "eslint-config-next": "15.5.3",
+    "npm-check-updates": "^18.1.0",
+    "sass": "^1.92.1",
     "sharp": "^0.34.3"
   }
 }
