@@ -32,7 +32,7 @@ export const OTHER_PROJECTS_DATA = [
     id: 4,
   },
   {
-    title: "Call of Duty 2 – Jumpers Heaven Statistics Website",
+    title: "Call of Duty 2 - Jumpers Heaven Statistics Website",
     description: (
       <>
         A dynamic website that displays real-time statistics for Call of Duty 2
@@ -49,8 +49,8 @@ export const OTHER_PROJECTS_DATA = [
       </>
     ),
     year: "2025",
-    liveUrl: "https://jh-leaderboard.netlify.app",
-    repoUrl: "https://github.com/Moamal-2000/JHLeaderboard",
+    liveUrl: "https://stats.jumpersheaven.com",
+    repoUrl: "https://github.com/Moamal-2000/jumpers-heaven-statistics",
     technologies: ["Next.js", "MessagePack", "Sass", "Redux Toolkit"],
     id: 5,
   },
