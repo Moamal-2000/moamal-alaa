@@ -32,7 +32,7 @@ export const OTHER_PROJECTS_DATA = [
     id: 4,
   },
   {
-    title: "Call of Duty 2 - Jumpers Heaven Statistics Website",
+    title: "Call of Duty 2 Stats",
     description: (
       <>
         A dynamic website that displays real-time statistics for Call of Duty 2
