@@ -22,7 +22,7 @@
   }
 }
 
-.title>a .featured {
+.title>a .status {
   all: initial;
   font-family: var(--font-mono);
   display: inline-block;
@@ -40,7 +40,7 @@
 }
 
 @include m.very-small {
-  .title>a .featured {
+  .title>a .status {
     position: absolute;
     right: 90px;
     top: 34px;

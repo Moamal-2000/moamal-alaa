@@ -5,14 +5,16 @@ const ProjectTitle = ({ children, liveUrl, isFeatured, isInProgress }) => {
     <h3 className={s.title}>
       <a href={liveUrl || "#"} target="_blank" rel="noopener noreferrer">
         {children}
-        {(isFeatured || isInProgress) && (
-          <span className={s.featured}>
-            {isFeatured ? "Featured" : "In Progress"}
-          </span>
-        )}
+        {(isFeatured || isInProgress) && <ProjectStatus />}
       </a>
     </h3>
   );
 };
 
 export default ProjectTitle;
+
+function ProjectStatus({ isFeatured }) {
+  return (
+    <span className={s.status}>{isFeatured ? "Featured" : "In Progress"}</span>
+  );
+}
