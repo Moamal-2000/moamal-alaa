@@ -5,7 +5,9 @@ const ProjectTitle = ({ children, liveUrl, isFeatured, isInProgress }) => {
     <h3 className={s.title}>
       <a href={liveUrl || "#"} target="_blank" rel="noopener noreferrer">
         {children}
-        {(isFeatured || isInProgress) && <ProjectStatus />}
+        {(isFeatured || isInProgress) && (
+          <ProjectStatus isFeatured={isFeatured} />
+        )}
       </a>
     </h3>
   );
