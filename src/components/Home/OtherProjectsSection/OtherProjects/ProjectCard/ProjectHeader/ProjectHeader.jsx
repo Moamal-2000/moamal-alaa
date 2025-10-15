@@ -4,7 +4,7 @@ import ProjectLinks from "./ProjectLinks/ProjectLinks";
 import ProjectTitle from "./ProjectTitle/ProjectTitle";
 
 const ProjectHeader = ({
-  data: { title, description, repoUrl, liveUrl, isFeatured },
+  data: { title, description, repoUrl, liveUrl, isFeatured, isInProgress },
 }) => {
   return (
     <header className={s.projectHeader}>
@@ -13,7 +13,11 @@ const ProjectHeader = ({
         <ProjectLinks repoUrl={repoUrl} liveUrl={liveUrl} />
       </div>
 
-      <ProjectTitle liveUrl={liveUrl} isFeatured={isFeatured}>
+      <ProjectTitle
+        liveUrl={liveUrl}
+        isFeatured={isFeatured}
+        isInProgress={isInProgress}
+      >
         {title}
       </ProjectTitle>
 

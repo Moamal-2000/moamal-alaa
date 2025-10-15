@@ -52,6 +52,7 @@ export const OTHER_PROJECTS_DATA = [
     liveUrl: "https://stats.jumpersheaven.com",
     repoUrl: "https://github.com/Moamal-2000/jumpers-heaven-statistics",
     technologies: ["Next.js", "MessagePack", "Sass", "Redux Toolkit"],
+    isInProgress: true,
     id: 5,
   },
   {
