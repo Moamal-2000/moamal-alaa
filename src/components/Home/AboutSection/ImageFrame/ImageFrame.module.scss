@@ -5,11 +5,6 @@
   border-radius: 4px;
   position: relative;
   color: #000;
-  transition: translate .25s var(--ease-main);
-
-  &:hover {
-    translate: -5px -5px;
-  }
 }
 
 @include m.medium {
@@ -38,25 +33,13 @@
   border: 2px solid #64ffda;
   z-index: -1;
   border-radius: 4px;
-  transition: translate .25s var(--ease-main);
-}
-
-.imageFrame:hover::after {
-  translate: 8px 8px;
 }
 
 .imageFrame>img {
+  grid-area: frame;
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 4px;
-  grid-area: frame;
   border-radius: 4px;
-  mix-blend-mode: multiply;
-  filter: grayscale(1) contrast(1) brightness(1.15);
-}
-
-.imageFrame:hover>img {
-  filter: grayscale(0) contrast(1) brightness(1.15);
-  mix-blend-mode: normal;
 }
