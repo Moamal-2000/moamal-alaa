@@ -52,9 +52,28 @@ export const FEATURED_PROJECTS = [
   },
   {
     title: "Call of Duty 2 Stats",
-    description: `A dynamic website that displays real-time statistics for Call of Duty 2
-    players on Jumpers Heaven servers. Still in active development, the platform aims to offer
-    detailed insights and leaderboard data.`,
+    description: (
+      <>
+        A live platform providing real-time stats for{" "}
+        <a
+          href="https://en.wikipedia.org/wiki/Call_of_Duty_2"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Call of Duty 2
+        </a>{" "}
+        <a
+          href="https://www.jumpersheaven.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Jumpers Heaven
+        </a>{" "}
+        servers, including leaderboards, maps, players, and servers with online
+        player data. Each player and map has its own detailed page. Currently in
+        active development and available as a beta release.
+      </>
+    ),
     technologies: [
       "Next.js",
       "Redux Toolkit",
