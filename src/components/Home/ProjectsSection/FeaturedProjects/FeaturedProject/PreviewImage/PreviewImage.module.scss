@@ -41,7 +41,7 @@
   height: 100%;
   inset: 0;
   z-index: 3;
-  background-color: #00ff77;
+  background-color: #00ff77d9;
   opacity: .318;
   transition: filter .15s var(--ease-main);
 }
@@ -55,13 +55,13 @@
 
 .previewImg:where(:hover, :focus-visible)::before {
   mix-blend-mode: screen;
-  filter: grayscale(100%) contrast(2) brightness(90%);
+  filter: grayscale(100%) contrast(2) brightness(60%);
 }
 
 @include m.small {
   .featuredProject:hover .previewImg::before {
     mix-blend-mode: screen;
-    filter: grayscale(100%) contrast(2) brightness(90%);
+    filter: grayscale(100%) contrast(2) brightness(60%);
   }
 }
 

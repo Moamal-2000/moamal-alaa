@@ -59,7 +59,7 @@ export const FEATURED_PROJECTS = [
       "Sass",
     ],
     repoUrl: "https://github.com/Moamal-2000/jumpers-heaven-statistics",
-    previewImg: "/images/call-of-duty-2-stats-project.png",
+    previewImg: "/images/call-of-duty-2-stats-project.webp",
     id: 3,
   },
   {
