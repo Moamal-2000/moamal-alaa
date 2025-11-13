@@ -25,12 +25,6 @@ export async function fetchMyGithubRepos() {
   }
 }
 
-export function getFeaturedProjects(repos) {
-  return FEATURED_PROJECTS.map((project) => {
-    return repos.find((repo) => repo.html_url === project.repoUrl);
-  });
-}
-
 export async function fetchFeaturedProjects() {
   const myRepos = await fetchMyGithubRepos();
   const featuredProjects = getFeaturedProjects(myRepos);
@@ -42,5 +36,11 @@ export async function fetchFeaturedProjects() {
       repoUrl: repo?.html_url || "",
       liveUrl: repo?.homepage || "",
     };
+  });
+}
+
+export function getFeaturedProjects(repos) {
+  return FEATURED_PROJECTS.map((project) => {
+    return repos.find((repo) => repo.html_url === project.repoUrl);
   });
 }
