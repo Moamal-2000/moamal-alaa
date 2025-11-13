@@ -1,3 +1,5 @@
+import AnchorLink from "@/components/Shared/AnchorLink/AnchorLink";
+
 export const FEATURED_PROJECTS = [
   {
     title: "E-Commercew",
@@ -22,20 +24,20 @@ export const FEATURED_PROJECTS = [
     description: (
       <>
         A live platform providing real-time stats for{" "}
-        <a
+        <AnchorLink
           href="https://en.wikipedia.org/wiki/Call_of_Duty_2"
           target="_blank"
           rel="noopener noreferrer"
         >
           Call of Duty 2
-        </a>{" "}
-        <a
+        </AnchorLink>{" "}
+        <AnchorLink
           href="https://www.jumpersheaven.com"
           target="_blank"
           rel="noopener noreferrer"
         >
           Jumpers Heaven
-        </a>{" "}
+        </AnchorLink>{" "}
         servers, including leaderboards, maps, players, and servers with online
         player data. Each player and map has its own detailed page. Currently in
         active development and available as a beta release.
