@@ -1,4 +1,4 @@
-import { FEATURED_PROJECTS } from "@/data/staticData";
+import { FEATURED_PROJECTS } from "@/data/featuredProjects";
 import FeaturedProject from "./FeaturedProject/FeaturedProject";
 import s from "./FeaturedProjects.module.scss";
 

@@ -1,5 +1,5 @@
 import { MY_REPOS_URL } from "@/data/constants";
-import { FEATURED_PROJECTS } from "@/data/staticData";
+import { FEATURED_PROJECTS } from "@/data/featuredProjects";
 
 export async function fetchMyGithubRepos() {
   try {
