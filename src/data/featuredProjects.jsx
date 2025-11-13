@@ -3,10 +3,17 @@ import AnchorLink from "@/components/Shared/AnchorLink/AnchorLink";
 export const FEATURED_PROJECTS = [
   {
     title: "E-Commercew",
-    description: `A responsive and modern e-commerce web application built with React and Redux Toolkit. 
-    It supports multi-language functionality, a dynamic shopping cart, 
-    wishlist, product search, order tracking, and zoomable product details. Designed with a clean UI, 
-    optimized for SEO, and built as a Progressive Web App for an app-like experience across all devices`,
+    description: (
+      <>
+        A responsive and modern{" "}
+        <strong className="highlight">e-commerce web application</strong> built
+        with React and Redux Toolkit. It supports multi-language functionality,
+        a dynamic shopping cart, wishlist, product search, order tracking, and
+        zoomable product details. Designed with a clean UI, optimized for SEO,
+        and built as a Progressive Web App for an app-like experience across all
+        devices
+      </>
+    ),
     technologies: [
       "React",
       "Sass",
@@ -39,8 +46,9 @@ export const FEATURED_PROJECTS = [
           Jumpers Heaven
         </AnchorLink>{" "}
         servers, including leaderboards, maps, players, and servers with online
-        player data. Each player and map has its own detailed page. Currently in
-        active development and available as a beta release.
+        player data. Each player and map has its own detailed page. Currently in{" "}
+        <strong className="highlight">active development</strong> and available
+        as a beta release.
       </>
     ),
     technologies: [
@@ -56,9 +64,14 @@ export const FEATURED_PROJECTS = [
   },
   {
     title: "Aster Information",
-    description: `A fully responsive website built as a freelance project for a potential client,
-    featuring a professional design, user-friendly interface, smooth on-scroll animations,
-    and cross-browser compatibility.`,
+    description: (
+      <>
+        A fully responsive website built as a{" "}
+        <strong className="highlight">freelance project</strong> for a potential
+        client, featuring a professional design, user-friendly interface, smooth
+        on-scroll animations, and cross-browser compatibility.
+      </>
+    ),
     technologies: ["React Helmet Async", "React Router Dom", "Sass", "React"],
     repoUrl: "https://github.com/Moamal-2000/aster-information",
     previewImg: "/images/aster-information-project.webp",
