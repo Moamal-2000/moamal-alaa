@@ -51,6 +51,22 @@ export const FEATURED_PROJECTS = [
     id: 1,
   },
   {
+    title: "Call of Duty 2 Stats",
+    description: `A dynamic website that displays real-time statistics for Call of Duty 2
+    players on Jumpers Heaven servers. Still in active development, the platform aims to offer
+    detailed insights and leaderboard data.`,
+    technologies: [
+      "Next.js",
+      "Redux Toolkit",
+      "MessagePack",
+      "LZ String",
+      "Sass",
+    ],
+    repoUrl: "https://github.com/Moamal-2000/jumpers-heaven-statistics",
+    previewImg: "/images/call-of-duty-2-stats-project.png",
+    id: 3,
+  },
+  {
     title: "Aster Information",
     description: `A fully responsive website built as a freelance project for a potential client,
     featuring a professional design, user-friendly interface, smooth on-scroll animations,

@@ -1,5 +1,3 @@
-import AnchorLink from "@/components/Shared/AnchorLink/AnchorLink";
-
 export const OTHER_PROJECTS_DATA = [
   {
     title: "Challenges with JavaScript",
@@ -67,29 +65,5 @@ export const OTHER_PROJECTS_DATA = [
     ],
     isInProgress: true,
     id: 7,
-  },
-  {
-    title: "Call of Duty 2 Stats",
-    description: (
-      <>
-        A dynamic website that displays real-time statistics for Call of Duty 2
-        players on{" "}
-        <AnchorLink
-          href="https://jumpersheaven.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Jumpers Heaven
-        </AnchorLink>{" "}
-        servers. Still in active development, the platform aims to offer
-        detailed insights and leaderboard data.
-      </>
-    ),
-    year: "2025",
-    liveUrl: "https://stats.jumpersheaven.com",
-    repoUrl: "https://github.com/Moamal-2000/jumpers-heaven-statistics",
-    technologies: ["Next.js", "MessagePack", "Sass", "Redux Toolkit"],
-    isInProgress: true,
-    id: 8,
   },
 ].reverse();
