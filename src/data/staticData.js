@@ -24,10 +24,16 @@ export const SOCIAL_MEDIA = [
     id: 3,
   },
   {
+    media: "Codewars",
+    iconName: "codewars",
+    url: "https://www.codewars.com/users/Moamal-2000",
+    id: 4,
+  },
+  {
     media: "Twitter",
     iconName: "twitter",
     url: "https://x.com/MoamalAlaa7",
-    id: 4,
+    id: 5,
   },
 ];
 
