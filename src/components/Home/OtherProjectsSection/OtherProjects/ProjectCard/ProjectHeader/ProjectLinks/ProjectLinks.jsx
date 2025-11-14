@@ -1,4 +1,3 @@
-import SvgIcon from "@/components/Shared/SvgIcon";
 import s from "./ProjectLinks.module.scss";
 
 const ProjectLinks = ({ repoUrl, liveUrl }) => {
@@ -11,7 +10,9 @@ const ProjectLinks = ({ repoUrl, liveUrl }) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <SvgIcon name="github" />
+          <svg aria-hidden="true">
+            <use href="/icons-sprite.svg#github" />
+          </svg>
         </a>
       )}
 
@@ -22,7 +23,9 @@ const ProjectLinks = ({ repoUrl, liveUrl }) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <SvgIcon name="live" />
+          <svg aria-hidden="true">
+            <use href="/icons-sprite.svg#live" />
+          </svg>
         </a>
       )}
     </div>

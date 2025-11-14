@@ -1,6 +1,5 @@
 "use client";
 
-import SvgIcon from "@/components/Shared/SvgIcon";
 import { OTHER_PROJECTS_DATA } from "@/data/otherProjects";
 import { fadeInOnViewMotionProps } from "@/functions/motionConfig";
 import { motion } from "motion/react";
@@ -38,7 +37,9 @@ const ProjectsTBody = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <SvgIcon name="live" />
+                    <svg aria-hidden="true">
+                      <use href="/icons-sprite.svg#live" />
+                    </svg>
                   </a>
                 )}
 
@@ -49,7 +50,9 @@ const ProjectsTBody = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <SvgIcon name="github" />
+                    <svg aria-hidden="true">
+                      <use href="/icons-sprite.svg#github" />
+                    </svg>
                   </a>
                 )}
               </div>

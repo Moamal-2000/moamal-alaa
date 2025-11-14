@@ -9,7 +9,6 @@ import { motion } from "motion/react";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import MobileNavBtn from "../Shared/MobileNavBtn/MobileNavBtn";
-import SvgIcon from "../Shared/SvgIcon";
 import s from "./Header.module.scss";
 import HeaderButtons from "./HeaderButtons/HeaderButtons";
 import MobileNavMenu from "./MobileNavMenu/MobileNavMenu";
@@ -73,7 +72,9 @@ const Header = () => {
         {...fadeInOnViewMotionProps({ initialY: 0 })}
       >
         <Link className={s.logo} href="/" aria-label="Go to homepage">
-          <SvgIcon name="logo" />
+          <svg aria-hidden="true">
+            <use href="/icons-sprite.svg#logo" />
+          </svg>
         </Link>
 
         <MobileNavBtn />

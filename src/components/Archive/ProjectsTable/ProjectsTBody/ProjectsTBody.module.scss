@@ -100,11 +100,11 @@
 .tbody tr td.links .wrapper>a>svg {
   width: 20px;
   height: 20px;
-  transition: stroke .25s var(--ease-main);
+  transition: color .25s var(--ease-main);
 }
 
 .tbody tr td.links .wrapper>a:where(:hover, :focus-visible)>svg {
-  stroke: #64ffda;
+  color: #64ffda;
 }
 
 @include m.very-small {

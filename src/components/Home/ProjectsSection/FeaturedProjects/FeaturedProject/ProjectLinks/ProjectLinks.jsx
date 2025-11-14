@@ -1,6 +1,5 @@
-import SvgIcon from "@/components/Shared/SvgIcon";
-import ProjectStats from "./ProjectStats/ProjectStats";
 import s from "./ProjectLinks.module.scss";
+import ProjectStats from "./ProjectStats/ProjectStats";
 
 const ProjectLinks = ({ fetchedData: { repoUrl, liveUrl, stars, forks } }) => {
   return (
@@ -11,13 +10,17 @@ const ProjectLinks = ({ fetchedData: { repoUrl, liveUrl, stars, forks } }) => {
         rel="noopener noreferrer"
         className={s.githubLink}
       >
-        <SvgIcon name="github" />
+        <svg aria-hidden="true">
+          <use href="/icons-sprite.svg#github" />
+        </svg>
         Source
         <ProjectStats stars={stars} forks={forks} />
       </a>
 
       <a href={liveUrl} target="_blank" rel="noopener noreferrer">
-        <SvgIcon name="live" />
+        <svg aria-hidden="true">
+          <use href="/icons-sprite.svg#live" />
+        </svg>
         Live
       </a>
     </div>

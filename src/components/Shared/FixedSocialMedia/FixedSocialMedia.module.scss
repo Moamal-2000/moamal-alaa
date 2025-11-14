@@ -43,7 +43,7 @@
 
   &:hover,
   &:focus-visible {
-    translate: 0 -3px;
+    translate: 0 -2px;
   }
 
   &:focus-visible {
@@ -54,7 +54,7 @@
 }
 
 .socialMedia a:hover svg {
-  stroke: #64ffda;
+  color: #64ffda;
 
   &[data-type=twitter] {
     fill: #64ffda;
@@ -71,7 +71,7 @@
   fill: none;
   transition:
     fill .25s var(--ease-main),
-    stroke .25s var(--ease-main);
+    color .25s var(--ease-main);
 
   &[data-type=twitter] {
     fill: #a8b2d1;
