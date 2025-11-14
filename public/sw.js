@@ -6,10 +6,12 @@ const urlsToCache = [
   "/offline",
   "/manifest.json",
   "/resume.pdf",
-  "/images/aster-information-project.webp",
   "/images/e-commercew-project.webp",
+  "/images/call-of-duty-2-stats-project.webp",
+  "/images/aster-information-project.webp",
   "/images/me.png",
   "/PWA/icons/maskable-icon.webp",
+  "/icons-sprite.svg",
 ];
 
 async function installServiceWorker() {
