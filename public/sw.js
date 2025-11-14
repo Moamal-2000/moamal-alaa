@@ -8,7 +8,7 @@ const urlsToCache = [
   "/images/e-commercew-project.webp",
   "/images/call-of-duty-2-stats-project.webp",
   "/images/aster-information-project.webp",
-  "/images/me.png",
+  "/images/me.webp",
   "/PWA/icons/maskable-icon.webp",
   "/icons-sprite.svg",
 ];
