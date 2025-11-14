@@ -35,7 +35,7 @@
 }
 
 .socialMedia a:hover svg {
-  stroke: #64ffda;
+  color: #64ffda;
 
   &[data-type=twitter] {
     fill: #64ffda;
@@ -47,7 +47,7 @@
   height: 20px;
   transition:
     fill .25s var(--ease-main),
-    stroke .25s var(--ease-main);
+    color .25s var(--ease-main);
 
   &[data-type=twitter] {
     fill: #a8b2d1;
