@@ -18,10 +18,10 @@
 .projectLinks>a svg {
   width: 20px;
   height: 20px;
-  stroke: #a8b2d1;
-  transition: stroke .25s var(--ease-main);
+  color: #a8b2d1;
+  transition: color .25s var(--ease-main);
 }
 
 .projectLinks>a:where(:hover, :focus-visible) svg {
-  stroke: #64ffda;
+  color: #64ffda;
 }
