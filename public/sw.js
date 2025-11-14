@@ -3,7 +3,6 @@ const CACHE_NAME = "moamal-alaa-v18.6.0";
 const urlsToCache = [
   "/",
   "/archive",
-  "/offline",
   "/manifest.json",
   "/resume.pdf",
   "/images/e-commercew-project.webp",
@@ -38,8 +37,6 @@ async function handleFetchRequest(event) {
     await storeResponseInCache(event.request, response.clone());
     return response;
   } catch (error) {
-    const isNavigationRequest = event.request.mode === "navigate";
-    if (isNavigationRequest) return caches.match("/offline");
     return null;
   }
 }
