@@ -1,8 +1,6 @@
 @use "@/styles/mixins" as m;
 
 .aboutSection {
-  width: fit-content;
-  margin: 0 auto;
   display: grid;
   grid-template-areas:
     "heading heading heading"
