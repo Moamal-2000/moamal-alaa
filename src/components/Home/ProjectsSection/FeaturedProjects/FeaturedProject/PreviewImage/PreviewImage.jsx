@@ -1,7 +1,7 @@
 import Image from "next/image";
 import s from "./PreviewImage.module.scss";
 
-const PreviewImage = ({ src, liveUrl, title }) => {
+const PreviewImage = ({ src, liveUrl, title, loading = "eager" }) => {
   return (
     <a
       className={s.previewImg}
@@ -10,7 +10,7 @@ const PreviewImage = ({ src, liveUrl, title }) => {
       rel="noopener noreferrer"
       title={`View ${title}`}
     >
-      <Image src={src} alt={title} width={628} height={435} />
+      <Image src={src} alt={title} width={628} height={435} loading={loading} />
     </a>
   );
 };

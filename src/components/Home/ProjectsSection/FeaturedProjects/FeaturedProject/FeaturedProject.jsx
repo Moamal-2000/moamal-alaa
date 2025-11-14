@@ -35,6 +35,7 @@ const FeaturedProject = ({ data, fetchedData, shouldReverse }) => {
         src={previewImg}
         liveUrl={fetchedData.liveUrl}
         title={title}
+        loading="lazy"
       />
     </motion.div>
   );
