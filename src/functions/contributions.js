@@ -2,8 +2,7 @@ import {
   contributionBlacklist,
   contributionsDescriptions,
 } from "@/data/contributions";
-
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
+import { contributionsQuery } from "@/graphql/contributionsQuery";
 
 export function filterContributions(contributions) {
   return contributions.filter((contribution) => {
@@ -71,7 +70,7 @@ export async function fetchContributions() {
         Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ query }),
+      body: JSON.stringify({ query: contributionsQuery }),
     });
 
     const data = await res.json();
@@ -81,68 +80,3 @@ export async function fetchContributions() {
     return [];
   }
 }
-
-const query = `{
-  user(login: "Moamal-2000") {
-    pullRequests(first: 100, states: MERGED, orderBy: {field: CREATED_AT, direction: DESC}) {
-      nodes {
-        title
-        url
-        mergedAt
-        createdAt
-        updatedAt
-        number
-        state
-        body
-        bodyHTML
-        bodyText
-
-        repository {
-          name
-          url
-          owner {
-            login
-            url
-          }
-        }
-
-        author {
-          login
-          url
-        }
-
-        additions
-        deletions
-        changedFiles
-
-        commits(first: 20) {
-          totalCount
-          nodes {
-            commit {
-              message
-              committedDate
-              url
-            }
-          }
-        }
-
-        labels(first: 10) {
-          nodes {
-            name
-            color
-          }
-        }
-
-        reviews(first: 10) {
-          nodes {
-            author {
-              login
-            }
-            state
-            submittedAt
-          }
-        }
-      }
-    }
-  }
-}`;
