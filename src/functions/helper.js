@@ -79,3 +79,9 @@ export function getSortedPullRequests(repoData, repo) {
     prs: repo.prs.sort((a, b) => new Date(b.mergedAt) - new Date(a.mergedAt)),
   };
 }
+
+export function getContributionData(contributions) {
+  const filtered = filterContributions(contributions);
+  const grouped = groupContributionsByRepo(filtered);
+  return enrichRepos(grouped);
+}
