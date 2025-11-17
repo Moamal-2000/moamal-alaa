@@ -1,5 +1,6 @@
 import AboutSection from "@/components/Home/AboutSection/AboutSection";
 import ContactSection from "@/components/Home/ContactSection/ContactSection";
+import ContributionsSection from "@/components/Home/ContributionsSection/ContributionsSection";
 import HeroSection from "@/components/Home/HeroSection/HeroSection";
 import OtherProjectsSection from "@/components/Home/OtherProjectsSection/OtherProjectsSection";
 import ProjectsSection from "@/components/Home/ProjectsSection/ProjectsSection";
@@ -15,6 +16,7 @@ export default async function Home() {
       <AboutSection />
       <ProjectsSection projectsData={projectsData} />
       <OtherProjectsSection />
+      <ContributionsSection contributions={contributions} />
       <ContactSection />
     </main>
   );
