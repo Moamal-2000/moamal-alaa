@@ -1,4 +1,8 @@
 import NumberedHeading from "@/components/Shared/NumberedHeading/NumberedHeading";
+import {
+  contributionBlacklist,
+  contributionsDescriptions,
+} from "@/data/contributions";
 import ContributionCard from "./ContributionCard/ContributionCard";
 import s from "./ContributionsSection.module.scss";
 
@@ -27,12 +31,23 @@ const ContributionsSection = ({ contributions = [] }) => {
     {}
   );
 
-  // Convert to array and sort by most recent PR date
   const repositoryContributions = Object.values(groupedContributions).map(
-    (repo) => ({
-      ...repo,
-      prs: repo.prs.sort((a, b) => new Date(b.mergedAt) - new Date(a.mergedAt)),
-    })
+    (repo) => {
+      const repoClone = { ...repo };
+
+      const requiredData = contributionsDescriptions.find(
+        (item) =>
+          item.id ===
+          `${repoClone.repository.owner.login}/${repoClone.repository.name}`
+      );
+
+      const sortedPullRequests = getSortedPullRequests(repoClone, repo);
+
+      if (!requiredData) return sortedPullRequests;
+
+      repoClone.repository.description = requiredData?.description || "";
+      return sortedPullRequests;
+    }
   );
 
   return (
@@ -54,11 +69,9 @@ const ContributionsSection = ({ contributions = [] }) => {
 
 export default ContributionsSection;
 
-const contributionBlacklist = [
-  "Amrr-Maherr/TourEg",
-  "Ahmedr6/router-app",
-  "YoussefDybala/Leon-Project",
-  "muqataea/Palestine",
-  "NaderHikaL/Hikal-Company",
-  "ahmedmostafa8/Fetch-Github-Repositories",
-];
+function getSortedPullRequests(repoData, repo) {
+  return {
+    ...repoData,
+    prs: repo.prs.sort((a, b) => new Date(b.mergedAt) - new Date(a.mergedAt)),
+  };
+}

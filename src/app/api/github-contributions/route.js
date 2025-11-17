@@ -30,7 +30,6 @@ const query = `{
         repository {
           name
           url
-          description
           owner {
             login
             url
