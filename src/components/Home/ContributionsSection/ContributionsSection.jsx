@@ -1,9 +1,7 @@
 import NumberedHeading from "@/components/Shared/NumberedHeading/NumberedHeading";
-import { contributionsDescriptions } from "@/data/contributions";
 import {
+  enrichRepos,
   filterContributions,
-  getRepoFullName,
-  getSortedPullRequests,
   groupContributionsByRepo,
 } from "@/functions/helper";
 import ContributionCard from "./ContributionCard/ContributionCard";
@@ -12,23 +10,7 @@ import s from "./ContributionsSection.module.scss";
 const ContributionsSection = ({ contributions = [] }) => {
   const filteredContributions = filterContributions(contributions);
   const groupedContributions = groupContributionsByRepo(filteredContributions);
-
-  const repositoryContributions = Object.values(groupedContributions).map(
-    (repo) => {
-      const repoClone = { ...repo };
-
-      const requiredData = contributionsDescriptions.find(
-        (item) => item.id === getRepoFullName(repoClone)
-      );
-
-      const sortedPullRequests = getSortedPullRequests(repoClone, repo);
-
-      if (!requiredData) return sortedPullRequests;
-
-      repoClone.repository.description = requiredData?.description || "";
-      return sortedPullRequests;
-    }
-  );
+  const repositoryContributions = enrichRepos(groupedContributions);
 
   return (
     <section className={s.contributionsSection}>

@@ -1,4 +1,7 @@
-import { contributionBlacklist } from "@/data/contributions";
+import {
+  contributionBlacklist,
+  contributionsDescriptions,
+} from "@/data/contributions";
 
 export function isMobile() {
   if (typeof navigator === "undefined") return;
@@ -47,6 +50,23 @@ export function groupContributionsByRepo(contributions) {
     acc[repoName].prs.push(contribution);
     return acc;
   }, {});
+}
+
+export function enrichRepos(contributions) {
+  return Object.values(contributions).map((repo) => {
+    const repoClone = { ...repo };
+
+    const requiredData = contributionsDescriptions.find(
+      (item) => item.id === getRepoFullName(repoClone)
+    );
+
+    const sortedPullRequests = getSortedPullRequests(repoClone, repo);
+
+    if (!requiredData) return sortedPullRequests;
+
+    repoClone.repository.description = requiredData?.description || "";
+    return sortedPullRequests;
+  });
 }
 
 export function getRepoFullName(data) {
