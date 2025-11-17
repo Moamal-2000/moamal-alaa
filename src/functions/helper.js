@@ -22,3 +22,7 @@ export async function lockPortraitOrientation() {
     console.warn("Orientation lock failed:", err.message);
   }
 }
+
+export function getRepoFullName(data) {
+  return `${data.repository.owner.login}/${data.repository.name}`;
+}

@@ -3,6 +3,7 @@ import {
   contributionBlacklist,
   contributionsDescriptions,
 } from "@/data/contributions";
+import { getRepoFullName } from "@/functions/helper";
 import ContributionCard from "./ContributionCard/ContributionCard";
 import s from "./ContributionsSection.module.scss";
 
@@ -10,7 +11,7 @@ const ContributionsSection = ({ contributions = [] }) => {
   const filteredContributions = contributions.filter((contribution) => {
     const isMoamalRepo = contribution.url.includes("Moamal-2000");
     const isBlacklisted = contributionBlacklist.includes(
-      `${contribution.repository.owner.login}/${contribution.repository.name}`
+      getRepoFullName(contribution)
     );
 
     return !isMoamalRepo && !isBlacklisted;
@@ -18,14 +19,13 @@ const ContributionsSection = ({ contributions = [] }) => {
 
   const groupedContributions = filteredContributions.reduce(
     (acc, contribution) => {
-      const repoKey = `${contribution.repository.owner.login}/${contribution.repository.name}`;
-      if (!acc[repoKey]) {
-        acc[repoKey] = {
-          repository: contribution.repository,
-          prs: [],
-        };
+      const repoName = getRepoFullName(contribution);
+
+      if (!acc[repoName]) {
+        acc[repoName] = { repository: contribution.repository, prs: [] };
       }
-      acc[repoKey].prs.push(contribution);
+
+      acc[repoName].prs.push(contribution);
       return acc;
     },
     {}
@@ -36,9 +36,7 @@ const ContributionsSection = ({ contributions = [] }) => {
       const repoClone = { ...repo };
 
       const requiredData = contributionsDescriptions.find(
-        (item) =>
-          item.id ===
-          `${repoClone.repository.owner.login}/${repoClone.repository.name}`
+        (item) => item.id === getRepoFullName(repoClone)
       );
 
       const sortedPullRequests = getSortedPullRequests(repoClone, repo);
