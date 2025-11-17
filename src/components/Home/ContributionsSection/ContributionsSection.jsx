@@ -1,5 +1,5 @@
 import NumberedHeading from "@/components/Shared/NumberedHeading/NumberedHeading";
-import { getContributionData } from "@/functions/helper";
+import { getContributionData } from "@/functions/contributions";
 import ContributionCard from "./ContributionCard/ContributionCard";
 import s from "./ContributionsSection.module.scss";
 
