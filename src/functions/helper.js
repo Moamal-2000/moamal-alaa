@@ -36,6 +36,19 @@ export function filterContributions(contributions) {
   });
 }
 
+export function groupContributionsByRepo(contributions) {
+  return contributions.reduce((acc, contribution) => {
+    const repoName = getRepoFullName(contribution);
+
+    if (!acc[repoName]) {
+      acc[repoName] = { repository: contribution.repository, prs: [] };
+    }
+
+    acc[repoName].prs.push(contribution);
+    return acc;
+  }, {});
+}
+
 export function getRepoFullName(data) {
   return `${data.repository.owner.login}/${data.repository.name}`;
 }

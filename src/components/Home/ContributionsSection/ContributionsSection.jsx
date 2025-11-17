@@ -4,26 +4,14 @@ import {
   filterContributions,
   getRepoFullName,
   getSortedPullRequests,
+  groupContributionsByRepo,
 } from "@/functions/helper";
 import ContributionCard from "./ContributionCard/ContributionCard";
 import s from "./ContributionsSection.module.scss";
 
 const ContributionsSection = ({ contributions = [] }) => {
   const filteredContributions = filterContributions(contributions);
-
-  const groupedContributions = filteredContributions.reduce(
-    (acc, contribution) => {
-      const repoName = getRepoFullName(contribution);
-
-      if (!acc[repoName]) {
-        acc[repoName] = { repository: contribution.repository, prs: [] };
-      }
-
-      acc[repoName].prs.push(contribution);
-      return acc;
-    },
-    {}
-  );
+  const groupedContributions = groupContributionsByRepo(filteredContributions);
 
   const repositoryContributions = Object.values(groupedContributions).map(
     (repo) => {
