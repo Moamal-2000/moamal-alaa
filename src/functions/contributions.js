@@ -65,7 +65,7 @@ export function getContributionData(contributions) {
 
 export async function fetchContributions() {
   try {
-    const res = await fetch(`${API_BASE_URL}/api/github-contributions`);
+    const res = await fetch(`/api/github-contributions`);
     const data = await res.json();
     return data.data.user.pullRequests.nodes;
   } catch (error) {
