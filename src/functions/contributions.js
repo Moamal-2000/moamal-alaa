@@ -65,10 +65,84 @@ export function getContributionData(contributions) {
 
 export async function fetchContributions() {
   try {
-    const res = await fetch(`/api/github-contributions`);
+    const res = await fetch("https://api.github.com/graphql", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ query }),
+    });
+
     const data = await res.json();
     return data.data.user.pullRequests.nodes;
   } catch (error) {
     console.log(error);
+    return [];
   }
 }
+
+const query = `{
+  user(login: "Moamal-2000") {
+    pullRequests(first: 100, states: MERGED, orderBy: {field: CREATED_AT, direction: DESC}) {
+      nodes {
+        title
+        url
+        mergedAt
+        createdAt
+        updatedAt
+        number
+        state
+        body
+        bodyHTML
+        bodyText
+
+        repository {
+          name
+          url
+          owner {
+            login
+            url
+          }
+        }
+
+        author {
+          login
+          url
+        }
+
+        additions
+        deletions
+        changedFiles
+
+        commits(first: 20) {
+          totalCount
+          nodes {
+            commit {
+              message
+              committedDate
+              url
+            }
+          }
+        }
+
+        labels(first: 10) {
+          nodes {
+            name
+            color
+          }
+        }
+
+        reviews(first: 10) {
+          nodes {
+            author {
+              login
+            }
+            state
+            submittedAt
+          }
+        }
+      }
+    }
+  }
+}`;
