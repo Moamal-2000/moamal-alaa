@@ -26,3 +26,10 @@ export async function lockPortraitOrientation() {
 export function getRepoFullName(data) {
   return `${data.repository.owner.login}/${data.repository.name}`;
 }
+
+export function getSortedPullRequests(repoData, repo) {
+  return {
+    ...repoData,
+    prs: repo.prs.sort((a, b) => new Date(b.mergedAt) - new Date(a.mergedAt)),
+  };
+}

@@ -3,7 +3,7 @@ import {
   contributionBlacklist,
   contributionsDescriptions,
 } from "@/data/contributions";
-import { getRepoFullName } from "@/functions/helper";
+import { getRepoFullName, getSortedPullRequests } from "@/functions/helper";
 import ContributionCard from "./ContributionCard/ContributionCard";
 import s from "./ContributionsSection.module.scss";
 
@@ -66,10 +66,3 @@ const ContributionsSection = ({ contributions = [] }) => {
 };
 
 export default ContributionsSection;
-
-function getSortedPullRequests(repoData, repo) {
-  return {
-    ...repoData,
-    prs: repo.prs.sort((a, b) => new Date(b.mergedAt) - new Date(a.mergedAt)),
-  };
-}
