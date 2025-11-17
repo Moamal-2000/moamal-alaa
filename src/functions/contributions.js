@@ -3,6 +3,8 @@ import {
   contributionsDescriptions,
 } from "@/data/contributions";
 
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
+
 export function filterContributions(contributions) {
   return contributions.filter((contribution) => {
     const isMoamalRepo = contribution.url.includes("Moamal-2000");
@@ -59,4 +61,14 @@ export function getContributionData(contributions) {
   const filtered = filterContributions(contributions);
   const grouped = groupContributionsByRepo(filtered);
   return enrichRepos(grouped);
+}
+
+export async function fetchContributions() {
+  try {
+    const res = await fetch(`${API_BASE_URL}/api/github-contributions`);
+    const data = await res.json();
+    return data.data.user.pullRequests.nodes;
+  } catch (error) {
+    console.log(error);
+  }
 }

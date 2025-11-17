@@ -4,11 +4,12 @@ import ContributionsSection from "@/components/Home/ContributionsSection/Contrib
 import HeroSection from "@/components/Home/HeroSection/HeroSection";
 import OtherProjectsSection from "@/components/Home/OtherProjectsSection/OtherProjectsSection";
 import ProjectsSection from "@/components/Home/ProjectsSection/ProjectsSection";
+import { fetchContributions } from "@/functions/contributions";
 import { fetchFeaturedProjects } from "@/functions/featuredProjectsApi";
 
 export default async function Home() {
   const projectsData = await fetchFeaturedProjects();
-  const contributions = await getContributions();
+  const contributions = await fetchContributions();
 
   return (
     <main>
@@ -20,14 +21,4 @@ export default async function Home() {
       <ContactSection />
     </main>
   );
-}
-
-async function getContributions() {
-  try {
-    const res = await fetch("http://localhost:3000/api/github-contributions");
-    const data = await res.json();
-    return data.data.user.pullRequests.nodes;
-  } catch (error) {
-    console.log(error);
-  }
 }
