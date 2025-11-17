@@ -1,21 +1,15 @@
 import NumberedHeading from "@/components/Shared/NumberedHeading/NumberedHeading";
+import { contributionsDescriptions } from "@/data/contributions";
 import {
-  contributionBlacklist,
-  contributionsDescriptions,
-} from "@/data/contributions";
-import { getRepoFullName, getSortedPullRequests } from "@/functions/helper";
+  filterContributions,
+  getRepoFullName,
+  getSortedPullRequests,
+} from "@/functions/helper";
 import ContributionCard from "./ContributionCard/ContributionCard";
 import s from "./ContributionsSection.module.scss";
 
 const ContributionsSection = ({ contributions = [] }) => {
-  const filteredContributions = contributions.filter((contribution) => {
-    const isMoamalRepo = contribution.url.includes("Moamal-2000");
-    const isBlacklisted = contributionBlacklist.includes(
-      getRepoFullName(contribution)
-    );
-
-    return !isMoamalRepo && !isBlacklisted;
-  });
+  const filteredContributions = filterContributions(contributions);
 
   const groupedContributions = filteredContributions.reduce(
     (acc, contribution) => {

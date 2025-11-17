@@ -1,3 +1,5 @@
+import { contributionBlacklist } from "@/data/contributions";
+
 export function isMobile() {
   if (typeof navigator === "undefined") return;
 
@@ -21,6 +23,17 @@ export async function lockPortraitOrientation() {
   } catch (err) {
     console.warn("Orientation lock failed:", err.message);
   }
+}
+
+export function filterContributions(contributions) {
+  return contributions.filter((contribution) => {
+    const isMoamalRepo = contribution.url.includes("Moamal-2000");
+    const isBlacklisted = contributionBlacklist.includes(
+      getRepoFullName(contribution)
+    );
+
+    return !isMoamalRepo && !isBlacklisted;
+  });
 }
 
 export function getRepoFullName(data) {
