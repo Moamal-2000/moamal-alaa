@@ -48,7 +48,7 @@ const ContributionsSection = ({ contributions = [] }) => {
         <div className={s.panels}>
           {contributionsToDisplay.map((contribution, index) => (
             <div
-              key={index}
+              key={getRepoFullName(contribution)}
               id={`panel-${index}`}
               role="tabpanel"
               className={`${s.panel} ${
@@ -69,10 +69,9 @@ const ContributionsSection = ({ contributions = [] }) => {
                 {contribution.repository.description}
               </p>
 
-              {/* List PRs */}
               <ul className={s.pullRequests}>
                 {contribution.prs.map((pr) => (
-                  <li key={pr.number}>
+                  <li key={pr.url}>
                     <Link
                       href={pr.url}
                       target="_blank"
