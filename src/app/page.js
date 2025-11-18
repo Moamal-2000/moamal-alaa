@@ -1,3 +1,5 @@
+export const runtime = "nodejs";
+
 import AboutSection from "@/components/Home/AboutSection/AboutSection";
 import ContactSection from "@/components/Home/ContactSection/ContactSection";
 import ContributionsSection from "@/components/Home/ContributionsSection/ContributionsSection";
