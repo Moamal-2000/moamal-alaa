@@ -1,23 +1,92 @@
+"use client";
+
 import NumberedHeading from "@/components/Shared/NumberedHeading/NumberedHeading";
-import { getContributionData } from "@/functions/contributions";
-import ContributionCard from "./ContributionCard/ContributionCard";
+import {
+  getContributionData,
+  getRepoFullName,
+} from "@/functions/contributions";
+import { capitalizeFirstLetter } from "@/functions/helper";
+import Link from "next/link";
+import { useState } from "react";
 import s from "./ContributionsSection.module.scss";
 
 const ContributionsSection = ({ contributions = [] }) => {
   const contributionsToDisplay = getContributionData(contributions);
+  const [activeTabId, setActiveTabId] = useState(0);
 
   return (
-    <section className={s.contributionsSection}>
-      <NumberedHeading number="03" title="Contributions" />
+    <section className={s.section}>
+      <NumberedHeading number="03" title="Where I Have Contributed" />
 
-      <div className={s.contributionsWrapper}>
-        {contributionsToDisplay.map(({ repository, prs }) => (
-          <ContributionCard
-            key={`${repository.owner.login}-${repository.name}`}
-            repository={repository}
-            prs={prs}
+      <div className={s.wrapper}>
+        <div className={s.tabList} role="tablist">
+          {contributionsToDisplay.map((contribution, index) => {
+            return (
+              <button
+                key={getRepoFullName(contribution)}
+                className={`${s.tabButton} ${
+                  activeTabId === index ? s.active : ""
+                }`}
+                onClick={() => setActiveTabId(index)}
+                role="tab"
+                aria-selected={activeTabId === index}
+                aria-controls={`panel-${index}`}
+              >
+                {capitalizeFirstLetter(contribution.repository.name)}
+              </button>
+            );
+          })}
+
+          <div
+            className={s.highlight}
+            style={{
+              translate: `0 calc(${activeTabId} * var(--tab-height))`,
+            }}
           />
-        ))}
+        </div>
+
+        <div className={s.panels}>
+          {contributionsToDisplay.map((contribution, index) => (
+            <div
+              key={index}
+              id={`panel-${index}`}
+              role="tabpanel"
+              className={`${s.panel} ${
+                activeTabId === index ? s.show : s.hidden
+              }`}
+            >
+              <Link
+                href={contribution.repository.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={s.title}
+                tabIndex={activeTabId === index ? 0 : -1}
+              >
+                {getRepoFullName(contribution).toLocaleLowerCase()}
+              </Link>
+
+              <p className={s.description}>
+                {contribution.repository.description}
+              </p>
+
+              {/* List PRs */}
+              <ul className={s.pullRequests}>
+                {contribution.prs.map((pr) => (
+                  <li key={pr.number}>
+                    <Link
+                      href={pr.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      tabIndex={activeTabId === index ? 0 : -1}
+                    >
+                      {pr.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

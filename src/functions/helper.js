@@ -22,3 +22,8 @@ export async function lockPortraitOrientation() {
     console.warn("Orientation lock failed:", err.message);
   }
 }
+
+export function capitalizeFirstLetter(str) {
+  str = str.toLowerCase();
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
