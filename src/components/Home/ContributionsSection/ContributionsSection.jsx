@@ -1,11 +1,13 @@
 "use client";
 
 import NumberedHeading from "@/components/Shared/NumberedHeading/NumberedHeading";
+import { SMALL_SCREEN_WIDTH } from "@/data/constants";
 import {
   getContributionData,
   getRepoFullName,
 } from "@/functions/contributions";
 import { capitalizeFirstLetter } from "@/functions/helper";
+import useGetResizeWindow from "@/hooks/useGetResizeWindow";
 import Link from "next/link";
 import { useState } from "react";
 import s from "./ContributionsSection.module.scss";
@@ -13,6 +15,25 @@ import s from "./ContributionsSection.module.scss";
 const ContributionsSection = ({ contributions = [] }) => {
   const contributionsToDisplay = getContributionData(contributions);
   const [activeTabId, setActiveTabId] = useState(0);
+
+  const { width: windowWidth } = useGetResizeWindow({ debounceDelay: 200 });
+
+  function getTabPanelMotionProps() {
+    const isSmallScreen = windowWidth <= SMALL_SCREEN_WIDTH;
+    const stylesObject = {
+      translate: `0 calc(${activeTabId} * var(--tab-height))`,
+    };
+
+    if (!isSmallScreen) return stylesObject;
+
+    if (isSmallScreen) {
+      const tabWidth = "176.2px";
+      stylesObject.translate = `calc(${activeTabId} * ${tabWidth}) 0`;
+      stylesObject.width = tabWidth;
+    }
+
+    return stylesObject;
+  }
 
   return (
     <section id="contributions" className={s.section}>
@@ -37,12 +58,7 @@ const ContributionsSection = ({ contributions = [] }) => {
             );
           })}
 
-          <div
-            className={s.highlight}
-            style={{
-              translate: `0 calc(${activeTabId} * var(--tab-height))`,
-            }}
-          />
+          <div className={s.highlight} style={getTabPanelMotionProps()} />
         </div>
 
         <div className={s.panels}>
