@@ -9,7 +9,7 @@ import Panels from "./Panels/Panels";
 import TabList from "./TabList/TabList";
 
 const ContributionsSection = ({ contributions = [] }) => {
-  const contributionsToDisplay = getContributionData(contributions);
+  const contribItems = getContributionData(contributions);
 
   return (
     <motion.section
@@ -23,8 +23,8 @@ const ContributionsSection = ({ contributions = [] }) => {
       <NumberedHeading number="02" title="Where I Have Contributed" />
 
       <div className={s.wrapper}>
-        <TabList contributionsToDisplay={contributionsToDisplay} />
-        <Panels contributionsToDisplay={contributionsToDisplay} />
+        <TabList contribItems={contribItems} />
+        <Panels contribItems={contribItems} />
       </div>
     </motion.section>
   );

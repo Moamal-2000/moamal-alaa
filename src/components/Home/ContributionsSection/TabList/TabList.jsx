@@ -6,7 +6,7 @@ import useGlobalStore from "@/stores/global/useGlobalStore";
 import { useEffect, useState } from "react";
 import s from "./TabList.module.scss";
 
-const TabList = ({ contributionsToDisplay }) => {
+const TabList = ({ contribItems }) => {
   const [isMounted, setIsMounted] = useState(false);
 
   const { activeTabId, updateGlobalState } = useGlobalStore();
@@ -22,7 +22,7 @@ const TabList = ({ contributionsToDisplay }) => {
 
   return (
     <div className={s.tabList} role="tablist">
-      {contributionsToDisplay.map((contribution, index) => {
+      {contribItems.map((contribution, index) => {
         return (
           <button
             key={getRepoFullName(contribution)}
