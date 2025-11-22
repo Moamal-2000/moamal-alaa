@@ -7,7 +7,9 @@ import {
   getRepoFullName,
 } from "@/functions/contributions";
 import { capitalizeFirstLetter } from "@/functions/helper";
+import { fadeInOnViewMotionProps } from "@/functions/motionConfig";
 import useGetResizeWindow from "@/hooks/useGetResizeWindow";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import s from "./ContributionsSection.module.scss";
@@ -42,7 +44,14 @@ const ContributionsSection = ({ contributions = [] }) => {
   }, []);
 
   return (
-    <section id="contributions" className={s.section}>
+    <motion.section
+      id="contributions"
+      className={s.section}
+      {...fadeInOnViewMotionProps({
+        visibilityThreshold: 0.4,
+        delay: 0.2,
+      })}
+    >
       <NumberedHeading number="02" title="Where I Have Contributed" />
 
       <div className={s.wrapper}>
@@ -112,7 +121,7 @@ const ContributionsSection = ({ contributions = [] }) => {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
