@@ -3,9 +3,11 @@ import Link from "next/link";
 import s from "./Panel.module.scss";
 
 const Panel = ({ contribution, index, activeTabId }) => {
+  const repoFullName = getRepoFullName(contribution);
+
   return (
     <div
-      key={getRepoFullName(contribution)}
+      key={repoFullName}
       role="tabpanel"
       className={`${s.panel} ${activeTabId === index ? s.show : s.hidden}`}
     >
@@ -16,7 +18,7 @@ const Panel = ({ contribution, index, activeTabId }) => {
         className={s.title}
         tabIndex={activeTabId === index ? 0 : -1}
       >
-        {getRepoFullName(contribution).toLocaleLowerCase()}
+        {repoFullName.toLocaleLowerCase()}
       </Link>
 
       <p className={s.description}>{contribution.repository.description}</p>
