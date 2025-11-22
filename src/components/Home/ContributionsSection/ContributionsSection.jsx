@@ -15,7 +15,7 @@ const ContributionsSection = ({ contributions = [] }) => {
   const [activeTabId, setActiveTabId] = useState(0);
 
   return (
-    <section className={s.section}>
+    <section id="contributions" className={s.section}>
       <NumberedHeading number="03" title="Where I Have Contributed" />
 
       <div className={s.wrapper}>
