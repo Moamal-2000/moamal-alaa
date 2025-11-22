@@ -1,6 +1,7 @@
 import { getRepoFullName } from "@/functions/contributions";
 import Link from "next/link";
 import s from "./Panel.module.scss";
+import PullRequests from "./PullRequests/PullRequests";
 
 const Panel = ({ contribution, index, activeTabId }) => {
   const repoFullName = getRepoFullName(contribution);
@@ -23,20 +24,11 @@ const Panel = ({ contribution, index, activeTabId }) => {
 
       <p className={s.description}>{contribution.repository.description}</p>
 
-      <ul className={s.pullRequests}>
-        {contribution.prs.map((pr) => (
-          <li key={pr.url}>
-            <Link
-              href={pr.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              tabIndex={activeTabId === index ? 0 : -1}
-            >
-              {pr.title}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <PullRequests
+        contribution={contribution}
+        index={index}
+        activeTabId={activeTabId}
+      />
     </div>
   );
 };
