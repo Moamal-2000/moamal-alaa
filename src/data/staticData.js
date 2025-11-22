@@ -1,7 +1,7 @@
 export const NAV_LINKS = [
   { title: "About", id: 1 },
-  { title: "Projects", id: 2 },
-  { title: "Contributions", id: 3 },
+  { title: "Contributions", id: 2 },
+  { title: "Projects", id: 3 },
   { title: "Contact", id: 4 },
 ];
 

@@ -9,7 +9,7 @@ const ProjectsSection = ({ projectsData }) => {
     <section id="projects">
       <NumberedHeading
         title="Some Things I've Built"
-        number="02"
+        number="03"
         animationProps={fadeInOnViewMotionProps({ visibilityThreshold: 0 })}
       />
       <FeaturedProjects projectsData={projectsData} />

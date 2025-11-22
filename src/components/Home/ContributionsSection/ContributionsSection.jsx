@@ -16,7 +16,7 @@ const ContributionsSection = ({ contributions = [] }) => {
 
   return (
     <section id="contributions" className={s.section}>
-      <NumberedHeading number="03" title="Where I Have Contributed" />
+      <NumberedHeading number="02" title="Where I Have Contributed" />
 
       <div className={s.wrapper}>
         <div className={s.tabList} role="tablist">
