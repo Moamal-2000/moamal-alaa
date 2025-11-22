@@ -1,3 +1,5 @@
+@use "@/styles/mixins" as m;
+
 .section {
   background-color: #0a192f;
   color: #e6f1ff;
@@ -13,11 +15,25 @@
   align-items: flex-start;
 }
 
+@include m.small {
+  .section .wrapper {
+    flex-direction: column;
+  }
+}
+
 .wrapper .tabList {
   --tab-height: 42px;
   position: relative;
   z-index: 3;
   width: max-content;
+}
+
+@include m.small {
+  .wrapper .tabList {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+  }
 }
 
 .wrapper .tabList .tabButton {
@@ -52,6 +68,13 @@
   }
 }
 
+@include m.small {
+  .wrapper .tabList .tabButton {
+    border-left: none;
+    border-bottom: 2px solid #233554;
+  }
+}
+
 .wrapper .tabList .highlight {
   position: absolute;
   top: 0;
@@ -65,11 +88,24 @@
   transition: translate .25s .1s var(--ease-main);
 }
 
+@include m.small {
+  .wrapper .tabList .highlight {
+    display: none;
+  }
+}
+
 .wrapper .panels {
   position: relative;
   width: 100%;
   min-height: 340px;
   margin-left: 20px;
+}
+
+@include m.small {
+  .wrapper .panels {
+    margin-left: 0;
+    margin-top: 20px;
+  }
 }
 
 .wrapper .panels .panel {
@@ -110,8 +146,16 @@
   color: #a8b2d1;
 }
 
+@include m.medium {
+  .wrapper .panels .panel .description {
+    font-size: 1.15rem;
+  }
+}
+
 .wrapper .panel .pullRequests {
   font-size: 1.125rem;
+  max-height: 217px;
+  overflow-y: auto;
 }
 
 .wrapper .panel .pullRequests li>a {
@@ -128,6 +172,18 @@
   &:focus-visible {
     color: #64ffda;
     text-decoration: underline;
+  }
+}
+
+@include m.medium {
+  .wrapper .panel .pullRequests li>a {
+    padding-left: 20px;
+  }
+}
+
+@include m.medium {
+  .wrapper .panel .pullRequests li>a {
+    font-size: 1.15rem;
   }
 }
 
