@@ -9,12 +9,14 @@ import {
 import { capitalizeFirstLetter } from "@/functions/helper";
 import useGetResizeWindow from "@/hooks/useGetResizeWindow";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import s from "./ContributionsSection.module.scss";
 
 const ContributionsSection = ({ contributions = [] }) => {
   const contributionsToDisplay = getContributionData(contributions);
+
   const [activeTabId, setActiveTabId] = useState(0);
+  const [isMounted, setIsMounted] = useState(false);
 
   const { width: windowWidth } = useGetResizeWindow({ debounceDelay: 200 });
 
@@ -34,6 +36,10 @@ const ContributionsSection = ({ contributions = [] }) => {
 
     return stylesObject;
   }
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   return (
     <section id="contributions" className={s.section}>
@@ -58,7 +64,10 @@ const ContributionsSection = ({ contributions = [] }) => {
             );
           })}
 
-          <div className={s.highlight} style={getTabPanelMotionProps()} />
+          <div
+            className={s.highlight}
+            style={isMounted ? getTabPanelMotionProps() : {}}
+          />
         </div>
 
         <div className={s.panels}>
