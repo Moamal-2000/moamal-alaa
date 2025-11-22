@@ -1,9 +1,62 @@
-import s from './TabList.module.scss'
+import { SMALL_SCREEN_WIDTH } from "@/data/constants";
+import { getRepoFullName } from "@/functions/contributions";
+import { capitalizeFirstLetter } from "@/functions/helper";
+import useGetResizeWindow from "@/hooks/useGetResizeWindow";
+import { useEffect, useState } from "react";
+import s from "./TabList.module.scss";
 
-const TabList = () => {
+const TabList = ({ contributionsToDisplay, activeTabId, setActiveTabId }) => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  const { width: windowWidth } = useGetResizeWindow({ debounceDelay: 200 });
+
+  const highlightStyles = isMounted
+    ? getTabPanelMotionProps({ windowWidth, activeTabId })
+    : {};
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   return (
-    <div>TabList</div>
-  )
-}
+    <div className={s.tabList} role="tablist">
+      {contributionsToDisplay.map((contribution, index) => {
+        return (
+          <button
+            key={getRepoFullName(contribution)}
+            className={`${s.tabButton} ${
+              activeTabId === index ? s.active : ""
+            }`}
+            onClick={() => setActiveTabId(index)}
+            role="tab"
+            aria-selected={activeTabId === index}
+            aria-controls={`panel-${index}`}
+          >
+            {capitalizeFirstLetter(contribution.repository.name)}
+          </button>
+        );
+      })}
 
-export default TabList
+      <div className={s.highlight} style={highlightStyles} />
+    </div>
+  );
+};
+
+export default TabList;
+
+function getTabPanelMotionProps({ windowWidth, activeTabId }) {
+  const isSmallScreen = windowWidth <= SMALL_SCREEN_WIDTH;
+  const stylesObject = {
+    translate: `0 calc(${activeTabId} * var(--tab-height))`,
+  };
+
+  if (!isSmallScreen) return stylesObject;
+
+  if (isSmallScreen) {
+    const tabWidth = "176.2px";
+    stylesObject.translate = `calc(${activeTabId} * ${tabWidth}) 0`;
+    stylesObject.width = tabWidth;
+  }
+
+  return stylesObject;
+}

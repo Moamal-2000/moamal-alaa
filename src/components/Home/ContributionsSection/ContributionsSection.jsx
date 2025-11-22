@@ -1,34 +1,21 @@
 "use client";
 
 import NumberedHeading from "@/components/Shared/NumberedHeading/NumberedHeading";
-import { SMALL_SCREEN_WIDTH } from "@/data/constants";
 import {
   getContributionData,
   getRepoFullName,
 } from "@/functions/contributions";
-import { capitalizeFirstLetter } from "@/functions/helper";
 import { fadeInOnViewMotionProps } from "@/functions/motionConfig";
-import useGetResizeWindow from "@/hooks/useGetResizeWindow";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import s from "./ContributionsSection.module.scss";
+import TabList from "./TabList/TabList";
 
 const ContributionsSection = ({ contributions = [] }) => {
   const contributionsToDisplay = getContributionData(contributions);
 
   const [activeTabId, setActiveTabId] = useState(0);
-  const [isMounted, setIsMounted] = useState(false);
-
-  const { width: windowWidth } = useGetResizeWindow({ debounceDelay: 200 });
-
-  const highlightStyles = isMounted
-    ? getTabPanelMotionProps({ windowWidth, activeTabId })
-    : {};
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
 
   return (
     <motion.section
@@ -42,26 +29,11 @@ const ContributionsSection = ({ contributions = [] }) => {
       <NumberedHeading number="02" title="Where I Have Contributed" />
 
       <div className={s.wrapper}>
-        <div className={s.tabList} role="tablist">
-          {contributionsToDisplay.map((contribution, index) => {
-            return (
-              <button
-                key={getRepoFullName(contribution)}
-                className={`${s.tabButton} ${
-                  activeTabId === index ? s.active : ""
-                }`}
-                onClick={() => setActiveTabId(index)}
-                role="tab"
-                aria-selected={activeTabId === index}
-                aria-controls={`panel-${index}`}
-              >
-                {capitalizeFirstLetter(contribution.repository.name)}
-              </button>
-            );
-          })}
-
-          <div className={s.highlight} style={highlightStyles} />
-        </div>
+        <TabList
+          contributionsToDisplay={contributionsToDisplay}
+          activeTabId={activeTabId}
+          setActiveTabId={setActiveTabId}
+        />
 
         <div className={s.panels}>
           {contributionsToDisplay.map((contribution, index) => (
@@ -110,20 +82,3 @@ const ContributionsSection = ({ contributions = [] }) => {
 };
 
 export default ContributionsSection;
-
-function getTabPanelMotionProps({ windowWidth, activeTabId }) {
-  const isSmallScreen = windowWidth <= SMALL_SCREEN_WIDTH;
-  const stylesObject = {
-    translate: `0 calc(${activeTabId} * var(--tab-height))`,
-  };
-
-  if (!isSmallScreen) return stylesObject;
-
-  if (isSmallScreen) {
-    const tabWidth = "176.2px";
-    stylesObject.translate = `calc(${activeTabId} * ${tabWidth}) 0`;
-    stylesObject.width = tabWidth;
-  }
-
-  return stylesObject;
-}
