@@ -22,22 +22,9 @@ const ContributionsSection = ({ contributions = [] }) => {
 
   const { width: windowWidth } = useGetResizeWindow({ debounceDelay: 200 });
 
-  function getTabPanelMotionProps() {
-    const isSmallScreen = windowWidth <= SMALL_SCREEN_WIDTH;
-    const stylesObject = {
-      translate: `0 calc(${activeTabId} * var(--tab-height))`,
-    };
-
-    if (!isSmallScreen) return stylesObject;
-
-    if (isSmallScreen) {
-      const tabWidth = "176.2px";
-      stylesObject.translate = `calc(${activeTabId} * ${tabWidth}) 0`;
-      stylesObject.width = tabWidth;
-    }
-
-    return stylesObject;
-  }
+  const highlightStyles = isMounted
+    ? getTabPanelMotionProps({ windowWidth, activeTabId })
+    : {};
 
   useEffect(() => {
     setIsMounted(true);
@@ -73,10 +60,7 @@ const ContributionsSection = ({ contributions = [] }) => {
             );
           })}
 
-          <div
-            className={s.highlight}
-            style={isMounted ? getTabPanelMotionProps() : {}}
-          />
+          <div className={s.highlight} style={highlightStyles} />
         </div>
 
         <div className={s.panels}>
@@ -126,3 +110,20 @@ const ContributionsSection = ({ contributions = [] }) => {
 };
 
 export default ContributionsSection;
+
+function getTabPanelMotionProps({ windowWidth, activeTabId }) {
+  const isSmallScreen = windowWidth <= SMALL_SCREEN_WIDTH;
+  const stylesObject = {
+    translate: `0 calc(${activeTabId} * var(--tab-height))`,
+  };
+
+  if (!isSmallScreen) return stylesObject;
+
+  if (isSmallScreen) {
+    const tabWidth = "176.2px";
+    stylesObject.translate = `calc(${activeTabId} * ${tabWidth}) 0`;
+    stylesObject.width = tabWidth;
+  }
+
+  return stylesObject;
+}
