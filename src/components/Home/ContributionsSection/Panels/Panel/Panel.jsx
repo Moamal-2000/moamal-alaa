@@ -1,10 +1,12 @@
 import { getRepoFullName } from "@/functions/contributions";
+import useGlobalStore from "@/stores/global/useGlobalStore";
 import Link from "next/link";
 import s from "./Panel.module.scss";
 import PullRequests from "./PullRequests/PullRequests";
 
-const Panel = ({ contribution, index, activeTabId }) => {
+const Panel = ({ contribution, index }) => {
   const repoFullName = getRepoFullName(contribution);
+  const activeTabId = useGlobalStore().activeTabId;
 
   return (
     <div
@@ -26,8 +28,8 @@ const Panel = ({ contribution, index, activeTabId }) => {
 
       <PullRequests
         contribution={contribution}
-        index={index}
         activeTabId={activeTabId}
+        index={index}
       />
     </div>
   );

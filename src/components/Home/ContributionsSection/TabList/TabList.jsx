@@ -2,12 +2,14 @@ import { SMALL_SCREEN_WIDTH } from "@/data/constants";
 import { getRepoFullName } from "@/functions/contributions";
 import { capitalizeFirstLetter } from "@/functions/helper";
 import useGetResizeWindow from "@/hooks/useGetResizeWindow";
+import useGlobalStore from "@/stores/global/useGlobalStore";
 import { useEffect, useState } from "react";
 import s from "./TabList.module.scss";
 
-const TabList = ({ contributionsToDisplay, activeTabId, setActiveTabId }) => {
+const TabList = ({ contributionsToDisplay }) => {
   const [isMounted, setIsMounted] = useState(false);
 
+  const { activeTabId, updateGlobalState } = useGlobalStore();
   const { width: windowWidth } = useGetResizeWindow({ debounceDelay: 200 });
 
   const highlightStyles = isMounted
@@ -27,7 +29,7 @@ const TabList = ({ contributionsToDisplay, activeTabId, setActiveTabId }) => {
             className={`${s.tabButton} ${
               activeTabId === index ? s.active : ""
             }`}
-            onClick={() => setActiveTabId(index)}
+            onClick={() => updateGlobalState({ activeTabId: index })}
             role="tab"
             aria-selected={activeTabId === index}
             aria-controls={`panel-${index}`}

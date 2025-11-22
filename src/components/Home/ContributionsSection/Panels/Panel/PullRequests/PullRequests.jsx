@@ -1,7 +1,7 @@
 import Link from "next/link";
 import s from "./PullRequests.module.scss";
 
-const PullRequests = ({ contribution, index, activeTabId }) => {
+const PullRequests = ({ contribution, activeTabId, index }) => {
   return (
     <ul className={s.pullRequests}>
       {contribution.prs.map((pr) => (
