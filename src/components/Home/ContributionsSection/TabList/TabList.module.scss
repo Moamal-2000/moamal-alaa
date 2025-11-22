@@ -57,25 +57,3 @@
     justify-content: center;
   }
 }
-
-.tabList .highlight {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  width: 2px;
-  height: var(--tab-height);
-  border-radius: 4px;
-  background: #64ffda;
-  translate: 0 calc(2 * var(--tab-height));
-  transition: translate .25s .1s var(--ease-main);
-}
-
-@include m.small {
-  .tabList .highlight {
-    height: 2px;
-    top: unset;
-    bottom: 0;
-    translate: calc(2 * var(--tab-height)) 0;
-  }
-}
