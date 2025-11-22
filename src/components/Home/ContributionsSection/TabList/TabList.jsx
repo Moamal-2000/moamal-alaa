@@ -26,7 +26,7 @@ const TabList = ({ contribItems }) => {
         );
       })}
 
-      <TabsHighlighter />
+      <TabsHighlighter activeTabId={activeTabId} />
     </div>
   );
 };
