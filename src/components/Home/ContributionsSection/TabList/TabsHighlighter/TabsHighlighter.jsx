@@ -9,7 +9,7 @@ const TabsHighlighter = ({ activeTabId }) => {
   const { width: windowWidth } = useGetResizeWindow({ debounceDelay: 200 });
 
   const highlightStyles = isMounted
-    ? getTabPanelMotionProps({ windowWidth, activeTabId })
+    ? getHighlightStyles({ windowWidth, activeTabId })
     : {};
 
   useEffect(() => {
@@ -21,7 +21,7 @@ const TabsHighlighter = ({ activeTabId }) => {
 
 export default TabsHighlighter;
 
-function getTabPanelMotionProps({ windowWidth, activeTabId }) {
+function getHighlightStyles({ windowWidth, activeTabId }) {
   const isSmallScreen = windowWidth <= SMALL_SCREEN_WIDTH;
   const stylesObject = {
     translate: `0 calc(${activeTabId} * var(--tab-height))`,
