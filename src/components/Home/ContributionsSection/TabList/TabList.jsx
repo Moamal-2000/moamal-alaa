@@ -20,6 +20,7 @@ const TabList = ({ contribItems }) => {
             role="tab"
             aria-selected={activeTabId === index}
             aria-controls={`panel-${index}`}
+            tabIndex={activeTabId === index ? 0 : -1}
           >
             {capitalizeFirstLetter(contribution.repository.name)}
           </button>

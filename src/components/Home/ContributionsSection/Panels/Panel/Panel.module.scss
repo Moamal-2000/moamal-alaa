@@ -1,6 +1,8 @@
 @use "@/styles/mixins" as m;
 
 .panel {
+  outline: dashed 2px transparent;
+  outline-offset: 6px;
   position: absolute;
   top: 20px;
   opacity: 0;
@@ -11,6 +13,10 @@
     transition: opacity .15s .08s var(--ease-main);
     pointer-events: all;
     opacity: 1;
+
+    &:focus-visible {
+      outline-color: #64ffda;
+    }
   }
 }
 

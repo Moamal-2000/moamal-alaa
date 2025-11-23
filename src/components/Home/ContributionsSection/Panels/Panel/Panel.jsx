@@ -13,6 +13,9 @@ const Panel = ({ contribution, index }) => {
       key={repoFullName}
       role="tabpanel"
       className={`${s.panel} ${activeTabId === index ? s.show : s.hidden}`}
+      id={`panel-${index}`}
+      aria-labelledby={`tab-${index}`}
+      tabIndex={activeTabId === index ? 0 : -1}
     >
       <Link
         href={contribution.repository.url}
