@@ -18,7 +18,7 @@
 
   &:hover,
   &:focus-visible {
-    color: #64ffda;
+    color: var(--green);
     text-decoration: underline;
   }
 }
@@ -39,5 +39,5 @@
   content: "▹";
   position: absolute;
   left: 0;
-  color: #64ffda;
+  color: var(--green);
 }

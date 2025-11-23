@@ -32,13 +32,13 @@
     outline .1s var(--ease-main);
 
   &:hover {
-    background-color: #64ffda;
+    background-color: var(--green);
     color: var(--website-bg);
     box-shadow: 0 4px 6px rgba(100, 255, 218, .2);
   }
 
   &:focus-visible {
-    outline: solid 2px #64ffda;
+    outline: solid 2px var(--green);
     outline-offset: -1px;
   }
 }

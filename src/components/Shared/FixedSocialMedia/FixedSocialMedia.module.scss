@@ -47,22 +47,22 @@
   }
 
   &:focus-visible {
-    color: #64ffda;
-    outline: solid 2px #64ffda;
+    color: var(--green);
+    outline: solid 2px var(--green);
     outline-offset: -2px;
   }
 }
 
 .socialMedia a:hover svg {
-  color: #64ffda;
+  color: var(--green);
 
   &[data-type=twitter] {
-    fill: #64ffda;
+    fill: var(--green);
   }
 }
 
 .socialMedia a:focus-visible svg[data-type=twitter] {
-  fill: #64ffda;
+  fill: var(--green);
 }
 
 .socialMedia a svg {

@@ -21,7 +21,7 @@
 
 .numberedHeading span {
   margin-right: 10px;
-  color: #64ffda;
+  color: var(--green);
   font-family: var(--font-mono);
   font-size: clamp(1rem, 3vw, 1.25rem);
   font-weight: 400;

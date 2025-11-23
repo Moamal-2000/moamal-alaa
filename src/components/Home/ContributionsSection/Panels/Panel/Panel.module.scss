@@ -15,7 +15,7 @@
     opacity: 1;
 
     &:focus-visible {
-      outline-color: #64ffda;
+      outline-color: var(--green);
     }
   }
 }
@@ -31,7 +31,7 @@
 
   &:hover,
   &:focus-visible {
-    color: #64ffda;
+    color: var(--green);
   }
 }
 

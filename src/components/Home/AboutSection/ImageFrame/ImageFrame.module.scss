@@ -1,7 +1,7 @@
 @use "@/styles/mixins" as m;
 
 .imageFrame {
-  background-color: #64ffda;
+  background-color: var(--green);
   border-radius: 4px;
   position: relative;
   color: #000;
@@ -30,7 +30,7 @@
   height: 100%;
   top: 10px;
   left: 10px;
-  border: 2px solid #64ffda;
+  border: 2px solid var(--green);
   z-index: -1;
   border-radius: 4px;
 }

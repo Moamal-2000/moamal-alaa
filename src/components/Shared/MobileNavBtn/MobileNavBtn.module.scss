@@ -26,7 +26,7 @@
   }
 
   &.active:focus-visible {
-    outline: dashed 2px #64ffda;
+    outline: dashed 2px var(--green);
   }
 }
 
@@ -48,7 +48,7 @@
 }
 
 .mobileNavBtn:where(:hover, .active) .icon {
-  background-color: #64ffda;
+  background-color: var(--green);
 }
 
 .mobileNavBtn .icon::before,

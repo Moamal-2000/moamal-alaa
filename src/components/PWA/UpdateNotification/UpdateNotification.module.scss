@@ -45,7 +45,7 @@
   align-items: center;
   justify-content: center;
   font-size: 1.5em;
-  color: #64ffda;
+  color: var(--green);
   margin-right: 6px;
   margin-left: 2px;
 }
@@ -64,7 +64,7 @@
   -webkit-tap-highlight-color: transparent;
   border: none;
   display: inline-block;
-  background: linear-gradient(135deg, #64ffda, #64ffda);
+  background: linear-gradient(135deg, var(--green), var(--green));
   color: var(--website-bg);
   box-shadow: 0 4px 15px rgba(100, 255, 218, .2);
   padding: 12px 28px;
@@ -82,7 +82,7 @@
 
   &:hover,
   &:focus-visible {
-    background: linear-gradient(135deg, #64ffda, #64ffda);
+    background: linear-gradient(135deg, var(--green), var(--green));
     box-shadow: 0 5px 20px rgba(100, 255, 218, .3);
 
     &::before {

@@ -39,13 +39,13 @@
     outline-color .3s ease;
 
   &:hover {
-    color: #64ffda !important;
-    border-color: #64ffda !important;
+    color: var(--green) !important;
+    border-color: var(--green) !important;
   }
 
   &:focus-visible {
-    color: #64ffda !important;
-    outline-color: #64ffda !important;
+    color: var(--green) !important;
+    outline-color: var(--green) !important;
     outline-offset: -2px !important;
   }
 }

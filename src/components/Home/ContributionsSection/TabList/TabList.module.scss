@@ -39,11 +39,11 @@
   &:hover,
   &:focus-visible {
     background-color: #112240;
-    color: #64ffda;
+    color: var(--green);
   }
 
   &.active {
-    color: #64ffda;
+    color: var(--green);
   }
 }
 

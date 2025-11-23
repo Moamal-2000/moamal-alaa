@@ -8,14 +8,14 @@
   overflow: hidden;
   grid-area: 1 / 6 / -1 / -1;
   z-index: 1;
-  outline: solid 0 #64ffda;
+  outline: solid 0 var(--green);
   outline-offset: 0;
   transition:
     outline .2s ease,
     outline-offset .2s ease;
 
   &:focus-visible {
-    outline: solid 3px #64ffda;
+    outline: solid 3px var(--green);
     outline-offset: 3px;
   }
 }

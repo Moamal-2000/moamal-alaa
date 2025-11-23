@@ -54,13 +54,13 @@
   transition: color .25s var(--ease-main);
 
   &:hover {
-    color: #64ffda;
+    color: var(--green);
   }
 }
 
 .mobileMenu nav li a::before {
   content: "0" counter(item) ".";
-  color: #64ffda;
+  color: var(--green);
   font-size: .875rem;
   padding-right: 10px;
 }
@@ -83,12 +83,12 @@
 
 .mobileMenu .buttons>:where(button, a) {
   -webkit-tap-highlight-color: transparent;
-  color: #64ffda;
+  color: var(--green);
   max-width: 124px;
   min-width: 124px;
   width: 100%;
   background-color: transparent;
-  border: 1px solid #64ffda;
+  border: 1px solid var(--green);
   border-radius: 4px;
   font-size: .875rem;
   font-family: var(--font-mono);
@@ -101,7 +101,7 @@
     box-shadow .25s var(--ease-main);
 
   &:hover {
-    background-color: #64ffda;
+    background-color: var(--green);
     color: var(--website-bg);
     box-shadow: 0 4px 6px rgba(100, 255, 218, .2);
   }

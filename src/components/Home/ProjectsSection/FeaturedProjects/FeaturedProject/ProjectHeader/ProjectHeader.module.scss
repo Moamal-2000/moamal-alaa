@@ -9,7 +9,7 @@
 .projectHeader .featuredText {
   font-family: var(--font-mono);
   font-size: .9rem;
-  color: #64ffda;
+  color: var(--green);
 }
 
 @include m.very-small {
@@ -32,12 +32,12 @@
   transition: color .3s ease, border-color .3s ease;
 
   &:hover {
-    color: #64ffda;
+    color: var(--green);
   }
 
   &:focus-visible {
-    color: #64ffda;
-    border-bottom: solid 2px #64ffda;
+    color: var(--green);
+    border-bottom: solid 2px var(--green);
   }
 }
 

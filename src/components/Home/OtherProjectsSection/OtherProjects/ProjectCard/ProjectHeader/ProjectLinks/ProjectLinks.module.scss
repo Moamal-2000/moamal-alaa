@@ -10,7 +10,7 @@
   transition: outline-color .25s var(--ease-main);
 
   &:focus-visible {
-    outline: 2px solid #64ffda;
+    outline: 2px solid var(--green);
     outline-offset: -1px;
   }
 }
@@ -23,5 +23,5 @@
 }
 
 .projectLinks>a:where(:hover, :focus-visible) svg {
-  color: #64ffda;
+  color: var(--green);
 }

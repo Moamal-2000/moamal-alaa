@@ -1,7 +1,7 @@
 .link {
   display: inline-block;
   position: relative;
-  color: #64ffda;
+  color: var(--green);
 
   &:focus-visible {
     outline: none;
@@ -15,7 +15,7 @@
   height: 1px;
   position: relative;
   bottom: 5px;
-  background-color: #64ffda;
+  background-color: var(--green);
   opacity: .5;
   transition:
     width .25s var(--ease-main),

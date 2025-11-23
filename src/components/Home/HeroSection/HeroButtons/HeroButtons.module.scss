@@ -41,7 +41,7 @@
 
 .buttons .viewWorkBtn {
   border: none;
-  background: linear-gradient(135deg, #64ffda, #64ffda);
+  background: linear-gradient(135deg, var(--green), var(--green));
   color: var(--website-bg);
   letter-spacing: 1px;
   font-weight: 600;
@@ -54,7 +54,7 @@
 
   &:hover,
   &:focus-visible {
-    background: linear-gradient(135deg, #64ffda, #64ffda);
+    background: linear-gradient(135deg, var(--green), var(--green));
     box-shadow: 0 5px 20px rgba(100, 255, 218, .3);
 
     &::before {

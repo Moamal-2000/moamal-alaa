@@ -17,7 +17,7 @@
 
 .tbody tr td.year {
   padding-inline: 20px;
-  color: #64ffda;
+  color: var(--green);
   font-family: var(--font-mono);
   font-size: 1rem;
   font-weight: 400;
@@ -92,7 +92,7 @@
   transition: outline-color .25s var(--ease-main);
 
   &:focus-visible {
-    outline: 2px solid #64ffda;
+    outline: 2px solid var(--green);
     outline-offset: 5px;
   }
 }
@@ -104,7 +104,7 @@
 }
 
 .tbody tr td.links .wrapper>a:where(:hover, :focus-visible)>svg {
-  color: #64ffda;
+  color: var(--green);
 }
 
 @include m.very-small {

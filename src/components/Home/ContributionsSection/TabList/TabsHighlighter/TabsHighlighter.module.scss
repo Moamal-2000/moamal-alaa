@@ -8,7 +8,7 @@
   width: 2px;
   height: var(--tab-height);
   border-radius: 4px;
-  background: #64ffda;
+  background: var(--green);
   translate: 0 calc(2 * var(--tab-height));
   transition: translate .25s .1s var(--ease-main);
 }

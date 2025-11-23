@@ -24,19 +24,19 @@
     outline .1s var(--ease-main);
 
   &:hover {
-    color: #64ffda;
+    color: var(--green);
   }
 
   &:focus-visible {
-    color: #64ffda;
-    outline: solid 2px #64ffda;
+    color: var(--green);
+    outline: solid 2px var(--green);
   }
 }
 
 .navLinks li a::before {
   content: "0" counter(item) ".";
   margin-right: 5px;
-  color: #64ffda;
+  color: var(--green);
   font-size: .75rem;
   text-align: right;
 }
