@@ -32,6 +32,8 @@ Thanks for understanding!
 - **Styling:** [SCSS (Sass)](https://sass-lang.com)
 - **State Management:** [Zustand](https://zustand-demo.pmnd.rs)
 - **Animations:** [Framer Motion](https://motion.dev)
+- **Data Layer:** [GraphQL (GitHub API v4)](https://docs.github.com/en/graphql/overview/about-the-graphql-api)
+- **Optimization:** [React Compiler](https://react.dev/learn/react-compiler)
 
 ## Installation & Setup
 
