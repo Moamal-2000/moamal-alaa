@@ -1,33 +1,15 @@
-import { getRepoFullName } from "@/functions/contributions";
-import { capitalizeFirstLetter } from "@/functions/helper";
-import useGlobalStore from "@/stores/global/useGlobalStore";
+import TabButton from "./TabButton/TabButton";
 import s from "./TabList.module.scss";
 import TabsHighlighter from "./TabsHighlighter/TabsHighlighter";
 
 const TabList = ({ contribItems }) => {
-  const { activeTabId, updateGlobalState } = useGlobalStore();
-
   return (
     <div className={s.tabList} role="tablist">
-      {contribItems.map((contribution, index) => {
-        return (
-          <button
-            key={getRepoFullName(contribution)}
-            className={`${s.tabButton} ${
-              activeTabId === index ? s.active : ""
-            }`}
-            onClick={() => updateGlobalState({ activeTabId: index })}
-            role="tab"
-            aria-selected={activeTabId === index}
-            aria-controls={`panel-${index}`}
-            tabIndex={activeTabId === index ? 0 : -1}
-          >
-            {capitalizeFirstLetter(contribution.repository.name)}
-          </button>
-        );
-      })}
+      {contribItems.map((contribution, index) => (
+        <TabButton key={index} index={index} contribution={contribution} />
+      ))}
 
-      <TabsHighlighter activeTabId={activeTabId} />
+      <TabsHighlighter />
     </div>
   );
 };

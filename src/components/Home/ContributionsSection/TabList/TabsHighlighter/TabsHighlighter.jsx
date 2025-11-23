@@ -1,9 +1,11 @@
 import { SMALL_SCREEN_WIDTH } from "@/data/constants";
 import useGetResizeWindow from "@/hooks/useGetResizeWindow";
+import useGlobalStore from "@/stores/global/useGlobalStore";
 import { useEffect, useState } from "react";
 import s from "./TabsHighlighter.module.scss";
 
-const TabsHighlighter = ({ activeTabId }) => {
+const TabsHighlighter = () => {
+  const activeTabId = useGlobalStore().activeTabId;
   const [isMounted, setIsMounted] = useState(false);
 
   const { width: windowWidth } = useGetResizeWindow({ debounceDelay: 200 });
