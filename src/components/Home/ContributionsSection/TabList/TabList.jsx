@@ -60,7 +60,6 @@ function focusTabWithArrowKeys(
 }
 
 function getNextFocusedTabId({ key, focusedTabId, tabs }) {
-  console.log(key);
   if (key === "ArrowDown") {
     return focusedTabId === tabs.length - 1 ? 0 : focusedTabId + 1;
   }
