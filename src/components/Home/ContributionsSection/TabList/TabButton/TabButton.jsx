@@ -6,17 +6,20 @@ import s from "./TabButton.module.scss";
 const TabButton = ({ contribution, index }) => {
   const { activeTabId, updateGlobalState } = useGlobalStore();
 
+  const isActive = activeTabId === index;
+  const repoName = capitalizeFirstLetter(contribution.repository.name);
+
   return (
     <button
       key={getRepoFullName(contribution)}
-      className={`${s.tabButton} ${activeTabId === index ? s.active : ""}`}
+      className={`${s.tabButton} ${isActive ? s.active : ""}`}
       onClick={() => updateGlobalState({ activeTabId: index })}
       role="tab"
-      aria-selected={activeTabId === index}
+      aria-selected={isActive}
       aria-controls={`panel-${index}`}
-      tabIndex={activeTabId === index ? 0 : -1}
+      tabIndex={isActive ? 0 : -1}
     >
-      {capitalizeFirstLetter(contribution.repository.name)}
+      {repoName}
     </button>
   );
 };
