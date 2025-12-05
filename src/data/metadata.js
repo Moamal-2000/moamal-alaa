@@ -1,3 +1,6 @@
+export const BASE_URL = process.env.NEXT_PUBLIC_SITE_MAP;
+const title = "Moamal Alaa | Front-End Developer";
+
 const keywords = [
   "Moamal Alaa",
   "Moamal Alaa CV",
@@ -12,13 +15,12 @@ const keywords = [
   "Modern UI",
   "Portfolio",
 ];
+
 const description =
   "Moamal Alaa - Front-End Developer creating responsive, accessible, and high-performance websites with React & Next.js. Focused on clean UI, SEO, and great user experiences.";
-const GLOBAL_METADATA = {
-  title: "Moamal Alaa | Front-End Developer",
-  description,
-  keywords,
-};
+
+const GLOBAL_METADATA = { title, description, keywords };
+
 const PWA_METADATA = {
   manifest: "/manifest.json",
   appleWebApp: {
@@ -49,5 +51,30 @@ const PWA_METADATA = {
     // ],
   },
 };
+
+export function getOpenGraphMetadata(pagePath = "") {
+  const url = pagePath ? `${BASE_URL}/${pagePath}` : BASE_URL;
+
+  return {
+    openGraph: {
+      title,
+      description,
+      url,
+      type: "website",
+      locale: "en_US",
+      siteName: "Moamal Alaa Portfolio",
+      authors: ["Moamal Alaa"],
+      images: [
+        {
+          url: `${BASE_URL}/og-image.jpg`,
+          type: "image/jpeg",
+          alt: "Moamal Alaa Front-End Engineer Portfolio OG Image",
+          width: 1200,
+          height: 630,
+        },
+      ],
+    },
+  };
+}
 
 export const METADATA = { ...GLOBAL_METADATA, ...PWA_METADATA };
