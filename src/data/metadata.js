@@ -1,4 +1,4 @@
-export const BASE_URL = process.env.NEXT_PUBLIC_SITE_MAP;
+export const BASE_URL = process.env.SITE_MAP;
 const title = "Moamal Alaa | Front-End Developer";
 
 const keywords = [
