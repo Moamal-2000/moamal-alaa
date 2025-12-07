@@ -1,9 +1,9 @@
+import { BASE_URL } from "@/data/metadata";
 import { readdirSync } from "fs";
 import path from "path";
 
 export const revalidate = 3600;
 
-const baseUrl = process.env.SITE_URL || "http:localhost:3000";
 const baseDir = "src/app/(pages)";
 const excludeDirs = ["api", "fonts"];
 
@@ -23,7 +23,7 @@ async function getRoutes() {
   });
 
   const sitemap = routes.map((route) => ({
-    url: `${baseUrl}${route}`,
+    url: `${BASE_URL}${route}`,
     lastModified: new Date(),
   }));
 
