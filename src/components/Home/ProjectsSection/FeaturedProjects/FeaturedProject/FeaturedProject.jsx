@@ -1,7 +1,7 @@
 "use client";
 
 import { fadeInOnViewMotionProps } from "@/functions/motionConfig";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import s from "./FeaturedProject.module.scss";
 import PreviewImage from "./PreviewImage/PreviewImage";
 import ProjectHeader from "./ProjectHeader/ProjectHeader";

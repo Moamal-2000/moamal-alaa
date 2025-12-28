@@ -3,7 +3,7 @@
 import NumberedHeading from "@/components/Shared/NumberedHeading/NumberedHeading";
 import { getContributionData } from "@/functions/contributions";
 import { fadeInOnViewMotionProps } from "@/functions/motionConfig";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import s from "./ContributionsSection.module.scss";
 import Panels from "./Panels/Panels";
 import TabList from "./TabList/TabList";

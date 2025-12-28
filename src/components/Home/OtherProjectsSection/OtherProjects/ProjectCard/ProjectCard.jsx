@@ -1,5 +1,5 @@
 import { fadeInOnViewMotionProps } from "@/functions/motionConfig";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import s from "./ProjectCard.module.scss";
 import ProjectFooter from "./ProjectFooter/ProjectFooter";
 import ProjectHeader from "./ProjectHeader/ProjectHeader";

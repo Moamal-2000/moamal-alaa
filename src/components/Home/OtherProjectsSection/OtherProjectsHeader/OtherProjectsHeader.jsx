@@ -1,5 +1,5 @@
 import { fadeInOnViewMotionProps } from "@/functions/motionConfig";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import Link from "next/link";
 import s from "./OtherProjectsHeader.module.scss";
 
