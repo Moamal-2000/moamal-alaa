@@ -1,3 +1,5 @@
+@use "@/styles/mixins" as m;
+
 .navLinks {
   display: flex;
   justify-content: space-between;
@@ -6,10 +8,8 @@
 }
 
 .navLinks li {
-  margin: 0 5px;
-  position: relative;
+  margin-inline: 5px;
   counter-increment: item 1;
-  font-size: .8rem;
 }
 
 .navLinks li a {
@@ -17,8 +17,9 @@
   text-decoration: none;
   text-decoration-skip-ink: auto;
   color: inherit;
-  position: relative;
+  font-size: .8rem;
   padding: 10px;
+  position: relative;
   transition:
     color .25s var(--ease-main),
     outline .1s var(--ease-main);
@@ -33,10 +34,12 @@
   }
 }
 
-.navLinks li a::before {
-  content: "0" counter(item) ".";
-  margin-right: 5px;
-  color: var(--green);
-  font-size: .75rem;
-  text-align: right;
+@media (min-width: 992px) {
+  .navLinks li a::before {
+    content: "0" counter(item) ".";
+    margin-right: 5px;
+    color: var(--green);
+    font-size: .75rem;
+    text-align: right;
+  }
 }
