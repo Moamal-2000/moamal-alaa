@@ -66,11 +66,11 @@ export function getOpenGraphMetadata(pagePath = "") {
       authors: ["Moamal Alaa"],
       images: [
         {
-          url: `${BASE_URL}/og-image.jpg`,
-          type: "image/jpeg",
+          url: `${BASE_URL}/og-image.webp`,
+          type: "image/webp",
           alt: "Moamal Alaa Front-End Engineer Portfolio OG Image",
           width: 1200,
-          height: 630,
+          height: 634,
         },
       ],
     },
