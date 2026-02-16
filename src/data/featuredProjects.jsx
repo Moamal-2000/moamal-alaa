@@ -4,15 +4,27 @@ export const FEATURED_PROJECTS = [
   {
     title: "E-Commercew",
     description: (
-      <p>
-        A responsive and modern{" "}
-        <strong className="highlight">e-commerce web application</strong> built
-        with React and Redux Toolkit. It supports multi-language functionality,
-        a dynamic shopping cart, wishlist, product search, order tracking, and
-        zoomable product details. Designed with a clean UI, optimized for SEO,
-        and built as a Progressive Web App for an app-like experience across all
-        devices
-      </p>
+      <>
+        <p>
+          A comprehensive e-commerce platform built with React and Redux
+          Toolkit, demonstrating modern front-end architecture, state
+          management, and performance best practices. Featuring multi-language
+          support, cart and wishlist systems, product search, and PWA
+          functionality.
+        </p>
+        <p>
+          The project was chosen as a{" "}
+          <strong className="highlight">learning reference</strong> on{" "}
+          <AnchorLink
+            href="https://www.codewithrandom.com/2024/06/04/create-e-commerce-website-using-react"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            CodeWithRandom
+          </AnchorLink>{" "}
+          for developers building real-world React applications.
+        </p>
+      </>
     ),
     technologies: [
       "React",
