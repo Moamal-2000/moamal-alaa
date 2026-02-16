@@ -71,11 +71,11 @@
 .content .description {
   background: #112240;
   color: #a8b2d1;
-  padding: 21px;
+  padding: 14px 18px;
   border-radius: 8px;
   line-height: 1.3;
   border: 1px solid #293856;
-  font-size: 1.125rem;
+  font-size: 1rem;
   position: relative;
   text-wrap: pretty;
   pointer-events: all;
@@ -99,8 +99,6 @@
   }
 }
 
-@include m.very-small {
-  .content .description {
-    font-size: 1rem;
-  }
+.content .description>p:not(:last-child) {
+  margin-bottom: 12px;
 }

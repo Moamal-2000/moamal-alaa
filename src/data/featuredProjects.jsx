@@ -4,7 +4,7 @@ export const FEATURED_PROJECTS = [
   {
     title: "E-Commercew",
     description: (
-      <>
+      <p>
         A responsive and modern{" "}
         <strong className="highlight">e-commerce web application</strong> built
         with React and Redux Toolkit. It supports multi-language functionality,
@@ -12,7 +12,7 @@ export const FEATURED_PROJECTS = [
         zoomable product details. Designed with a clean UI, optimized for SEO,
         and built as a Progressive Web App for an app-like experience across all
         devices
-      </>
+      </p>
     ),
     technologies: [
       "React",
@@ -68,12 +68,12 @@ export const FEATURED_PROJECTS = [
   {
     title: "Aster Information",
     description: (
-      <>
+      <p>
         A fully responsive website built as a{" "}
         <strong className="highlight">freelance project</strong> for a potential
         client, featuring a professional design, user-friendly interface, smooth
         on-scroll animations, and cross-browser compatibility.
-      </>
+      </p>
     ),
     technologies: ["React Helmet Async", "React Router Dom", "Sass", "React"],
     repoUrl: "https://github.com/Moamal-2000/aster-information",

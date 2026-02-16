@@ -25,7 +25,7 @@ const FeaturedProject = ({ data, fetchedData, shouldReverse }) => {
       <div className={s.content}>
         <ProjectHeader title={title} liveUrl={fetchedData.liveUrl} />
 
-        <p className={s.description}>{description}</p>
+        <div className={s.description}>{description}</div>
 
         <ProjectTechList technologies={technologies} />
         <ProjectLinks fetchedData={fetchedData} />
