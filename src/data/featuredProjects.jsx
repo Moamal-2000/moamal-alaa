@@ -27,28 +27,31 @@ export const FEATURED_PROJECTS = [
     id: 1,
   },
   {
-    title: "Call of Duty 2 Stats",
+    title: "Jumpers Heaven Stats",
     description: (
       <>
-        A live platform providing real-time stats for{" "}
-        <AnchorLink
-          href="https://en.wikipedia.org/wiki/Call_of_Duty_2"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Call of Duty 2
-        </AnchorLink>{" "}
-        <AnchorLink
-          href="https://www.jumpersheaven.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Jumpers Heaven
-        </AnchorLink>{" "}
-        servers, including leaderboards, maps, players, and servers with online
-        player data. Each player and map has its own detailed page. Currently in{" "}
-        <strong className="highlight">active development</strong> and available
-        as a beta release.
+        <p>
+          A production-grade gaming analytics platform serving real-time
+          statistics for multiple{" "}
+          <AnchorLink
+            href="https://www.jumpersheaven.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Jumpers Heaven
+          </AnchorLink>{" "}
+          servers across <strong className="highlight">Call of Duty</strong>{" "}
+          titles. The system provides interactive leaderboards, player and map
+          analytics, server monitoring, and detailed performance insights with
+          dedicated pages for each entity.
+        </p>
+        <p>
+          Designed with performance in mind, the platform uses MessagePack
+          serialization, client-side caching with compression, and optimized
+          data fetching strategies to handle large datasets efficiently while
+          maintaining a responsive user experience.
+        </p>
+        <p>Currently deployed and actively used by the community.</p>
       </>
     ),
     technologies: [
