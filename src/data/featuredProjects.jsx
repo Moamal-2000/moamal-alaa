@@ -89,7 +89,7 @@ export const FEATURED_PROJECTS = [
         practices.
       </p>
     ),
-    technologies: ["React Helmet Async", "React Router Dom", "Sass", "React"],
+    technologies: ["React Router Dom", "Sass", "React v19"],
     repoUrl: "https://github.com/Moamal-2000/aster-information",
     previewImg: "/images/aster-information-project.webp",
     id: 2,
