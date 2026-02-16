@@ -81,10 +81,12 @@ export const FEATURED_PROJECTS = [
     title: "Aster Information",
     description: (
       <p>
-        A fully responsive website built as a{" "}
-        <strong className="highlight">freelance project</strong> for a potential
-        client, featuring a professional design, user-friendly interface, smooth
-        on-scroll animations, and cross-browser compatibility.
+        A production-quality responsive website developed for a{" "}
+        <strong className="highlight">freelance client</strong>, emphasizing
+        professional UI design, smooth interactive animations, and robust
+        cross-browser support. The project demonstrates real-world delivery
+        standards, attention to usability, and modern front-end implementation
+        practices.
       </p>
     ),
     technologies: ["React Helmet Async", "React Router Dom", "Sass", "React"],
