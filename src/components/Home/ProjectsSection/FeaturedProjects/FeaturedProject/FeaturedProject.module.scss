@@ -34,6 +34,10 @@
       color: #fff;
       border-color: #808690;
     }
+
+    & .content strong {
+      color: #ffff3d;
+    }
   }
 }
 
@@ -101,4 +105,8 @@
 
 .content .description>p:not(:last-child) {
   margin-bottom: 12px;
+}
+
+.content strong {
+  transition: color .3s .1s ease;
 }
