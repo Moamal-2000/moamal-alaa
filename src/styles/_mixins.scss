@@ -1,7 +1,28 @@
+$breakpoints: (
+  large: 1200px,
+  medium: 992px,
+  small: 768px,
+  very-small: 376px
+);
+
 @mixin center-x-y {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin media($name) {
+  $size: map-get($breakpoints, $name);
+
+  @if ($size) {
+    @media (max-width: $size) {
+      @content;
+    }
+  }
+
+  @else {
+    @error "Unknown breakpoint: #{$name}, known breakpoints are: (#{map-keys($breakpoints)})";
+  }
 }
 
 @mixin large {
