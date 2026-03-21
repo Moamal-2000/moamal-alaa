@@ -63,7 +63,6 @@ export const OTHER_PROJECTS_DATA = [
       "HTML to PDF",
       "React Datepicker",
     ],
-    isInProgress: true,
     id: 7,
   },
 ].reverse();
