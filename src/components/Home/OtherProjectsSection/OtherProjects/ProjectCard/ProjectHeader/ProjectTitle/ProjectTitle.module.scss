@@ -39,7 +39,7 @@
   height: fit-content;
 }
 
-@include m.very-small {
+@include m.media(very-small) {
   .title>a .status {
     position: absolute;
     right: 90px;

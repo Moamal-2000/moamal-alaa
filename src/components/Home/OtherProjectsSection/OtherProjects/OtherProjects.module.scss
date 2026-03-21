@@ -16,7 +16,7 @@
   }
 }
 
-@include m.very-small {
+@include m.media(very-small) {
   .otherProjects {
     grid-template-columns: 1fr;
   }

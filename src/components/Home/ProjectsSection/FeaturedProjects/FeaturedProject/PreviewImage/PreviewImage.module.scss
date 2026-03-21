@@ -20,13 +20,13 @@
   }
 }
 
-@include m.large {
+@include m.media(large) {
   .previewImg {
     grid-area: 1 / 6 / -1 / -1;
   }
 }
 
-@include m.small {
+@include m.media(small) {
   .previewImg {
     grid-column: 1 / -1;
     height: 100%;

@@ -32,7 +32,7 @@
   }
 }
 
-@include m.small {
+@include m.media(small) {
   .tabButton {
     border-left: none;
     border-bottom: 2px solid #233554;

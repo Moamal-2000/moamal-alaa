@@ -15,7 +15,7 @@
   align-items: flex-start;
 }
 
-@include m.small {
+@include m.media(small) {
   .section .wrapper {
     flex-direction: column;
   }

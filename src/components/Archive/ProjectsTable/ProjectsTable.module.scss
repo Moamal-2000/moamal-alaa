@@ -1,6 +1,6 @@
 @use "@/styles/mixins" as m;
 
-@include m.medium {
+@include m.media(medium) {
   .hideOnMobile {
     display: none;
   }
@@ -10,7 +10,7 @@
   margin: 100px -20px;
 }
 
-@include m.small {
+@include m.media(small) {
   .tableWrapper {
     margin: 50px -10px;
   }

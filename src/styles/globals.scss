@@ -59,19 +59,19 @@ main {
   padding-inline: 100px;
 }
 
-@include m.large {
+@include m.media(large) {
   main {
     padding: 0 100px;
   }
 }
 
-@include m.small {
+@include m.media(small) {
   main {
     padding: 0 25px;
   }
 }
 
-@include m.very-small {
+@include m.media(very-small) {
   main {
     padding: 0 15px;
   }

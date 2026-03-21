@@ -7,7 +7,7 @@
   --ease-main: cubic-bezier(.645, .045, .355, 1);
 }
 
-@include m.large {
+@include m.media(large) {
   :root {
     --website-width: 100%;
   }

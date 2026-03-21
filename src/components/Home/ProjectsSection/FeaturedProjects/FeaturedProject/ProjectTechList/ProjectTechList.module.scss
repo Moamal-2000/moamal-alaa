@@ -9,13 +9,13 @@
   width: 440px;
 }
 
-@include m.large {
+@include m.media(large) {
   .techList {
     width: 400px;
   }
 }
 
-@include m.medium {
+@include m.media(medium) {
   .techList {
     width: fit-content;
     display: inline-flex;
@@ -27,7 +27,7 @@
   right: -13px;
 }
 
-@include m.small {
+@include m.media(small) {
   [dir=rtl] .techList {
     left: -13px;
   }
@@ -45,14 +45,14 @@
   transition: color .3s ease;
 }
 
-@include m.small {
+@include m.media(small) {
   .techList li {
     color: #ccd6f6;
     transition: color .3s .1s ease;
   }
 }
 
-@include m.very-small {
+@include m.media(very-small) {
   .techList li {
     font-size: .8rem;
   }

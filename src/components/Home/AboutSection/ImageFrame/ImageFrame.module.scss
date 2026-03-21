@@ -7,7 +7,7 @@
   color: #000;
 }
 
-@include m.medium {
+@include m.media(medium) {
   .imageFrame {
     margin: 0 auto;
     margin-top: 80px;

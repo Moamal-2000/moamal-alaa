@@ -6,7 +6,7 @@
   display: none;
 }
 
-@include m.small {
+@include m.media(small) {
   .socialMedia {
     display: flex;
     align-items: center;

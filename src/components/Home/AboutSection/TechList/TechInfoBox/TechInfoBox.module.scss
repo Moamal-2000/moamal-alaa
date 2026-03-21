@@ -13,13 +13,13 @@
   padding: 21px;
 }
 
-@include m.small {
+@include m.media(small) {
   .infoBox {
     min-width: 340px;
   }
 }
 
-@include m.very-small {
+@include m.media(very-small) {
   .infoBox {
     min-width: auto;
     max-width: auto;
@@ -36,7 +36,7 @@
   font-weight: 400;
 }
 
-@include m.very-small {
+@include m.media(very-small) {
   .infoBox>p {
     font-size: 1rem;
   }

@@ -1,6 +1,6 @@
 @use "@/styles/mixins" as m;
 
-@include m.medium {
+@include m.media(medium) {
   .hideOnMobile {
     display: none;
   }
@@ -14,7 +14,7 @@
   user-select: none;
 }
 
-@include m.very-small {
+@include m.media(very-small) {
   .thead tr th {
     font-size: 1rem;
   }
@@ -28,7 +28,7 @@
   padding-right: 20px;
 }
 
-@include m.very-small {
+@include m.media(very-small) {
   .thead tr th:first-child {
     padding-left: 10px;
   }

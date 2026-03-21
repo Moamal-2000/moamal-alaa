@@ -13,7 +13,7 @@
   grid-area: heading;
 }
 
-@include m.very-small {
+@include m.media(very-small) {
   .numberedHeading {
     font-size: clamp(1.5rem, 5vw, 2rem);
   }

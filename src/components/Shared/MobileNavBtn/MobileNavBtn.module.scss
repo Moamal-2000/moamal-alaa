@@ -30,7 +30,7 @@
   }
 }
 
-@include m.small {
+@include m.media(small) {
   .mobileNavBtn {
     display: block;
   }

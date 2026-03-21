@@ -12,7 +12,7 @@
   align-items: center;
 }
 
-@include m.small {
+@include m.media(small) {
   .fixedEmail {
     display: none;
   }

@@ -6,7 +6,7 @@
   text-align: center;
 }
 
-@include m.medium {
+@include m.media(medium) {
   .contactSection {
     max-width: 420px;
   }
@@ -34,7 +34,7 @@
   line-height: 1.3;
 }
 
-@include m.very-small {
+@include m.media(very-small) {
   .contactSection .description {
     font-size: 1.1rem;
   }

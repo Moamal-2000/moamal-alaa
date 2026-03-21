@@ -13,7 +13,7 @@
   transition: translate .25s .1s var(--ease-main);
 }
 
-@include m.small {
+@include m.media(small) {
   .highlight {
     height: 2px;
     top: unset;

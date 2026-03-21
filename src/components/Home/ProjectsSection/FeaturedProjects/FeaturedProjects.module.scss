@@ -6,13 +6,13 @@
   gap: 200px;
 }
 
-@include m.medium {
+@include m.media(medium) {
   .featuredProjects {
     gap: 150px;
   }
 }
 
-@include m.small {
+@include m.media(small) {
   .featuredProjects {
     gap: 70px;
   }

@@ -72,7 +72,7 @@
   margin-top: 10%;
 }
 
-@include m.very-small {
+@include m.media(very-small) {
   .mobileMenu .buttons {
     flex-direction: column;
     width: fit-content;

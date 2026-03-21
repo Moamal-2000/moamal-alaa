@@ -19,7 +19,7 @@
   }
 }
 
-@include m.very-small {
+@include m.media(very-small) {
   .projectCard {
     padding: 25px 20px;
   }

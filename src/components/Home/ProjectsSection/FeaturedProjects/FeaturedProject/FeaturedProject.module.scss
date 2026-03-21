@@ -8,7 +8,7 @@
   position: relative;
 }
 
-@include m.medium {
+@include m.media(medium) {
   .featuredProject {
     display: flex;
     flex-direction: column;
@@ -16,7 +16,7 @@
   }
 }
 
-@include m.small {
+@include m.media(small) {
   .featuredProject {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -48,13 +48,13 @@
   pointer-events: none;
 }
 
-@include m.large {
+@include m.media(large) {
   .featuredProject .content {
     grid-area: 1 / 1 / -1 / 8;
   }
 }
 
-@include m.small {
+@include m.media(small) {
   .featuredProject .content {
     display: flex;
     flex-direction: column;
@@ -66,7 +66,7 @@
   }
 }
 
-@include m.very-small {
+@include m.media(very-small) {
   .featuredProject .content {
     padding: 16px;
   }
@@ -86,14 +86,14 @@
   transition: color .3s .1s ease;
 }
 
-@include m.medium {
+@include m.media(medium) {
   .content .description {
     max-width: 540px;
     width: 100%;
   }
 }
 
-@include m.small {
+@include m.media(small) {
   .content .description {
     background-color: transparent;
     border: none;

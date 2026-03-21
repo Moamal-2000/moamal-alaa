@@ -23,13 +23,13 @@
   }
 }
 
-@include m.medium {
+@include m.media(medium) {
   .pullRequests li>a {
     padding-left: 20px;
   }
 }
 
-@include m.medium {
+@include m.media(medium) {
   .pullRequests li>a {
     font-size: 1.15rem;
   }

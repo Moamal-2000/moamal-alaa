@@ -44,7 +44,7 @@
   color: #a8b2d1;
 }
 
-@include m.medium {
+@include m.media(medium) {
   .panel .description {
     font-size: 1.15rem;
   }

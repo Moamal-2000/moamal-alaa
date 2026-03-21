@@ -31,13 +31,13 @@
   }
 }
 
-@include m.small {
+@include m.media(small) {
   .header {
     padding: 0 25px;
   }
 }
 
-@include m.very-small {
+@include m.media(very-small) {
   .header {
     padding: 0 15px;
   }

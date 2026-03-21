@@ -7,7 +7,7 @@
   grid-area: techList;
 }
 
-@include m.medium {
+@include m.media(medium) {
   .wrapper {
     flex-direction: column;
   }
@@ -23,14 +23,14 @@
   left: -8px;
 }
 
-@include m.small {
+@include m.media(small) {
   .techList {
     gap: 1px 14px;
     user-select: none;
   }
 }
 
-@include m.very-small {
+@include m.media(very-small) {
   .techList {
     grid-template-columns: auto;
     width: 100%;
@@ -54,13 +54,13 @@
   }
 }
 
-@include m.small {
+@include m.media(small) {
   .techList li {
     position: static;
   }
 }
 
-@include m.very-small {
+@include m.media(very-small) {
 
   // JavaScript
   .techList li:nth-child(1) {

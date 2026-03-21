@@ -4,19 +4,19 @@
   padding: 200px 140px;
 }
 
-@include m.large {
+@include m.media(large) {
   .archive {
     padding: 200px 110px;
   }
 }
 
-@include m.small {
+@include m.media(small) {
   .archive {
     padding: 150px 25px;
   }
 }
 
-@include m.very-small {
+@include m.media(very-small) {
   .archive {
     padding: 150px 15px;
   }
