@@ -16,10 +16,6 @@
     outline .1s var(--ease-main),
     outline-offset .1s var(--ease-main);
 
-  &.move.active {
-    right: 10px;
-  }
-
   &:focus-visible {
     outline: dashed 2px #ccd6f6;
     outline-offset: 3px;

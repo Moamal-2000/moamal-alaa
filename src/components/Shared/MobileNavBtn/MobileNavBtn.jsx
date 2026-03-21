@@ -1,20 +1,11 @@
 "use client";
 
-import { isMobile } from "@/functions/helper";
 import useGlobalStore from "@/stores/global/useGlobalStore";
-import { useEffect, useState } from "react";
 import s from "./MobileNavBtn.module.scss";
 
 const MobileNavBtn = () => {
   const { isMobileNavOpen, updateGlobalState } = useGlobalStore();
-  const [isMobileDevice, setIsMobileDevice] = useState(false);
   const activeClass = isMobileNavOpen ? s.active : "";
-  const moveClass = !isMobileDevice ? s.move : "";
-  const buttonClasses = `${s.mobileNavBtn} ${activeClass} ${moveClass}`;
-
-  useEffect(() => {
-    setIsMobileDevice(isMobile());
-  }, []);
 
   function handleClick() {
     updateGlobalState({ isMobileNavOpen: !isMobileNavOpen });
@@ -23,7 +14,7 @@ const MobileNavBtn = () => {
   return (
     <button
       type="button"
-      className={buttonClasses}
+      className={`${s.mobileNavBtn} ${activeClass}`}
       aria-label="Menu Button"
       onClick={handleClick}
     >
