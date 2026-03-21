@@ -71,7 +71,12 @@ const Header = () => {
         className={s.navLinks}
         {...fadeInOnViewMotionProps({ initialY: 0 })}
       >
-        <Link className={s.logo} href="/" aria-label="Go to homepage">
+        <Link
+          className={s.logo}
+          href="/"
+          title="Go to homepage"
+          aria-label="Go to homepage"
+        >
           <svg aria-hidden="true">
             <use href="/icons-sprite.svg#logo" />
           </svg>
