@@ -5,7 +5,9 @@ import s from "./MobileNavBtn.module.scss";
 
 const MobileNavBtn = () => {
   const { isMobileNavOpen, updateGlobalState } = useGlobalStore();
+
   const activeClass = isMobileNavOpen ? s.active : "";
+  const title = isMobileNavOpen ? "Close Menu" : "Open Menu";
 
   function handleClick() {
     updateGlobalState({ isMobileNavOpen: !isMobileNavOpen });
@@ -15,7 +17,8 @@ const MobileNavBtn = () => {
     <button
       type="button"
       className={`${s.mobileNavBtn} ${activeClass}`}
-      aria-label="Menu Button"
+      title={title}
+      aria-label={title}
       onClick={handleClick}
     >
       <div className={s.icon} />
