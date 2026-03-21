@@ -6,12 +6,12 @@ import { contributionsQuery } from "@/graphql/contributionsQuery";
 
 export function filterContributions(contributions) {
   return contributions.filter((contribution) => {
-    const isMoamalRepo = contribution.url.includes("Moamal-2000");
+    const isMyRepo = contribution.url.includes("Moamal-2000");
     const isBlacklisted = contributionBlacklist.includes(
-      getRepoFullName(contribution)
+      getRepoFullName(contribution),
     );
 
-    return !isMoamalRepo && !isBlacklisted;
+    return !isMyRepo && !isBlacklisted;
   });
 }
 
@@ -31,9 +31,10 @@ export function groupContributionsByRepo(contributions) {
 export function enrichRepos(contributions) {
   return Object.values(contributions).map((repo) => {
     const repoClone = { ...repo };
+    const repoName = getRepoFullName(repoClone);
 
     const requiredData = contributionsDescriptions.find(
-      (item) => item.id === getRepoFullName(repoClone)
+      (item) => item.id === repoName,
     );
 
     const sortedPullRequests = getSortedPullRequests(repoClone, repo);
