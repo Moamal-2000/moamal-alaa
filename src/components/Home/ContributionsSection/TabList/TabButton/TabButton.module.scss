@@ -19,7 +19,9 @@
   font-size: .81rem;
   text-align: left;
   white-space: nowrap;
-  transition: all .25s var(--ease-main);
+  transition:
+    background-color .25s var(--ease-main),
+    color .25s var(--ease-main);
 
   &:hover,
   &:focus-visible {
