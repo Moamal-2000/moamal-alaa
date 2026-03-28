@@ -28,7 +28,7 @@ const FeaturedProject = ({ data, fetchedData, shouldReverse }) => {
         <div className={s.description}>{description}</div>
 
         <ProjectTechList technologies={technologies} />
-        <ProjectLinks fetchedData={fetchedData} />
+        <ProjectLinks fetchedData={fetchedData} title={title} />
       </div>
 
       <PreviewImage

@@ -2,7 +2,7 @@ import s from "./ProjectStats.module.scss";
 
 const ProjectStats = ({ stars, forks }) => {
   return (
-    <div className={s.projectStats}>
+    <div className={s.projectStats} aria-hidden>
       <span className={s.stat}>
         <svg aria-hidden="true">
           <use href="/icons-sprite.svg#star" />
