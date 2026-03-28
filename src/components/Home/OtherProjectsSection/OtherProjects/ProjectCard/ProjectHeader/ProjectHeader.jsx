@@ -11,7 +11,7 @@ const ProjectHeader = ({
         <svg aria-hidden="true">
           <use href="/icons-sprite.svg#folder" />
         </svg>
-        <ProjectLinks repoUrl={repoUrl} liveUrl={liveUrl} />
+        <ProjectLinks repoUrl={repoUrl} liveUrl={liveUrl} title={title} />
       </div>
 
       <ProjectTitle
