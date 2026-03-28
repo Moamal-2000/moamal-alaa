@@ -36,6 +36,7 @@ const ProjectsTBody = () => {
                     title="External Link"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`Visit ${title} live site (opens in a new tab)`}
                   >
                     <svg aria-hidden="true">
                       <use href="/icons-sprite.svg#live" />
@@ -49,6 +50,7 @@ const ProjectsTBody = () => {
                     title="GitHub Link"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`View ${title} source code on GitHub`}
                   >
                     <svg aria-hidden="true">
                       <use href="/icons-sprite.svg#github" />
@@ -58,7 +60,7 @@ const ProjectsTBody = () => {
               </div>
             </td>
           </motion.tr>
-        )
+        ),
       )}
     </tbody>
   );
