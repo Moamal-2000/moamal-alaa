@@ -12,7 +12,7 @@ export async function fetchMyGithubRepos() {
       console.error(
         "GitHub API returned error:",
         response.status,
-        response.statusText
+        response.statusText,
       );
 
       return [];
