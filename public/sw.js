@@ -1,4 +1,4 @@
-const CACHE_NAME = "moamal-alaa-v1.11.0";
+const CACHE_NAME = "moamal-alaa-v1.12.0";
 
 const urlsToCache = [
   "/",
@@ -7,7 +7,7 @@ const urlsToCache = [
   "/resume.pdf",
   "/images/e-commercew-project.webp",
   "/images/call-of-duty-2-stats-project.webp",
-  "/images/aster-information-project.webp",
+  "/images/advanced-tic-tac-toe.webp",
   "/images/me.webp",
   "/PWA/icons/maskable-icon.webp",
   "/icons-sprite.svg",
