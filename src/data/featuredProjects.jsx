@@ -38,6 +38,7 @@ export const FEATURED_PROJECTS = [
     previewImg: "/images/e-commercew-project.webp",
     id: 1,
   },
+
   {
     title: "Jumpers Heaven Stats",
     description: (
@@ -76,5 +77,26 @@ export const FEATURED_PROJECTS = [
     repoUrl: "https://github.com/Moamal-2000/jumpers-heaven-statistics",
     previewImg: "/images/call-of-duty-2-stats-project.webp",
     id: 3,
+  },
+
+  {
+    title: "Advanced Tic Tac Toe (Full-Stack)",
+    description: (
+      <p>
+        An <strong className="highlight">Enterprise-standard</strong> remaining
+        of the classic game, engineered for peak performance and strategic
+        depth. Features a custom-built{" "}
+        <strong className="highlight">Offline AI</strong> and{" "}
+        <strong className="highlight">Real-time Multiplayer</strong> with live
+        chat. Includes game-changing mechanics like Freeze, Bomb, and Swap
+        across dynamic 3x3 to 5x5 boards. Achieved{" "}
+        <strong className="highlight">100/100 Lighthouse scores</strong> through
+        rigorous optimization, semantic HTML, and full PWA support.
+      </p>
+    ),
+    repoUrl: "https://github.com/Moamal-2000/tic-tac-toe",
+    previewImg: "/images/advanced-tic-tac-toe.webp",
+    technologies: ["Next.js", "Socket.io", "Zustand", "Sass", "PWA"],
+    id: 4,
   },
 ];
