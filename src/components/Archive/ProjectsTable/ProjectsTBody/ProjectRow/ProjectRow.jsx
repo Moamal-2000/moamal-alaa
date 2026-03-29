@@ -1,3 +1,4 @@
+import IconLink from "@/components/Shared/Buttons/IconLink/IconLink";
 import { motion } from "motion/react";
 import s from "./ProjectRow.module.scss";
 
@@ -9,6 +10,7 @@ const ProjectRow = ({
     <motion.tr key={id} {...motionProps} className={s.projectRow}>
       <td className={s.year}>{year}</td>
       <td className={s.title}>{title}</td>
+
       <td className={`${s.tech} ${s.hideOnMobile}`}>
         {technologies?.map((tech, index) => (
           <span key={index}>
@@ -19,36 +21,20 @@ const ProjectRow = ({
           </span>
         ))}
       </td>
-      <td className={s.links}>
-        <div className={s.wrapper}>
-          {liveUrl && (
-            <a
-              href={liveUrl}
-              title="External Link"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`Visit ${title} live site (opens in a new tab)`}
-            >
-              <svg aria-hidden="true">
-                <use href="/icons-sprite.svg#live" />
-              </svg>
-            </a>
-          )}
 
-          {repoUrl && (
-            <a
-              href={liveUrl}
-              title="GitHub Link"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`View ${title} source code on GitHub`}
-            >
-              <svg aria-hidden="true">
-                <use href="/icons-sprite.svg#github" />
-              </svg>
-            </a>
-          )}
-        </div>
+      <td className={s.links}>
+        <IconLink
+          href={liveUrl}
+          title="External Link"
+          iconName="live"
+          ariaLabel={`Visit ${title} live site (opens in a new tab)`}
+        />
+        <IconLink
+          href={repoUrl}
+          title="GitHub Link"
+          iconName="github"
+          ariaLabel={`View ${title} source code on GitHub`}
+        />
       </td>
     </motion.tr>
   );

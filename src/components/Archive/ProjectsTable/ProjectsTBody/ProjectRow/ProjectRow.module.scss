@@ -72,7 +72,7 @@
   margin-inline: 5px;
 }
 
-.projectRow td.links .wrapper {
+.projectRow td.links {
   padding-right: 20px;
   display: flex;
   align-items: center;
@@ -80,36 +80,7 @@
 }
 
 @include m.media(very-small) {
-  .projectRow td.links .wrapper {
+  .projectRow td.links {
     padding-inline: 10px;
-  }
-}
-
-.projectRow td.links .wrapper a {
-  -webkit-tap-highlight-color: transparent;
-  @include m.center-x-y;
-  flex-shrink: 0;
-  transition: outline-color .25s var(--ease-main);
-
-  &:focus-visible {
-    outline: 2px solid var(--green);
-    outline-offset: 5px;
-  }
-}
-
-.projectRow td.links .wrapper>a>svg {
-  width: 20px;
-  height: 20px;
-  transition: color .25s var(--ease-main);
-}
-
-.projectRow td.links .wrapper>a:where(:hover, :focus-visible)>svg {
-  color: var(--green);
-}
-
-@include m.media(very-small) {
-  .projectRow td.links .wrapper>a>svg {
-    width: 18px;
-    height: 18px;
   }
 }
