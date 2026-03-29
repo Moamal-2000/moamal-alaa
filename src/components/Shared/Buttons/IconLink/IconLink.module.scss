@@ -1,0 +1,30 @@
+@use "@/styles/mixins" as m;
+
+.link {
+  -webkit-tap-highlight-color: transparent;
+  @include m.center-x-y;
+  flex-shrink: 0;
+  transition: outline-color .25s var(--ease-main);
+
+  &:focus-visible {
+    outline: 2px solid var(--green);
+    outline-offset: 5px;
+  }
+}
+
+.link>svg {
+  width: 20px;
+  height: 20px;
+  transition: color .25s var(--ease-main);
+}
+
+.link:where(:hover, :focus-visible)>svg {
+  color: var(--green);
+}
+
+@include m.media(very-small) {
+  .link>svg {
+    width: 18px;
+    height: 18px;
+  }
+}
