@@ -1,21 +1,21 @@
 export const OTHER_PROJECTS_DATA = [
   {
-    title: "Challenges with JavaScript",
-    description:
-      "A set of JavaScript challenges focused on solving real-world interactivity problems using only HTML, CSS, and JavaScript. Built to sharpen DOM manipulation, event handling, and logic-building skills.",
-    year: "2022",
-    liveUrl: "https://moamal-2000.github.io/simple-javascript-projects/",
-    repoUrl: "https://github.com/Moamal-2000/simple-javascript-projects",
-    technologies: ["HTML", "CSS", "Sass", "JavaScript"],
-    id: 1,
-  },
-  {
     title: "Responsive Landing Page",
     description:
       "A clean and modern landing page template designed to capture visitor attention and effectively showcase content or products.",
     year: "2022",
     liveUrl: "https://moamal-2000.github.io/template2",
     repoUrl: "https://github.com/Moamal-2000/template2",
+    technologies: ["HTML", "CSS", "Sass", "JavaScript"],
+    id: 1,
+  },
+  {
+    title: "Challenges with JavaScript",
+    description:
+      "A set of JavaScript challenges focused on solving real-world interactivity problems using only HTML, CSS, and JavaScript. Built to sharpen DOM manipulation, event handling, and logic-building skills.",
+    year: "2022",
+    liveUrl: "https://moamal-2000.github.io/simple-javascript-projects/",
+    repoUrl: "https://github.com/Moamal-2000/simple-javascript-projects",
     technologies: ["HTML", "CSS", "Sass", "JavaScript"],
     id: 2,
   },
@@ -27,6 +27,24 @@ export const OTHER_PROJECTS_DATA = [
     liveUrl: "https://hooks-time.netlify.app",
     repoUrl: "https://github.com/Moamal-2000/custom-hooks",
     technologies: ["React", "PWA", "JSZip", "syntax highlighter"],
+    id: 3,
+  },
+  {
+    title: "Aster Information",
+    description: (
+      <>
+        A production-quality responsive website developed for a{" "}
+        <strong className="highlight">freelance client</strong>, emphasizing
+        professional UI design, smooth interactive animations, and robust
+        cross-browser support. The project demonstrates real-world delivery
+        standards, attention to usability, and modern front-end implementation
+        practices.
+      </>
+    ),
+    year: "2024",
+    liveUrl: "https://asterinformation.netlify.app",
+    repoUrl: "https://github.com/Moamal-2000/aster-information",
+    technologies: ["React", "React Router Dom", "Sass"],
     id: 4,
   },
   {

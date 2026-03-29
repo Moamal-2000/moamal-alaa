@@ -77,21 +77,4 @@ export const FEATURED_PROJECTS = [
     previewImg: "/images/call-of-duty-2-stats-project.webp",
     id: 3,
   },
-  {
-    title: "Aster Information",
-    description: (
-      <p>
-        A production-quality responsive website developed for a{" "}
-        <strong className="highlight">freelance client</strong>, emphasizing
-        professional UI design, smooth interactive animations, and robust
-        cross-browser support. The project demonstrates real-world delivery
-        standards, attention to usability, and modern front-end implementation
-        practices.
-      </p>
-    ),
-    technologies: ["React Router Dom", "Sass", "React v19"],
-    repoUrl: "https://github.com/Moamal-2000/aster-information",
-    previewImg: "/images/aster-information-project.webp",
-    id: 2,
-  },
 ];
