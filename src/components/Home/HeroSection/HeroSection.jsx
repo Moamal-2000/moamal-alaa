@@ -6,12 +6,7 @@ import HeroButtons from "./HeroButtons/HeroButtons";
 import s from "./HeroSection.module.scss";
 
 const { initial, animate, transition } = heroMotionConfig();
-
-const motionProps = () => ({
-  initial,
-  animate,
-  transition: transition(),
-});
+const motionProps = () => ({ initial, animate, transition: transition() });
 
 const HeroSection = () => {
   return (

@@ -5,22 +5,18 @@ export function heroMotionConfig() {
   const animate = { opacity: 1, y: 0 };
   const transition = getStaggeredTransition();
 
-  function getStaggeredTransition(addBy = 0.15) {
-    let addedDelay = 0;
+  return { initial, animate, transition };
+}
 
-    return () => {
-      const baseDelay = NAV_LINKS.length * 0.1;
-      const currentDelay = baseDelay + addedDelay;
-      addedDelay += addBy;
+export function getStaggeredTransition(addBy = 0.15) {
+  let addedDelay = 0;
 
-      return { duration: 0.5, delay: currentDelay + addBy };
-    };
-  }
+  return () => {
+    const baseDelay = NAV_LINKS.length * 0.1;
+    const currentDelay = baseDelay + addedDelay;
+    addedDelay += addBy;
 
-  return {
-    initial,
-    animate,
-    transition,
+    return { duration: 0.5, delay: currentDelay + addBy };
   };
 }
 
