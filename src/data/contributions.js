@@ -9,6 +9,10 @@ export const contributionBlacklist = [
 
 export const contributionsDescriptions = [
   {
+    description: `Optimized LCP and initial bundle size by converting key assets to WebP, refactoring the Hero section for semantic image loading with high fetch priority, and introducing conditional eager/lazy loading to prioritize critical brand elements.`,
+    id: "Esraa-Dev/Al-Shifa-Clinic",
+  },
+  {
     description: `Enhanced the Travel-Agency website by improving code quality, fixing layout shifts, optimizing image behavior, removing unused assets, improving load performance, adding key SEO meta tags, and updating the site title for better branding and user experience.`,
     id: "Ahmed-C0der/Travel-Agency",
   },
