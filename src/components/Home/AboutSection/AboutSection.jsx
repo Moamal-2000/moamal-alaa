@@ -29,6 +29,7 @@ const AboutSection = () => {
           height={300}
           quality={100}
           loading="lazy"
+          fetchPriority="low"
         />
       </ImageFrame>
       <TechList />
