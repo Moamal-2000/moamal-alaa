@@ -15,7 +15,7 @@ import MobileNavMenu from "./MobileNavMenu/MobileNavMenu";
 
 const Header = () => {
   const scrollDirection = useScrollDirection({ initialDir: "down" });
-  const { isMobileNavOpen, updateGlobalState } = useGlobalStore();
+  const isMobileNavOpen = useGlobalStore((s) => s.isMobileNavOpen);
 
   const [isActive, setIsActive] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
@@ -25,10 +25,6 @@ const Header = () => {
   const timerRef = useRef();
 
   const headerClasses = getHeaderClasses({ cssModule: s, isActive, isHidden });
-
-  function handleHeaderClick() {
-    if (isMobileNavOpen) updateGlobalState({ isMobileNavOpen: false });
-  }
 
   const handleScroll = useCallback(() => {
     clearTimeout(timerRef.current);
@@ -66,7 +62,7 @@ const Header = () => {
   }, [handleScroll]);
 
   return (
-    <header className={headerClasses} onClick={handleHeaderClick}>
+    <header className={headerClasses}>
       <motion.nav
         className={s.navLinks}
         {...fadeInOnViewMotionProps({ initialY: 0 })}
