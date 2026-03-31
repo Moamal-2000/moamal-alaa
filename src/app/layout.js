@@ -1,4 +1,3 @@
-import UpdateNotification from "@/components/PWA/UpdateNotification/UpdateNotification";
 import { METADATA } from "@/data/metadata";
 import RootProviders from "../components/Shared/RootProviders";
 import "../styles/globals.scss";
@@ -12,10 +11,5 @@ export const viewport = {
 };
 
 export default function RootLayout({ children }) {
-  return (
-    <RootProviders>
-      <UpdateNotification />
-      {children}
-    </RootProviders>
-  );
+  return <RootProviders>{children}</RootProviders>;
 }

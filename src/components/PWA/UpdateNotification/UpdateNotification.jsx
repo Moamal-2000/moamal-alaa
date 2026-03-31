@@ -2,15 +2,21 @@
 
 import { IS_PRODUCTION } from "@/data/constants";
 import { refreshPage } from "@/lib/utils";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import s from "./UpdateNotification.module.scss";
 
 export default function UpdateNotification() {
   const [showNotification, setShowNotification] = useState(false);
 
+  const buttonRef = useRef(null);
+
   useEffect(() => {
     registerSWWithUpdate(setShowNotification);
   }, []);
+
+  useEffect(() => {
+    if (showNotification) buttonRef.current.focus();
+  }, [showNotification]);
 
   function handleRefreshPage() {
     if (navigator.serviceWorker.controller) {
@@ -20,18 +26,23 @@ export default function UpdateNotification() {
   }
 
   return (
-    showNotification && (
-      <div className={s.notification}>
-        <p className={s.message}>A new version is available!</p>
-        <button
-          className={s.refreshButton}
-          type="button"
-          onClick={handleRefreshPage}
-        >
-          Refresh
-        </button>
-      </div>
-    )
+    <div
+      className={`${s.notification} ${showNotification ? s.show : ""}`}
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+    >
+      <p className={s.message}>A new version is available!</p>
+      <button
+        className={s.refreshButton}
+        type="button"
+        onClick={handleRefreshPage}
+        aria-label="Refresh - reload the page to get the latest version"
+        ref={buttonRef}
+      >
+        Refresh
+      </button>
+    </div>
   );
 }
 async function registerSWWithUpdate(setShowNotification) {

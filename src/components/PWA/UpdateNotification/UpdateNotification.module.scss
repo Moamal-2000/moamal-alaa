@@ -19,6 +19,13 @@
   align-items: center;
   gap: 30px;
   animation: fade-slide-up .35s cubic-bezier(.645, .045, .355, 1) forwards;
+  animation-play-state: paused;
+  visibility: hidden;
+
+  &.show {
+    visibility: visible;
+    animation-play-state: running;
+  }
 }
 
 @media (max-width: 520px) {
