@@ -6,23 +6,30 @@ import TechInfoBox from "./TechInfoBox/TechInfoBox";
 import s from "./TechList.module.scss";
 
 const TechList = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeTech, setActiveTech] = useState(TECHNOLOGIES[0]);
 
   return (
     <div className={s.wrapper}>
-      <ul className={s.techList}>
-        {TECHNOLOGIES.map(({ name, id }, index) => (
-          <li
-            key={`${id}-${name}`}
-            className={index === activeIndex ? s.active : ""}
-            onMouseEnter={() => setActiveIndex(index)}
-          >
-            {name}
+      <ul className={s.techList} role="tablist">
+        {TECHNOLOGIES.map((tech) => (
+          <li key={tech.id} role="presentation">
+            <button
+              type="button"
+              className={tech.id === activeTech.id ? s.active : ""}
+              onClick={() => setActiveTech(tech)}
+              onFocus={() => setActiveTech(tech)}
+              role="tab"
+              aria-selected={tech.id === activeTech.id}
+              aria-controls="tech-info-panel"
+              id={`tab-${tech.id}`}
+            >
+              {tech.name}
+            </button>
           </li>
         ))}
       </ul>
 
-      <TechInfoBox activeIndex={activeIndex} />
+      <TechInfoBox activeTech={activeTech} id="tech-info-panel" />
     </div>
   );
 };

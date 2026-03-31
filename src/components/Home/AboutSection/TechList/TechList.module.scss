@@ -37,7 +37,9 @@
   }
 }
 
-.techList li {
+.techList li>button {
+  border: 0;
+  background-color: transparent;
   width: fit-content;
   height: fit-content;
   color: var(--main-text-color);
@@ -52,10 +54,20 @@
   &.active {
     color: var(--green);
   }
+
+  &:focus-visible {
+    outline: 2px solid var(--green);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  &:not(.active):focus-visible {
+    color: #fff;
+  }
 }
 
 @include m.media(small) {
-  .techList li {
+  .techList li>button {
     position: static;
   }
 }
@@ -63,32 +75,32 @@
 @include m.media(very-small) {
 
   // JavaScript
-  .techList li:nth-child(1) {
+  .techList li>button:nth-child(1) {
     order: 2;
   }
 
   // Sass
-  .techList li:nth-child(2) {
+  .techList li>button:nth-child(2) {
     order: 6;
   }
 
   // React
-  .techList li:nth-child(3) {
+  .techList li>button:nth-child(3) {
     order: 4;
   }
 
   // Next
-  .techList li:nth-child(4) {
+  .techList li>button:nth-child(4) {
     order: 5;
   }
 
   // Progressive Web Apps
-  .techList li:nth-child(5) {
+  .techList li>button:nth-child(5) {
     order: 1;
   }
 
   // Redux/Toolkit
-  .techList li:nth-child(6) {
+  .techList li>button:nth-child(6) {
     order: 3;
   }
 }
