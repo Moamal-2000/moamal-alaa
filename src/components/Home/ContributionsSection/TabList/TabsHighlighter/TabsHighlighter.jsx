@@ -24,7 +24,9 @@ const TabsHighlighter = () => {
     setIsMounted(true);
   }, []);
 
-  return <div className={s.highlight} style={highlightStyles} />;
+  return (
+    <div className={s.highlight} style={highlightStyles} role="presentation" />
+  );
 };
 
 export default TabsHighlighter;
