@@ -24,33 +24,27 @@
 .mobileMenu nav {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 100%;
   color: #ccd6f6;
   font-family: var(--font-mono);
   text-align: center;
 }
 
 .mobileMenu nav ol {
-  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   counter-reset: item 0;
 }
 
 .mobileMenu nav li {
-  margin: 0 auto 20px;
+  margin-bottom: 20px;
   font-size: clamp(.875rem, 4vw, 1.125rem);
   counter-increment: item 1;
 }
 
 .mobileMenu nav li a {
   padding: 10px;
-  width: 160px;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
   transition: color .25s var(--ease-main);
 
   &:hover {
@@ -66,18 +60,17 @@
 }
 
 .mobileMenu .buttons {
-  @include m.center-x-y;
+  display: flex;
+  flex-wrap: wrap;
   gap: 10px;
-  width: 100%;
   margin-top: 10%;
+  margin-left: 10px;
 }
 
 @include m.media(very-small) {
   .mobileMenu .buttons {
     flex-direction: column;
     width: fit-content;
-    position: relative;
-    right: 10px;
   }
 }
 
@@ -86,7 +79,6 @@
   color: var(--green);
   max-width: 124px;
   min-width: 124px;
-  width: 100%;
   background-color: transparent;
   border: 1px solid var(--green);
   border-radius: 4px;
