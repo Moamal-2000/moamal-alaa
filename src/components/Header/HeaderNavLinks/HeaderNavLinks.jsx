@@ -1,7 +1,7 @@
 "use client";
 
 import { NAV_LINKS } from "@/data/staticData";
-import { navLinkMotionProps } from "@/functions/motionConfig";
+import { navLinkMotionProps } from "@/lib/motionConfig";
 import { motion } from "motion/react";
 import { usePathname, useRouter } from "next/navigation";
 import s from "./HeaderNavLinks.module.scss";

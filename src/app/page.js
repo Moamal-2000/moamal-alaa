@@ -5,8 +5,8 @@ import HeroSection from "@/components/Home/HeroSection/HeroSection";
 import OtherProjectsSection from "@/components/Home/OtherProjectsSection/OtherProjectsSection";
 import ProjectsSection from "@/components/Home/ProjectsSection/ProjectsSection";
 import { getOpenGraphMetadata } from "@/data/metadata";
-import { fetchContributions } from "@/functions/contributions";
-import { fetchFeaturedProjects } from "@/functions/featuredProjectsApi";
+import { fetchContributions } from "@/lib/contributions";
+import { fetchFeaturedProjects } from "@/lib/featuredProjectsApi";
 
 export function generateMetadata() {
   return getOpenGraphMetadata();

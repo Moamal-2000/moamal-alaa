@@ -1,9 +1,9 @@
 "use client";
 
 import { DEBOUNCE_DELAY, SCROLL_THRESHOLD } from "@/data/constants";
-import { getHeaderClasses } from "@/functions/classNames";
-import { fadeInOnViewMotionProps } from "@/functions/motionConfig";
 import useScrollDirection from "@/hooks/useScrollDirection";
+import { getHeaderClasses } from "@/lib/classNames";
+import { fadeInOnViewMotionProps } from "@/lib/motionConfig";
 import useGlobalStore from "@/stores/global/useGlobalStore";
 import { motion } from "motion/react";
 import Link from "next/link";

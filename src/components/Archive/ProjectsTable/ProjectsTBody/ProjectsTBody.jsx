@@ -1,7 +1,7 @@
 "use client";
 
 import { OTHER_PROJECTS_DATA } from "@/data/otherProjects";
-import { fadeInOnViewMotionProps } from "@/functions/motionConfig";
+import { fadeInOnViewMotionProps } from "@/lib/motionConfig";
 import ProjectRow from "./ProjectRow/ProjectRow";
 
 const motionProps = fadeInOnViewMotionProps({ duration: 0.4 });

@@ -1,4 +1,4 @@
-import { getRepoFullName } from "@/functions/contributions";
+import { getRepoFullName } from "@/lib/contributions";
 import useGlobalStore from "@/stores/global/useGlobalStore";
 import Link from "next/link";
 import s from "./Panel.module.scss";

@@ -1,4 +1,4 @@
-import { fixedItemsMotionProps } from "@/functions/motionConfig";
+import { fixedItemsMotionProps } from "@/lib/motionConfig";
 import { motion } from "motion/react";
 import s from "./FixedEmail.module.scss";
 

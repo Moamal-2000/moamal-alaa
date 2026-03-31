@@ -1,7 +1,7 @@
 "use client";
 
 import NumberedHeading from "@/components/Shared/NumberedHeading/NumberedHeading";
-import { fadeInOnViewMotionProps } from "@/functions/motionConfig";
+import { fadeInOnViewMotionProps } from "@/lib/motionConfig";
 import FeaturedProjects from "./FeaturedProjects/FeaturedProjects";
 
 const ProjectsSection = ({ projectsData }) => {

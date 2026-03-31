@@ -1,7 +1,7 @@
 "use client";
 
 import NumberedHeading from "@/components/Shared/NumberedHeading/NumberedHeading";
-import { fadeInOnViewMotionProps } from "@/functions/motionConfig";
+import { fadeInOnViewMotionProps } from "@/lib/motionConfig";
 import { motion } from "motion/react";
 import Image from "next/image";
 import AboutContent from "./AboutContent/AboutContent";

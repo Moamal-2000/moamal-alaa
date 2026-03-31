@@ -1,6 +1,6 @@
 import InstallPWAButton from "@/components/PWA/InstallPWAButton";
 import { NAV_LINKS } from "@/data/staticData";
-import { navLinkMotionProps } from "@/functions/motionConfig";
+import { navLinkMotionProps } from "@/lib/motionConfig";
 import { motion } from "motion/react";
 import Link from "next/link";
 import HeaderNavLinks from "../HeaderNavLinks/HeaderNavLinks";

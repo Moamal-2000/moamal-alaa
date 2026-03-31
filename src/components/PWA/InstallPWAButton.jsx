@@ -1,6 +1,6 @@
 "use client";
 
-import { lockPortraitOrientation } from "@/functions/helper";
+import { lockPortraitOrientation } from "@/lib/utils";
 import { useEffect, useState } from "react";
 
 const InstallPWAButton = () => {
@@ -22,7 +22,7 @@ const InstallPWAButton = () => {
     return () => {
       window.removeEventListener(
         "beforeinstallprompt",
-        handleBeforeInstallPrompt
+        handleBeforeInstallPrompt,
       );
     };
   }, []);

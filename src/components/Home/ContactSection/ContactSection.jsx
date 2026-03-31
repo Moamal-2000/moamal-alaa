@@ -1,7 +1,7 @@
 "use client";
 
 import LinkButton from "@/components/Shared/Buttons/LinkButton/LinkButton";
-import { fadeInOnViewMotionProps } from "@/functions/motionConfig";
+import { fadeInOnViewMotionProps } from "@/lib/motionConfig";
 import { motion } from "motion/react";
 import s from "./ContactSection.module.scss";
 

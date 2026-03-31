@@ -1,7 +1,7 @@
 "use client";
 
 import { IS_PRODUCTION } from "@/data/constants";
-import { refreshPage } from "@/functions/helper";
+import { refreshPage } from "@/lib/utils";
 import { useEffect, useState } from "react";
 import s from "./UpdateNotification.module.scss";
 
@@ -43,7 +43,7 @@ async function registerSWWithUpdate(setShowNotification) {
     if (registration.waiting) setShowNotification(true);
 
     registration.addEventListener("updatefound", () =>
-      handleUpdateFound(registration, setShowNotification)
+      handleUpdateFound(registration, setShowNotification),
     );
   } catch (err) {
     console.error(`Error registering service worker: ${err}`);

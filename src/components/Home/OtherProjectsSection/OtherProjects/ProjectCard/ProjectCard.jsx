@@ -1,4 +1,4 @@
-import { fadeInOnViewMotionProps } from "@/functions/motionConfig";
+import { fadeInOnViewMotionProps } from "@/lib/motionConfig";
 import { motion } from "motion/react";
 import s from "./ProjectCard.module.scss";
 import ProjectFooter from "./ProjectFooter/ProjectFooter";

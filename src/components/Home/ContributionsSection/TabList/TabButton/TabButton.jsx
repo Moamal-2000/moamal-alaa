@@ -1,5 +1,5 @@
-import { getRepoFullName } from "@/functions/contributions";
-import { capitalizeFirstLetter } from "@/functions/helper";
+import { getRepoFullName } from "@/lib/contributions";
+import { capitalizeFirstLetter } from "@/lib/utils";
 import useGlobalStore from "@/stores/global/useGlobalStore";
 import s from "./TabButton.module.scss";
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { heroMotionConfig } from "@/functions/motionConfig";
+import { heroMotionConfig } from "@/lib/motionConfig";
 import { motion } from "motion/react";
 import HeroButtons from "./HeroButtons/HeroButtons";
 import s from "./HeroSection.module.scss";

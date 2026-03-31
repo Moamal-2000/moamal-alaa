@@ -1,5 +1,5 @@
 import { SOCIAL_MEDIA } from "@/data/staticData";
-import { fixedItemsMotionProps } from "@/functions/motionConfig";
+import { fixedItemsMotionProps } from "@/lib/motionConfig";
 import { motion } from "motion/react";
 import s from "./FixedSocialMedia.module.scss";
 

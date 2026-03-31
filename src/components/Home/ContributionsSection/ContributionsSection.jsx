@@ -1,8 +1,8 @@
 "use client";
 
 import NumberedHeading from "@/components/Shared/NumberedHeading/NumberedHeading";
-import { getContributionData } from "@/functions/contributions";
-import { fadeInOnViewMotionProps } from "@/functions/motionConfig";
+import { getContributionData } from "@/lib/contributions";
+import { fadeInOnViewMotionProps } from "@/lib/motionConfig";
 import { motion } from "motion/react";
 import s from "./ContributionsSection.module.scss";
 import Panels from "./Panels/Panels";
