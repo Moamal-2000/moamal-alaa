@@ -3,7 +3,6 @@
 import { NAV_LINKS } from "@/data/staticData";
 import { isSmallScreen } from "@/lib/utils";
 import useGlobalStore from "@/stores/global/useGlobalStore";
-import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import InstallPWAButton from "../../PWA/InstallPWAButton";
 import s from "./MobileNavMenu.module.scss";
@@ -40,9 +39,16 @@ const MobileNavMenu = () => {
         </ol>
 
         <div className={s.buttons}>
-          <Link className={s.resume} href="/resume.pdf" title="Show my resume">
+          <a
+            className={s.resume}
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="View my resume"
+            aria-label="View my resume (opens in a new tab)"
+          >
             Resume
-          </Link>
+          </a>
 
           <InstallPWAButton />
         </div>
