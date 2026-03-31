@@ -27,3 +27,8 @@ export function capitalizeFirstLetter(str) {
   str = str.toLowerCase();
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
+
+export function isSmallScreen() {
+  if (typeof window === "undefined") return false;
+  return matchMedia("(max-width: 768px)").matches;
+}

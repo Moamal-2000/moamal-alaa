@@ -1,7 +1,7 @@
 "use client";
 
 import { NAV_LINKS } from "@/data/staticData";
-import { isMobile } from "@/functions/helper";
+import { isSmallScreen } from "@/functions/helper";
 import useGlobalStore from "@/stores/global/useGlobalStore";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
@@ -9,9 +9,10 @@ import InstallPWAButton from "../../PWA/InstallPWAButton";
 import s from "./MobileNavMenu.module.scss";
 
 const MobileNavMenu = () => {
+  const { isMobileNavOpen, updateGlobalState } = useGlobalStore();
   const pathname = usePathname();
   const router = useRouter();
-  const { isMobileNavOpen, updateGlobalState } = useGlobalStore();
+
   const activeClass = isMobileNavOpen ? s.active : "";
 
   function handleClick(title) {
@@ -20,7 +21,10 @@ const MobileNavMenu = () => {
   }
 
   return (
-    <aside className={`${s.mobileMenu} ${activeClass}`}>
+    <aside
+      className={`${s.mobileMenu} ${activeClass}`}
+      inert={isSmallScreen() && isMobileNavOpen ? false : true}
+    >
       <nav>
         <ol>
           {NAV_LINKS.map(({ title, id }) => (
@@ -28,7 +32,6 @@ const MobileNavMenu = () => {
               <a
                 href={`#${title.toLowerCase()}`}
                 onClick={() => handleClick(title.toLowerCase())}
-                tabIndex={isMobile() ? 0 : -1}
               >
                 {title}
               </a>
@@ -37,12 +40,7 @@ const MobileNavMenu = () => {
         </ol>
 
         <div className={s.buttons}>
-          <Link
-            className={s.resume}
-            href="/resume.pdf"
-            title="Show my resume"
-            tabIndex={isMobile() ? 0 : -1}
-          >
+          <Link className={s.resume} href="/resume.pdf" title="Show my resume">
             Resume
           </Link>
 
