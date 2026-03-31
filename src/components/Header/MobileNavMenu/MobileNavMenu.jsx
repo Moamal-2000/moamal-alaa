@@ -23,6 +23,7 @@ const MobileNavMenu = () => {
     <aside
       className={`${s.mobileMenu} ${activeClass}`}
       inert={isSmallScreen() && isMobileNavOpen ? false : true}
+      onBlur={(event) => handleAsideBlur(event, updateGlobalState)}
     >
       <nav>
         <ol>
@@ -58,3 +59,14 @@ const MobileNavMenu = () => {
 };
 
 export default MobileNavMenu;
+
+function handleAsideBlur(event, updateGlobalState) {
+  const containerElement = event.currentTarget;
+  const focusedElement = event.relatedTarget;
+
+  const isFocusStillInside = containerElement.contains(focusedElement);
+
+  if (!isFocusStillInside) {
+    updateGlobalState({ isMobileNavOpen: false });
+  }
+}
