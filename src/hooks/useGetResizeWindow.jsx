@@ -1,9 +1,10 @@
 "use client";
 
+import { isServer } from "@/lib/utils";
 import { useEffect, useState } from "react";
 
 const useGetResizeWindow = ({ debounceDelay = 300 }) => {
-  if (typeof window === "undefined") return { width: null, height: null };
+  if (isServer) return { width: null, height: null };
 
   const [sizes, setSizes] = useState({
     width: innerWidth,

@@ -1,3 +1,5 @@
+export const isServer = typeof window === "undefined";
+
 export function isMobile() {
   if (typeof navigator === "undefined") return;
 
@@ -29,6 +31,6 @@ export function capitalizeFirstLetter(str) {
 }
 
 export function isSmallScreen() {
-  if (typeof window === "undefined") return false;
+  if (isServer) return false;
   return matchMedia("(max-width: 768px)").matches;
 }
