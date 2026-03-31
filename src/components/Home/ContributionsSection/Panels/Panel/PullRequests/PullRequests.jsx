@@ -1,7 +1,7 @@
 import Link from "next/link";
 import s from "./PullRequests.module.scss";
 
-const PullRequests = ({ contribution, activeTabId, index }) => {
+const PullRequests = ({ contribution, activeTabOrder, index }) => {
   return (
     <ul className={s.pullRequests}>
       {contribution.prs.map((pr) => (
@@ -10,7 +10,7 @@ const PullRequests = ({ contribution, activeTabId, index }) => {
             href={pr.url}
             target="_blank"
             rel="noopener noreferrer"
-            tabIndex={activeTabId === index ? 0 : -1}
+            tabIndex={activeTabOrder === index ? 0 : -1}
           >
             {pr.title}
           </Link>

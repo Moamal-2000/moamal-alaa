@@ -6,23 +6,23 @@ import PullRequests from "./PullRequests/PullRequests";
 
 const Panel = ({ contribution, index }) => {
   const repoFullName = getRepoFullName(contribution);
-  const activeTabId = useGlobalStore().activeTabId;
+  const activeTabOrder = useGlobalStore().activeTabOrder;
 
   return (
     <div
       key={repoFullName}
       role="tabpanel"
-      className={`${s.panel} ${activeTabId === index ? s.show : s.hidden}`}
+      className={`${s.panel} ${activeTabOrder === index ? s.show : s.hidden}`}
       id={`panel-${index}`}
       aria-labelledby={`tab-${index}`}
-      tabIndex={activeTabId === index ? 0 : -1}
+      tabIndex={activeTabOrder === index ? 0 : -1}
     >
       <Link
         href={contribution.repository.url}
         target="_blank"
         rel="noopener noreferrer"
         className={s.title}
-        tabIndex={activeTabId === index ? 0 : -1}
+        tabIndex={activeTabOrder === index ? 0 : -1}
       >
         {repoFullName.toLocaleLowerCase()}
       </Link>
@@ -31,7 +31,7 @@ const Panel = ({ contribution, index }) => {
 
       <PullRequests
         contribution={contribution}
-        activeTabId={activeTabId}
+        activeTabOrder={activeTabOrder}
         index={index}
       />
     </div>

@@ -4,10 +4,22 @@ import useGlobalStore from "@/stores/global/useGlobalStore";
 import s from "./TabButton.module.scss";
 
 const TabButton = ({ contribution, index, tabsRef }) => {
-  const { activeTabId, updateGlobalState } = useGlobalStore();
+  const { activeTabOrder, updateGlobalState } = useGlobalStore();
 
-  const isActive = activeTabId === index;
+  const isActive = activeTabOrder === index;
   const repoName = capitalizeFirstLetter(contribution.repository.name);
+
+  function handleClick(event) {
+    const currentTab = event.currentTarget;
+    const activeTabWidth = currentTab.getBoundingClientRect().width;
+    const tabsHighlightLeftPosition = currentTab.offsetLeft;
+
+    updateGlobalState({
+      tabsHighlightLeftPosition,
+      activeTabWidth,
+      activeTabOrder: index,
+    });
+  }
 
   return (
     <button
@@ -17,9 +29,9 @@ const TabButton = ({ contribution, index, tabsRef }) => {
       aria-selected={isActive}
       aria-controls={`panel-${index}`}
       tabIndex={isActive ? 0 : -1}
-      onClick={() => updateGlobalState({ activeTabId: index })}
-      onFocus={() => updateGlobalState({ focusedTabId: index })}
-      onBlur={() => updateGlobalState({ focusedTabId: null })}
+      onClick={handleClick}
+      onFocus={() => updateGlobalState({ focusedTabOrder: index })}
+      onBlur={() => updateGlobalState({ focusedTabOrder: null })}
       ref={(el) => (tabsRef.current[index] = el)}
     >
       {repoName}

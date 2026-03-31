@@ -5,13 +5,19 @@ import { useEffect, useState } from "react";
 import s from "./TabsHighlighter.module.scss";
 
 const TabsHighlighter = () => {
-  const activeTabId = useGlobalStore().activeTabId;
+  const { activeTabOrder, activeTabWidth, tabsHighlightLeftPosition } =
+    useGlobalStore();
   const [isMounted, setIsMounted] = useState(false);
 
   const { width: windowWidth } = useGetResizeWindow({ debounceDelay: 200 });
 
   const highlightStyles = isMounted
-    ? getHighlightStyles({ windowWidth, activeTabId })
+    ? getHighlightStyles({
+        windowWidth,
+        activeTabOrder,
+        activeTabWidth,
+        tabsHighlightLeftPosition,
+      })
     : {};
 
   useEffect(() => {
@@ -23,19 +29,21 @@ const TabsHighlighter = () => {
 
 export default TabsHighlighter;
 
-function getHighlightStyles({ windowWidth, activeTabId }) {
+function getHighlightStyles({
+  windowWidth,
+  activeTabOrder,
+  activeTabWidth,
+  tabsHighlightLeftPosition,
+}) {
   const isSmallScreen = windowWidth <= SMALL_SCREEN_WIDTH;
-  const stylesObject = {
-    translate: `0 calc(${activeTabId} * var(--tab-height))`,
-  };
+  const styles = { translate: `0 calc(${activeTabOrder} * var(--tab-height))` };
 
-  if (!isSmallScreen) return stylesObject;
+  if (!isSmallScreen) return styles;
 
   if (isSmallScreen) {
-    const tabWidth = "176.2px";
-    stylesObject.translate = `calc(${activeTabId} * ${tabWidth}) 0`;
-    stylesObject.width = tabWidth;
+    styles.translate = `${tabsHighlightLeftPosition}px 0`;
+    styles.width = `${activeTabWidth}px`;
   }
 
-  return stylesObject;
+  return styles;
 }

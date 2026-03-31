@@ -1,16 +1,16 @@
 import { useKeyListeners } from "@/hooks/useKeyListeners";
 import useGlobalStore from "@/stores/global/useGlobalStore";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import TabButton from "./TabButton/TabButton";
 import s from "./TabList.module.scss";
 import TabsHighlighter from "./TabsHighlighter/TabsHighlighter";
 
 const TabList = ({ contribItems }) => {
-  const { updateGlobalState, focusedTabId } = useGlobalStore();
+  const { updateGlobalState, focusedTabOrder } = useGlobalStore();
   const tabsRef = useRef([]);
 
   function keyHandler(event) {
-    focusTabWithArrowKeys(event, focusedTabId, tabsRef, updateGlobalState);
+    focusTabWithArrowKeys(event, focusedTabOrder, tabsRef, updateGlobalState);
   }
 
   useKeyListeners(
@@ -20,8 +20,14 @@ const TabList = ({ contribItems }) => {
       Home: keyHandler,
       End: keyHandler,
     },
-    { preventDefault: true }
+    { preventDefault: true },
   );
+
+  // set first tab width (for highlighter animation)
+  useEffect(() => {
+    const firstTabWidth = tabsRef.current[0].getBoundingClientRect().width;
+    updateGlobalState({ activeTabWidth: firstTabWidth });
+  }, []);
 
   return (
     <div className={s.tabList} role="tablist">
@@ -43,29 +49,33 @@ export default TabList;
 
 function focusTabWithArrowKeys(
   event,
-  focusedTabId,
+  focusedTabOrder,
   tabsRef,
-  updateGlobalState
+  updateGlobalState,
 ) {
-  if (focusedTabId === null) return;
+  if (focusedTabOrder === null) return;
 
   const tabs = tabsRef.current;
   const key = event.key;
-  const nextFocusedTabId = getNextFocusedTabId({ key, focusedTabId, tabs });
+  const nextfocusedTabOrder = getNextfocusedTabOrder({
+    key,
+    focusedTabOrder,
+    tabs,
+  });
 
-  if (nextFocusedTabId === null) return;
+  if (nextfocusedTabOrder === null) return;
 
-  updateGlobalState({ focusedTabId: nextFocusedTabId });
-  tabs[nextFocusedTabId].focus();
+  updateGlobalState({ focusedTabOrder: nextfocusedTabOrder });
+  tabs[nextfocusedTabOrder].focus();
 }
 
-function getNextFocusedTabId({ key, focusedTabId, tabs }) {
+function getNextfocusedTabOrder({ key, focusedTabOrder, tabs }) {
   if (key === "ArrowDown") {
-    return focusedTabId === tabs.length - 1 ? 0 : focusedTabId + 1;
+    return focusedTabOrder === tabs.length - 1 ? 0 : focusedTabOrder + 1;
   }
 
   if (key === "ArrowUp") {
-    return focusedTabId === 0 ? tabs.length - 1 : focusedTabId - 1;
+    return focusedTabOrder === 0 ? tabs.length - 1 : focusedTabOrder - 1;
   }
 
   if (key === "Home") return 0;

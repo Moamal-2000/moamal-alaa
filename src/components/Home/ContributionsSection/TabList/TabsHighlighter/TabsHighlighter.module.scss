@@ -19,5 +19,9 @@
     top: unset;
     bottom: 0;
     translate: calc(2 * var(--tab-height)) 0;
+    will-change: width;
+    transition:
+      translate .25s .1s var(--ease-main),
+      width .25s .1s var(--ease-main);
   }
 }
