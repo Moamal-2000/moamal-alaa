@@ -5,13 +5,16 @@ import Header from "@/components/Header/Header";
 import FixedEmail from "@/components/Shared/FixedEmail/FixedEmail";
 import FixedSocialMedia from "@/components/Shared/FixedSocialMedia/FixedSocialMedia";
 import SkipContentLink from "@/components/Shared/SkipContentLink/SkipContentLink";
+import useGlobalStore from "@/stores/global/useGlobalStore";
 import UpdateNotification from "../PWA/UpdateNotification/UpdateNotification";
 import RootLayer from "./RootLayer/RootLayer";
 
 const RootProviders = ({ children }) => {
+  const isMobileNavOpen = useGlobalStore((s) => s.isMobileNavOpen);
+
   return (
     <html lang="en">
-      <body>
+      <body className={isMobileNavOpen ? "noScroll" : ""}>
         <UpdateNotification />
         <SkipContentLink />
         <Header />
