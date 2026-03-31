@@ -7,6 +7,8 @@ const InstallPWAButton = () => {
   const [deferredPrompt, setDeferredPrompt] = useState(null);
   const [showButton, setShowButton] = useState(false);
 
+  const title = "Install the app to your device";
+
   useEffect(() => {
     function handleBeforeInstallPrompt(event) {
       event.preventDefault();
@@ -45,7 +47,8 @@ const InstallPWAButton = () => {
     <button
       type="button"
       onClick={handleInstallClick}
-      title="Install the app to your device"
+      title={title}
+      aria-label={title}
     >
       Install
     </button>
