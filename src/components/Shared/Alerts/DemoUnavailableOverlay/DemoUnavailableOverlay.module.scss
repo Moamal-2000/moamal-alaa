@@ -1,0 +1,22 @@
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  border-radius: 4px;
+  backdrop-filter: blur(2px);
+  pointer-events: none;
+}
+
+.message {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 18px 20px 12px;
+  color: var(--green);
+  font-size: 1.1rem;
+  text-align: center;
+  border-radius: 4px;
+  text-box-trim: trim-both;
+}
