@@ -13,6 +13,13 @@ const urlsToCache = [
   "/icons-sprite.svg",
 ];
 
+function isCacheableRequest(request) {
+  if (request.method !== "GET") return false;
+
+  const url = new URL(request.url);
+  return url.protocol === "http:" || url.protocol === "https:";
+}
+
 async function installServiceWorker() {
   try {
     const cache = await caches.open(CACHE_NAME);
@@ -73,6 +80,7 @@ self.addEventListener("install", (event) => {
 });
 
 self.addEventListener("fetch", (event) => {
+  if (!isCacheableRequest(event.request)) return;
   event.respondWith(handleFetchRequest(event));
 });
 
