@@ -1,4 +1,4 @@
-export const BASE_URL = process.env.SITE_MAP;
+export const BASE_URL = process.env.BASE_URL;
 const title = "Moamal Alaa | Front-End Developer";
 
 const keywords = [
