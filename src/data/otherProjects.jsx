@@ -24,7 +24,7 @@ export const OTHER_PROJECTS_DATA = [
     description:
       "A collection of reusable and well-documented custom React hooks for boosting productivity and consistency across React projects. Includes live previews and code highlighting",
     year: "2024",
-    liveUrl: "https://hooks-time.netlify.app",
+    liveUrl: "https://custom-hooks-moamal.vercel.app",
     repoUrl: "https://github.com/Moamal-2000/custom-hooks",
     technologies: ["React", "PWA", "JSZip", "syntax highlighter"],
     id: 3,
@@ -42,7 +42,7 @@ export const OTHER_PROJECTS_DATA = [
       </>
     ),
     year: "2024",
-    liveUrl: "https://asterinformation.netlify.app",
+    liveUrl: "https://asterinformation.vercel.app",
     repoUrl: "https://github.com/Moamal-2000/aster-information",
     technologies: ["React", "React Router Dom", "Sass"],
     id: 4,
@@ -52,7 +52,7 @@ export const OTHER_PROJECTS_DATA = [
     description:
       "A personal gallery of creative CSS-based visual artworks built during my front-end learning journey. Each piece explores animations, shapes, and UI tricks using CSS (and sometimes JavaScript) to push the limits of what's possible in the browser.",
     year: "2025",
-    liveUrl: "https://css-arts-gallery.netlify.app",
+    liveUrl: "https://css-arts-gallery.vercel.app",
     repoUrl: "https://github.com/Moamal-2000/css-arts-gallery",
     technologies: ["Next.js", "Sass"],
     id: 5,
@@ -61,7 +61,7 @@ export const OTHER_PROJECTS_DATA = [
     title: "Resume Builder",
     description: `Currently on temporary development pause, with a beta version available for preview.,`,
     year: "2025",
-    liveUrl: "https://resume-builder-easy.netlify.app",
+    liveUrl: "https://resume-builder-moamal.vercel.app",
     repoUrl: "https://github.com/Moamal-2000/resume-builder",
     technologies: [
       "Next.js",
