@@ -1,4 +1,5 @@
 import { METADATA } from "@/data/metadata";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import RootProviders from "../components/Shared/RootProviders";
 import "../styles/globals.scss";
 
@@ -11,5 +12,10 @@ export const viewport = {
 };
 
 export default function RootLayout({ children }) {
-  return <RootProviders>{children}</RootProviders>;
+  return (
+    <>
+      {process.env.NODE_ENV === "production" && <SpeedInsights />}
+      <RootProviders>{children}</RootProviders>
+    </>
+  );
 }
