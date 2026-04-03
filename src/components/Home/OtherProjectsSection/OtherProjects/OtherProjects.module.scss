@@ -21,9 +21,3 @@
     grid-template-columns: 1fr;
   }
 }
-
-@media (max-width: 735px) {
-  .otherProjects [data-domain-unavailable] {
-    align-items: flex-start;
-  }
-}
