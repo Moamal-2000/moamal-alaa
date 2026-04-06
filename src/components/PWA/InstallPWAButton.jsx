@@ -1,9 +1,10 @@
 "use client";
 
 import { lockPortraitOrientation } from "@/lib/utils";
+import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 
-const InstallPWAButton = () => {
+const InstallPWAButton = ({ className, motionProps = {} }) => {
   const [deferredPrompt, setDeferredPrompt] = useState(null);
   const [showButton, setShowButton] = useState(false);
 
@@ -44,14 +45,16 @@ const InstallPWAButton = () => {
   if (!showButton) return null;
 
   return (
-    <button
+    <motion.button
       type="button"
+      className={className}
       onClick={handleInstallClick}
       title={title}
       aria-label={title}
+      {...motionProps}
     >
       Install
-    </button>
+    </motion.button>
   );
 };
 

@@ -11,8 +11,7 @@
   }
 }
 
-.buttons .resume,
-.buttons .installPWA>button {
+.buttons :where(.resume, .installPWA) {
   color: #5ff1cf;
   background-color: transparent;
   border: 1px solid #5ff1cf;

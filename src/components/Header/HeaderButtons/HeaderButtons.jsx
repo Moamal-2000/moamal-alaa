@@ -1,7 +1,6 @@
 import InstallPWAButton from "@/components/PWA/InstallPWAButton";
 import { NAV_LINKS } from "@/data/staticData";
 import { navLinkMotionProps } from "@/lib/motionConfig";
-import { motion } from "motion/react";
 import HeaderNavLinks from "../HeaderNavLinks/HeaderNavLinks";
 import s from "./HeaderButtons.module.scss";
 
@@ -21,12 +20,10 @@ const HeaderButtons = ({ navClicked }) => {
         Resume
       </a>
 
-      <motion.div
+      <InstallPWAButton
         className={s.installPWA}
-        {...navLinkMotionProps(NAV_LINKS.length + 1)}
-      >
-        <InstallPWAButton />
-      </motion.div>
+        motionProps={navLinkMotionProps(NAV_LINKS.length + 1)}
+      />
     </div>
   );
 };
