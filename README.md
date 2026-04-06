@@ -93,7 +93,7 @@ npm run start
 | ----------- | ------------------------------------------------------------------ |
 | Navy        | ![#0a192f](https://placehold.co/15x15/0a192f/0a192f.png) `#0a192f` |
 | Accent Blue | ![#233554](https://placehold.co/15x15/233554/233554.png) `#233554` |
-| Slate       | ![#8892b0](https://placehold.co/15x15/8892b0/8892b0.png) `#8892b0` |
+| Slate       | ![#a1aac6](https://placehold.co/15x15/8892b0/8892b0.png) `#8892b0` |
 | White       | ![#e6f1ff](https://placehold.co/15x15/e6f1ff/e6f1ff.png) `#e6f1ff` |
 | Green       | ![#64ffda](https://placehold.co/15x15/64ffda/64ffda.png) `#64ffda` |
 
