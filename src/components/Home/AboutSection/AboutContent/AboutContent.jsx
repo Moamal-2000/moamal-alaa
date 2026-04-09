@@ -11,7 +11,7 @@ const AboutContent = () => {
       </p>
 
       <p>
-        I’ve been exploring front-end development for over four years now. It
+        I’ve been exploring front-end development for over five years now. It
         all started with writing HTML and CSS, which felt like drawing with
         code, I loved bringing designs to life on the screen. That curiosity led
         me to JavaScript and, eventually, to the world of modern front-end
