@@ -6,7 +6,7 @@ import PullRequests from "./PullRequests/PullRequests";
 
 const Panel = ({ contribution, index }) => {
   const repoFullName = getRepoFullName(contribution);
-  const activeTabOrder = useGlobalStore().activeTabOrder;
+  const activeTabOrder = useGlobalStore((s) => s.activeTabOrder);
 
   return (
     <div
