@@ -14,6 +14,8 @@ import s from "./Header.module.scss";
 import HeaderButtons from "./HeaderButtons/HeaderButtons";
 import MobileNavMenu from "./MobileNavMenu/MobileNavMenu";
 
+const motionProps = fadeInOnViewMotionProps({ initialY: 0 });
+
 const Header = () => {
   const scrollDirection = useScrollDirection({ initialDir: "down" });
   const isMobileNavOpen = useGlobalStore((s) => s.isMobileNavOpen);
@@ -64,10 +66,7 @@ const Header = () => {
 
   return (
     <header className={headerClasses}>
-      <motion.nav
-        className={s.navLinks}
-        {...fadeInOnViewMotionProps({ initialY: 0 })}
-      >
+      <motion.nav className={s.navLinks} {...motionProps}>
         <Link
           className={s.logo}
           href="/"

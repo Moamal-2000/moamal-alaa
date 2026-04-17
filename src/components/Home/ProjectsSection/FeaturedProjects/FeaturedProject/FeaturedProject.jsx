@@ -8,6 +8,13 @@ import ProjectHeader from "./ProjectHeader/ProjectHeader";
 import ProjectLinks from "./ProjectLinks/ProjectLinks";
 import ProjectTechList from "./ProjectTechList/ProjectTechList";
 
+const motionProps = fadeInOnViewMotionProps({
+  visibilityThreshold: 0.1,
+  duration: 0.5,
+  delay: 0.1,
+  initialY: 40,
+});
+
 const FeaturedProject = ({ data, fetchedData, shouldReverse }) => {
   const { title, description, technologies, previewImg } = data;
 
@@ -15,12 +22,7 @@ const FeaturedProject = ({ data, fetchedData, shouldReverse }) => {
     <motion.div
       className={s.featuredProject}
       dir={shouldReverse ? "rtl" : "ltr"}
-      {...fadeInOnViewMotionProps({
-        visibilityThreshold: 0.1,
-        duration: 0.5,
-        delay: 0.1,
-        initialY: 40,
-      })}
+      {...motionProps}
     >
       <div className={s.content}>
         <ProjectHeader title={title} liveUrl={fetchedData.liveUrl} />

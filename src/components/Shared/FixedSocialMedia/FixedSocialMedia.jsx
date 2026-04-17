@@ -3,9 +3,11 @@ import { fixedItemsMotionProps } from "@/lib/motionConfig";
 import { motion } from "motion/react";
 import s from "./FixedSocialMedia.module.scss";
 
+const motionProps = fixedItemsMotionProps();
+
 const FixedSocialMedia = () => {
   return (
-    <motion.ul className={s.socialMedia} {...fixedItemsMotionProps()}>
+    <motion.ul className={s.socialMedia} {...motionProps}>
       {SOCIAL_MEDIA.map(({ media, iconName, url, id }) => (
         <li key={id}>
           <a href={url} target="_blank" rel="noopener noreferrer" title={media}>

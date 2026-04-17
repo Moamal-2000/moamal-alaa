@@ -4,6 +4,9 @@ import { navLinkMotionProps } from "@/lib/motionConfig";
 import HeaderNavLinks from "../HeaderNavLinks/HeaderNavLinks";
 import s from "./HeaderButtons.module.scss";
 
+const resumeMotionProps = navLinkMotionProps(NAV_LINKS.length);
+const installPwaMotionProps = navLinkMotionProps(NAV_LINKS.length + 1);
+
 const HeaderButtons = ({ navClicked }) => {
   return (
     <div className={s.buttons}>
@@ -15,14 +18,14 @@ const HeaderButtons = ({ navClicked }) => {
         target="_blank"
         rel="noopener noreferrer"
         title="Show my resume"
-        {...navLinkMotionProps(NAV_LINKS.length)}
+        {...resumeMotionProps}
       >
         Resume
       </a>
 
       <InstallPWAButton
         className={s.installPWA}
-        motionProps={navLinkMotionProps(NAV_LINKS.length + 1)}
+        motionProps={installPwaMotionProps}
       />
     </div>
   );

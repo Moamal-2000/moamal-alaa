@@ -9,16 +9,14 @@ import s from "./AboutSection.module.scss";
 import ImageFrame from "./ImageFrame/ImageFrame";
 import TechList from "./TechList/TechList";
 
+const motionProps = fadeInOnViewMotionProps({
+  visibilityThreshold: 0.4,
+  delay: 0.2,
+});
+
 const AboutSection = () => {
   return (
-    <motion.section
-      className={s.aboutSection}
-      id="about"
-      {...fadeInOnViewMotionProps({
-        visibilityThreshold: 0.4,
-        delay: 0.2,
-      })}
-    >
+    <motion.section className={s.aboutSection} id="about" {...motionProps}>
       <NumberedHeading title="About Me" number="01" />
       <AboutContent />
       <ImageFrame width={300} height={300}>

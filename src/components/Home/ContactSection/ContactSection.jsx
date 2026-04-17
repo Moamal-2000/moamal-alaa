@@ -5,15 +5,11 @@ import { fadeInOnViewMotionProps } from "@/lib/motionConfig";
 import { motion } from "motion/react";
 import s from "./ContactSection.module.scss";
 
+const motionProps = fadeInOnViewMotionProps({ visibilityThreshold: 0.8 });
+
 const ContactSection = () => {
   return (
-    <motion.section
-      className={s.contactSection}
-      id="contact"
-      {...fadeInOnViewMotionProps({
-        visibilityThreshold: 0.8,
-      })}
-    >
+    <motion.section className={s.contactSection} id="contact" {...motionProps}>
       <h2>04. What's Next?</h2>
       <h3>Get In Touch</h3>
       <p className={s.description}>
