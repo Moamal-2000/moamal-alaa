@@ -4,6 +4,7 @@ import { DEBOUNCE_DELAY, SCROLL_THRESHOLD } from "@/data/constants";
 import useScrollDirection from "@/hooks/useScrollDirection";
 import { getHeaderClasses } from "@/lib/classNames";
 import { fadeInOnViewMotionProps } from "@/lib/motionConfig";
+import { scrollToTop } from "@/lib/utils";
 import useGlobalStore from "@/stores/global/useGlobalStore";
 import { motion } from "motion/react";
 import Link from "next/link";
@@ -72,6 +73,7 @@ const Header = () => {
           href="/"
           title="Go to homepage"
           aria-label="Go to homepage"
+          onClick={scrollToTop}
         >
           <svg aria-hidden="true">
             <use href="/icons-sprite.svg#logo" />

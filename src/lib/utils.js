@@ -34,3 +34,8 @@ export function isSmallScreen() {
   if (isServer) return false;
   return matchMedia("(max-width: 768px)").matches;
 }
+
+export function scrollToTop() {
+  if (isServer) return;
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
