@@ -26,6 +26,7 @@ const Header = () => {
   const navClicked = useRef(false);
   const hasMounted = useRef(false);
   const timerRef = useRef();
+  const headerRef = useRef(null);
 
   const headerClasses = getHeaderClasses({ cssModule: s, isActive, isHidden });
 
@@ -53,6 +54,15 @@ const Header = () => {
     }, DEBOUNCE_DELAY);
   }, [scrollDirection]);
 
+  function handleHeaderKeyDown(event) {
+    showHeaderOnFocusInside(event);
+  }
+
+  function showHeaderOnFocusInside(event) {
+    const isFocusStillInside = headerRef.current.contains(event.target);
+    setIsHidden(!isFocusStillInside);
+  }
+
   useEffect(() => {
     // Invoke scroll handler on initial load
     if (!hasMounted.current) handleScroll();
@@ -65,7 +75,11 @@ const Header = () => {
   }, [handleScroll]);
 
   return (
-    <header className={headerClasses}>
+    <header
+      className={headerClasses}
+      ref={headerRef}
+      onKeyDown={handleHeaderKeyDown}
+    >
       <motion.nav className={s.navLinks} {...motionProps}>
         <Link
           className={s.logo}
