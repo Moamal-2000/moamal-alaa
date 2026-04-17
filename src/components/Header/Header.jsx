@@ -54,12 +54,14 @@ const Header = () => {
     }, DEBOUNCE_DELAY);
   }, [scrollDirection]);
 
-  function handleHeaderKeyDown(event) {
-    showHeaderOnFocusInside(event);
+  function handleHeaderKeyUp() {
+    showHeaderOnFocusInside();
   }
 
-  function showHeaderOnFocusInside(event) {
-    const isFocusStillInside = headerRef.current.contains(event.target);
+  function showHeaderOnFocusInside() {
+    const isFocusStillInside = headerRef.current.contains(
+      document.activeElement,
+    );
     setIsHidden(!isFocusStillInside);
   }
 
@@ -78,7 +80,7 @@ const Header = () => {
     <header
       className={headerClasses}
       ref={headerRef}
-      onKeyDown={handleHeaderKeyDown}
+      onKeyUp={handleHeaderKeyUp}
     >
       <motion.nav className={s.navLinks} {...motionProps}>
         <Link
