@@ -4,8 +4,7 @@
   @include m.center-x-y;
   position: fixed;
   top: 0;
-  bottom: 0;
-  right: -102%;
+  right: 0;
   padding: 50px 10px;
   width: min(75vw, 400px);
   height: 100dvh;
@@ -14,10 +13,11 @@
   box-shadow: -10px 0 30px -15px rgba(2, 12, 27, .7);
   z-index: 9;
   visibility: visible;
-  transition: right .25s var(--ease-main);
+  translate: 102% 0;
+  transition: translate .25s var(--ease-main);
 
   &.active {
-    right: 0;
+    translate: 0 0;
   }
 }
 
