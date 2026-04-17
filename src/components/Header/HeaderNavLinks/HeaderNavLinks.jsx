@@ -21,7 +21,7 @@ const HeaderNavLinks = ({ navClicked }) => {
         <motion.li key={id} {...navLinkMotionProps(index)}>
           <a
             onClick={() => handleClick(title.toLowerCase())}
-            href={`#${title.toLowerCase()}`}
+            href={`/#${title.toLowerCase()}`}
           >
             {title}
           </a>
