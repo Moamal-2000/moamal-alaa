@@ -36,24 +36,6 @@ body {
   }
 }
 
-body::-webkit-scrollbar {
-  width: 12px;
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: #495670;
-  border: 3px solid var(--website-bg);
-  border-radius: 10px;
-
-  &:hover {
-    background-color: #747e92;
-  }
-}
-
-body::-webkit-scrollbar-track {
-  background: var(--website-bg);
-}
-
 main {
   min-height: 100dvh;
   width: 100%;
