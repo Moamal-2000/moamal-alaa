@@ -31,7 +31,9 @@ const InstallPWAButton = ({ className, motionProps = {} }) => {
   }, []);
 
   async function handleInstallClick() {
-    if (!deferredPrompt) return;
+    if (!deferredPrompt) {
+      return;
+    }
     deferredPrompt.prompt();
 
     const { outcome } = await deferredPrompt.userChoice;
@@ -42,7 +44,9 @@ const InstallPWAButton = ({ className, motionProps = {} }) => {
     setShowButton(!isAccepted);
   }
 
-  if (!showButton) return null;
+  if (!showButton) {
+    return null;
+  }
 
   return (
     <motion.button

@@ -22,7 +22,9 @@ function handleKeyDown(event, listeners = {}, options = {}) {
 
   const { metaKey, ctrlKey, altKey, shiftKey, code } = event;
 
-  if (debugging) console.log(event);
+  if (debugging) {
+    console.log(event);
+  }
 
   const hasAnyModifier = metaKey || ctrlKey || altKey || shiftKey;
 
@@ -33,12 +35,18 @@ function handleKeyDown(event, listeners = {}, options = {}) {
     (ignoreAlt && altKey) ||
     (ignoreShift && shiftKey);
 
-  if (isModifierBlocked) return;
+  if (isModifierBlocked) {
+    return;
+  }
 
   const listener = listeners[code];
-  if (!listener) return;
+  if (!listener) {
+    return;
+  }
 
-  if (preventDefault) event.preventDefault();
+  if (preventDefault) {
+    event.preventDefault();
+  }
 
   listener(event);
 }

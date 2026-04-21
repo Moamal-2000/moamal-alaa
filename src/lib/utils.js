@@ -1,7 +1,9 @@
 export const isServer = typeof window === "undefined";
 
 export function isMobile() {
-  if (typeof navigator === "undefined") return;
+  if (typeof navigator === "undefined") {
+    return;
+  }
 
   const mobilesType = /Mobi|Android|iPhone|iPad|iPod/i;
   return mobilesType.test(navigator.userAgent);
@@ -16,7 +18,9 @@ export async function lockPortraitOrientation() {
   const isMobiOrAndroid = /Mobi|Android/i.test(navigator.userAgent);
   const canLockOrientation = typeof window !== "undefined" && isSupported;
 
-  if (!canLockOrientation || !isMobiOrAndroid) return;
+  if (!canLockOrientation || !isMobiOrAndroid) {
+    return;
+  }
 
   try {
     screen.orientation.lock("portrait");
@@ -31,11 +35,15 @@ export function capitalizeFirstLetter(str) {
 }
 
 export function isSmallScreen() {
-  if (isServer) return false;
+  if (isServer) {
+    return false;
+  }
   return matchMedia("(max-width: 768px)").matches;
 }
 
 export function scrollToTop() {
-  if (isServer) return;
+  if (isServer) {
+    return;
+  }
   window.scrollTo({ top: 0, behavior: "smooth" });
 }

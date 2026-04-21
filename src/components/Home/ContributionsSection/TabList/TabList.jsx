@@ -53,7 +53,9 @@ function focusTabWithArrowKeys(
   tabsRef,
   updateGlobalState,
 ) {
-  if (focusedTabOrder === null) return;
+  if (focusedTabOrder === null) {
+    return;
+  }
 
   const tabs = tabsRef.current;
   const key = event.key;
@@ -63,7 +65,9 @@ function focusTabWithArrowKeys(
     tabs,
   });
 
-  if (nextfocusedTabOrder === null) return;
+  if (nextfocusedTabOrder === null) {
+    return;
+  }
 
   updateGlobalState({ focusedTabOrder: nextfocusedTabOrder });
   tabs[nextfocusedTabOrder].focus();
@@ -78,8 +82,12 @@ function getNextfocusedTabOrder({ key, focusedTabOrder, tabs }) {
     return focusedTabOrder === 0 ? tabs.length - 1 : focusedTabOrder - 1;
   }
 
-  if (key === "Home") return 0;
-  if (key === "End") return tabs.length - 1;
+  if (key === "Home") {
+    return 0;
+  }
+  if (key === "End") {
+    return tabs.length - 1;
+  }
 
   return null;
 }

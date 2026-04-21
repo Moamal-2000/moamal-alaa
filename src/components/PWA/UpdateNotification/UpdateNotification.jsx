@@ -15,7 +15,9 @@ export default function UpdateNotification() {
   }, []);
 
   useEffect(() => {
-    if (showNotification) buttonRef.current.focus();
+    if (showNotification) {
+      buttonRef.current.focus();
+    }
   }, [showNotification]);
 
   function handleRefreshPage() {
@@ -47,12 +49,16 @@ export default function UpdateNotification() {
 }
 
 async function registerSWWithUpdate(setShowNotification) {
-  if (!("serviceWorker" in navigator) || !IS_PRODUCTION) return;
+  if (!("serviceWorker" in navigator) || !IS_PRODUCTION) {
+    return;
+  }
 
   try {
     const registration = await navigator.serviceWorker.register("/sw.js");
 
-    if (registration.waiting) setShowNotification(true);
+    if (registration.waiting) {
+      setShowNotification(true);
+    }
 
     registration.addEventListener("updatefound", () =>
       handleUpdateFound(registration, setShowNotification),
@@ -64,7 +70,9 @@ async function registerSWWithUpdate(setShowNotification) {
 
 function handleUpdateFound(registration, setShowNotification) {
   const newWorker = registration.installing;
-  if (!newWorker) return;
+  if (!newWorker) {
+    return;
+  }
 
   newWorker.addEventListener("statechange", () => {
     const updateRequired =

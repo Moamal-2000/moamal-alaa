@@ -1,7 +1,9 @@
 import s from "./IconLink.module.scss";
 
 const IconLink = ({ href, title, ariaLabel, iconName }) => {
-  if (!href || href === undefined || href === null) return null;
+  if (!href || href === undefined || href === null) {
+    return null;
+  }
 
   return (
     <a

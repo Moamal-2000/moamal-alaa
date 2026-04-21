@@ -8,7 +8,9 @@ const RootLayer = ({ children }) => {
   const blurClass = isMobileNavOpen ? s.blur : "";
 
   function handleClick() {
-    if (!isMobileNavOpen) return;
+    if (!isMobileNavOpen) {
+      return;
+    }
 
     updateGlobalState({ isMobileNavOpen: false });
   }

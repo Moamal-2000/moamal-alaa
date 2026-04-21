@@ -39,7 +39,9 @@ export function enrichRepos(contributions) {
 
     const sortedPullRequests = getSortedPullRequests(repoClone, repo);
 
-    if (!requiredData) return sortedPullRequests;
+    if (!requiredData) {
+      return sortedPullRequests;
+    }
 
     repoClone.repository.description = requiredData?.description || "";
     return sortedPullRequests;

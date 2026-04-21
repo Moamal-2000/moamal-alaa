@@ -40,7 +40,9 @@ function getHighlightStyles({
   const isSmallScreen = windowWidth <= SMALL_SCREEN_WIDTH;
   const styles = { translate: `0 calc(${activeTabOrder} * var(--tab-height))` };
 
-  if (!isSmallScreen) return styles;
+  if (!isSmallScreen) {
+    return styles;
+  }
 
   if (isSmallScreen) {
     styles.translate = `${tabsHighlightLeftPosition}px 0`;

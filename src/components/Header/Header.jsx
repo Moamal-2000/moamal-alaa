@@ -42,7 +42,9 @@ const Header = () => {
       const show = scrollDirection === "up" || navClicked.current;
       const isAtTop = window?.scrollY >= SCROLL_THRESHOLD;
 
-      if (hide) setIsHidden(true);
+      if (hide) {
+        setIsHidden(true);
+      }
 
       if (show) {
         setIsHidden(false);
@@ -67,7 +69,9 @@ const Header = () => {
 
   useEffect(() => {
     // Invoke scroll handler on initial load
-    if (!hasMounted.current) handleScroll();
+    if (!hasMounted.current) {
+      handleScroll();
+    }
 
     window.addEventListener("scroll", handleScroll);
     return () => {
