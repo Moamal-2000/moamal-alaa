@@ -45,6 +45,7 @@ export default function UpdateNotification() {
     </div>
   );
 }
+
 async function registerSWWithUpdate(setShowNotification) {
   if (!("serviceWorker" in navigator) || !IS_PRODUCTION) return;
 
