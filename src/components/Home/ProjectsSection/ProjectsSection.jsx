@@ -6,7 +6,7 @@ import FeaturedProjects from "./FeaturedProjects/FeaturedProjects";
 
 const animationProps = fadeInOnViewMotionProps({ visibilityThreshold: 0 });
 
-const ProjectsSection = ({ projectsData }) => {
+const ProjectsSection = ({ featuredProjects }) => {
   return (
     <section id="projects">
       <NumberedHeading
@@ -14,7 +14,7 @@ const ProjectsSection = ({ projectsData }) => {
         number="03"
         animationProps={animationProps}
       />
-      <FeaturedProjects projectsData={projectsData} />
+      <FeaturedProjects featuredProjects={featuredProjects} />
     </section>
   );
 };

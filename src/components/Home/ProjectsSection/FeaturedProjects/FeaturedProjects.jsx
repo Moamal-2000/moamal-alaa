@@ -2,14 +2,14 @@ import { FEATURED_PROJECTS } from "@/data/featuredProjects";
 import FeaturedProject from "./FeaturedProject/FeaturedProject";
 import s from "./FeaturedProjects.module.scss";
 
-const FeaturedProjects = ({ projectsData }) => {
+const FeaturedProjects = ({ featuredProjects }) => {
   return (
     <div className={s.featuredProjects}>
       {FEATURED_PROJECTS.map((projectData, index) => {
         return (
           <FeaturedProject
             data={projectData}
-            fetchedData={projectsData[index]}
+            fetchedData={featuredProjects[index]}
             key={projectData.id}
             shouldReverse={index % 2 === 0}
           />

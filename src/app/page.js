@@ -13,7 +13,7 @@ export function generateMetadata() {
 }
 
 export default async function Home() {
-  const projectsData = await fetchFeaturedProjects();
+  const featuredProjects = await fetchFeaturedProjects();
   const contributions = await fetchContributions();
 
   return (
@@ -21,7 +21,7 @@ export default async function Home() {
       <HeroSection />
       <AboutSection />
       <ContributionsSection contributions={contributions} />
-      <ProjectsSection projectsData={projectsData} />
+      <ProjectsSection featuredProjects={featuredProjects} />
       <OtherProjectsSection />
       <ContactSection />
     </main>
