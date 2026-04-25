@@ -6,6 +6,7 @@ import s from "./FeaturedProject.module.scss";
 import PreviewImage from "./PreviewImage/PreviewImage";
 import ProjectHeader from "./ProjectHeader/ProjectHeader";
 import ProjectLinks from "./ProjectLinks/ProjectLinks";
+import ProjectStats from "./ProjectLinks/ProjectStats/ProjectStats";
 import ProjectTechList from "./ProjectTechList/ProjectTechList";
 
 const motionProps = fadeInOnViewMotionProps({
@@ -17,6 +18,7 @@ const motionProps = fadeInOnViewMotionProps({
 
 const FeaturedProject = ({ data, fetchedData, shouldReverse }) => {
   const { title, description, technologies, previewImg } = data;
+  const { stars, forks, commitCount } = fetchedData;
 
   return (
     <motion.div
@@ -30,7 +32,11 @@ const FeaturedProject = ({ data, fetchedData, shouldReverse }) => {
         <div className={s.description}>{description}</div>
 
         <ProjectTechList technologies={technologies} />
-        <ProjectLinks fetchedData={fetchedData} title={title} />
+
+        <div className={s.projectMeta}>
+          <ProjectLinks fetchedData={fetchedData} title={title} />
+          <ProjectStats stars={stars} forks={forks} commitCount={commitCount} />
+        </div>
       </div>
 
       <PreviewImage

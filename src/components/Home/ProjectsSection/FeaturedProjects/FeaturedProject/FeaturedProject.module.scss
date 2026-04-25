@@ -38,6 +38,10 @@
     & .content strong {
       color: #ffff3d;
     }
+
+    & [data-type=project-stats]>* {
+      color: #fff;
+    }
   }
 }
 
@@ -109,4 +113,11 @@
 
 .content strong {
   transition: color .3s .1s ease;
+}
+
+.content .projectMeta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
 }

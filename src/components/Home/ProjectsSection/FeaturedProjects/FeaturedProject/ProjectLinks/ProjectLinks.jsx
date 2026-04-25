@@ -1,14 +1,10 @@
 import s from "./ProjectLinks.module.scss";
-import ProjectStats from "./ProjectStats/ProjectStats";
 
-const ProjectLinks = ({
-  fetchedData: { repoUrl, liveUrl, stars, forks },
-  title,
-}) => {
+const ProjectLinks = ({ fetchedData, title }) => {
   return (
     <div className={s.projectLinks} data-type="project-links">
       <a
-        href={repoUrl}
+        href={fetchedData.repoUrl}
         target="_blank"
         rel="noopener noreferrer"
         className={s.githubLink}
@@ -18,11 +14,10 @@ const ProjectLinks = ({
           <use href="/icons-sprite.svg#github" />
         </svg>
         Source
-        <ProjectStats stars={stars} forks={forks} />
       </a>
 
       <a
-        href={liveUrl}
+        href={fetchedData.liveUrl}
         target="_blank"
         rel="noopener noreferrer"
         aria-label={`Visit ${title} live site (opens in a new tab)`}

@@ -1,8 +1,11 @@
+@use "@/styles/mixins" as m;
+
 .projectStats {
   display: flex;
   align-items: center;
   gap: 12px;
   pointer-events: all;
+  margin-top: 1px;
 }
 
 .projectStats .stat {
@@ -14,4 +17,26 @@
 .projectStats .stat>svg {
   width: 16px;
   height: 16px;
+}
+
+.projectStats .stat.commits>svg {
+  width: 22px;
+}
+
+.projectStats>span {
+  color: #a8b2d1;
+  scale: 2;
+  position: relative;
+  bottom: 7px;
+  user-select: none;
+}
+
+@include m.media(small) {
+  .projectStats {
+
+    &>span,
+    .stat>svg {
+      transition: color .3s .1s ease;
+    }
+  }
 }

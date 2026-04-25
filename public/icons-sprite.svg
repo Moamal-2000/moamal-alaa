@@ -8,6 +8,11 @@
       d="M80 104a24 24 0 1 0 0-48 24 24 0 1 0 0 48m80-24c0 33-20 61-48 73v39c0 18 14 32 32 32h160c18 0 32-14 32-32v-39a80 80 0 1 1 64 0v39c0 53-43 96-96 96h-48v71a80 80 0 1 1-64 0v-71h-48c-53 0-96-43-96-96v-39a80 80 0 1 1 112-73m208 24a24 24 0 1 0 0-48 24 24 0 1 0 0 48M248 432a24 24 0 1 0-48 0 24 24 0 1 0 48 0" />
   </symbol>
 
+  <symbol id="commit" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewBox="0 0 19 19">
+    <circle cx="12" cy="12" r="3" />
+    <path d="M3 12h6m6 0h6" />
+  </symbol>
+
   <symbol id="github" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
     <path
       d="M9 19c-5 2-5-2-7-3m14 6v-4a3 3 0 0 0-1-2c3-1 7-2 7-7a5 5 0 0 0-2-4 5 5 0 0 0 0-4s-1 0-4 1a13 13 0 0 0-7 0L5 1a5 5 0 0 0 0 4 5 5 0 0 0-1 4c0 5 3 6 6 7a3 3 0 0 0-1 2v4" />
