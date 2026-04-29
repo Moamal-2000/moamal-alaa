@@ -13,6 +13,10 @@ export const contributionsDescriptions = [
     id: "codse/animata",
   },
   {
+    description: `Streamlined keyboard navigation by implementing a "Skip to Main Content" pattern and refactoring dense sidebar layouts into semantic W3C-compliant structures, significantly reducing interaction cost for assistive technology users.`,
+    id: "1612elphi/delphitools",
+  },
+  {
     description: `Optimized LCP and initial bundle size by converting key assets to WebP, refactoring the Hero section for semantic image loading with high fetch priority, and introducing conditional eager/lazy loading to prioritize critical brand elements.`,
     id: "Esraa-Dev/Al-Shifa-Clinic",
   },
