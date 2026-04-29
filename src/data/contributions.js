@@ -5,6 +5,8 @@ export const contributionBlacklist = [
   "muqataea/Palestine",
   "NaderHikaL/Hikal-Company",
   "ahmedmostafa8/Fetch-Github-Repositories",
+  "bchiang7/halcyon-vscode",
+  "seraprogrammer/portfolio",
 ];
 
 export const contributionsDescriptions = [
@@ -34,7 +36,7 @@ export const contributionsDescriptions = [
   },
   {
     description: `Improved Dashboard UI by adjusting the scrollbar placement inside the FloatTicket chat element for a cleaner and more consistent layout.`,
-    id: "sfwnisme/COMPLAINT-TICKETS",
+    id: "sfwnisme/frontend-complaint-tickets",
   },
   {
     description: `Enhanced website accessibility and structure by adding accessible names to buttons, fixing heading order in the Features section, and updating to the latest version for improved stability.`,
@@ -43,9 +45,5 @@ export const contributionsDescriptions = [
   {
     description: `Optimized the project’s CSS by cleaning redundant styles, addressing a known cursor lag issue in Chrome and Edge devtools, improving rendering performance and developer experience.`,
     id: "sfwnisme/sfwn.me-",
-  },
-  {
-    description: `Organized project structure by fixing image paths and folder layout, and removed unnecessary base path to simplify routing and make the codebase easier to maintain.`,
-    id: "kareemokeil/portfolio",
   },
 ];
