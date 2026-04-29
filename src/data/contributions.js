@@ -7,6 +7,7 @@ export const contributionBlacklist = [
   "ahmedmostafa8/Fetch-Github-Repositories",
   "bchiang7/halcyon-vscode",
   "seraprogrammer/portfolio",
+  "kareemokeil/portfolio",
 ];
 
 export const contributionsDescriptions = [
@@ -39,8 +40,8 @@ export const contributionsDescriptions = [
     id: "sfwnisme/frontend-complaint-tickets",
   },
   {
-    description: `Enhanced website accessibility and structure by adding accessible names to buttons, fixing heading order in the Features section, and updating to the latest version for improved stability.`,
-    id: "AmruthPillai/Reactive-Resume",
+    description: `Enhanced global accessibility for a high-traffic open-source platform by auditing and fixing heading hierarchies and implementing localized ARIA patterns for interactive controls, ensuring WCAG compliance across multilingual interfaces.`,
+    id: "amruthpillai/reactive-resume",
   },
   {
     description: `Optimized the project’s CSS by cleaning redundant styles, addressing a known cursor lag issue in Chrome and Edge devtools, improving rendering performance and developer experience.`,
