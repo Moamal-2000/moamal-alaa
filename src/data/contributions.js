@@ -12,6 +12,10 @@ export const contributionBlacklist = [
 
 export const contributionsDescriptions = [
   {
+    description: `Resolved header layout overflows to ensure search bar responsiveness, optimized sponsors' stats legibility for mobile viewports, and improved accessibility by revealing action icons on focus.`,
+    id: "turbostarter/loading-ui",
+  },
+  {
     description: `Architected a high-performance animation strategy by offloading JS-driven orbit logic to CSS, effectively eliminating infinite React re-render cycles. Additionally, optimized user flow to mitigate navigation fatigue and standardized the DOM hierarchy for WCAG-compliant accessibility.`,
     id: "codse/animata",
   },
