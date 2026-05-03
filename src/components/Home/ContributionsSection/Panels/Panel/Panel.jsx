@@ -14,7 +14,7 @@ const Panel = ({ contribution, index }) => {
       role="tabpanel"
       className={`${s.panel} ${activeTabOrder === index ? s.show : s.hidden}`}
       id={`panel-${index}`}
-      aria-labelledby={`tab-${index}`}
+      aria-labelledby={`contribution-tab-${index}`}
       tabIndex={activeTabOrder === index ? 0 : -1}
     >
       <Link

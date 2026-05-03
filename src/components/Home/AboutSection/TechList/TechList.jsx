@@ -21,7 +21,7 @@ const TechList = () => {
               role="tab"
               aria-selected={tech.id === activeTech.id}
               aria-controls="tech-info-panel"
-              id={`tab-${tech.id}`}
+              id={`tech-tab-${tech.id}`}
             >
               {tech.name}
             </button>

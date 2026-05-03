@@ -25,7 +25,7 @@ const TabButton = ({ contribution, index, tabsRef }) => {
     <button
       key={getRepoFullName(contribution)}
       className={`${s.tabButton} ${isActive ? s.active : ""}`}
-      id={`tab-${index}`}
+      id={`contribution-tab-${index}`}
       role="tab"
       aria-selected={isActive}
       aria-controls={`panel-${index}`}

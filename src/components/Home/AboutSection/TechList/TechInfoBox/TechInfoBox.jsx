@@ -13,7 +13,7 @@ const TechInfoBox = ({ activeTech, id }) => {
         transition={{ duration: 0.2, ease: "easeInOut" }}
         id={id}
         role="tabpanel"
-        aria-labelledby={`tab-${activeTech.id}`}
+        aria-labelledby={`tech-tab-${activeTech.id}`}
       >
         {activeTech.description}
       </motion.p>
