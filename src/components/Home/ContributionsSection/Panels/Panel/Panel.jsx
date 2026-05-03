@@ -12,7 +12,8 @@ const Panel = ({ contribution, index }) => {
     <div
       key={repoFullName}
       role="tabpanel"
-      className={`${s.panel} ${activeTabOrder === index ? s.show : s.hidden}`}
+      className={`${s.panel} ${activeTabOrder === index ? s.show : ""}`}
+      hidden={activeTabOrder !== index}
       id={`panel-${index}`}
       aria-labelledby={`contribution-tab-${index}`}
       tabIndex={activeTabOrder === index ? 0 : -1}
