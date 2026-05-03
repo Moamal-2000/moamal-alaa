@@ -18,7 +18,12 @@ const TabButton = ({ contribution, index, tabsRef }) => {
       tabsHighlightLeftPosition,
       activeTabWidth,
       activeTabOrder: index,
+      focusedTabOrder: index,
     });
+  }
+
+  function handleFocus() {
+    updateGlobalState({ focusedTabOrder: index });
   }
 
   return (
@@ -31,8 +36,7 @@ const TabButton = ({ contribution, index, tabsRef }) => {
       aria-controls={`panel-${index}`}
       tabIndex={isActive ? 0 : -1}
       onClick={handleClick}
-      onFocus={() => updateGlobalState({ focusedTabOrder: index })}
-      onBlur={() => updateGlobalState({ focusedTabOrder: null })}
+      onFocus={handleFocus}
       ref={(el) => (tabsRef.current[index] = el)}
     >
       {repoName}
