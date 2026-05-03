@@ -1,5 +1,5 @@
 import { useKeyListeners } from "@/hooks/useKeyListeners";
-import { checkMediaQuery } from "@/lib/utils";
+import { checkMediaQuery, getNextTabIndex, getPrevTabIndex } from "@/lib/utils";
 import useGlobalStore from "@/stores/global/useGlobalStore";
 import { useEffect, useRef } from "react";
 import TabButton from "./TabButton/TabButton";
@@ -87,30 +87,30 @@ function focusTabWithArrowKeys(
   tabs[nextFocusedTabOrder].focus();
 }
 
-function getNextFocusedTabOrder({ key, focusedTabOrder, tabs }) {
-  if (!isSmallScreen) {
-    if (key === "ArrowDown") {
-      return focusedTabOrder === tabs.length - 1 ? 0 : focusedTabOrder + 1;
-    }
-    if (key === "ArrowUp") {
-      return focusedTabOrder === 0 ? tabs.length - 1 : focusedTabOrder - 1;
-    }
-  }
+const tabsKeyMap = {
+  ArrowDown: !isSmallScreen ? "next" : null,
+  ArrowUp: !isSmallScreen ? "prev" : null,
+  ArrowRight: isSmallScreen ? "next" : null,
+  ArrowLeft: isSmallScreen ? "prev" : null,
+};
 
-  if (isSmallScreen) {
-    if (key === "ArrowLeft") {
-      return focusedTabOrder === 0 ? tabs.length - 1 : focusedTabOrder - 1;
-    }
-    if (key === "ArrowRight") {
-      return focusedTabOrder === tabs.length - 1 ? 0 : focusedTabOrder + 1;
-    }
-  }
+function getNextFocusedTabOrder({ key, focusedTabOrder, tabs }) {
+  const lastIndex = tabs.length - 1;
 
   if (key === "Home") {
     return 0;
   }
   if (key === "End") {
-    return tabs.length - 1;
+    return lastIndex;
+  }
+
+  const direction = tabsKeyMap[key];
+
+  if (direction === "next") {
+    return getNextTabIndex(focusedTabOrder, tabs.length);
+  }
+  if (direction === "prev") {
+    return getPrevTabIndex(focusedTabOrder, tabs.length);
   }
 
   return null;
