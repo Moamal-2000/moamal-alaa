@@ -55,3 +55,9 @@ export function scrollToTop() {
   }
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
+
+export const getNextTabIndex = (index, length) =>
+  index === length - 1 ? 0 : index + 1;
+
+export const getPrevTabIndex = (index, length) =>
+  index === 0 ? length - 1 : index - 1;
