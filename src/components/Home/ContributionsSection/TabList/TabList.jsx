@@ -1,4 +1,5 @@
 import { useKeyListeners } from "@/hooks/useKeyListeners";
+import { getRepoFullName } from "@/lib/contributions";
 import { checkMediaQuery, getNextTabIndex, getPrevTabIndex } from "@/lib/utils";
 import useGlobalStore from "@/stores/global/useGlobalStore";
 import { useEffect, useRef } from "react";
@@ -44,14 +45,18 @@ const TabList = ({ contribItems }) => {
       aria-orientation={isSmallScreen ? "horizontal" : "vertical"}
       ref={tabsWrapperRef}
     >
-      {contribItems.map((contribution, index) => (
-        <TabButton
-          key={index}
-          index={index}
-          contribution={contribution}
-          tabsRef={tabsRef}
-        />
-      ))}
+      {contribItems.map((contribution, index) => {
+        const repoFullName = getRepoFullName(contribution);
+
+        return (
+          <TabButton
+            key={repoFullName}
+            index={index}
+            contribution={contribution}
+            tabsRef={tabsRef}
+          />
+        );
+      })}
 
       <TabsHighlighter />
     </div>
