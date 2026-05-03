@@ -8,22 +8,26 @@ import TabsHighlighter from "./TabsHighlighter/TabsHighlighter";
 
 const TabList = ({ contribItems }) => {
   const { updateGlobalState, focusedTabOrder } = useGlobalStore();
+
   const tabsRef = useRef([]);
+  const tabsWrapperRef = useRef(null);
+
   const isScreenWidthAtLeast768 = checkMediaQuery(768);
 
   function keyHandler(event) {
     focusTabWithArrowKeys(event, focusedTabOrder, tabsRef, updateGlobalState);
   }
 
-  useKeyListeners(
-    {
+  useKeyListeners({
+    ref: tabsWrapperRef,
+    listeners: {
       ArrowUp: keyHandler,
       ArrowDown: keyHandler,
       Home: keyHandler,
       End: keyHandler,
     },
-    { preventDefault: true },
-  );
+    options: { preventDefault: true },
+  });
 
   // set first tab width (for highlighter animation)
   useEffect(() => {
@@ -36,6 +40,7 @@ const TabList = ({ contribItems }) => {
       className={s.tabList}
       role="tablist"
       aria-orientation={isScreenWidthAtLeast768 ? "horizontal" : "vertical"}
+      ref={tabsWrapperRef}
     >
       {contribItems.map((contribution, index) => (
         <TabButton

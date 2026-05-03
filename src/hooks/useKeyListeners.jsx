@@ -1,11 +1,12 @@
 import { useEffect } from "react";
 
-export const useKeyListeners = (listeners, options = {}) => {
+export const useKeyListeners = ({ ref, listeners, options = {} } = {}) => {
   useEffect(() => {
+    const element = ref?.current || window;
     const handler = (event) => handleKeyDown(event, listeners, options);
 
-    window.addEventListener("keydown", handler);
-    return () => window.removeEventListener("keydown", handler);
+    element.addEventListener("keydown", handler);
+    return () => element.removeEventListener("keydown", handler);
   }, [listeners, options]);
 };
 
