@@ -9,6 +9,14 @@ export function isMobile() {
   return mobilesType.test(navigator.userAgent);
 }
 
+export function checkMediaQuery(MaxWidth) {
+  if (isServer) {
+    return;
+  }
+
+  return window.matchMedia(`(max-width: ${MaxWidth}px)`).matches;
+}
+
 export function refreshPage() {
   window.location.reload();
 }

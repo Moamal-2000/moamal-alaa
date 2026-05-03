@@ -1,4 +1,5 @@
 import { useKeyListeners } from "@/hooks/useKeyListeners";
+import { checkMediaQuery } from "@/lib/utils";
 import useGlobalStore from "@/stores/global/useGlobalStore";
 import { useEffect, useRef } from "react";
 import TabButton from "./TabButton/TabButton";
@@ -8,6 +9,7 @@ import TabsHighlighter from "./TabsHighlighter/TabsHighlighter";
 const TabList = ({ contribItems }) => {
   const { updateGlobalState, focusedTabOrder } = useGlobalStore();
   const tabsRef = useRef([]);
+  const isScreenWidthAtLeast768 = checkMediaQuery(768);
 
   function keyHandler(event) {
     focusTabWithArrowKeys(event, focusedTabOrder, tabsRef, updateGlobalState);
@@ -30,7 +32,11 @@ const TabList = ({ contribItems }) => {
   }, []);
 
   return (
-    <div className={s.tabList} role="tablist">
+    <div
+      className={s.tabList}
+      role="tablist"
+      aria-orientation={isScreenWidthAtLeast768 ? "horizontal" : "vertical"}
+    >
       {contribItems.map((contribution, index) => (
         <TabButton
           key={index}
