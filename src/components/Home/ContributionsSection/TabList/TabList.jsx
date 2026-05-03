@@ -70,21 +70,22 @@ function focusTabWithArrowKeys(
 
   const tabs = tabsRef.current;
   const key = event.key;
-  const nextfocusedTabOrder = getNextfocusedTabOrder({
+
+  const nextFocusedTabOrder = getNextFocusedTabOrder({
     key,
     focusedTabOrder,
     tabs,
   });
 
-  if (nextfocusedTabOrder === null) {
+  if (nextFocusedTabOrder === null) {
     return;
   }
 
-  updateGlobalState({ focusedTabOrder: nextfocusedTabOrder });
-  tabs[nextfocusedTabOrder].focus();
+  updateGlobalState({ focusedTabOrder: nextFocusedTabOrder });
+  tabs[nextFocusedTabOrder].focus();
 }
 
-function getNextfocusedTabOrder({ key, focusedTabOrder, tabs }) {
+function getNextFocusedTabOrder({ key, focusedTabOrder, tabs }) {
   if (key === "ArrowDown") {
     return focusedTabOrder === tabs.length - 1 ? 0 : focusedTabOrder + 1;
   }
