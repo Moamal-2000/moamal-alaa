@@ -23,6 +23,8 @@ const TabList = ({ contribItems }) => {
     listeners: {
       ArrowUp: keyHandler,
       ArrowDown: keyHandler,
+      ArrowLeft: keyHandler,
+      ArrowRight: keyHandler,
       Home: keyHandler,
       End: keyHandler,
     },
@@ -86,12 +88,22 @@ function focusTabWithArrowKeys(
 }
 
 function getNextFocusedTabOrder({ key, focusedTabOrder, tabs }) {
-  if (key === "ArrowDown") {
-    return focusedTabOrder === tabs.length - 1 ? 0 : focusedTabOrder + 1;
+  if (!isSmallScreen) {
+    if (key === "ArrowDown") {
+      return focusedTabOrder === tabs.length - 1 ? 0 : focusedTabOrder + 1;
+    }
+    if (key === "ArrowUp") {
+      return focusedTabOrder === 0 ? tabs.length - 1 : focusedTabOrder - 1;
+    }
   }
 
-  if (key === "ArrowUp") {
-    return focusedTabOrder === 0 ? tabs.length - 1 : focusedTabOrder - 1;
+  if (isSmallScreen) {
+    if (key === "ArrowLeft") {
+      return focusedTabOrder === 0 ? tabs.length - 1 : focusedTabOrder - 1;
+    }
+    if (key === "ArrowRight") {
+      return focusedTabOrder === tabs.length - 1 ? 0 : focusedTabOrder + 1;
+    }
   }
 
   if (key === "Home") {
