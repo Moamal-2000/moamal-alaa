@@ -14,6 +14,10 @@ const RootProviders = ({ children }) => {
 
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://api.github.com" />
+      </head>
+
       <body className={isMobileNavOpen ? "noScroll" : ""}>
         <UpdateNotification />
         <SkipContentLink />
