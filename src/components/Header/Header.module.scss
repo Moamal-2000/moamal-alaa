@@ -43,6 +43,12 @@
   }
 }
 
+@media (prefers-reduced-transparency: reduce) {
+  .header {
+    background-color: rgb(10, 25, 47) !important;
+  }
+}
+
 .header .navLinks {
   display: flex;
   justify-content: space-between;
@@ -64,8 +70,8 @@
   z-index: 1;
   filter: brightness(1.12) contrast(1.12) saturate(1.08) drop-shadow(0 0 1px #64ffdb9d);
   transition:
-  outline-offset .2s var(--ease-main),
-  outline-color .3s ease;
+    outline-offset .2s var(--ease-main),
+    outline-color .3s ease;
 
   &:focus-visible {
     outline-color: var(--green);

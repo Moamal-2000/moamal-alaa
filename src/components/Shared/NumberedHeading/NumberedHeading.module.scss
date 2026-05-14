@@ -38,3 +38,9 @@
   margin-left: 20px;
   background-color: #233554;
 }
+
+@media (prefers-reduced-transparency: reduce) {
+  .numberedHeading::after {
+    background-color: #758db6;
+  }
+}

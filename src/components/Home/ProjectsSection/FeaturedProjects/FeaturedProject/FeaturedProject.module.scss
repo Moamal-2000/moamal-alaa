@@ -33,6 +33,10 @@
     & .content [data-type=project-links] a {
       color: #fff;
       border-color: #808690;
+
+      @media (prefers-reduced-transparency: reduce) {
+        border-color: #fff;
+      }
     }
 
     & .content strong {

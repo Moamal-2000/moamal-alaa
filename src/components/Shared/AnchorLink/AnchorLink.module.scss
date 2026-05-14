@@ -33,3 +33,10 @@
     transition: none;
   }
 }
+
+@media (prefers-reduced-transparency: reduce) {
+  .link::after {
+    height: 2px;
+    bottom: 4px;
+  }
+}

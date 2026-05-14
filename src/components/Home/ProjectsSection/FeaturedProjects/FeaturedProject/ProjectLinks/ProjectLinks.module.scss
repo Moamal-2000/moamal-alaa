@@ -51,6 +51,12 @@
   }
 }
 
+@media (prefers-reduced-transparency: reduce) {
+  .projectLinks a {
+    border-color: #758db6;
+  }
+}
+
 .projectLinks a svg {
   width: 15px;
   height: 15px;
