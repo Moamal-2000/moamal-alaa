@@ -34,7 +34,7 @@
   }
 }
 
-@media (min-width: 992px) {
+@include m.media(medium) {
   .navLinks li a::before {
     content: "0" counter(item) ".";
     margin-right: 5px;
