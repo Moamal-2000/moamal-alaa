@@ -9,6 +9,13 @@
   margin: 0;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
 ::selection {
   background-color: #233554;
   color: #ccd6f6;

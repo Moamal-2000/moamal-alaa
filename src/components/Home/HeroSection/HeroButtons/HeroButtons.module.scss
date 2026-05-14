@@ -82,6 +82,12 @@
   transition: left .5s ease-out;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .buttons .viewWorkBtn::before {
+    transition: none;
+  }
+}
+
 .buttons .getInTouchBtn {
   background: transparent;
   color: var(--main-text-color);

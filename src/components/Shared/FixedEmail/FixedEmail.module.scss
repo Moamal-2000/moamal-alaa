@@ -54,3 +54,13 @@
     outline-offset: 0;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .fixedEmail a {
+
+    &:hover,
+    &:focus-visible {
+      translate: 0;
+    }
+  }
+}

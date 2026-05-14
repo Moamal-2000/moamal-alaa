@@ -53,6 +53,16 @@
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .socialMedia a {
+
+    &:hover,
+    &:focus-visible {
+      translate: 0;
+    }
+  }
+}
+
 .socialMedia a:hover svg {
   color: var(--green);
 
