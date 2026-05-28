@@ -25,9 +25,11 @@ const HeroSection = () => {
         </motion.h2>
 
         <motion.p className={s.description} {...motionProps()}>
-          I'm a front-end developer passionate about creating engaging and
-          intuitive user interfaces. I focus on building responsive, performant,
-          and accessible websites that leave a lasting impression.
+          I’m a Front-End Engineer who builds immersive, high-performance, and
+          fully accessible web experiences. I bridge the gap between creative UI
+          design and flawless technical execution, utilizing Next.js, semantic
+          HTML, and optimized styling to ensure websites are not just engaging,
+          but lightning-fast.
         </motion.p>
 
         <HeroButtons motionProps={motionProps} />
