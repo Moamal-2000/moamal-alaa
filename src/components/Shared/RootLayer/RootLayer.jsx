@@ -5,7 +5,7 @@ import s from "./RootLayer.module.scss";
 
 const RootLayer = ({ children }) => {
   const { isMobileNavOpen, updateGlobalState } = useGlobalStore();
-  const blurClass = isMobileNavOpen ? s.blur : "";
+  const activeClass = isMobileNavOpen ? s.active : "";
 
   function handleClick() {
     if (!isMobileNavOpen) {
@@ -16,7 +16,7 @@ const RootLayer = ({ children }) => {
   }
 
   return (
-    <div className={`${s.layer} ${blurClass}`} onClick={handleClick}>
+    <div className={`${s.layer} ${activeClass}`} onClick={handleClick}>
       {children}
     </div>
   );

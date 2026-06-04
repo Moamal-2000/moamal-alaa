@@ -1,13 +1,13 @@
 .layer {
   transition: filter ease-in .2s .1s;
 
-  &.blur {
+  &.active {
     filter: blur(5px);
   }
 }
 
 @media (prefers-reduced-transparency: reduce) {
-  .layer.blur {
+  .layer.active {
     filter: none !important;
   }
 }
@@ -21,16 +21,17 @@
   width: 100%;
   height: 100%;
   z-index: 10;
+  cursor: pointer;
   pointer-events: none;
 }
 
 
 @media (prefers-reduced-transparency: reduce) {
-  .layer.blur::before {
+  .layer.active::before {
     background-color: rgba(10, 25, 47, .8);
   }
 }
 
-.layer.blur::before {
+.layer.active::before {
   pointer-events: all;
 }
