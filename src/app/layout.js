@@ -1,3 +1,4 @@
+import { IS_PRODUCTION } from "@/data/constants";
 import { METADATA } from "@/data/metadata";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import RootProviders from "../components/Shared/RootProviders";
@@ -14,7 +15,7 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <>
-      {process.env.NODE_ENV === "production" && <SpeedInsights />}
+      {IS_PRODUCTION && <SpeedInsights />}
       <RootProviders>{children}</RootProviders>
     </>
   );
