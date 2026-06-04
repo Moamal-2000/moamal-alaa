@@ -43,12 +43,18 @@
 
 .mobileMenu nav li a {
   padding: 10px;
+  border-radius: 4px;
   display: flex;
   justify-content: flex-start;
   transition: color .25s var(--ease-main);
 
   &:hover {
     color: var(--green);
+  }
+
+  &:focus-visible {
+    color: var(--green);
+    outline: 2px solid var(--green);
   }
 }
 
@@ -96,5 +102,11 @@
     background-color: var(--green);
     color: var(--website-bg);
     box-shadow: 0 4px 6px rgba(100, 255, 218, .2);
+  }
+
+  &:focus-visible {
+    color: var(--green);
+    outline: 2px solid var(--green);
+    outline-offset: -1px;
   }
 }
