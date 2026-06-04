@@ -21,7 +21,7 @@ const MobileNavBtn = () => {
       aria-label={title}
       onClick={handleClick}
     >
-      <div className={s.icon} />
+      <div className={s.icon} role="presentation" />
     </button>
   );
 };
