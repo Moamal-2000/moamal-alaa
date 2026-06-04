@@ -1,3 +1,5 @@
+"use client";
+
 import LinkButton from "@/components/Shared/Buttons/LinkButton/LinkButton";
 import s from "../styles/NotFoundPage.module.scss";
 
