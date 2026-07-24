@@ -20,5 +20,9 @@
     "babel-plugin-react-compiler": "^1.0.0",
     "eslint": "^10.8.0",
     "sass": "^1.101.7"
+  },
+  "overrides": {
+    "postcss": "8.4.31",
+    "sharp": "^0.35.3"
   }
 }
