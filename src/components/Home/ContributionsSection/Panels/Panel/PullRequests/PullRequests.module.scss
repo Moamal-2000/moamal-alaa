@@ -1,12 +1,15 @@
 @use "@/styles/mixins" as m;
 
-$max-visible-items: 7;
+$max-visible-items: 10;
 
 .pullRequests {
+  --tab-height: 32.4px;
   font-size: 1.125rem;
   max-height: 348px;
+  max-height: calc(var(--tab-height) * #{$max-visible-items});
   overflow-y: auto;
   scrollbar-width: thin;
+  padding-right: 10px;
 }
 
 // Prevent parent page scroll chaining when content exceeds max visible items
