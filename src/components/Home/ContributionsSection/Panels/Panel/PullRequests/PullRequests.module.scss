@@ -5,6 +5,7 @@
   max-height: 212px;
   overflow-y: auto;
   overscroll-behavior: contain;
+  scrollbar-width: thin;
 }
 
 .pullRequests li>a {
