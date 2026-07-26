@@ -5,7 +5,6 @@ $max-visible-items: 10;
 .pullRequests {
   --tab-height: 32.4px;
   font-size: 1.125rem;
-  max-height: 348px;
   max-height: calc(var(--tab-height) * #{$max-visible-items});
   overflow-y: auto;
   scrollbar-width: thin;
@@ -37,11 +36,6 @@ $max-visible-items: 10;
 @include m.media(medium) {
   .pullRequests li>a {
     padding-left: 20px;
-  }
-}
-
-@include m.media(medium) {
-  .pullRequests li>a {
     font-size: 1.15rem;
   }
 }

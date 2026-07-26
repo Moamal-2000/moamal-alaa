@@ -12,7 +12,7 @@ $max-visible-items: 12;
   scrollbar-width: thin;
 }
 
-@include m.media(small) {
+@include m.media(medium) {
   .tabList {
     width: 100%;
     min-width: 100%;

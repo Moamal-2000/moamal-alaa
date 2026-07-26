@@ -10,13 +10,14 @@
 .section .wrapper {
   min-height: 340px;
   width: 100%;
-  max-width: 760px;
+  max-width: 980px;
   display: flex;
   align-items: flex-start;
 }
 
-@include m.media(small) {
+@include m.media(medium) {
   .section .wrapper {
+    max-width: 100%;
     flex-direction: column;
   }
 }

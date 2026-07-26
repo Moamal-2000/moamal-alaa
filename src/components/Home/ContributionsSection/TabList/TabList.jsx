@@ -1,3 +1,4 @@
+import { MEDIUM_SCREEN_WIDTH } from "@/data/constants";
 import { useKeyListeners } from "@/hooks/useKeyListeners";
 import { getRepoFullName } from "@/lib/contributions";
 import { checkMediaQuery, getNextTabIndex, getPrevTabIndex } from "@/lib/utils";
@@ -7,7 +8,7 @@ import TabButton from "./TabButton/TabButton";
 import s from "./TabList.module.scss";
 import TabsHighlighter from "./TabsHighlighter/TabsHighlighter";
 
-const isSmallScreen = checkMediaQuery(768);
+const isMediumScreen = checkMediaQuery(MEDIUM_SCREEN_WIDTH);
 
 const TabList = ({ contribItems }) => {
   const { updateGlobalState, focusedTabOrder } = useGlobalStore();
@@ -42,7 +43,7 @@ const TabList = ({ contribItems }) => {
     <div
       className={s.tabList}
       role="tablist"
-      aria-orientation={isSmallScreen ? "horizontal" : "vertical"}
+      aria-orientation={isMediumScreen ? "horizontal" : "vertical"}
       ref={tabsWrapperRef}
     >
       {contribItems.map((contribution, index) => {
@@ -93,10 +94,10 @@ function focusTabWithArrowKeys(
 }
 
 const tabsKeyMap = {
-  ArrowDown: !isSmallScreen ? "next" : null,
-  ArrowUp: !isSmallScreen ? "prev" : null,
-  ArrowRight: isSmallScreen ? "next" : null,
-  ArrowLeft: isSmallScreen ? "prev" : null,
+  ArrowDown: !isMediumScreen ? "next" : null,
+  ArrowUp: !isMediumScreen ? "prev" : null,
+  ArrowRight: isMediumScreen ? "next" : null,
+  ArrowLeft: isMediumScreen ? "prev" : null,
 };
 
 function getNextFocusedTabOrder({ key, focusedTabOrder, tabs }) {

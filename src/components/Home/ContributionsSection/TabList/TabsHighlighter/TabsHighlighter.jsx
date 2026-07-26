@@ -1,4 +1,4 @@
-import { SMALL_SCREEN_WIDTH } from "@/data/constants";
+import { MEDIUM_SCREEN_WIDTH } from "@/data/constants";
 import useGetResizeWindow from "@/hooks/useGetResizeWindow";
 import useGlobalStore from "@/stores/global/useGlobalStore";
 import { useEffect, useState } from "react";
@@ -37,14 +37,14 @@ function getHighlightStyles({
   activeTabWidth,
   tabsHighlightLeftPosition,
 }) {
-  const isSmallScreen = windowWidth <= SMALL_SCREEN_WIDTH;
+  const isMediumScreen = windowWidth <= MEDIUM_SCREEN_WIDTH;
   const styles = { translate: `0 calc(${activeTabOrder} * var(--tab-height))` };
 
-  if (!isSmallScreen) {
+  if (!isMediumScreen) {
     return styles;
   }
 
-  if (isSmallScreen) {
+  if (isMediumScreen) {
     styles.translate = `${tabsHighlightLeftPosition}px 0`;
     styles.width = `${activeTabWidth}px`;
   }
