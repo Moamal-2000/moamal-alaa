@@ -1,11 +1,17 @@
 @use "@/styles/mixins" as m;
 
+$max-visible-items: 5;
+
 .pullRequests {
   font-size: 1.125rem;
   max-height: 212px;
   overflow-y: auto;
-  overscroll-behavior: contain;
   scrollbar-width: thin;
+}
+
+// Prevent parent page scroll chaining when content exceeds max visible items
+.pullRequests:has(> :nth-child(#{$max-visible-items + 1})) {
+  overscroll-behavior-y: contain;
 }
 
 .pullRequests li>a {

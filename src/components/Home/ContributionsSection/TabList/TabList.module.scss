@@ -1,13 +1,14 @@
 @use "@/styles/mixins" as m;
 
+$max-visible-items: 12;
+
 .tabList {
   --tab-height: 42px;
   position: relative;
   z-index: 3;
   min-width: max-content;
-  max-height: calc(var(--tab-height) * 12);
+  max-height: calc(var(--tab-height) * #{$max-visible-items});
   overflow-y: auto;
-  overscroll-behavior: contain;
   scrollbar-width: thin;
 }
 
@@ -18,4 +19,9 @@
     display: flex;
     overflow-x: auto;
   }
+}
+
+// Prevent parent page scroll chaining when content exceeds max visible items
+.tabList:has(> :nth-child(#{$max-visible-items + 1})) {
+  overscroll-behavior-y: contain;
 }
