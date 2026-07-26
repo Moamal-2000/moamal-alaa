@@ -7,6 +7,7 @@
   min-width: max-content;
   max-height: calc(var(--tab-height) * 12);
   overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 @include m.media(small) {
