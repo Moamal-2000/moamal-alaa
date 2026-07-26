@@ -1,18 +1,7 @@
-"use client";
-
-import Footer from "@/components/Footer/Footer";
-import Header from "@/components/Header/Header";
-import FixedEmail from "@/components/Shared/FixedEmail/FixedEmail";
-import FixedSocialMedia from "@/components/Shared/FixedSocialMedia/FixedSocialMedia";
-import SkipContentLink from "@/components/Shared/SkipContentLink/SkipContentLink";
 import { personJsonLd } from "@/data/jsonLd";
-import useGlobalStore from "@/stores/global/useGlobalStore";
-import UpdateNotification from "../PWA/UpdateNotification/UpdateNotification";
-import RootLayer from "./RootLayer/RootLayer";
+import Body from "./Body";
 
 const RootProviders = ({ children }) => {
-  const isMobileNavOpen = useGlobalStore((s) => s.isMobileNavOpen);
-
   return (
     <html lang="en">
       <head>
@@ -22,18 +11,7 @@ const RootProviders = ({ children }) => {
         />
         <link rel="preconnect" href="https://api.github.com" />
       </head>
-
-      <body className={isMobileNavOpen ? "noScroll" : ""}>
-        <UpdateNotification />
-        <SkipContentLink />
-        <Header />
-        <RootLayer>
-          <FixedSocialMedia />
-          <FixedEmail />
-          {children}
-          <Footer />
-        </RootLayer>
-      </body>
+      <Body>{children}</Body>
     </html>
   );
 };
