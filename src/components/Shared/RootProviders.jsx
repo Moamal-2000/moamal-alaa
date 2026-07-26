@@ -5,6 +5,7 @@ import Header from "@/components/Header/Header";
 import FixedEmail from "@/components/Shared/FixedEmail/FixedEmail";
 import FixedSocialMedia from "@/components/Shared/FixedSocialMedia/FixedSocialMedia";
 import SkipContentLink from "@/components/Shared/SkipContentLink/SkipContentLink";
+import { personJsonLd } from "@/data/jsonLd";
 import useGlobalStore from "@/stores/global/useGlobalStore";
 import UpdateNotification from "../PWA/UpdateNotification/UpdateNotification";
 import RootLayer from "./RootLayer/RootLayer";
@@ -15,6 +16,10 @@ const RootProviders = ({ children }) => {
   return (
     <html lang="en">
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
         <link rel="preconnect" href="https://api.github.com" />
       </head>
 
