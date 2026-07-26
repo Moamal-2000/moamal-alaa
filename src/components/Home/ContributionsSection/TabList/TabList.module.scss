@@ -4,12 +4,15 @@
   --tab-height: 42px;
   position: relative;
   z-index: 3;
-  width: max-content;
+  min-width: max-content;
+  max-height: calc(var(--tab-height) * 12);
+  overflow-y: auto;
 }
 
 @include m.media(small) {
   .tabList {
     width: 100%;
+    min-width: 100%;
     display: flex;
     overflow-x: auto;
   }
