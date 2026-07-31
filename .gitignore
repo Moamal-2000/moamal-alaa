@@ -17,3 +17,7 @@ npm-debug.log*
 
 # vercel
 .vercel
+
+# Build output folders
+.open-next/
+.cloudflare/
