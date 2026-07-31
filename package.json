@@ -4,11 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "opennextjs-cloudflare build",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "start": "next start",
     "lint": "eslint src"
   },
   "dependencies": {
+    "@opennextjs/cloudflare": "^1.20.2",
     "@vercel/speed-insights": "^2.0.0",
     "motion": "^12.42.2",
     "next": "^16.2.12",
@@ -19,7 +22,8 @@
   "devDependencies": {
     "babel-plugin-react-compiler": "^1.0.0",
     "eslint": "^10.8.0",
-    "sass": "^1.102.0"
+    "sass": "^1.102.0",
+    "wrangler": "^4.116.0"
   },
   "overrides": {
     "postcss": "8.4.31",
