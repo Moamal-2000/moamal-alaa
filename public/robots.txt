@@ -1,4 +1,4 @@
 User-Agent: *
 Allow: /
 
-Sitemap: https://moamal-alaa.vercel.app
+Sitemap: https://www.moamalalaa.com

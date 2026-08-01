@@ -30,7 +30,7 @@ export const personJsonLd = {
   name: "Moamal Alaa",
   alternateName: "مؤمل علاء",
   jobTitle: "Front-End Engineer",
-  url: "https://moamal-alaa.vercel.app",
+  url: "https://www.moamalalaa.com",
   email: "mailto:moamalalaapro1@gmail.com",
   address: {
     "@type": "PostalAddress",
