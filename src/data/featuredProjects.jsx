@@ -74,7 +74,7 @@ export const FEATURED_PROJECTS = [
       "LZ String",
       "Sass",
     ],
-    repoUrl: "https://github.com/Moamal-2000/jumpers-heaven-statistics",
+    repoUrl: "https://github.com/Moamal-2000/cod-jumping-stats",
     previewImg: "/images/call-of-duty-2-stats-project.webp",
     id: 3,
   },
