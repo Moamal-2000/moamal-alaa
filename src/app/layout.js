@@ -1,5 +1,6 @@
 import { IS_PRODUCTION } from "@/data/constants";
 import { METADATA } from "@/data/metadata";
+import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import RootProviders from "../components/Shared/RootProviders";
 import "../styles/globals.scss";
@@ -15,8 +16,13 @@ export const viewport = {
 export default function RootLayout({ children }) {
   return (
     <>
-      {IS_PRODUCTION && <SpeedInsights />}
       <RootProviders>{children}</RootProviders>
+      {IS_PRODUCTION && (
+        <>
+          <Analytics />
+          <SpeedInsights />
+        </>
+      )}
     </>
   );
 }
