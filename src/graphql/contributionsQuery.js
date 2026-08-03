@@ -9,6 +9,19 @@ export const contributionsQuery = `{
         repository {
           name
           url
+          stargazerCount
+          forkCount
+
+          defaultBranchRef {
+            target {
+              ... on Commit {
+                history {
+                  totalCount
+                }
+              }
+            }
+          }
+
           owner {
             login
             url
