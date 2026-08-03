@@ -4,7 +4,7 @@ const AboutContent = () => {
   return (
     <div className={s.content}>
       <p className={s.firstParagraph}>
-        Hi, I’m Moamal, a Front-End Engineer dedicated to building
+        Hi, I’m Moamal, a Front-End Engineer & Open-Source Contributor, dedicated to building
         high-performance, accessible, and scalable web applications. With over
         five years of experience, I specialize in crafting seamless user
         interfaces using React and Next.js, with a strong focus on technical SEO
