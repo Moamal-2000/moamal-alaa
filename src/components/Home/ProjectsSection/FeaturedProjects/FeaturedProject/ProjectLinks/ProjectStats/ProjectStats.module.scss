@@ -11,6 +11,7 @@
 .projectStats .stat {
   display: flex;
   gap: 4px;
+  color: var(--main-text-color);
   transition: color .3s ease;
 }
 

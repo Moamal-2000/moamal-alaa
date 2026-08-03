@@ -5,6 +5,7 @@
   outline-offset: 6px;
   position: absolute;
   top: 20px;
+  width: 100%;
   opacity: 0;
   pointer-events: none;
   transition: opacity .05s var(--ease-main);
@@ -21,6 +22,22 @@
 
   &.hidden {
     user-select: none;
+    pointer-events: none;
+    z-index: -1;
+  }
+}
+
+.panel .header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@include m.media(small) {
+  .panel .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
   }
 }
 
@@ -39,6 +56,10 @@
   &:focus-visible {
     color: var(--green);
   }
+}
+
+.panel .header [data-type=project-stats] {
+  margin-top: 4px;
 }
 
 .panel .description {

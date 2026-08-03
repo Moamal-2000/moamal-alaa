@@ -19,7 +19,7 @@ const Panel = ({ contribution, index }) => {
       aria-labelledby={`contribution-tab-${index}`}
       tabIndex={activeTabOrder === index ? 0 : -1}
     >
-      <div>
+      <div className={s.header}>
         <Link
           href={contribution.repository.url}
           target="_blank"
