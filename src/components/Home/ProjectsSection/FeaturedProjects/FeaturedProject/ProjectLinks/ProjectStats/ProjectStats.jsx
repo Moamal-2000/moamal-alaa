@@ -1,13 +1,13 @@
 import s from "./ProjectStats.module.scss";
 
-const ProjectStats = ({ stars, forks, commitCount }) => {
+const ProjectStats = ({ stars = 0, forks = 0, commitCount = 0 }) => {
   return (
     <div className={s.projectStats} data-type="project-stats">
       <div className={s.stat}>
         <svg aria-hidden="true">
           <use href="/icons-sprite.svg#star" />
         </svg>{" "}
-        {stars || 0}
+        {stars.toLocaleString()}
       </div>
 
       <span>.</span>
@@ -16,7 +16,7 @@ const ProjectStats = ({ stars, forks, commitCount }) => {
         <svg aria-hidden="true">
           <use href="/icons-sprite.svg#fork" />
         </svg>
-        {forks || 0}
+        {forks.toLocaleString()}
       </div>
 
       <span>.</span>
@@ -25,7 +25,7 @@ const ProjectStats = ({ stars, forks, commitCount }) => {
         <svg aria-hidden="true">
           <use href="/icons-sprite.svg#commit" />
         </svg>
-        {commitCount}
+        {commitCount.toLocaleString()}
       </div>
     </div>
   );
