@@ -53,6 +53,14 @@ export const FEATURED_PROJECTS = [
           >
             Jumpers Heaven
           </AnchorLink>{" "}
+          and{" "}
+          <AnchorLink
+            href="https://jump4life.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Jump 4 Life
+          </AnchorLink>{" "}
           servers across <strong className="highlight">Call of Duty</strong>{" "}
           titles. The system provides interactive leaderboards, player and map
           analytics, server monitoring, and detailed performance insights with
