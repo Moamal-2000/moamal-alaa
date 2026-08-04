@@ -21,6 +21,12 @@
   }
 }
 
+@include m.media(very-small) {
+  .mobileMenu {
+    width: 100dvw;
+  }
+}
+
 .mobileMenu nav {
   display: flex;
   flex-direction: column;
