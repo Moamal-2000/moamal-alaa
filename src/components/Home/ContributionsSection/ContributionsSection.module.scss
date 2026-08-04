@@ -8,7 +8,7 @@
 }
 
 .section .wrapper {
-  min-height: 340px;
+  min-height: 500px;
   width: 100%;
   max-width: 980px;
   display: flex;
@@ -17,6 +17,7 @@
 
 @include m.media(medium) {
   .section .wrapper {
+    min-height: 600px;
     max-width: 100%;
     flex-direction: column;
   }
