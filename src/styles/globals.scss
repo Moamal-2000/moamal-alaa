@@ -57,12 +57,6 @@ main {
 
 @include m.media(small) {
   main {
-    padding: 0 25px;
-  }
-}
-
-@include m.media(very-small) {
-  main {
     padding: 0 15px;
   }
 }
