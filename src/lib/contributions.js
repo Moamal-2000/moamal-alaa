@@ -48,6 +48,14 @@ export function enrichRepos(contributions) {
   });
 }
 
+export function sortReposByStars({ repos, sortDescending = true } = {}) {
+  return repos.toSorted((a, b) => {
+    const starsA = a?.repository?.stargazerCount ?? 0;
+    const starsB = b?.repository?.stargazerCount ?? 0;
+    return sortDescending ? starsB - starsA : starsA - starsB;
+  });
+}
+
 export function getRepoFullName(data) {
   return `${data.repository.owner.login}/${data.repository.name}`;
 }
@@ -62,7 +70,8 @@ export function getSortedPullRequests(repoData, repo) {
 export function getContributionData(contributions) {
   const filtered = filterContributions(contributions);
   const grouped = groupContributionsByRepo(filtered);
-  return enrichRepos(grouped);
+  const sortedByStarsDesc = sortReposByStars({ repos: enrichRepos(grouped) });
+  return sortedByStarsDesc;
 }
 
 export async function fetchContributions() {
