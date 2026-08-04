@@ -9,7 +9,7 @@ export const contributionBlacklist = [
   "seraprogrammer/portfolio",
   "kareemokeil/portfolio",
   "Cjdcoy/j4l-web",
-  "Ahmed-C0der/Travel-Agency"
+  "Ahmed-C0der/Travel-Agency",
 ];
 
 export const contributionsDescriptions = [
@@ -28,14 +28,6 @@ export const contributionsDescriptions = [
   {
     description: `Optimized LCP and initial bundle size by converting key assets to WebP, refactoring the Hero section for semantic image loading with high fetch priority, and introducing conditional eager/lazy loading to prioritize critical brand elements.`,
     id: "Esraa-Dev/Al-Shifa-Clinic",
-  },
-  {
-    description: `Enhanced the Travel-Agency website by improving code quality, fixing layout shifts, optimizing image behavior, removing unused assets, improving load performance, adding key SEO meta tags, and updating the site title for better branding and user experience.`,
-    id: "Ahmed-C0der/Travel-Agency",
-  },
-  {
-    description: `Updated project dependencies and resolved security vulnerabilities to ensure a safer, more stable, and up-to-date codebase while maintaining compatibility with React 18 peer requirements.`,
-    id: "seraprogrammer/portfolio",
   },
   {
     description: `Fixed layout shifting in the dropdown menu during theme toggle, improving visual stability and overall user experience.`,
