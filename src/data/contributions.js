@@ -14,6 +14,14 @@ export const contributionBlacklist = [
 
 export const contributionsDescriptions = [
   {
+    description: `Boosted network and rendering performance through font self-hosting, network prefetching, and GPU-accelerated animations. Elevated accessibility (WCAG) using semantic layout structures and keyboard navigation patterns, alongside critical production bug fixes and mobile-responsive UI refinements.`,
+    id: "BraveOPotato/FckSignups",
+  },
+  {
+    description: `Improved UI responsiveness and visual stability by resolving fixed-grid layout stretching during devtools resizing, along with global button cursor refinements.`,
+    id: "harshjdhv/componentry",
+  },
+  {
     description: `Resolved header layout overflows to ensure search bar responsiveness, optimized sponsors' stats legibility for mobile viewports, and improved accessibility by revealing action icons on focus.`,
     id: "turbostarter/loading-ui",
   },
