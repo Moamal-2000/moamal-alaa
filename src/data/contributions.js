@@ -8,6 +8,8 @@ export const contributionBlacklist = [
   "bchiang7/halcyon-vscode",
   "seraprogrammer/portfolio",
   "kareemokeil/portfolio",
+  "Cjdcoy/j4l-web",
+  "Ahmed-C0der/Travel-Agency"
 ];
 
 export const contributionsDescriptions = [
