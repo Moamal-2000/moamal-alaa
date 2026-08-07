@@ -19,7 +19,13 @@ const keywords = [
 const description =
   "Moamal Alaa - Front-End Developer creating responsive, accessible, and high-performance websites with React & Next.js. Focused on clean UI, SEO, and great user experiences.";
 
-const GLOBAL_METADATA = { title, description, keywords };
+const GLOBAL_METADATA = {
+  title,
+  description,
+  keywords,
+  metadataBase: new URL(BASE_URL),
+  alternates: { canonical: "/" },
+};
 
 const PWA_METADATA = {
   manifest: "/manifest.json",
