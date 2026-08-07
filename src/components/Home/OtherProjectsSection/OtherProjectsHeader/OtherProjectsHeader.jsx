@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 import Link from "next/link";
 import s from "./OtherProjectsHeader.module.scss";
 
-const motionProps = fadeInOnViewMotionProps({});
+const motionProps = fadeInOnViewMotionProps();
 
 const OtherProjectsHeader = () => {
   return (
