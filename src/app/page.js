@@ -13,8 +13,10 @@ export function generateMetadata() {
 }
 
 export default async function Home() {
-  const featuredProjects = await fetchFeaturedProjects();
-  const contributions = await fetchContributions();
+  const [featuredProjects, contributions] = await Promise.all([
+    fetchFeaturedProjects(),
+    fetchContributions(),
+  ]);
 
   return (
     <main>
