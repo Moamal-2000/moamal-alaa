@@ -1,5 +1,8 @@
 import AnchorLink from "@/components/Shared/AnchorLink/AnchorLink";
 
+export const COD_JUMPING_STATS_REPO_URL =
+  "https://github.com/Moamal-2000/cod-jumping-stats";
+
 export const FEATURED_PROJECTS = [
   {
     title: "E-Commercew",
@@ -82,9 +85,9 @@ export const FEATURED_PROJECTS = [
       "LZ String",
       "Sass",
     ],
-    repoUrl: "https://github.com/Moamal-2000/cod-jumping-stats",
+    repoUrl: COD_JUMPING_STATS_REPO_URL,
     previewImg: "/images/call-of-duty-2-stats-project.webp",
-    id: 3,
+    id: 2,
   },
 
   {
@@ -105,6 +108,15 @@ export const FEATURED_PROJECTS = [
     repoUrl: "https://github.com/Moamal-2000/tic-tac-toe",
     previewImg: "/images/advanced-tic-tac-toe.webp",
     technologies: ["Next.js", "Socket.io", "Zustand", "Sass", "PWA"],
-    id: 4,
+    id: 3,
   },
 ];
+
+export const codJumpingStatsProject = {
+  repoUrl: COD_JUMPING_STATS_REPO_URL,
+  liveUrl: "https://cjstats.vercel.app",
+  stars: 6,
+  forks: 1,
+  commitCount: 2642,
+  isPrivate: true,
+};
