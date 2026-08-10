@@ -3,18 +3,27 @@ import s from "./ProjectLinks.module.scss";
 const ProjectLinks = ({ fetchedData, title }) => {
   return (
     <div className={s.projectLinks} data-type="project-links">
-      <a
-        href={fetchedData.repoUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={s.githubLink}
-        aria-label={`View ${title} source code on GitHub`}
-      >
-        <svg aria-hidden="true">
-          <use href="/icons-sprite.svg#github" />
-        </svg>
-        Source
-      </a>
+      {fetchedData?.isPrivate ? (
+        <span className={s.githubLink} title="Private repository">
+          <svg aria-hidden="true">
+            <use href="/icons-sprite.svg#github" />
+          </svg>
+          Source
+        </span>
+      ) : (
+        <a
+          href={fetchedData.repoUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={s.githubLink}
+          aria-label={`View ${title} source code on GitHub`}
+        >
+          <svg aria-hidden="true">
+            <use href="/icons-sprite.svg#github" />
+          </svg>
+          Source
+        </a>
+      )}
 
       <a
         href={fetchedData.liveUrl}

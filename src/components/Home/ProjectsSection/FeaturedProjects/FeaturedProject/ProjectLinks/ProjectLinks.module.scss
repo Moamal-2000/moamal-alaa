@@ -49,13 +49,26 @@
   }
 }
 
+.projectLinks span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #696969;
+  border: 1px solid #233149;
+  font-size: 1rem;
+  padding: 8px 11px;
+  border-radius: 4px;
+  cursor: not-allowed;
+  position: relative;
+}
+
 @media (prefers-reduced-transparency: reduce) {
   .projectLinks a {
     border-color: #758db6;
   }
 }
 
-.projectLinks a svg {
+.projectLinks * svg {
   width: 15px;
   height: 15px;
 }
