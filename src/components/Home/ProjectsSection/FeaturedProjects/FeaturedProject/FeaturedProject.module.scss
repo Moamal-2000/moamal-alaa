@@ -111,6 +111,10 @@
   }
 }
 
+.content .description>p>a::after {
+  bottom: 3px;
+}
+
 .content .description>p:not(:last-child) {
   margin-bottom: 12px;
 }
