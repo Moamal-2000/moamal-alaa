@@ -35,7 +35,8 @@ const TabList = ({ contribItems }) => {
 
   // set first tab width (for highlighter animation)
   useEffect(() => {
-    const firstTabWidth = tabsRef.current[0].getBoundingClientRect().width;
+    const firstTabWidth =
+      tabsRef.current?.[0]?.getBoundingClientRect?.()?.width || 0;
     updateGlobalState({ activeTabWidth: firstTabWidth });
   }, []);
 
