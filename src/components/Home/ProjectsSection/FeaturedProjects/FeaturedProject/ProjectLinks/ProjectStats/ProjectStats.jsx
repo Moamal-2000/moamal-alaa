@@ -1,47 +1,35 @@
+import { Fragment } from "react";
 import s from "./ProjectStats.module.scss";
 
 const ProjectStats = ({ stars = 0, forks = 0, commitCount = 0 }) => {
+  const stats = getStats({ stars, forks, commitCount });
+
   return (
-    <div
-      className={s.projectStats}
-      data-type="project-stats"
-      aria-label="GitHub repository statistics"
-    >
-      <div className={s.stat}>
-        <svg aria-hidden="true">
-          <use href="/icons-sprite.svg#star" />
-        </svg>{" "}
-        {stars.toLocaleString()}
-        <span className="visuallyHidden">
-          {stars.toLocaleString()} GitHub stars
-        </span>
-      </div>
+    <dl className={s.projectStats}>
+      {stats.map(({ value, icon, label }, index) => (
+        <Fragment key={icon}>
+          <dt className={s.stat}>
+            <svg aria-hidden="true">
+              <use href={`/icons-sprite.svg#${icon}`} />
+            </svg>
+            <span className="visuallyHidden">{label}</span>
+          </dt>
 
-      <span aria-hidden="true">.</span>
+          <dd>{value.toLocaleString()}</dd>
 
-      <div className={s.stat}>
-        <svg aria-hidden="true">
-          <use href="/icons-sprite.svg#fork" />
-        </svg>
-        {forks.toLocaleString()}
-        <span className="visuallyHidden">
-          {forks.toLocaleString()} GitHub forks
-        </span>
-      </div>
-
-      <span aria-hidden="true">.</span>
-
-      <div className={`${s.stat} ${s.commits}`}>
-        <svg aria-hidden="true">
-          <use href="/icons-sprite.svg#commit" />
-        </svg>
-        {commitCount.toLocaleString()}
-        <span className="visuallyHidden">
-          {commitCount.toLocaleString()} GitHub commits
-        </span>
-      </div>
-    </div>
+          {index < stats.length - 1 && <span aria-hidden="true">.</span>}
+        </Fragment>
+      ))}
+    </dl>
   );
 };
 
 export default ProjectStats;
+
+function getStats({ stars, forks, commitCount } = {}) {
+  return [
+    { value: stars, icon: "star", label: "GitHub stars" },
+    { value: forks, icon: "fork", label: "GitHub forks" },
+    { value: commitCount, icon: "commit", label: "GitHub commits" },
+  ];
+}

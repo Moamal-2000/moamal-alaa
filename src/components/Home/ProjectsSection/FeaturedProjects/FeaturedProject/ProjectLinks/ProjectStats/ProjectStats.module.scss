@@ -20,7 +20,7 @@
   height: 16px;
 }
 
-.projectStats .stat.commits>svg {
+.projectStats .stat>svg:has([href*=commit]) {
   width: 22px;
 }
 
