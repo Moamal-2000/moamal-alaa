@@ -14,43 +14,43 @@ export const contributionBlacklist = [
 
 export const contributionsDescriptions = [
   {
-    description: `Boosted network and rendering performance through font self-hosting, network prefetching, and GPU-accelerated animations. Elevated accessibility (WCAG) using semantic layout structures and keyboard navigation patterns, alongside critical production bug fixes and mobile-responsive UI refinements.`,
+    description: `Improved performance and accessibility by self-hosting fonts, adding network prefetching, and moving animations to the GPU. Also fixed production issues and refined mobile layouts and interactions.`,
     id: "BraveOPotato/FckSignups",
   },
   {
-    description: `Improved UI responsiveness and visual stability by resolving fixed-grid layout stretching during devtools resizing, along with global button cursor refinements.`,
+    description: `Fixed fixed-grid stretching during DevTools resizing and improved button interactions with consistent cursor behavior.`,
     id: "harshjdhv/componentry",
   },
   {
-    description: `Resolved header layout overflows to ensure search bar responsiveness, optimized sponsors' stats legibility for mobile viewports, and improved accessibility by revealing action icons on focus.`,
+    description: `Fixed header overflow to keep the search bar responsive, improved sponsor stats readability on small screens, and made action icons keyboard-focusable.`,
     id: "turbostarter/loading-ui",
   },
   {
-    description: `Architected a high-performance animation strategy by offloading JS-driven orbit logic to CSS, effectively eliminating infinite React re-render cycles. Additionally, optimized user flow to mitigate navigation fatigue and standardized the DOM hierarchy for WCAG-compliant accessibility.`,
+    description: `Replaced JS-driven orbit animations with CSS to eliminate unnecessary React re-renders. Also improved component navigation and corrected the DOM structure for better accessibility.`,
     id: "codse/animata",
   },
   {
-    description: `Streamlined keyboard navigation by implementing a "Skip to Main Content" pattern and refactoring dense sidebar layouts into semantic W3C-compliant structures, significantly reducing interaction cost for assistive technology users.`,
+    description: `Added a "Skip to Main Content" link and refactored the sidebar structure to improve keyboard navigation and semantic accessibility.`,
     id: "1612elphi/delphitools",
   },
   {
-    description: `Optimized LCP and initial bundle size by converting key assets to WebP, refactoring the Hero section for semantic image loading with high fetch priority, and introducing conditional eager/lazy loading to prioritize critical brand elements.`,
+    description: `Improved LCP and reduced the initial asset load by converting key images to WebP and refining Hero image loading with appropriate fetch priorities and lazy loading.`,
     id: "Esraa-Dev/Al-Shifa-Clinic",
   },
   {
-    description: `Fixed layout shifting in the dropdown menu during theme toggle, improving visual stability and overall user experience.`,
+    description: `Fixed layout shifting in the dropdown menu when switching themes, improving visual stability during theme changes.`,
     id: "bgub/bengubler.com",
   },
   {
-    description: `Improved Dashboard UI by adjusting the scrollbar placement inside the FloatTicket chat element for a cleaner and more consistent layout.`,
+    description: `Adjusted the scrollbar placement in the FloatTicket chat to keep it contained within the chat element and improve the dashboard layout.`,
     id: "sfwnisme/frontend-complaint-tickets",
   },
   {
-    description: `Enhanced global accessibility for a high-traffic open-source platform by auditing and fixing heading hierarchies and implementing localized ARIA patterns for interactive controls, ensuring WCAG compliance across multilingual interfaces.`,
+    description: `Improved accessibility across the application by fixing heading hierarchy and adding localized ARIA patterns for interactive controls.`,
     id: "amruthpillai/reactive-resume",
   },
   {
-    description: `Optimized the project’s CSS by cleaning redundant styles, addressing a known cursor lag issue in Chrome and Edge devtools, improving rendering performance and developer experience.`,
+    description: `Cleaned up redundant CSS and fixed a cursor lag issue in Chrome and Edge DevTools, improving rendering behavior and the development experience.`,
     id: "sfwnisme/sfwn.me-",
   },
 ];
