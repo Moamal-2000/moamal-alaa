@@ -3,41 +3,45 @@
 .projectStats {
   display: flex;
   align-items: center;
-  gap: 12px;
   pointer-events: all;
   margin-top: 1px;
+  color: #a8b2d1;
 }
 
-.projectStats .stat {
-  display: flex;
-  gap: 4px;
+.projectStats .term {
   color: var(--main-text-color);
   transition: color .3s ease;
 }
 
-.projectStats .stat>svg {
+.projectStats .term>svg {
   width: 16px;
   height: 16px;
 }
 
-.projectStats .stat>svg:has([href*=commit]) {
+.projectStats .term>svg:has([href*=commit]) {
   width: 22px;
+  position: relative;
+  bottom: 2px;
 }
 
-.projectStats>span {
-  color: #a8b2d1;
+.projectStats .dot {
   scale: 2;
   position: relative;
-  bottom: 7px;
+  bottom: 8px;
   user-select: none;
+  margin-inline: 12px;
 }
 
 @include m.media(small) {
   .projectStats {
 
-    &>span,
-    .stat>svg {
+    & .dot,
+    .term>svg {
       transition: color .3s .1s ease;
     }
   }
+}
+
+.projectStats .value {
+  margin-inline-start: 5px;
 }
