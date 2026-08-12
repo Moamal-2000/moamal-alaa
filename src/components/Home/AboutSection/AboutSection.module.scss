@@ -1,22 +1,4 @@
-@use "@/styles/mixins" as m;
-
 .aboutSection {
-  display: grid;
-  grid-template-areas:
-    "heading heading heading"
-    "aboutContent aboutContent frame"
-    "techList techList techList";
-  gap: 0 50px;
-}
-
-@include m.media(medium) {
-  .aboutSection {
-    grid-template-areas:
-      "heading"
-      "aboutContent"
-      "techList"
-      "frame";
-    gap: 0;
-    width: 100%;
-  }
+  display: flex;
+  flex-direction: column;
 }

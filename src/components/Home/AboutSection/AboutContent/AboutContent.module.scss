@@ -1,7 +1,7 @@
 @use "@/styles/mixins" as m;
 
 .content {
-  max-width: 640px;
+  max-width: 890px;
   width: 100%;
   text-wrap: pretty;
   grid-area: aboutContent;
@@ -16,8 +16,8 @@
 .content p {
   color: var(--main-text-color);
   line-height: 1.3;
-  font-size: 1.25rem;
-  margin-bottom: 15px;
+  font-size: 1.2rem;
+  margin-bottom: 16px;
 }
 
 @include m.media(small) {
@@ -30,24 +30,5 @@
   .content p {
     font-size: 1rem;
     text-wrap: pretty;
-  }
-}
-
-.content p.firstParagraph {
-  color: #ccd6f6;
-  font-size: 1.35rem;
-  line-height: 1.2;
-  font-weight: 500;
-}
-
-@include m.media(small) {
-  .content p.firstParagraph {
-    font-size: 1.25rem;
-  }
-}
-
-@include m.media(very-small) {
-  .content p.firstParagraph {
-    font-size: 1.05rem;
   }
 }
