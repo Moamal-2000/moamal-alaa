@@ -5,7 +5,6 @@ import { fadeInOnViewMotionProps } from "@/lib/motionConfig";
 import { motion } from "motion/react";
 import AboutContent from "./AboutContent/AboutContent";
 import s from "./AboutSection.module.scss";
-import TechList from "./TechList/TechList";
 
 const motionProps = fadeInOnViewMotionProps({
   visibilityThreshold: 0.4,
@@ -17,7 +16,6 @@ const AboutSection = () => {
     <motion.section className={s.aboutSection} id="about" {...motionProps}>
       <NumberedHeading title="About Me" number="01" />
       <AboutContent />
-      <TechList />
     </motion.section>
   );
 };

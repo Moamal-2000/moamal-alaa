@@ -41,8 +41,6 @@ const AboutContent = () => {
         layout bugs, and collaborating asynchronously with developers around the
         world.
       </p>
-
-      <p>Here are a few technologies I’ve been working with recently:</p>
     </div>
   );
 };
