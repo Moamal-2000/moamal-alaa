@@ -19,7 +19,7 @@ const knowsAbout = [
   "Web Accessibility (WCAG 2.1 AA / A11y)",
   "Technical SEO",
   "Progressive Web Apps (PWA)",
-  "Real-Time Web Applications (Socket.io)",
+  "Real-Time Web Applications (Socket.IO)",
   "Internationalization (i18n)",
   "Cross-Browser Compatibility",
 ];

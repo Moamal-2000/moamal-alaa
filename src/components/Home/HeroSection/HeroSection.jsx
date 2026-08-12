@@ -26,10 +26,9 @@ const HeroSection = () => {
 
         <motion.p className={s.description} {...motionProps()}>
           I’m a Front-End Engineer who builds immersive, high-performance, and
-          fully accessible web experiences. I bridge the gap between creative UI
-          design and flawless technical execution, utilizing Next.js, semantic
-          HTML, and optimized styling to ensure websites are not just engaging,
-          but lightning-fast.
+          accessible web experiences. I combine thoughtful UI design with solid
+          technical execution, using Next.js, semantic HTML, and optimized CSS
+          to create interfaces that are engaging, fast, and reliable.
         </motion.p>
 
         <HeroButtons motionProps={motionProps} />

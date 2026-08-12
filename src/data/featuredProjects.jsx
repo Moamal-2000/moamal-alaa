@@ -94,9 +94,9 @@ export const FEATURED_PROJECTS = [
     title: "Advanced Tic Tac Toe (Full-Stack)",
     description: (
       <p>
-        An <strong className="highlight">Enterprise-standard</strong> remaining
-        of the classic game, engineered for peak performance and strategic
-        depth. Features a custom-built{" "}
+        A <strong className="highlight">full-stack</strong> reimagining of the
+        classic game, engineered for peak performance and strategic depth.
+        Features a custom-built{" "}
         <strong className="highlight">Offline AI</strong> and{" "}
         <strong className="highlight">Real-time Multiplayer</strong> with live
         chat. Includes game-changing mechanics like Freeze, Bomb, and Swap
@@ -107,7 +107,7 @@ export const FEATURED_PROJECTS = [
     ),
     repoUrl: "https://github.com/Moamal-2000/tic-tac-toe",
     previewImg: "/images/advanced-tic-tac-toe.webp",
-    technologies: ["Next.js", "Socket.io", "Zustand", "Sass", "PWA"],
+    technologies: ["Next.js", "Socket.IO", "Zustand", "Sass", "PWA"],
     id: 3,
   },
 ];

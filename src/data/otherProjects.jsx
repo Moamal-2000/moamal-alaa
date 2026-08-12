@@ -59,7 +59,7 @@ export const OTHER_PROJECTS_DATA = [
   },
   {
     title: "Resume Builder",
-    description: `Currently on temporary development pause, with a beta version available for preview.,`,
+    description: `Currently on temporary development pause, with a beta version available for preview.`,
     year: "2025",
     liveUrl: "https://resume-builder-moamal.vercel.app",
     repoUrl: "https://github.com/Moamal-2000/resume-builder",
