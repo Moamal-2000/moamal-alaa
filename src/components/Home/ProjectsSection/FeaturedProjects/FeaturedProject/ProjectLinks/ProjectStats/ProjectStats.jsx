@@ -5,7 +5,7 @@ const ProjectStats = ({ stars = 0, forks = 0, commitCount = 0 }) => {
   const stats = getStats({ stars, forks, commitCount });
 
   return (
-    <dl className={s.projectStats}>
+    <dl className={s.projectStats} data-type="project-stats">
       {stats.map(({ value, icon, label }, index) => (
         <Fragment key={icon}>
           <dt className={s.term}>

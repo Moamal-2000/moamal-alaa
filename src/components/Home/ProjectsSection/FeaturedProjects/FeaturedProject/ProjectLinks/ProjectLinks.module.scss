@@ -1,3 +1,5 @@
+@use "@/Styles/mixins" as m;
+
 .projectLinks {
   display: flex;
   align-items: center;
@@ -46,6 +48,12 @@
     color: var(--green) !important;
     outline-color: var(--green) !important;
     outline-offset: -2px !important;
+  }
+}
+
+@include m.media(small) {
+  .projectLinks a {
+    transition: color .3s .1s ease, border-color .3s .1s ease;
   }
 }
 

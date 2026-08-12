@@ -33,12 +33,8 @@
 }
 
 @include m.media(small) {
-  .projectStats {
-
-    & .dot,
-    .term>svg {
-      transition: color .3s .1s ease;
-    }
+  .projectStats * {
+    transition: color .3s .1s ease;
   }
 }
 
