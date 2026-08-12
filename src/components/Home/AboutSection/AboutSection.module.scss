@@ -1,4 +1,34 @@
+@use "@/styles/mixins" as m;
+
 .aboutSection {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-areas:
+    "heading heading heading"
+    "aboutContent aboutContent frame"
+    "aboutContent aboutContent frame";
+  justify-content: space-between;
+  gap: 0 50px;
+}
+
+@include m.media(large) {
+  .aboutSection {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@include m.media(medium) {
+  .aboutSection {
+    grid-template-areas:
+      "heading"
+      "aboutContent"
+      "frame";
+    gap: 0;
+    width: 100%;
+  }
+}
+
+.frameImage {
+  grid-area: frame;
+  align-self: center;
 }
