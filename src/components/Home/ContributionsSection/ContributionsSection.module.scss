@@ -17,8 +17,14 @@
 
 @include m.media(medium) {
   .section .wrapper {
-    min-height: 600px;
+    min-height: 500px;
     max-width: 100%;
     flex-direction: column;
+  }
+}
+
+@include m.media(small) {
+  .section .wrapper {
+    min-height: 600px;
   }
 }
