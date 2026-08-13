@@ -8,7 +8,8 @@ const AboutContent = () => {
         the web. I’m a frontend engineer with a focus on crafting clean,
         accessible, and high-performance user interfaces. I take pride in the
         little architectural details that make a web experience feel smooth,
-        from light bundle sizes to pixel-perfect layouts that load instantly.
+        from keeping bundle sizes lean to crafting pixel-perfect layouts that
+        feel fast and responsive.
       </p>
 
       <p>
@@ -17,7 +18,7 @@ const AboutContent = () => {
         <strong className="highlight">Call of Duty 2</strong>. Trying to bring
         my ideas to life forced me to learn GSC script. Wrestling with logic for
         the first time was challenging, but that deep dive into problem-solving
-        sparked my passion for building software and led me straight into
+        sparked my passion for building software and eventually led me to
         frontend engineering.
       </p>
 
