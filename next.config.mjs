@@ -4,7 +4,11 @@ const nextConfig = {
   devIndicators: false,
   reactCompiler: true,
   productionBrowserSourceMaps: true,
-  images: { qualities: [100], formats: ["image/avif", "image/webp"] },
+  images: {
+    qualities: [100],
+    formats: ["image/avif", "image/webp"],
+    unoptimized: true,
+  },
 
   async redirects() {
     return [...getOldDomainRedirects()];
