@@ -43,7 +43,7 @@ export const FEATURED_PROJECTS = [
   },
 
   {
-    title: "Jumpers Heaven Stats",
+    title: "Cod Jumping Stats",
     description: (
       <>
         <p>
