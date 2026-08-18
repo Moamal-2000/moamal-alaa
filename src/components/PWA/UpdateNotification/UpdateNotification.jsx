@@ -1,6 +1,6 @@
 "use client";
 
-import { IS_PRODUCTION } from "@/data/constants";
+import { IS_PRODUCTION } from "@/constants/constants";
 import { refreshPage } from "@/lib/utils";
 import { useEffect, useRef, useState } from "react";
 import s from "./UpdateNotification.module.scss";

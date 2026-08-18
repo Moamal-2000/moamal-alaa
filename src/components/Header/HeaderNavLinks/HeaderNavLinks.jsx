@@ -1,6 +1,6 @@
 "use client";
 
-import { NAV_LINKS } from "@/data/staticData";
+import { NAV_LINKS } from "@/constants/staticData";
 import { navLinkMotionProps } from "@/lib/motionConfig";
 import { motion } from "motion/react";
 import s from "./HeaderNavLinks.module.scss";

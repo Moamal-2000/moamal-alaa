@@ -1,5 +1,5 @@
 import InstallPWAButton from "@/components/PWA/InstallPWAButton";
-import { NAV_LINKS } from "@/data/staticData";
+import { NAV_LINKS } from "@/constants/staticData";
 import { navLinkMotionProps } from "@/lib/motionConfig";
 import HeaderNavLinks from "../HeaderNavLinks/HeaderNavLinks";
 import s from "./HeaderButtons.module.scss";

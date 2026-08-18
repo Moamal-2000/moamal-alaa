@@ -1,4 +1,4 @@
-export const contributionBlacklist = [
+export const CONTRIBUTION_BLACKLIST = [
   "Amrr-Maherr/TourEg",
   "Ahmedr6/router-app",
   "YoussefDybala/Leon-Project",
@@ -12,7 +12,7 @@ export const contributionBlacklist = [
   "Ahmed-C0der/Travel-Agency",
 ];
 
-export const contributionsDescriptions = [
+export const CONTRIBUTIONS_DESCRIPTIONS = [
   {
     description: `Improved performance and accessibility by self-hosting fonts, adding network prefetching, and moving animations to the GPU. Also fixed production issues and refined mobile layouts and interactions.`,
     id: "BraveOPotato/FckSignups",

@@ -1,4 +1,4 @@
-import { MEDIUM_SCREEN_WIDTH } from "@/data/constants";
+import { MEDIUM_SCREEN_WIDTH } from "@/constants/constants";
 import useGetResizeWindow from "@/hooks/useGetResizeWindow";
 import useGlobalStore from "@/stores/global/useGlobalStore";
 import { useEffect, useState } from "react";

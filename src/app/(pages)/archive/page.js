@@ -1,6 +1,6 @@
 import ArchiveIntroduction from "@/components/Archive/ArchiveIntroduction/ArchiveIntroduction";
 import ProjectsTable from "@/components/Archive/ProjectsTable/ProjectsTable";
-import { getOpenGraphMetadata } from "@/data/metadata";
+import { getOpenGraphMetadata } from "@/constants/metadata";
 import s from "./Archive.module.scss";
 
 export function generateMetadata() {

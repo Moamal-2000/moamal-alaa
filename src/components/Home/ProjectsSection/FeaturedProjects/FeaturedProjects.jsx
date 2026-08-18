@@ -1,8 +1,8 @@
 import {
+  COD_JUMPING_STATS_PROJECT,
   COD_JUMPING_STATS_REPO_URL,
-  codJumpingStatsProject,
   FEATURED_PROJECTS,
-} from "@/data/featuredProjects";
+} from "@/constants/featuredProjects";
 import FeaturedProject from "./FeaturedProject/FeaturedProject";
 import s from "./FeaturedProjects.module.scss";
 
@@ -14,7 +14,7 @@ const FeaturedProjects = ({ featuredProjects }) => {
           projectData.repoUrl === COD_JUMPING_STATS_REPO_URL;
 
         const fetchedData = isPrivateRepo
-          ? codJumpingStatsProject
+          ? COD_JUMPING_STATS_PROJECT
           : featuredProjects[index];
 
         return (

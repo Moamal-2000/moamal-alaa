@@ -1,6 +1,6 @@
 "use client";
 
-import { OTHER_PROJECTS_DATA } from "@/data/otherProjects";
+import { OTHER_PROJECTS_DATA } from "@/constants/otherProjects";
 import { fadeInOnViewMotionProps } from "@/lib/motionConfig";
 import ProjectRow from "./ProjectRow/ProjectRow";
 

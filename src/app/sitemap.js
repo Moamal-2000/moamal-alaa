@@ -1,4 +1,4 @@
-import { BASE_URL } from "@/data/metadata";
+import { BASE_URL } from "@/constants/metadata";
 import { readdirSync } from "fs";
 import path from "path";
 

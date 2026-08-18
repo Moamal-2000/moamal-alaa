@@ -1,7 +1,10 @@
 export const BASE_URL = process.env.BASE_URL;
-const title = "Moamal Alaa | Front-End Developer";
 
-const keywords = [
+const SITE_TITLE = "Moamal Alaa | Front-End Developer";
+const SITE_DESCRIPTION =
+  "Moamal Alaa - Front-End Developer creating responsive, accessible, and high-performance websites with React & Next.js. Focused on clean UI, SEO, and great user experiences.";
+
+const KEYWORDS = [
   "Moamal Alaa",
   "Moamal Alaa CV",
   "Moamal Alaa Resume",
@@ -16,13 +19,10 @@ const keywords = [
   "Portfolio",
 ];
 
-const description =
-  "Moamal Alaa - Front-End Developer creating responsive, accessible, and high-performance websites with React & Next.js. Focused on clean UI, SEO, and great user experiences.";
-
 const GLOBAL_METADATA = {
-  title,
-  description,
-  keywords,
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
+  keywords: KEYWORDS,
   metadataBase: new URL(BASE_URL),
   alternates: { canonical: "/" },
 };
@@ -63,8 +63,8 @@ export function getOpenGraphMetadata(pagePath = "") {
 
   return {
     openGraph: {
-      title,
-      description,
+      title: SITE_TITLE,
+      description: SITE_DESCRIPTION,
       url,
       type: "website",
       locale: "en_US",

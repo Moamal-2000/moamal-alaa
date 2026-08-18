@@ -4,7 +4,7 @@ import ContributionsSection from "@/components/Home/ContributionsSection/Contrib
 import HeroSection from "@/components/Home/HeroSection/HeroSection";
 import OtherProjectsSection from "@/components/Home/OtherProjectsSection/OtherProjectsSection";
 import ProjectsSection from "@/components/Home/ProjectsSection/ProjectsSection";
-import { getOpenGraphMetadata } from "@/data/metadata";
+import { getOpenGraphMetadata } from "@/constants/metadata";
 import { fetchContributions } from "@/lib/contributions";
 import { fetchFeaturedProjects } from "@/lib/featuredProjectsApi";
 

@@ -1,4 +1,4 @@
-import { OTHER_PROJECTS_DATA } from "@/data/otherProjects";
+import { OTHER_PROJECTS_DATA } from "@/constants/otherProjects";
 import s from "./OtherProjects.module.scss";
 import ProjectCard from "./ProjectCard/ProjectCard";
 

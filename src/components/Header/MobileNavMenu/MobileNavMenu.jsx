@@ -1,6 +1,6 @@
 "use client";
 
-import { NAV_LINKS } from "@/data/staticData";
+import { NAV_LINKS } from "@/constants/staticData";
 import { isSmallScreen } from "@/lib/utils";
 import useGlobalStore from "@/stores/global/useGlobalStore";
 import { usePathname, useRouter } from "next/navigation";
