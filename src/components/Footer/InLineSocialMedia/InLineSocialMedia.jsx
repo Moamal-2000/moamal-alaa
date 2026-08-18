@@ -1,4 +1,4 @@
-import { SOCIAL_MEDIA } from "@/data/staticData";
+import { SOCIAL_MEDIA } from "@/constants/staticData";
 import s from "./InLineSocialMedia.module.scss";
 
 const InLineSocialMedia = () => {

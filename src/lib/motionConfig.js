@@ -1,4 +1,4 @@
-import { NAV_LINKS } from "@/data/staticData";
+import { NAV_LINKS } from "@/constants/staticData";
 
 export function heroMotionConfig() {
   const initial = { opacity: 0, y: 30 };

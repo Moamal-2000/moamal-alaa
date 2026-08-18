@@ -1,4 +1,4 @@
-const knowsAbout = [
+const KNOWS_ABOUT = [
   // Core Technologies & Frameworks
   "Front-End Engineering",
   "React.js",
@@ -24,7 +24,7 @@ const knowsAbout = [
   "Cross-Browser Compatibility",
 ];
 
-export const personJsonLd = {
+export const PERSON_JSON_LD = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Moamal Alaa",
@@ -41,7 +41,7 @@ export const personJsonLd = {
     "https://github.com/Moamal-2000",
     "https://www.linkedin.com/in/moamal-alaa",
   ],
-  knowsAbout,
+  knowsAbout: KNOWS_ABOUT,
   description:
     "Front-End Engineer & Open-Source Contributor obsessed with web performance, clean code, WCAG accessibility, and perfect Lighthouse scores.",
 };

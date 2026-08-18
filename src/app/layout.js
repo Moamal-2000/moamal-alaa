@@ -1,7 +1,7 @@
 import Body from "@/components/Shared/Body";
-import { IS_PRODUCTION } from "@/data/constants";
-import { personJsonLd } from "@/data/jsonLd";
-import { METADATA } from "@/data/metadata";
+import { IS_PRODUCTION } from "@/constants/constants";
+import { PERSON_JSON_LD } from "@/constants/jsonLd";
+import { METADATA } from "@/constants/metadata";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "../styles/globals.scss";
@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
           <link rel="dns-prefetch" href="https://api.github.com" />
           <script
             type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(PERSON_JSON_LD) }}
           />
         </head>
         <Body>{children}</Body>

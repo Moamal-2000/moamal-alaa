@@ -1,6 +1,6 @@
 "use client";
 
-import { DEBOUNCE_DELAY, SCROLL_THRESHOLD } from "@/data/constants";
+import { DEBOUNCE_DELAY, SCROLL_THRESHOLD } from "@/constants/constants";
 import useScrollDirection from "@/hooks/useScrollDirection";
 import { getHeaderClasses } from "@/lib/classNames";
 import { fadeInOnViewMotionProps } from "@/lib/motionConfig";

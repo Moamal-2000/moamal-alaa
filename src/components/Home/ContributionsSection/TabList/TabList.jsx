@@ -1,4 +1,4 @@
-import { MEDIUM_SCREEN_WIDTH } from "@/data/constants";
+import { MEDIUM_SCREEN_WIDTH } from "@/constants/constants";
 import { useKeyListeners } from "@/hooks/useKeyListeners";
 import { getRepoFullName } from "@/lib/contributions";
 import { checkMediaQuery, getNextTabIndex, getPrevTabIndex } from "@/lib/utils";

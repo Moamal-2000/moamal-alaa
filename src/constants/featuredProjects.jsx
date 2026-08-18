@@ -112,7 +112,7 @@ export const FEATURED_PROJECTS = [
   },
 ];
 
-export const codJumpingStatsProject = {
+export const COD_JUMPING_STATS_PROJECT = {
   repoUrl: COD_JUMPING_STATS_REPO_URL,
   liveUrl: "https://cjstats.vercel.app",
   stars: 6,

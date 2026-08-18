@@ -1,13 +1,13 @@
 import {
-  contributionBlacklist,
-  contributionsDescriptions,
-} from "@/data/contributions";
+  CONTRIBUTION_BLACKLIST,
+  CONTRIBUTIONS_DESCRIPTIONS,
+} from "@/constants/contributions";
 import { contributionsQuery } from "@/graphql/contributionsQuery";
 
 export function filterContributions(contributions) {
   return contributions.filter((contribution) => {
     const isMyRepo = contribution.url.includes("Moamal-2000");
-    const isBlacklisted = contributionBlacklist.includes(
+    const isBlacklisted = CONTRIBUTION_BLACKLIST.includes(
       getRepoFullName(contribution),
     );
 
@@ -33,7 +33,7 @@ export function enrichRepos(contributions) {
     const repoClone = { ...repo };
     const repoName = getRepoFullName(repoClone);
 
-    const requiredData = contributionsDescriptions.find(
+    const requiredData = CONTRIBUTIONS_DESCRIPTIONS.find(
       (item) => item.id === repoName,
     );
 
