@@ -7,11 +7,11 @@ const nextConfig = {
   images: {
     qualities: [100],
     formats: ["image/avif", "image/webp"],
-    unoptimized: true,
+    unoptimized: false,
   },
 
   async redirects() {
-    return [...getOldDomainRedirects()];
+    return getOldDomainRedirects();
   },
 };
 
