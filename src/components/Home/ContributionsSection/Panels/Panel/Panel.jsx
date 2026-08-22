@@ -8,7 +8,8 @@ import PullRequests from "./PullRequests/PullRequests";
 const Panel = ({ contribution, index }) => {
   const repoFullName = getRepoFullName(contribution);
   const activeTabOrder = useGlobalStore((s) => s.activeTabOrder);
-  const { stars, forks, commitCount } = getProjectStats(contribution);
+  const { stars, forks, commitCount, pullRequests } =
+    getProjectStats(contribution);
 
   return (
     <div
@@ -29,7 +30,12 @@ const Panel = ({ contribution, index }) => {
         >
           {repoFullName.toLocaleLowerCase()}
         </Link>
-        <ProjectStats stars={stars} forks={forks} commitCount={commitCount} />
+        <ProjectStats
+          stars={stars}
+          forks={forks}
+          commitCount={commitCount}
+          pullRequests={pullRequests}
+        />
       </div>
 
       <p className={s.description}>{contribution.repository.description}</p>
@@ -52,5 +58,6 @@ function getProjectStats(contribution = {}) {
     commitCount:
       contribution?.repository?.defaultBranchRef?.target?.history?.totalCount ??
       "?",
+    pullRequests: contribution?.prs.length,
   };
 }
