@@ -5,18 +5,41 @@ const SITE_DESCRIPTION =
   "Moamal Alaa - Front-End Developer creating responsive, accessible, and high-performance websites with React & Next.js. Focused on clean UI, SEO, and great user experiences.";
 
 const KEYWORDS = [
+  // Personal Brand
   "Moamal Alaa",
   "Moamal Alaa CV",
   "Moamal Alaa Resume",
+  "Moamal Alaa Portfolio",
+  "مؤمل علاء",
+
+  // Core Roles
   "Front-End Developer",
   "React Developer",
   "Next.js Developer",
-  "React developer portfolio",
   "Freelance Front-End Developer",
+  "Frontend Engineer",
+
+  // Specializations & Performance
+  "PWA Developer",
+  "Web Performance Optimization",
+  "Core Web Vitals Specialist",
+  "WCAG Accessibility Developer",
+  "SCSS Modules",
+  "Zustand",
+  "Redux Toolkit",
+
+  // Location & Market
   "Web Developer Iraq",
+  "Front End Developer Baghdad",
+  "Front End Developer Middle East",
+  "مطور واجهات امامية",
+  "مطور رياكت",
+
+  // Intent & Services
+  "Hire React Developer",
+  "Hire NextJS Developer",
+  "React developer portfolio",
   "Responsive Web Design",
-  "Modern UI",
-  "Portfolio",
 ];
 
 const GLOBAL_METADATA = {
