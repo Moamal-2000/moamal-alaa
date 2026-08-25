@@ -83,4 +83,28 @@ export function getOpenGraphMetadata(pagePath = "") {
   };
 }
 
-export const METADATA = { ...GLOBAL_METADATA, ...PWA_METADATA };
+export const METADATA = {
+  ...GLOBAL_METADATA,
+  ...PWA_METADATA,
+  icons: [
+    {
+      rel: "icon",
+      type: "image/x-icon",
+      url: "/images/favicon/favicon.ico",
+      sizes: "any",
+    },
+    {
+      rel: "icon",
+      type: "image/png",
+      url: "/images/favicon/64x64.png",
+      sizes: "64x64",
+    },
+  ],
+  apple: [
+    {
+      url: "/images/favicon/180x180.png",
+      sizes: "180x180",
+      type: "image/png",
+    },
+  ],
+};
