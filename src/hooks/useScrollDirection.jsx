@@ -1,6 +1,6 @@
 "use client";
 
-import { isServer } from "@/lib/utils";
+import { IS_SERVER } from "@/constants/constants";
 import { useEffect, useRef, useState } from "react";
 
 const useScrollDirection = ({
@@ -13,7 +13,7 @@ const useScrollDirection = ({
   const ticking = useRef(false);
 
   useEffect(() => {
-    if (isServer || off) {
+    if (IS_SERVER || off) {
       setScrollDir(initialDir);
       return;
     }

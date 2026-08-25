@@ -1,16 +1,17 @@
-export const isServer = typeof window === "undefined";
+import { IS_SERVER } from "@/constants/constants";
+
+const mobilesType = /Mobi|Android|iPhone|iPad|iPod/i;
 
 export function isMobile() {
   if (typeof navigator === "undefined") {
     return;
   }
 
-  const mobilesType = /Mobi|Android|iPhone|iPad|iPod/i;
   return mobilesType.test(navigator.userAgent);
 }
 
 export function checkMediaQuery(MaxWidth) {
-  if (isServer) {
+  if (IS_SERVER) {
     return;
   }
 
@@ -43,14 +44,14 @@ export function capitalizeFirstLetter(str) {
 }
 
 export function isSmallScreen() {
-  if (isServer) {
+  if (IS_SERVER) {
     return false;
   }
   return matchMedia("(max-width: 768px)").matches;
 }
 
 export function scrollToTop() {
-  if (isServer) {
+  if (IS_SERVER) {
     return;
   }
   window.scrollTo({ top: 0, behavior: "smooth" });

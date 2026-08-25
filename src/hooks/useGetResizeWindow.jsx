@@ -1,10 +1,10 @@
 "use client";
 
-import { isServer } from "@/lib/utils";
+import { IS_SERVER } from "@/constants/constants";
 import { useEffect, useState } from "react";
 
 const useGetResizeWindow = ({ debounceDelay = 300 }) => {
-  if (isServer) {
+  if (IS_SERVER) {
     return { width: null, height: null };
   }
 
