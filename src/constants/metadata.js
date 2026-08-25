@@ -1,6 +1,6 @@
 export const BASE_URL = process.env.BASE_URL;
 
-const SITE_TITLE = "Moamal Alaa | Front-End Developer";
+const SITE_TITLE = "Moamal Alaa | Front-End Engineer";
 const SITE_DESCRIPTION =
   "Moamal Alaa - Front-End Engineer specializing in high-performance, accessible (WCAG), and responsive web applications using React, Next.js, and modern CSS architecture.";
 
@@ -97,7 +97,7 @@ export function getOpenGraphMetadata(pagePath = "") {
         {
           url: `${BASE_URL}/og-image.webp`,
           type: "image/webp",
-          alt: "Moamal Alaa Front-End Engineer Portfolio OG Image",
+          alt: "Moamal Alaa Front-End Engineer Portfolio",
           width: 1200,
           height: 634,
         },
