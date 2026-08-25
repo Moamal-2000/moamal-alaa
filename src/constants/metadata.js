@@ -2,7 +2,7 @@ export const BASE_URL = process.env.BASE_URL;
 
 const SITE_TITLE = "Moamal Alaa | Front-End Developer";
 const SITE_DESCRIPTION =
-  "Moamal Alaa - Front-End Developer creating responsive, accessible, and high-performance websites with React & Next.js. Focused on clean UI, SEO, and great user experiences.";
+  "Moamal Alaa - Front-End Engineer specializing in high-performance, accessible (WCAG), and responsive web applications using React, Next.js, and modern CSS architecture.";
 
 const KEYWORDS = [
   // Personal Brand
