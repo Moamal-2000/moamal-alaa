@@ -19,8 +19,6 @@ export default function RootLayout({ children }) {
     <>
       <html lang="en" data-scroll-behavior="smooth">
         <head>
-          <link rel="preconnect" href="https://api.github.com" />
-          <link rel="dns-prefetch" href="https://api.github.com" />
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(PERSON_JSON_LD) }}
