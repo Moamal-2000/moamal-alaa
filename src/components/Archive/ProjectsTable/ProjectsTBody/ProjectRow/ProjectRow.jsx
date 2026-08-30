@@ -1,5 +1,5 @@
 import IconLink from "@/components/Shared/Buttons/IconLink/IconLink";
-import { motion } from "motion/react";
+import { m } from "motion/react";
 import s from "./ProjectRow.module.scss";
 
 const ProjectRow = ({
@@ -7,7 +7,7 @@ const ProjectRow = ({
   motionProps,
 }) => {
   return (
-    <motion.tr key={id} {...motionProps} className={s.projectRow}>
+    <m.tr key={id} {...motionProps} className={s.projectRow}>
       <td className={s.year}>{year}</td>
       <td className={s.title}>{title}</td>
 
@@ -36,7 +36,7 @@ const ProjectRow = ({
           ariaLabel={`View ${title} source code on GitHub`}
         />
       </td>
-    </motion.tr>
+    </m.tr>
   );
 };
 export default ProjectRow;

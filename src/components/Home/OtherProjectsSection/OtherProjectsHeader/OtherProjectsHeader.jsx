@@ -1,6 +1,6 @@
 import { OTHER_PROJECTS_DATA } from "@/constants/otherProjects";
 import { fadeInOnViewMotionProps } from "@/lib/motionConfig";
-import { motion } from "motion/react";
+import { m } from "motion/react";
 import Link from "next/link";
 import s from "./OtherProjectsHeader.module.scss";
 
@@ -8,7 +8,7 @@ const motionProps = fadeInOnViewMotionProps();
 
 const OtherProjectsHeader = () => {
   return (
-    <motion.header className={s.otherProjectsHeader} {...motionProps}>
+    <m.header className={s.otherProjectsHeader} {...motionProps}>
       <h2 className={s.title}>Other Noteworthy Projects</h2>
 
       {OTHER_PROJECTS_DATA.length > 6 && (
@@ -16,7 +16,7 @@ const OtherProjectsHeader = () => {
           view the archive
         </Link>
       )}
-    </motion.header>
+    </m.header>
   );
 };
 

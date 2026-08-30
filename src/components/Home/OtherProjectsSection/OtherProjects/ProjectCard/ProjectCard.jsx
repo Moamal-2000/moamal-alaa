@@ -1,12 +1,12 @@
 import { fadeInOnViewMotionProps } from "@/lib/motionConfig";
-import { motion } from "motion/react";
+import { m } from "motion/react";
 import s from "./ProjectCard.module.scss";
 import ProjectFooter from "./ProjectFooter/ProjectFooter";
 import ProjectHeader from "./ProjectHeader/ProjectHeader";
 
 const ProjectCard = ({ data, index }) => {
   return (
-    <motion.article
+    <m.article
       className={s.projectCard}
       {...fadeInOnViewMotionProps({
         delay: index * 0.1,
@@ -15,7 +15,7 @@ const ProjectCard = ({ data, index }) => {
     >
       <ProjectHeader data={data} />
       <ProjectFooter technologies={data.technologies} />
-    </motion.article>
+    </m.article>
   );
 };
 

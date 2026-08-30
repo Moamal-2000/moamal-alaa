@@ -2,7 +2,7 @@
 
 import NumberedHeading from "@/components/Shared/NumberedHeading/NumberedHeading";
 import { fadeInOnViewMotionProps } from "@/lib/motionConfig";
-import { motion } from "motion/react";
+import { m } from "motion/react";
 import Image from "next/image";
 import AboutContent from "./AboutContent/AboutContent";
 import s from "./AboutSection.module.scss";
@@ -17,7 +17,7 @@ const FRAME_SIZE = 300;
 
 const AboutSection = () => {
   return (
-    <motion.section className={s.aboutSection} id="about" {...motionProps}>
+    <m.section className={s.aboutSection} id="about" {...motionProps}>
       <NumberedHeading title="About Me" number="01" />
       <AboutContent />
       <ImageFrame
@@ -34,7 +34,7 @@ const AboutSection = () => {
           fetchPriority="low"
         />
       </ImageFrame>
-    </motion.section>
+    </m.section>
   );
 };
 

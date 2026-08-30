@@ -1,7 +1,7 @@
 "use client";
 
 import { fadeInOnViewMotionProps } from "@/lib/motionConfig";
-import { motion } from "motion/react";
+import { m } from "motion/react";
 import s from "./FeaturedProject.module.scss";
 import PreviewImage from "./PreviewImage/PreviewImage";
 import ProjectHeader from "./ProjectHeader/ProjectHeader";
@@ -21,7 +21,7 @@ const FeaturedProject = ({ data, fetchedData, shouldReverse }) => {
   const { stars, forks, commitCount } = fetchedData;
 
   return (
-    <motion.div
+    <m.div
       className={s.featuredProject}
       dir={shouldReverse ? "rtl" : "ltr"}
       {...motionProps}
@@ -45,7 +45,7 @@ const FeaturedProject = ({ data, fetchedData, shouldReverse }) => {
         title={title}
         loading="lazy"
       />
-    </motion.div>
+    </m.div>
   );
 };
 
