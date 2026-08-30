@@ -13,17 +13,23 @@ const motionProps = fadeInOnViewMotionProps({
   delay: 0.2,
 });
 
+const FRAME_SIZE = 300;
+
 const AboutSection = () => {
   return (
     <motion.section className={s.aboutSection} id="about" {...motionProps}>
       <NumberedHeading title="About Me" number="01" />
       <AboutContent />
-      <ImageFrame className={s.frameImage} width={300} height={300}>
+      <ImageFrame
+        className={s.frameImage}
+        width={FRAME_SIZE}
+        height={FRAME_SIZE}
+      >
         <Image
           src="/images/me.webp"
           alt="Professional headshot of a young man with short, slightly spiked hair, wearing black rectangular eyeglasses and a muted blue-gray t-shirt, smiling warmly against a neutral light-gray background."
-          width={300}
-          height={300}
+          width={FRAME_SIZE}
+          height={FRAME_SIZE}
           loading="lazy"
           fetchPriority="low"
         />
