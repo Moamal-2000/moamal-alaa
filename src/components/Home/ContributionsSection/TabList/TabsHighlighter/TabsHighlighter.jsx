@@ -38,16 +38,16 @@ function getHighlightStyles({
   tabsHighlightLeftPosition,
 }) {
   const isMediumScreen = windowWidth <= MEDIUM_SCREEN_WIDTH;
-  const styles = { translate: `0 calc(${activeTabOrder} * var(--tab-height))` };
 
   if (!isMediumScreen) {
-    return styles;
+    return {
+      transform: `translateY(calc(${activeTabOrder} * var(--tab-height)))`,
+    };
   }
 
-  if (isMediumScreen) {
-    styles.translate = `${tabsHighlightLeftPosition}px 0`;
-    styles.width = `${activeTabWidth}px`;
-  }
+  const scaleRatio = activeTabWidth / 100;
 
-  return styles;
+  return {
+    transform: `translateX(${tabsHighlightLeftPosition}px) scaleX(${scaleRatio})`,
+  };
 }

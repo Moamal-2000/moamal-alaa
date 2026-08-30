@@ -9,19 +9,19 @@
   height: var(--tab-height);
   border-radius: 4px;
   background: var(--green);
-  translate: 0 calc(2 * var(--tab-height));
-  transition: translate .25s .1s var(--ease-main);
+  transform: translate(0 calc(2 * var(--tab-height)));
+  transition: transform .25s .1s var(--ease-main);
 }
 
 @include m.media(medium) {
   .highlight {
     height: 2px;
+    width: 100px;
     top: unset;
     bottom: 0;
-    translate: calc(2 * var(--tab-height)) 0;
-    will-change: width;
-    transition:
-      translate .25s .1s var(--ease-main),
-      width .25s .1s var(--ease-main);
+    left: 0;
+    transform-origin: left center;
+    will-change: transform;
+    transition: transform .25s .1s var(--ease-main);
   }
 }
