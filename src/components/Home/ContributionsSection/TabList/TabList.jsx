@@ -3,7 +3,7 @@ import { useKeyListeners } from "@/hooks/useKeyListeners";
 import { getRepoFullName } from "@/lib/contributions";
 import { checkMediaQuery, getNextTabIndex, getPrevTabIndex } from "@/lib/utils";
 import useGlobalStore from "@/stores/global/useGlobalStore";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import TabButton from "./TabButton/TabButton";
 import s from "./TabList.module.scss";
 import TabsHighlighter from "./TabsHighlighter/TabsHighlighter";
@@ -12,6 +12,7 @@ const isMediumScreen = checkMediaQuery(MEDIUM_SCREEN_WIDTH);
 
 const TabList = ({ contribItems }) => {
   const { updateGlobalState, focusedTabOrder } = useGlobalStore();
+  const [mounted, setMounted] = useState(false);
 
   const tabsRef = useRef([]);
   const tabsWrapperRef = useRef(null);
@@ -35,6 +36,10 @@ const TabList = ({ contribItems }) => {
 
   // set first tab width (for highlighter animation)
   useEffect(() => {
+    if (!mounted) {
+      setMounted(true);
+    }
+
     const firstTabWidth =
       tabsRef.current?.[0]?.getBoundingClientRect?.()?.width || 0;
     updateGlobalState({ activeTabWidth: firstTabWidth });
@@ -44,7 +49,7 @@ const TabList = ({ contribItems }) => {
     <div
       className={s.tabList}
       role="tablist"
-      aria-orientation={isMediumScreen ? "horizontal" : "vertical"}
+      aria-orientation={mounted && isMediumScreen ? "horizontal" : "vertical"}
       ref={tabsWrapperRef}
     >
       {contribItems.map((contribution, index) => {
