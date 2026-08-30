@@ -19,6 +19,20 @@ export default function RootLayout({ children }) {
     <>
       <html lang="en" data-scroll-behavior="smooth">
         <head>
+          <link
+            rel="preload"
+            href="/fonts/Calibre/Calibre-Regular.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/fonts/Calibre/Calibre-Semibold.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(PERSON_JSON_LD) }}
