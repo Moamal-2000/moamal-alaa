@@ -1,6 +1,5 @@
 "use client";
 
-import { lockPortraitOrientation } from "@/lib/utils";
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 
@@ -18,9 +17,6 @@ const InstallPWAButton = ({ className, motionProps = {} }) => {
     }
 
     window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
-
-    // Lock the screen orientation to portrait ( fallback )
-    lockPortraitOrientation();
 
     return () => {
       window.removeEventListener(
