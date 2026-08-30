@@ -7,7 +7,7 @@
 
 .notFoundPage>h1 {
   color: var(--green);
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-main);
   font-size: clamp(6.25rem, 25vw, 12.5rem);
   line-height: 1.1;
 }
@@ -28,7 +28,7 @@
   border-radius: 4px;
   padding: 16px 28px;
   font-size: .875rem;
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-main);
   line-height: 1;
   text-decoration: none;
   margin-top: 40px;

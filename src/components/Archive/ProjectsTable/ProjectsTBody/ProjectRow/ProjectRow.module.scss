@@ -18,7 +18,7 @@
 .projectRow td.year {
   padding-inline: 20px;
   color: var(--green);
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-main);
   font-size: 1rem;
   font-weight: 400;
 }
@@ -59,7 +59,7 @@
 
 .projectRow td.tech {
   font-size: .75rem;
-  font-family: var(--font-mono);
+  font-family: var(--font-mono-main);
   line-height: 1.5;
 }
 

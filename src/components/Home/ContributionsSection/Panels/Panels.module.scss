@@ -1,6 +1,7 @@
 @use "@/styles/mixins" as m;
 
 .panels {
+  font-family: var(--font-calibre-main);
   position: relative;
   width: 100%;
   min-height: 340px;

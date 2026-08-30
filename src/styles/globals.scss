@@ -1,7 +1,6 @@
 @use "./colors";
 @use "./variables";
 @use "./mixins" as m;
-@import "./fonts.css";
 
 * {
   box-sizing: border-box;
@@ -32,7 +31,7 @@ html {
 body {
   background: var(--website-bg);
   color: var(--main-text-color);
-  font-family: var(--font-calibre);
+  font-family: var(--font-calibre-main);
   max-width: var(--website-width);
   width: 100%;
   margin: 0 auto;
