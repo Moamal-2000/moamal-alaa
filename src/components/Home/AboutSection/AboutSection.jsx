@@ -24,7 +24,6 @@ const AboutSection = () => {
           alt="Professional headshot of a young man with short, slightly spiked hair, wearing black rectangular eyeglasses and a muted blue-gray t-shirt, smiling warmly against a neutral light-gray background."
           width={300}
           height={300}
-          quality={100}
           loading="lazy"
           fetchPriority="low"
         />
