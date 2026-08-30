@@ -7,11 +7,11 @@ import s from "./TabsHighlighter.module.scss";
 const TabsHighlighter = () => {
   const { activeTabOrder, activeTabWidth, tabsHighlightLeftPosition } =
     useGlobalStore();
-  const [isMounted, setIsMounted] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   const { width: windowWidth } = useGetResizeWindow({ debounceDelay: 200 });
 
-  const highlightStyles = isMounted
+  const highlightStyles = mounted
     ? getHighlightStyles({
         windowWidth,
         activeTabOrder,
@@ -21,7 +21,7 @@ const TabsHighlighter = () => {
     : {};
 
   useEffect(() => {
-    setIsMounted(true);
+    setMounted(true);
   }, []);
 
   return (
