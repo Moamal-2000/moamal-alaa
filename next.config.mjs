@@ -11,10 +11,6 @@ const nextConfig = {
     unoptimized: false,
   },
 
-  experimental: {
-    optimizeCss: true,
-  },
-
   async redirects() {
     return getOldDomainRedirects();
   },
