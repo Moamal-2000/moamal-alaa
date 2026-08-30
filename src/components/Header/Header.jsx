@@ -3,18 +3,14 @@
 import { DEBOUNCE_DELAY, SCROLL_THRESHOLD } from "@/constants/constants";
 import useScrollDirection from "@/hooks/useScrollDirection";
 import { getHeaderClasses } from "@/lib/classNames";
-import { fadeInOnViewMotionProps } from "@/lib/motionConfig";
 import { scrollToTop } from "@/lib/utils";
 import useGlobalStore from "@/stores/global/useGlobalStore";
-import { motion } from "motion/react";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import MobileNavBtn from "../Shared/MobileNavBtn/MobileNavBtn";
 import s from "./Header.module.scss";
 import HeaderButtons from "./HeaderButtons/HeaderButtons";
 import MobileNavMenu from "./MobileNavMenu/MobileNavMenu";
-
-const motionProps = fadeInOnViewMotionProps({ initialY: 0 });
 
 const Header = () => {
   const scrollDirection = useScrollDirection({ initialDir: "down" });
@@ -86,7 +82,7 @@ const Header = () => {
       ref={headerRef}
       onKeyUp={handleHeaderKeyUp}
     >
-      <motion.nav className={s.navLinks} {...motionProps}>
+      <nav className={s.navLinks}>
         <Link
           className={s.logo}
           href="/"
@@ -102,7 +98,7 @@ const Header = () => {
         <MobileNavBtn />
         <MobileNavMenu />
         <HeaderButtons navClicked={navClicked} />
-      </motion.nav>
+      </nav>
     </header>
   );
 };

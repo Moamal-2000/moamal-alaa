@@ -1,9 +1,8 @@
 "use client";
 
-import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 
-const InstallPWAButton = ({ className, motionProps = {} }) => {
+const InstallPWAButton = ({ className }) => {
   const [deferredPrompt, setDeferredPrompt] = useState(null);
   const [showButton, setShowButton] = useState(false);
 
@@ -45,16 +44,15 @@ const InstallPWAButton = ({ className, motionProps = {} }) => {
   }
 
   return (
-    <motion.button
+    <button
       type="button"
       className={className}
       onClick={handleInstallClick}
       title={title}
       aria-label={title}
-      {...motionProps}
     >
       Install
-    </motion.button>
+    </button>
   );
 };
 

@@ -1,9 +1,8 @@
-import { motion } from "motion/react";
 import s from "./HeroButtons.module.scss";
 
-const HeroButtons = ({ motionProps }) => {
+const HeroButtons = () => {
   return (
-    <motion.div className={s.buttons} {...motionProps()}>
+    <div className={s.buttons}>
       <a href="#projects" className={s.viewWorkBtn}>
         View my work
       </a>
@@ -11,7 +10,7 @@ const HeroButtons = ({ motionProps }) => {
       <a href="mailto:moamalalaapro1@gmail.com" className={s.getInTouchBtn}>
         Get in touch
       </a>
-    </motion.div>
+    </div>
   );
 };
 
