@@ -114,7 +114,7 @@ export const FEATURED_PROJECTS = [
 
 export const COD_JUMPING_STATS_PROJECT = {
   repoUrl: COD_JUMPING_STATS_REPO_URL,
-  liveUrl: "https://cjstats.vercel.app",
+  liveUrl: "https://cjstats.moamalalaa.com",
   stars: 6,
   forks: 1,
   commitCount: 2759,
