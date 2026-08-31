@@ -1,5 +1,3 @@
-import { getOldDomainRedirects } from "./src/lib/getRedirects.mjs";
-
 const nextConfig = {
   devIndicators: false,
   reactCompiler: true,
@@ -12,7 +10,14 @@ const nextConfig = {
   },
 
   async redirects() {
-    return getOldDomainRedirects();
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "moamalalaa.netlify.app" }],
+        destination: `https://moamalalaa.com/:path*`,
+        permanent: true,
+      },
+    ];
   },
 };
 
