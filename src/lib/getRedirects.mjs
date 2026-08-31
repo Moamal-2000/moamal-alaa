@@ -1,4 +1,4 @@
-const PRIMARY_DOMAIN = "https://www.moamalalaa.com";
+const PRIMARY_DOMAIN = "https://me.moamalalaa.com";
 
 const OLD_DOMAINS = [
   "https://moamal-alaa.vercel.app",
