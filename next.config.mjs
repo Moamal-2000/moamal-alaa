@@ -1,4 +1,4 @@
-import { getOldDomainRedirects } from "@/lib/getRedirects.mjs";
+import { getOldDomainRedirects } from "./src/lib/getRedirects.mjs";
 
 const nextConfig = {
   devIndicators: false,
