@@ -44,6 +44,7 @@ export const FEATURED_PROJECTS = [
 
   {
     title: "Cod Jumping Stats",
+    underDev: true,
     description: (
       <>
         <p>
