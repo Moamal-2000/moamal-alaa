@@ -10,16 +10,6 @@ export const OTHER_PROJECTS_DATA = [
     id: 1,
   },
   {
-    title: "Challenges with JavaScript",
-    description:
-      "A set of JavaScript challenges focused on solving real-world interactivity problems using only HTML, CSS, and JavaScript. Built to sharpen DOM manipulation, event handling, and logic-building skills.",
-    year: "2022",
-    liveUrl: "https://moamal-2000.github.io/simple-javascript-projects/",
-    repoUrl: "https://github.com/Moamal-2000/simple-javascript-projects",
-    technologies: ["HTML", "CSS", "Sass", "JavaScript"],
-    id: 2,
-  },
-  {
     title: "Custom React Hooks Library",
     description:
       "A collection of reusable and well-documented custom React hooks for boosting productivity and consistency across React projects. Includes live previews and code highlighting",
@@ -27,7 +17,7 @@ export const OTHER_PROJECTS_DATA = [
     liveUrl: "https://custom-hooks.moamalalaa.com",
     repoUrl: "https://github.com/Moamal-2000/custom-hooks",
     technologies: ["React", "PWA", "JSZip", "syntax highlighter"],
-    id: 3,
+    id: 2,
   },
   {
     title: "Aster Information",
@@ -45,7 +35,7 @@ export const OTHER_PROJECTS_DATA = [
     liveUrl: "https://aster-information.moamalalaa.com",
     repoUrl: "https://github.com/Moamal-2000/aster-information",
     technologies: ["React", "React Router Dom", "Sass"],
-    id: 4,
+    id: 3,
   },
   {
     title: "CSS Arts Gallery",
@@ -55,7 +45,7 @@ export const OTHER_PROJECTS_DATA = [
     liveUrl: "https://css-arts-gallery.moamalalaa.com",
     repoUrl: "https://github.com/Moamal-2000/css-arts-gallery",
     technologies: ["Next.js", "Sass"],
-    id: 5,
+    id: 4,
   },
   {
     title: "Resume Builder",
@@ -70,6 +60,6 @@ export const OTHER_PROJECTS_DATA = [
       "HTML to PDF",
       "React Datepicker",
     ],
-    id: 6,
+    id: 5,
   },
 ].reverse();
