@@ -4,7 +4,7 @@ import path from "path";
 
 export const revalidate = 3600;
 
-const baseDir = "src/app/(pages)";
+const baseDir = "src/app";
 const excludeDirs = ["api", "fonts"];
 
 export default function sitemap() {
