@@ -80,7 +80,6 @@ npm run start
 - `About` – A brief introduction about me and the technologies I work with.
 - `Contributions` - Highlights of my open-source work, pull requests I've made, and the projects I've helped improve.
 - `Projects` – A few cool things I've built, plus what I used to build them.
-- `Archive` – A list of other noteworthy projects I’ve worked on over the years.
 - `Contact` – Want to say hi? Here's how to reach me!
 
 ## Colors & Fonts
