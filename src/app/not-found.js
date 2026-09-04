@@ -1,7 +1,7 @@
 "use client";
 
+import s from "@/components/NotFoundPage/NotFoundPage.module.scss";
 import LinkButton from "@/components/Shared/Buttons/LinkButton/LinkButton";
-import s from "../styles/NotFoundPage.module.scss";
 
 const NotFoundPage = () => {
   return (
