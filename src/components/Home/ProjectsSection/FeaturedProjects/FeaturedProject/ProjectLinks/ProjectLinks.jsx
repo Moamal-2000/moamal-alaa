@@ -1,6 +1,6 @@
 import s from "./ProjectLinks.module.scss";
 
-const ProjectLinks = ({ fetchedData, title }) => {
+const ProjectLinks = ({ fetchedData = {}, title }) => {
   return (
     <div className={s.projectLinks} data-type="project-links">
       {fetchedData?.isPrivate ? (

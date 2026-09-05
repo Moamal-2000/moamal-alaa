@@ -16,9 +16,9 @@ const motionProps = fadeInOnViewMotionProps({
   initialY: 40,
 });
 
-const FeaturedProject = ({ data, fetchedData, shouldReverse }) => {
+const FeaturedProject = ({ data = {}, fetchedData = {}, shouldReverse }) => {
   const { title, description, technologies, previewImg, underDev } = data;
-  const { stars, forks, commitCount } = fetchedData;
+  const { liveUrl, commitCount, stars, forks } = fetchedData;
 
   return (
     <m.div
@@ -27,11 +27,7 @@ const FeaturedProject = ({ data, fetchedData, shouldReverse }) => {
       {...motionProps}
     >
       <div className={s.content}>
-        <ProjectHeader
-          title={title}
-          liveUrl={fetchedData.liveUrl}
-          underDev={underDev}
-        />
+        <ProjectHeader title={title} liveUrl={liveUrl} underDev={underDev} />
 
         <div className={s.description}>{description}</div>
 
@@ -45,7 +41,7 @@ const FeaturedProject = ({ data, fetchedData, shouldReverse }) => {
 
       <PreviewImage
         src={previewImg}
-        liveUrl={fetchedData.liveUrl}
+        liveUrl={liveUrl}
         title={title}
         loading="lazy"
       />

@@ -1,11 +1,12 @@
+import { STATS_FALLBACK } from "@/constants/constants";
 import { Fragment } from "react";
 import s from "./ProjectStats.module.scss";
 
 const ProjectStats = ({
-  stars = 0,
-  forks = 0,
-  commitCount = 0,
-  pullRequests = 0,
+  stars = STATS_FALLBACK,
+  forks = STATS_FALLBACK,
+  commitCount = STATS_FALLBACK,
+  pullRequests = STATS_FALLBACK,
 }) => {
   const stats = getStats({ stars, forks, commitCount, pullRequests });
 
@@ -20,7 +21,7 @@ const ProjectStats = ({
             <span className="visuallyHidden">{label}</span>
           </dt>
 
-          <dd className={s.value}>{value.toLocaleString()}</dd>
+          <dd className={s.value}>{value.toLocaleString() ?? "??"}</dd>
 
           {index < stats.length - 1 && (
             <span className={s.dot} aria-hidden="true">
@@ -42,7 +43,7 @@ function getStats({ stars, forks, commitCount, pullRequests } = {}) {
     { value: commitCount, icon: "commit", label: "GitHub commits" },
   ];
 
-  if (pullRequests > 0 && stats.length === 3) {
+  if (pullRequests !== STATS_FALLBACK && stats.length === 3) {
     stats.push({
       value: pullRequests,
       icon: "code-pull-request",
