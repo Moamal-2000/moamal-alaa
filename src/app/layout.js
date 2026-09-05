@@ -9,12 +9,7 @@ import { LazyMotion, domAnimation } from "motion/react";
 import "../styles/globals.scss";
 
 export const metadata = METADATA;
-
-export const viewport = {
-  themeColor: "#012260",
-  viewport:
-    "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no",
-};
+export const viewport = { themeColor: "#012260" };
 
 export default function RootLayout({ children }) {
   return (
