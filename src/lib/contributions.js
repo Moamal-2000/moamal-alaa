@@ -63,7 +63,9 @@ export function getRepoFullName(data) {
 export function getSortedPullRequests(repoData, repo) {
   return {
     ...repoData,
-    prs: repo.prs.sort((a, b) => new Date(b.mergedAt) - new Date(a.mergedAt)),
+    prs: repo.prs.toSorted(
+      (a, b) => new Date(b.mergedAt) - new Date(a.mergedAt),
+    ),
   };
 }
 
