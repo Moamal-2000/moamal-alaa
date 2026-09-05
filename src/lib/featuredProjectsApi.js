@@ -1,4 +1,4 @@
-import { MY_REPOS_URL } from "@/constants/constants";
+import { GITHUB_API, MY_REPOS_URL } from "@/constants/constants";
 import { FEATURED_PROJECTS } from "@/constants/featuredProjects";
 import { featuredProjectsQuery } from "@/graphql/featuredProjectsQuery";
 
@@ -27,7 +27,7 @@ export async function fetchMyGithubRepos() {
 }
 
 export async function fetchFeaturedProjects() {
-  const response = await fetch("https://api.github.com/graphql", {
+  const response = await fetch(`${GITHUB_API}/graphql`, {
     method: "POST",
     headers: {
       Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,

@@ -1,3 +1,4 @@
+import { GITHUB_API } from "@/constants/constants";
 import {
   CONTRIBUTION_BLACKLIST,
   CONTRIBUTIONS_DESCRIPTIONS,
@@ -80,7 +81,7 @@ export function getContributionData(contributions) {
 
 export async function fetchContributions() {
   try {
-    const res = await fetch("https://api.github.com/graphql", {
+    const res = await fetch(`${GITHUB_API}/graphql`, {
       method: "POST",
       headers: {
         Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
