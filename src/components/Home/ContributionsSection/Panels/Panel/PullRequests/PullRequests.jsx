@@ -6,6 +6,7 @@ const PullRequests = ({ contribution, activeTabOrder, index }) => {
     <ul className={s.pullRequests}>
       {contribution.prs.map((pr) => (
         <li key={pr.url}>
+          <span aria-hidden="true">▹</span>
           <Link
             href={pr.url}
             target="_blank"

@@ -16,6 +16,19 @@ $max-visible-items: 10;
   overscroll-behavior-y: contain;
 }
 
+.pullRequests li {
+  position: relative;
+}
+
+.pullRequests li>span {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  translate: 0 -50%;
+  color: var(--green);
+  pointer-events: none;
+}
+
 .pullRequests li>a {
   outline: none;
   display: inline-block;
@@ -38,11 +51,4 @@ $max-visible-items: 10;
     padding-left: 20px;
     font-size: 1.15rem;
   }
-}
-
-.pullRequests li>a::before {
-  content: "▹";
-  position: absolute;
-  left: 0;
-  color: var(--green);
 }
