@@ -1,9 +1,9 @@
-import { GITHUB_API } from "@/constants/constants";
 import {
   CONTRIBUTION_BLACKLIST,
   CONTRIBUTIONS_DESCRIPTIONS,
 } from "@/constants/contributions";
 import { contributionsQuery } from "@/graphql/contributionsQuery";
+import { fetchGithubGraphQL } from "./github/client";
 
 export function filterContributions(contributions) {
   return contributions.filter((contribution) => {
@@ -80,20 +80,11 @@ export function getContributionData(contributions) {
 }
 
 export async function fetchContributions() {
-  try {
-    const res = await fetch(`${GITHUB_API}/graphql`, {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ query: contributionsQuery }),
-    });
+  const data = await fetchGithubGraphQL(contributionsQuery);
 
-    const data = await res.json();
-    return data.data.user.pullRequests.nodes;
-  } catch (error) {
-    console.log(error);
+  if (data === null) {
     return [];
   }
+
+  return data.user.pullRequests.nodes;
 }

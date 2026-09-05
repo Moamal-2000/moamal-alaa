@@ -1,6 +1,7 @@
-import { GITHUB_API, MY_REPOS_URL } from "@/constants/constants";
+import { MY_REPOS_URL } from "@/constants/constants";
 import { FEATURED_PROJECTS } from "@/constants/featuredProjects";
 import { featuredProjectsQuery } from "@/graphql/featuredProjectsQuery";
+import { fetchGithubGraphQL } from "./github/client";
 
 export async function fetchMyGithubRepos() {
   try {
@@ -27,20 +28,16 @@ export async function fetchMyGithubRepos() {
 }
 
 export async function fetchFeaturedProjects() {
-  const response = await fetch(`${GITHUB_API}/graphql`, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ query: featuredProjectsQuery }),
-  });
+  const data = await fetchGithubGraphQL(featuredProjectsQuery);
 
-  const { data } = await response.json();
-  const allRepos = data.user.repositories.nodes;
+  if (data === null) {
+    return [];
+  }
+
+  const repos = data.user.repositories.nodes;
 
   return FEATURED_PROJECTS.map((project) => {
-    const repo = allRepos.find((repo) => repo.url === project.repoUrl);
+    const repo = repos.find((repo) => repo.url === project.repoUrl);
 
     return {
       stars: repo?.stargazerCount || 0,
