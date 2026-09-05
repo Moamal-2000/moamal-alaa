@@ -30,21 +30,23 @@ export function groupContributionsByRepo(contributions) {
 
 export function enrichRepos(contributions) {
   return Object.values(contributions).map((repo) => {
-    const repoClone = { ...repo };
-    const repoName = getRepoFullName(repoClone);
+    const repoWithSortedPrs = getSortedPullRequests(repo);
 
+    const repoName = getRepoFullName(repoWithSortedPrs);
     const requiredData = CONTRIBUTIONS_DESCRIPTIONS.find(
       (item) => item.id === repoName,
     );
 
-    const sortedPullRequests = getSortedPullRequests(repoClone, repo);
-
     if (!requiredData) {
-      return sortedPullRequests;
+      return repoWithSortedPrs;
     }
 
-    repoClone.repository.description = requiredData?.description || "";
-    return sortedPullRequests;
+    const description =
+      requiredData.description || repoWithSortedPrs.repository.description;
+    return {
+      ...repoWithSortedPrs,
+      repository: { ...repoWithSortedPrs.repository, description },
+    };
   });
 }
 
@@ -60,9 +62,9 @@ export function getRepoFullName(data) {
   return `${data.repository.owner.login}/${data.repository.name}`;
 }
 
-export function getSortedPullRequests(repoData, repo) {
+export function getSortedPullRequests(repo) {
   return {
-    ...repoData,
+    ...repo,
     prs: repo.prs.toSorted(
       (a, b) => new Date(b.mergedAt) - new Date(a.mergedAt),
     ),
