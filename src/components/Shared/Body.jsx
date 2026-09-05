@@ -1,6 +1,7 @@
 "use client";
 
 import useGlobalStore from "@/stores/global/useGlobalStore";
+import { domAnimation, LazyMotion } from "motion/react";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import UpdateNotification from "../PWA/UpdateNotification/UpdateNotification";
@@ -13,17 +14,19 @@ const Body = ({ children }) => {
   const isMobileNavOpen = useGlobalStore((s) => s.isMobileNavOpen);
 
   return (
-    <body className={isMobileNavOpen ? "noScroll" : ""}>
-      <UpdateNotification />
-      <SkipContentLink />
-      <Header />
-      <RootLayer>
-        <FixedSocialMedia />
-        <FixedEmail />
-        {children}
-        <Footer />
-      </RootLayer>
-    </body>
+    <LazyMotion features={domAnimation} strict>
+      <body className={isMobileNavOpen ? "noScroll" : ""}>
+        <UpdateNotification />
+        <SkipContentLink />
+        <Header />
+        <RootLayer>
+          <FixedSocialMedia />
+          <FixedEmail />
+          {children}
+          <Footer />
+        </RootLayer>
+      </body>
+    </LazyMotion>
   );
 };
 export default Body;
