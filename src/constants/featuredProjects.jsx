@@ -88,6 +88,7 @@ export const FEATURED_PROJECTS = [
     ],
     repoUrl: COD_JUMPING_STATS_REPO_URL,
     previewImg: "/images/call-of-duty-2-stats-project.webp",
+    caseStudyPath: "/projects/cj-stats",
     id: 2,
   },
 
