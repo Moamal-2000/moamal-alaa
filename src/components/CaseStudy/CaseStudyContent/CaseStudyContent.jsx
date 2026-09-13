@@ -18,11 +18,7 @@ const sections = [
   ["key-takeaways", "Key Takeaways"],
 ];
 
-const Heading = ({ id, children }) => (
-  <h2 id={id} tabIndex={-1}>
-    {children}
-  </h2>
-);
+const Heading = ({ id, children }) => <h2 id={id}>{children}</h2>;
 
 const CaseStudyContent = () => (
   <article className={s.article} data-case-study>
@@ -55,9 +51,7 @@ const CaseStudyContent = () => (
       </p>
 
       <section className={s.highlightPanel} aria-labelledby="key-highlights">
-        <h2 id="key-highlights" tabIndex={-1}>
-          Key Highlights
-        </h2>
+        <h2 id="key-highlights">Key Highlights</h2>
         <ul>
           <li>
             <strong>Data layer:</strong> Added MessagePack decoding and mapping
