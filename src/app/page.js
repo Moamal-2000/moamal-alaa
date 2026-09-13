@@ -19,7 +19,7 @@ export default async function Home() {
   ]);
 
   return (
-    <main>
+    <main id="main-content">
       <HeroSection />
       <AboutSection />
       <ContributionsSection contributions={contributions} />

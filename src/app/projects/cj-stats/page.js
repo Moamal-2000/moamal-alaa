@@ -64,7 +64,7 @@ const ARTICLE_JSON_LD = {
 export default function CJStatsCaseStudy() {
   return (
     <>
-      <main>
+      <main id="main-content">
         <CaseStudyLayout>
           <CaseStudyContent />
         </CaseStudyLayout>
