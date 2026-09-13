@@ -33,18 +33,31 @@
   color: #758db6;
   font-size: 0.86rem;
   line-height: 1.2;
-  transition: color 180ms var(--ease-main), border-color 180ms var(--ease-main);
-}
+  outline: solid 2px transparent;
+  outline-offset: -5px;
+  transition:
+    color .1s var(--ease-main),
+    outline .1s var(--ease-main),
+    border-color .1s var(--ease-main),
+    outline-offset .1s var(--ease-main);
 
-.tocList a:focus-visible,
-.tocList a.active,
-.tocList a.active:hover {
-  border-color: var(--green);
-  color: #fff;
-}
+  &.active,
+  &.active:hover {
+    border-color: var(--green);
+    color: #fff;
+  }
 
-.tocList a:hover {
-  color: #ccd6f6;
+  &:hover {
+    color: #ccd6f6;
+  }
+
+  &:focus-visible {
+    border-radius: 4px;
+    color: #fff;
+    outline-color: var(--green);
+    outline-offset: -3px;
+    border-left-color: transparent;
+  }
 }
 
 .tocList .subItem a {
