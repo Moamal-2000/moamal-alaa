@@ -40,8 +40,8 @@ const CaseStudyLayout = ({ children }) => {
 
   return (
     <div className={s.pageShell}>
-      <aside className={s.sidebar} aria-label="Case study navigation">
-        <nav>
+      <aside className={s.sidebar}>
+        <nav aria-label="Table of contents">
           <ol className={s.tocList}>
             {headings.map((heading) => (
               <li
