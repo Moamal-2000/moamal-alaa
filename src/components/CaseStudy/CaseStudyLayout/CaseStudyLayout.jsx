@@ -1,5 +1,3 @@
-"use client";
-
 import s from "./CaseStudyLayout.module.scss";
 import Sidebar from "./Sidebar/Sidebar";
 
