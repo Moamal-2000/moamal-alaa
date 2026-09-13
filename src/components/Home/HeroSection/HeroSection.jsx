@@ -5,7 +5,7 @@ import s from "./HeroSection.module.scss";
 
 const HeroSection = () => {
   return (
-    <section className={s.heroSection} id="hero">
+    <section className={s.heroSection}>
       <div className={s.content}>
         <p className={s.preHeading}>Hi, my name is</p>
         <h1 className={s.myName}>Moamal Alaa.</h1>

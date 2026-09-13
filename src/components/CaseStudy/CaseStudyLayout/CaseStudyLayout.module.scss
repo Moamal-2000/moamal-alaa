@@ -1,0 +1,28 @@
+@use "@/styles/mixins" as m;
+
+.pageShell {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 840px);
+  gap: 70px;
+  width: 100%;
+  padding-block: 150px 120px;
+}
+
+@include m.media(large) {
+  .pageShell {
+    gap: 30px;
+  }
+}
+
+@include m.media(medium) {
+  .pageShell {
+    display: block;
+  }
+}
+
+@include m.media(small) {
+  .pageShell {
+    display: block;
+    padding-block: 110px 80px;
+  }
+}

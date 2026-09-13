@@ -14,7 +14,7 @@ export default function sitemap() {
 async function getRoutes() {
   const fullPath = path.join(process.cwd(), baseDir);
   const entries = readdirSync(fullPath, { withFileTypes: true });
-  const routes = ["/"];
+  const routes = ["/", "/projects/cj-stats"];
 
   entries.forEach((entry) => {
     const isValidRoute =
