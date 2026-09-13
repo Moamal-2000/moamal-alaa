@@ -1,6 +1,7 @@
 import CaseStudyContent from "@/components/CaseStudy/CaseStudyContent/CaseStudyContent";
 import CaseStudyLayout from "@/components/CaseStudy/CaseStudyLayout/CaseStudyLayout";
 import { BASE_URL } from "@/constants/metadata";
+import Script from "next/script";
 
 const CASE_STUDY_URL = `${BASE_URL}/projects/cj-stats`;
 
@@ -39,6 +40,27 @@ export function generateMetadata() {
   };
 }
 
+const ARTICLE_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  headline: "CJ Statistics: Building a data-heavy frontend",
+  description:
+    "A frontend case study about building CJ Statistics, a Call of Duty jumping statistics application.",
+  author: { "@type": "Person", name: "Moamal Alaa", url: BASE_URL },
+  publisher: { "@type": "Person", name: "Moamal Alaa" },
+  url: CASE_STUDY_URL,
+  image: `${BASE_URL}/images/call-of-duty-2-stats-project.webp`,
+  datePublished: "2026-09-13",
+  mainEntityOfPage: CASE_STUDY_URL,
+  keywords: [
+    "Next.js",
+    "Redux Toolkit",
+    "MessagePack",
+    "web accessibility",
+    "frontend architecture",
+  ],
+};
+
 export default function CJStatsCaseStudy() {
   return (
     <>
@@ -47,6 +69,12 @@ export default function CJStatsCaseStudy() {
           <CaseStudyContent />
         </CaseStudyLayout>
       </main>
+
+      <Script
+        id="article-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(ARTICLE_JSON_LD) }}
+      />
     </>
   );
 }
