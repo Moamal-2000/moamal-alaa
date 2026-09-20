@@ -2,7 +2,6 @@ const CACHE_NAME = "moamal-alaa-v1.20.1";
 
 const urlsToCache = [
   "/",
-  "/archive",
   "/manifest.json",
   "/resume.pdf",
   "/images/e-commercew-project.webp",
@@ -21,12 +20,23 @@ function isCacheableRequest(request) {
 }
 
 async function installServiceWorker() {
-  try {
-    const cache = await caches.open(CACHE_NAME);
-    await cache.addAll(urlsToCache);
-  } catch (error) {
-    console.error("Failed to install service worker:", error);
-  }
+  const cache = await caches.open(CACHE_NAME);
+
+  await Promise.all(
+    urlsToCache.map(async (url) => {
+      try {
+        const response = await fetch(url);
+
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status} ${response.statusText}`);
+        }
+
+        await cache.put(url, response);
+      } catch (error) {
+        console.error(`Failed to cache ${url}:`, error);
+      }
+    }),
+  );
 }
 
 // Cache-first strategy
@@ -44,7 +54,8 @@ async function handleFetchRequest(event) {
     await storeResponseInCache(event.request, response.clone());
     return response;
   } catch (error) {
-    return null;
+    const cachedResponse = await caches.match("/");
+    return cachedResponse || Response.error();
   }
 }
 
@@ -85,6 +96,5 @@ self.addEventListener("fetch", (event) => {
 });
 
 self.addEventListener("activate", (event) => {
-  clients.claim();
-  event.waitUntil(cleanupOldCaches());
+  event.waitUntil(Promise.all([clients.claim(), cleanupOldCaches()]));
 });
