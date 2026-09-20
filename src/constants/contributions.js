@@ -18,7 +18,7 @@ export const CONTRIBUTIONS_DESCRIPTIONS = [
     id: "BraveOPotato/FckSignups",
   },
   {
-    description: `Fixed fixed-grid stretching during DevTools resizing and improved button interactions with consistent cursor behavior.`,
+    description: `Contributed performance, interaction, and layout improvements, including optimized sidebar positioning, consistent button cursors, and fixes for grid stretching during DevTools resizing.`,
     id: "harshjdhv/componentry",
   },
   {
@@ -52,5 +52,9 @@ export const CONTRIBUTIONS_DESCRIPTIONS = [
   {
     description: `Cleaned up redundant CSS and fixed a cursor lag issue in Chrome and Edge DevTools, improving rendering behavior and the development experience.`,
     id: "sfwnisme/sfwn.me-",
+  },
+  {
+    description: `Fixed responsive horizontal overflow from decorative corner bolts and improved the global layout structure to keep content contained, bolts centered, and the footer properly positioned.`,
+    id: "AlfieJones/theme-toggles",
   },
 ];
