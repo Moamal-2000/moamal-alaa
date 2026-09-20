@@ -1,5 +1,3 @@
-"use client";
-
 import NumberedHeading from "@/components/Shared/NumberedHeading/NumberedHeading";
 import { fadeInOnViewMotionProps } from "@/lib/motionConfig";
 import FeaturedProjects from "./FeaturedProjects/FeaturedProjects";

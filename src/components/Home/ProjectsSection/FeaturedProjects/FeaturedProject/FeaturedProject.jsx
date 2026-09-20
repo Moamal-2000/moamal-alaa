@@ -1,20 +1,10 @@
-"use client";
-
-import { fadeInOnViewMotionProps } from "@/lib/motionConfig";
-import { m } from "motion/react";
 import s from "./FeaturedProject.module.scss";
+import FeaturedProjectWrapper from "./FeaturedProjectWrapper";
 import PreviewImage from "./PreviewImage/PreviewImage";
 import ProjectHeader from "./ProjectHeader/ProjectHeader";
 import ProjectLinks from "./ProjectLinks/ProjectLinks";
 import ProjectStats from "./ProjectLinks/ProjectStats/ProjectStats";
 import ProjectTechList from "./ProjectTechList/ProjectTechList";
-
-const motionProps = fadeInOnViewMotionProps({
-  visibilityThreshold: 0.1,
-  duration: 0.5,
-  delay: 0.1,
-  initialY: 40,
-});
 
 const FeaturedProject = ({ data = {}, fetchedData = {}, shouldReverse }) => {
   const {
@@ -28,11 +18,7 @@ const FeaturedProject = ({ data = {}, fetchedData = {}, shouldReverse }) => {
   const { liveUrl, commitCount, stars, forks } = fetchedData;
 
   return (
-    <m.div
-      className={s.featuredProject}
-      dir={shouldReverse ? "rtl" : "ltr"}
-      {...motionProps}
-    >
+    <FeaturedProjectWrapper shouldReverse={shouldReverse}>
       <div className={s.content}>
         <ProjectHeader title={title} liveUrl={liveUrl} underDev={underDev} />
 
@@ -56,7 +42,7 @@ const FeaturedProject = ({ data = {}, fetchedData = {}, shouldReverse }) => {
         title={title}
         loading="lazy"
       />
-    </m.div>
+    </FeaturedProjectWrapper>
   );
 };
 
