@@ -6,7 +6,7 @@ import { getHeaderClasses } from "@/lib/classNames";
 import { scrollToTop } from "@/lib/utils";
 import useGlobalStore from "@/stores/global/useGlobalStore";
 import Link from "next/link";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import MobileNavBtn from "../Shared/MobileNavBtn/MobileNavBtn";
 import s from "./Header.module.scss";
 import HeaderButtons from "./HeaderButtons/HeaderButtons";
@@ -22,11 +22,10 @@ const Header = () => {
   const navClicked = useRef(false);
   const hasMounted = useRef(false);
   const timerRef = useRef();
-  const headerRef = useRef(null);
 
   const headerClasses = getHeaderClasses({ cssModule: s, isActive, isHidden });
 
-  const handleScroll = useCallback(() => {
+  function handleScroll() {
     clearTimeout(timerRef.current);
 
     timerRef.current = setTimeout(() => {
@@ -50,17 +49,6 @@ const Header = () => {
       navClicked.current = false;
       hasMounted.current = true;
     }, DEBOUNCE_DELAY);
-  }, [scrollDirection]);
-
-  function handleHeaderKeyUp() {
-    showHeaderOnFocusInside();
-  }
-
-  function showHeaderOnFocusInside() {
-    const isFocusStillInside = headerRef.current.contains(
-      document.activeElement,
-    );
-    setIsHidden(!isFocusStillInside);
   }
 
   useEffect(() => {
@@ -77,11 +65,7 @@ const Header = () => {
   }, [handleScroll]);
 
   return (
-    <header
-      className={headerClasses}
-      ref={headerRef}
-      onKeyUp={handleHeaderKeyUp}
-    >
+    <header className={headerClasses}>
       <nav className={s.navLinks}>
         <Link
           className={s.logo}
