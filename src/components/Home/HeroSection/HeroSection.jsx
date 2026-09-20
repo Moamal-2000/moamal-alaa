@@ -1,5 +1,3 @@
-"use client";
-
 import HeroButtons from "./HeroButtons/HeroButtons";
 import s from "./HeroSection.module.scss";
 

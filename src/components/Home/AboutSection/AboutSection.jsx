@@ -1,23 +1,15 @@
-"use client";
-
 import NumberedHeading from "@/components/Shared/NumberedHeading/NumberedHeading";
-import { fadeInOnViewMotionProps } from "@/lib/motionConfig";
-import { m } from "motion/react";
 import Image from "next/image";
 import AboutContent from "./AboutContent/AboutContent";
 import s from "./AboutSection.module.scss";
+import AboutWrapper from "./AboutWrapper";
 import ImageFrame from "./ImageFrame/ImageFrame";
-
-const motionProps = fadeInOnViewMotionProps({
-  visibilityThreshold: 0.4,
-  delay: 0.2,
-});
 
 const FRAME_SIZE = 300;
 
 const AboutSection = () => {
   return (
-    <m.section className={s.aboutSection} id="about" {...motionProps}>
+    <AboutWrapper>
       <NumberedHeading title="About Me" number="01" />
       <AboutContent />
       <ImageFrame
@@ -34,7 +26,7 @@ const AboutSection = () => {
           fetchPriority="low"
         />
       </ImageFrame>
-    </m.section>
+    </AboutWrapper>
   );
 };
 
