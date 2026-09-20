@@ -1,3 +1,4 @@
+import RegisterPWA from "@/components/PWA/RegisterPWA";
 import Body from "@/components/Shared/Body";
 import { IS_PRODUCTION } from "@/constants/constants";
 import { JSON_LD } from "@/constants/jsonLd";
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
 
       {IS_PRODUCTION && (
         <>
+          <RegisterPWA />
           <Analytics />
           <SpeedInsights />
         </>
