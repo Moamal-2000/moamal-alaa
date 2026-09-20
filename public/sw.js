@@ -1,4 +1,4 @@
-const CACHE_NAME = "moamal-alaa-v1.20.1";
+const CACHE_NAME = "moamal-alaa-v1.20.2";
 
 const urlsToCache = [
   "/",
@@ -25,7 +25,7 @@ async function installServiceWorker() {
   await Promise.all(
     urlsToCache.map(async (url) => {
       try {
-        const response = await fetch(url);
+        const response = await fetch(url, { cache: "no-store" });
 
         if (!response.ok) {
           throw new Error(`HTTP ${response.status} ${response.statusText}`);
@@ -39,54 +39,49 @@ async function installServiceWorker() {
   );
 }
 
-// Cache-first strategy
-async function handleFetchRequest(event) {
-  try {
-    const cachedResponse = await caches.match(event.request);
-    if (cachedResponse) return cachedResponse;
-
-    const response = await fetch(event.request);
-    const isValidResponse =
-      response && response.status === 200 && response.type === "basic";
-
-    if (!isValidResponse) return response;
-
-    await storeResponseInCache(event.request, response.clone());
-    return response;
-  } catch (error) {
-    const cachedResponse = await caches.match("/");
-    return cachedResponse || Response.error();
-  }
+function isNavigationRequest(request) {
+  return request.mode === "navigate";
 }
 
-async function storeResponseInCache(request, response) {
+function isValidResponse(response) {
+  return response && response.status === 200 && response.type === "basic";
+}
+
+// Network-first keeps deployed HTML and application code up to date.
+async function handleFetchRequest(event) {
+  const cache = await caches.open(CACHE_NAME);
+  const cachedResponse = await cache.match(event.request);
+
   try {
-    const cache = await caches.open(CACHE_NAME);
-    const isPostRequest = request.method === "POST";
+    const response = await fetch(
+      event.request,
+      isNavigationRequest(event.request) ? { cache: "no-store" } : undefined,
+    );
 
-    if (isPostRequest) return;
+    if (!isValidResponse(response)) return response;
 
-    await cache.put(request, response);
+    await cache.put(event.request, response.clone());
+
+    return response;
   } catch (error) {
-    console.error("Failed to cache response for request:", request.url, error);
+    return cachedResponse || (await caches.match("/")) || Response.error();
   }
 }
 
 async function cleanupOldCaches() {
   try {
     const cacheNames = await caches.keys();
-    const cachesToDelete = cacheNames
-      .filter((cacheName) => cacheName !== CACHE_NAME)
-      .map((name) => caches.delete(name));
-
-    await Promise.all(cachesToDelete.filter(Boolean));
+    await Promise.all(
+      cacheNames
+        .filter((cacheName) => cacheName !== CACHE_NAME)
+        .map((cacheName) => caches.delete(cacheName)),
+    );
   } catch (error) {
     console.error("Failed to cleanup old caches:", error);
   }
 }
 
 self.addEventListener("install", (event) => {
-  self.skipWaiting();
   event.waitUntil(installServiceWorker());
 });
 
