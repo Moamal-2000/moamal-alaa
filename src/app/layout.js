@@ -1,6 +1,6 @@
 import Body from "@/components/Shared/Body";
 import { IS_PRODUCTION } from "@/constants/constants";
-import { PERSON_JSON_LD } from "@/constants/jsonLd";
+import { JSON_LD } from "@/constants/jsonLd";
 import { METADATA } from "@/constants/metadata";
 import { calibreFont, sfMonoFont } from "@/lib/fonts";
 import { Analytics } from "@vercel/analytics/next";
@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{
-              __html: JSON.stringify(PERSON_JSON_LD),
+              __html: JSON.stringify(JSON_LD),
             }}
           />
         </head>

@@ -1,7 +1,7 @@
 export const BASE_URL = process.env.BASE_URL;
 
 const MY_FULL_NAME = "Moamal Alaa Kareem";
-const SITE_TITLE = "Moamal Alaa | Front-End Engineer";
+export const SITE_TITLE = "Moamal Alaa | Front-End Engineer";
 const SITE_DESCRIPTION =
   "Moamal Alaa - Front-End Engineer specializing in high-performance, accessible (WCAG), and responsive web applications using React, Next.js, and modern CSS architecture.";
 
