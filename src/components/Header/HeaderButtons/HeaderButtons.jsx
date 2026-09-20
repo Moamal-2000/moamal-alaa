@@ -2,10 +2,10 @@ import InstallPWAButton from "@/components/PWA/InstallPWAButton";
 import HeaderNavLinks from "../HeaderNavLinks/HeaderNavLinks";
 import s from "./HeaderButtons.module.scss";
 
-const HeaderButtons = ({ navClicked }) => {
+const HeaderButtons = () => {
   return (
     <div className={s.buttons}>
-      <HeaderNavLinks navClicked={navClicked} />
+      <HeaderNavLinks />
 
       <a
         className={s.resume}
