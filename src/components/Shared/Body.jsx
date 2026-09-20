@@ -5,13 +5,13 @@ import FixedEmail from "./FixedEmail/FixedEmail";
 import FixedSocialMedia from "./FixedSocialMedia/FixedSocialMedia";
 import ScrollLock from "./Logic/ScrollLock";
 import RootLayer from "./RootLayer/RootLayer";
-import SkipContentLink from "./SkipContentLink/SkipContentLink";
+import SkipLink from "./SkipLink/SkipLink";
 
 const Body = ({ children }) => {
   return (
     <LazyMotion features={domAnimation} strict>
       <body>
-        <SkipContentLink />
+        <SkipLink />
         <Header />
         <RootLayer>
           <FixedSocialMedia />
