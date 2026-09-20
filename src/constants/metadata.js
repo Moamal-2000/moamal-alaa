@@ -1,5 +1,6 @@
 export const BASE_URL = process.env.BASE_URL;
 
+const MY_FULL_NAME = "Moamal Alaa Kareem";
 const SITE_TITLE = "Moamal Alaa | Front-End Engineer";
 const SITE_DESCRIPTION =
   "Moamal Alaa - Front-End Engineer specializing in high-performance, accessible (WCAG), and responsive web applications using React, Next.js, and modern CSS architecture.";
@@ -48,6 +49,10 @@ const GLOBAL_METADATA = {
   keywords: KEYWORDS,
   metadataBase: new URL(BASE_URL),
   alternates: { canonical: "/" },
+  robots: { index: true, follow: true },
+  authors: [{ name: MY_FULL_NAME }],
+  publisher: MY_FULL_NAME,
+  creator: MY_FULL_NAME,
 };
 
 const PWA_METADATA = {
