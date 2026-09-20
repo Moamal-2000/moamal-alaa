@@ -1,3 +1,5 @@
+"use client";
+
 import ProjectStats from "@/components/Home/ProjectsSection/FeaturedProjects/FeaturedProject/ProjectLinks/ProjectStats/ProjectStats";
 import { getRepoFullName } from "@/lib/contributions";
 import useGlobalStore from "@/stores/global/useGlobalStore";

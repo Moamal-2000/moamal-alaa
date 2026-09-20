@@ -1,3 +1,5 @@
+"use client";
+
 import { MEDIUM_SCREEN_WIDTH } from "@/constants/constants";
 import { useKeyListeners } from "@/hooks/useKeyListeners";
 import { getRepoFullName } from "@/lib/contributions";
