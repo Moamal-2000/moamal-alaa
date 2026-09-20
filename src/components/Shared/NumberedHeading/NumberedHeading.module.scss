@@ -5,7 +5,7 @@
   align-items: center;
   margin: 10px 0 40px;
   width: 100%;
-  font-size: clamp(1.6rem, 5vw, 2rem);
+  font-size: clamp(1.5rem, 5vw, 2rem);
   white-space: nowrap;
   color: #ccd6f6;
   font-weight: 600;
@@ -15,7 +15,7 @@
 
 @include m.media(very-small) {
   .numberedHeading {
-    font-size: clamp(1.5rem, 5vw, 2rem);
+    font-size: clamp(1.2rem, 6vw, 2rem);
   }
 }
 

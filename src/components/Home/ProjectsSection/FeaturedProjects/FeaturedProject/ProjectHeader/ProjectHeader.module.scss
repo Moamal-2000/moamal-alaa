@@ -6,6 +6,14 @@
   pointer-events: all;
 }
 
+@include m.media(very-small) {
+  .projectHeader {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+
 .projectHeader .featuredText {
   font-family: var(--font-mono-main);
   font-size: .9rem;
@@ -15,6 +23,7 @@
 .projectHeader .developmentText {
   font-family: var(--font-mono-main);
   font-size: .9rem;
+  text-wrap: nowrap;
   color: #ff9a2e;
 }
 
@@ -25,6 +34,12 @@
   margin-inline: 8px;
   display: inline-block;
   scale: 1 1.1;
+}
+
+@include m.media(very-small) {
+  .projectHeader .separator {
+    display: none;
+  }
 }
 
 @include m.media(very-small) {
