@@ -47,6 +47,7 @@ const CaseStudyContent = () => (
 
       <section className={s.highlightPanel} aria-labelledby="key-highlights">
         <h2 id="key-highlights">Key Highlights</h2>
+
         <ul>
           <li>
             <strong>Data layer:</strong> Added MessagePack decoding and mapping
@@ -113,12 +114,14 @@ const CaseStudyContent = () => (
         The useful part of the split was knowing where different kinds of logic
         belonged.
       </p>
+
       <ul>
         <li>API code handled communication.</li>
         <li>Data mappers handled the shape of the data.</li>
         <li>Redux handled shared application state.</li>
         <li>Components handled presentation and interaction.</li>
       </ul>
+
       <p>
         That separation made later changes easier because a change in one layer
         did not automatically have to spread through the whole UI.
@@ -155,6 +158,7 @@ const CaseStudyContent = () => (
         know that index <code>0</code> means one thing and index <code>4</code>{" "}
         means another.
       </p>
+
       <div
         className={s.flow}
         aria-label="Data flow from the API to the user interface"
@@ -169,6 +173,7 @@ const CaseStudyContent = () => (
         <b aria-hidden="true">→</b>
         <span>UI</span>
       </div>
+
       <p>
         The same idea was used for maps, players, and leaderboards. The actual
         list mapping is linear in the number of records, but the bigger benefit
@@ -188,6 +193,7 @@ const CaseStudyContent = () => (
         I used Redux Toolkit for shared state and organized it around the
         domains that actually exist in the application:
       </p>
+
       <div className={s.chipList}>
         {[
           "servers",
@@ -200,6 +206,7 @@ const CaseStudyContent = () => (
           <code key={item}>{item}</code>
         ))}
       </div>
+
       <p>
         The point was not to put everything in Redux. Local UI state could stay
         local. Shared data and state that crossed page or component boundaries
@@ -220,6 +227,7 @@ const CaseStudyContent = () => (
         A lot of the frontend work was therefore about making that data easier
         to navigate. The application gained things such as:
       </p>
+
       <ul>
         <li>player search</li>
         <li>leaderboard sorting</li>
@@ -234,6 +242,7 @@ const CaseStudyContent = () => (
         <li>run analytics</li>
         <li>badges and rank information</li>
       </ul>
+
       <p>
         Some of those features were small. Others became shared patterns after I
         noticed the same problem appearing in several places.
@@ -261,6 +270,7 @@ const CaseStudyContent = () => (
         building the feature, then cleaning up the parts around it that became
         obviously repetitive.
       </p>
+
       <Heading id={sections[7][0]}>{sections[7][1]}</Heading>
       <p>
         CJ Statistics has more than one leaderboard system, so the frontend
@@ -279,6 +289,7 @@ const CaseStudyContent = () => (
         This was one of the points where understanding the domain mattered as
         much as writing the component.
       </p>
+
       <Heading id={sections[8][0]}>{sections[8][1]}</Heading>
       <p>
         Accessibility has been part of the frontend work throughout the project.
@@ -299,6 +310,7 @@ const CaseStudyContent = () => (
         These things are easy to overlook when a page looks correct in a
         browser.
       </p>
+
       <Heading id={sections[9][0]}>{sections[9][1]}</Heading>
       <p>
         Performance has mostly been a collection of smaller decisions rather
@@ -317,6 +329,7 @@ const CaseStudyContent = () => (
         I tend to prefer simple optimizations that fit the architecture over
         adding another library every time there is a performance problem.
       </p>
+
       <Heading id={sections[10][0]}>{sections[10][1]}</Heading>
       <p>
         Once player and map pages became proper dynamic routes, it also made
@@ -331,6 +344,7 @@ const CaseStudyContent = () => (
         The route, page data, and metadata now describe the same resource
         instead of the page being just another state of a generic route.
       </p>
+
       <Heading id={sections[11][0]}>{sections[11][1]}</Heading>
       <p>
         The project was initially deployed on Vercel. Later, I worked on moving
@@ -350,6 +364,7 @@ const CaseStudyContent = () => (
         application concern. A frontend can work perfectly in one environment
         and still make assumptions that do not hold somewhere else.
       </p>
+
       <Heading id={sections[12][0]}>{sections[12][1]}</Heading>
       <p>
         CJ Statistics is still being developed, so some parts of the frontend
@@ -364,8 +379,10 @@ const CaseStudyContent = () => (
         I am keeping those items separate from the completed work in this case
         study because the project is still changing.
       </p>
+
       <Heading id={sections[13][0]}>{sections[13][1]}</Heading>
       <p>My work on CJ Statistics has been focused on the frontend.</p>
+
       <ul>
         <li>Next.js application structure and routing</li>
         <li>React components and UI systems</li>
@@ -379,12 +396,15 @@ const CaseStudyContent = () => (
         <li>SEO and Open Graph metadata</li>
         <li>deployment configuration</li>
       </ul>
+
       <p>The backend API and backend services were maintained separately.</p>
       <p>So the simplest way to describe my role is:</p>
+
       <blockquote>
         I owned the frontend application and the user-facing experience built on
         top of the backend API.
       </blockquote>
+
       <Heading id={sections[14][0]}>{sections[14][1]}</Heading>
       <p>
         The most useful thing I got from this project was not learning another
