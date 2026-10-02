@@ -9,7 +9,7 @@ $max-visible-items: 12;
   min-width: max-content;
   max-height: calc(var(--tab-height) * #{$max-visible-items});
   overflow-y: auto;
-  scrollbar-width: thin;
+  scrollbar-width: none;
 }
 
 @include m.media(medium) {
