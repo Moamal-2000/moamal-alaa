@@ -5,6 +5,9 @@ export const contributionsQuery = `{
         title
         url
         mergedAt
+        comments {
+          totalCount
+        }
 
         repository {
           name

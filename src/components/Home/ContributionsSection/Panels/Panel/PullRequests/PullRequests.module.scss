@@ -18,9 +18,13 @@ $max-visible-items: 10;
 
 .pullRequests li {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
 }
 
-.pullRequests li>span {
+.pullRequests li .listMarker {
   position: absolute;
   left: 0;
   top: 50%;
@@ -44,6 +48,20 @@ $max-visible-items: 10;
     color: var(--green);
     text-decoration: underline;
   }
+}
+
+.pullRequests li .commentCount {
+  font-size: .9rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #a1aac6;
+}
+
+.pullRequests li .commentCount>svg {
+  width: 16px;
+  height: 16px;
+  fill: #a1aac6;
 }
 
 @include m.media(medium) {
