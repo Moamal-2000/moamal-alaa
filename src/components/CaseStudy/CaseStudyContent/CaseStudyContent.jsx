@@ -1,3 +1,4 @@
+import ArticleHeader from "./ArticleHeader/ArticleHeader";
 import s from "./CaseStudyContent.module.scss";
 import DirectoryTree from "./DirectoryTree/DirectoryTree";
 
@@ -23,14 +24,7 @@ const Heading = ({ id, children }) => <h2 id={id}>{children}</h2>;
 
 const CaseStudyContent = () => (
   <article className={s.article} data-case-study>
-    <header className={s.articleHeader}>
-      <p className={s.eyebrow}>Frontend case study / 2026</p>
-      <h1>CJ Statistics</h1>
-      <p className={s.lede}>
-        Building a data-heavy Call of Duty statistics frontend that stayed
-        navigable, accessible, and pleasant to use as the project grew.
-      </p>
-    </header>
+    <ArticleHeader />
 
     <div className={s.prose}>
       <p>

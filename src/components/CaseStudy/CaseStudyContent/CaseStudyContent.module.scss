@@ -5,35 +5,6 @@
   padding: 2px;
 }
 
-.eyebrow {
-  color: var(--green);
-  font-family: var(--font-mono-main);
-  font-size: 0.7rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.articleHeader {
-  padding-bottom: 50px;
-}
-
-.articleHeader h1 {
-  max-width: 700px;
-  margin: 18px 0 20px;
-  color: #ccd6f6;
-  font-size: clamp(3.4rem, 8vw, 5rem);
-  font-weight: 600;
-  letter-spacing: -0.03em;
-  line-height: 0.9;
-}
-
-.lede {
-  max-width: 610px;
-  color: #a8b4cf;
-  font-size: clamp(1.2rem, 5vw, 1.4rem);
-  line-height: 1.2;
-}
-
 .chipList code {
   padding: 4px 10px;
   color: var(--green);
