@@ -23,7 +23,7 @@ const PullRequests = ({ contribution, activeTabOrder, index }) => {
             </Link>
 
             <div className={s.commentCount}>
-              <span class="visuallyHidden">
+              <span className="visuallyHidden">
                 GitHub pull request comments count
               </span>
 
