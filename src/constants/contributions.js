@@ -14,6 +14,10 @@ export const CONTRIBUTION_BLACKLIST = [
 
 export const CONTRIBUTIONS_DESCRIPTIONS = [
   {
+    description: `Improved homepage accessibility by fixing heading hierarchy and adding accessible names to language and theme controls for better screen reader support.`,
+    id: "reactive-resume/reactive-resume",
+  },
+  {
     description: `Improved performance and accessibility by self-hosting fonts, adding network prefetching, and moving animations to the GPU. Also fixed production issues and refined mobile layouts and interactions.`,
     id: "BraveOPotato/FckSignups",
   },
