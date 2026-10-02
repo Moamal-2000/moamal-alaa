@@ -1,0 +1,56 @@
+@use "@/styles/mixins" as m;
+
+.item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.item .listMarker {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  translate: 0 -50%;
+  color: var(--green);
+  pointer-events: none;
+}
+
+.item>a {
+  outline: none;
+  display: inline-block;
+  font-size: 1.125rem;
+  padding-left: 30px;
+  padding-block: 5px;
+  color: #a1aac6;
+  position: relative;
+  transition: color .1s var(--ease-main);
+
+  &:hover,
+  &:focus-visible {
+    color: var(--green);
+    text-decoration: underline;
+  }
+}
+
+.item .commentCount {
+  font-size: .9rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #a1aac6;
+}
+
+.item .commentCount>svg {
+  width: 16px;
+  height: 16px;
+  fill: #a1aac6;
+}
+
+@include m.media(medium) {
+  .item>a {
+    padding-left: 20px;
+    font-size: 1.15rem;
+  }
+}
