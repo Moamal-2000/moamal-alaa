@@ -10,7 +10,7 @@ const PullRequestItem = ({ data, activeTabOrder, index }) => {
   const commentCount = comments?.totalCount ?? "N/A";
 
   return (
-    <li key={url} className={s.item}>
+    <li className={s.item}>
       <span className={s.listMarker} aria-hidden="true">
         ▹
       </span>

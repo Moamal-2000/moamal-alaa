@@ -32,6 +32,7 @@ const PullRequests = ({ contribution, activeTabOrder, index }) => {
     >
       {contribution.prs.map((pullRequest) => (
         <PullRequestItem
+          key={pullRequest.url}
           data={pullRequest}
           activeTabOrder={activeTabOrder}
           index={index}
