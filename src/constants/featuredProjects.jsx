@@ -119,6 +119,6 @@ export const COD_JUMPING_STATS_PROJECT = {
   liveUrl: "https://cjstats.moamalalaa.com",
   stars: 6,
   forks: 1,
-  commitCount: "~2800",
+  commitCount: "~3000",
   isPrivate: true,
 };
