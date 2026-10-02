@@ -6,12 +6,15 @@ import { METADATA } from "@/constants/metadata";
 import { calibreFont, sfMonoFont } from "@/lib/fonts";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import ReactDOM from "react-dom";
 import "../styles/globals.scss";
 
 export const metadata = METADATA;
 export const viewport = { themeColor: "#012260" };
 
 export default function RootLayout({ children }) {
+  ReactDOM.preload("/icons-sprite.svg", { as: "image", type: "image/svg+xml" });
+
   return (
     <>
       <html
