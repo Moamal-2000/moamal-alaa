@@ -9,6 +9,11 @@ $max-visible-items: 10;
   overflow-y: auto;
   scrollbar-width: thin;
   padding-right: 10px;
+  outline: dashed 2px transparent;
+
+  &:focus-visible {
+    outline-color: var(--green);
+  }
 }
 
 // Prevent parent page scroll chaining when content exceeds max visible items

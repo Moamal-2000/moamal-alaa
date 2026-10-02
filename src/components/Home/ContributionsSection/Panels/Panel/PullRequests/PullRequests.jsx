@@ -3,7 +3,7 @@ import s from "./PullRequests.module.scss";
 
 const PullRequests = ({ contribution, activeTabOrder, index }) => {
   return (
-    <ul className={s.pullRequests}>
+    <ul className={s.pullRequests} tabIndex={0}>
       {contribution.prs.map((pr) => {
         const commentCount = pr.comments?.totalCount ?? 0;
 
