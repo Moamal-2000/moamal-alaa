@@ -1,0 +1,21 @@
+@use "@/styles/mixins" as m;
+
+.tree {
+  font-family: var(--font-mono-main);
+  overflow-x: auto;
+  background: #081426;
+  padding: 22px;
+  color: #b8c7e4;
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+@include m.media(small) {
+  .tree {
+    padding: 12px;
+  }
+}
+
+.tree code {
+  background-color: transparent;
+}

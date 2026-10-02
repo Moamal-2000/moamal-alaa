@@ -98,22 +98,6 @@
   font-size: 0.78em;
 }
 
-.prose pre {
-  overflow-x: auto;
-  background: #081426;
-  padding: 22px;
-  color: #b8c7e4;
-  font-family: var(--font-mono-main);
-  font-size: 0.78rem;
-  line-height: 1.6;
-}
-
-@include m.media(small) {
-  .prose pre {
-    padding: 12px;
-  }
-}
-
 .prose blockquote {
   border-left: 2px solid var(--green);
   padding: 8px 0 8px 22px;
@@ -154,14 +138,6 @@
 
 .highlightPanel li {
   margin-bottom: 14px;
-}
-
-.tree {
-  color: var(--green) !important;
-}
-
-.tree code {
-  background-color: transparent;
 }
 
 .flow {
