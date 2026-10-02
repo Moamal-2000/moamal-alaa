@@ -1,4 +1,5 @@
 import LinkButton from "@/components/Shared/Buttons/LinkButton/LinkButton";
+import { MY_EMAIL } from "@/constants/metadata";
 import s from "./ContactSection.module.scss";
 import ContactWrapper from "./ContactWrapper";
 
@@ -11,10 +12,7 @@ const ContactSection = () => {
         I'm currently looking for new opportunities. Whether you have a question
         or just want to say hi, I'll get back to you as soon as possible!
       </p>
-      <LinkButton
-        href="mailto:moamalalaapro1@gmail.com"
-        title="Send me an email"
-      >
+      <LinkButton href={`mailto:${MY_EMAIL}`} title="Send me an email">
         Say Hello
       </LinkButton>
     </ContactWrapper>

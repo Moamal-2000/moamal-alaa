@@ -1,4 +1,4 @@
-import { BASE_URL, SITE_TITLE } from "./metadata";
+import { BASE_URL, MY_EMAIL, SITE_TITLE } from "./metadata";
 
 const KNOWS_ABOUT = [
   "Front-End Engineering",
@@ -62,7 +62,7 @@ const PERSONAL_SCHEMA = {
   alternateName: "مؤمل علاء",
   jobTitle: "Front-End Engineer",
   url: BASE_URL,
-  email: "moamalalaapro1@gmail.com",
+  email: MY_EMAIL,
   sameAs: [
     "https://github.com/Moamal-2000",
     "https://www.linkedin.com/in/moamal-alaa",

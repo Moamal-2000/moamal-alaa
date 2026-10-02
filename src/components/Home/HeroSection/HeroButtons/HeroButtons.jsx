@@ -1,3 +1,4 @@
+import { MY_EMAIL } from "@/constants/metadata";
 import s from "./HeroButtons.module.scss";
 
 const HeroButtons = () => {
@@ -7,7 +8,7 @@ const HeroButtons = () => {
         View my work
       </a>
 
-      <a href="mailto:moamalalaapro1@gmail.com" className={s.getInTouchBtn}>
+      <a href={`mailto:${MY_EMAIL}`} className={s.getInTouchBtn}>
         Get in touch
       </a>
     </div>

@@ -1,6 +1,6 @@
+import { MY_EMAIL } from "@/constants/metadata";
 import s from "./FixedEmail.module.scss";
 
-const MY_EMAIL = "moamalalaapro1@gmail.com";
 const LABEL = "Send me an email";
 
 const FixedEmail = () => {
