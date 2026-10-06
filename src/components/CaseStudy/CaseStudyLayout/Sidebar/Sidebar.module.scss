@@ -35,6 +35,7 @@
   line-height: 1.2;
   outline: solid 2px transparent;
   outline-offset: -5px;
+  text-wrap: balance;
   transition:
     color .1s var(--ease-main),
     outline .1s var(--ease-main),

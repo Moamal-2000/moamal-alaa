@@ -31,6 +31,15 @@ const CaseStudyContent = () => (
         CJ Statistics is a web app for browsing and analyzing Call of Duty
         jumping statistics from Jumpers Heaven and Jump 4 Life.
       </p>
+
+      <h2 id="introduction">2+ years of development · 3,000 commits</h2>
+      <p>
+        CJ Statistics has been continuously developed for more than two years,
+        growing from a relatively small statistics frontend into a data-heavy
+        application with its own routing, state management, data transformation
+        layer, reusable UI systems, and production deployment infrastructure.
+      </p>
+
       <p>
         I started working on the project when it was much smaller. Over time,
         more data, pages, and features were added. At some point the frontend

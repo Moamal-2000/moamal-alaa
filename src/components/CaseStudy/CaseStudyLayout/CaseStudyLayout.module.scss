@@ -5,7 +5,7 @@
   grid-template-columns: 230px minmax(0, 840px);
   gap: 60px;
   width: 100%;
-  padding-block: 150px 100px;
+  padding-block: 150px 40px;
 }
 
 @include m.media(large) {
