@@ -3,7 +3,7 @@ import s from "./ArticleHeader.module.scss";
 const ArticleHeader = () => {
   return (
     <header className={s.articleHeader}>
-      <p className={s.eyebrow}>Frontend case study / Sep 2026</p>
+      <p className={s.eyebrow}>Frontend case study / Oct 2026</p>
       <h1>CJ Statistics</h1>
       <p className={s.lede}>
         Building a data-heavy Call of Duty statistics frontend that stayed
