@@ -9,6 +9,15 @@ const ArticleHeader = () => {
         Building a data-heavy Call of Duty statistics frontend that stayed
         navigable, accessible, and pleasant to use as the project grew.
       </p>
+
+      <aside className={s.archiveNotice} aria-label="Archived project notice">
+        <strong>Archived project</strong>
+        <p>
+          Live data is no longer available on this site. CJ Statistics is
+          preserved as a static portfolio showcase of the frontend work, using
+          existing data that may not be current.
+        </p>
+      </aside>
     </header>
   );
 };
