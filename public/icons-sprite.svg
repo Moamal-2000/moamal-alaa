@@ -67,7 +67,7 @@
       <path stroke-width="20" d="M104 124h120m-120 60h180m-180 60h112m-112 60h112m-112 60h112m-112 60h152" />
     </g>
     <circle cx="356" cy="308" r="102" fill="none" stroke-width="36" />
-    <path stroke="#fff" stroke-width="48" stroke-linecap="round" d="m420 372 60 60" />
+    <path stroke="currentColor" stroke-width="48" stroke-linecap="round" d="m420 372 60 60" />
     <circle cx="356" cy="308" r="92" fill="transparent" stroke="currentColor" stroke-width="24" />
     <path stroke="currentColor" stroke-width="30" stroke-linecap="round" d="m424 376 52 52" />
   </symbol>
