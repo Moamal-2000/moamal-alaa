@@ -48,8 +48,7 @@ export const FEATURED_PROJECTS = [
     description: (
       <>
         <p>
-          A production-grade gaming analytics platform serving real-time
-          statistics for multiple{" "}
+          CJ Statistics is a gaming analytics platform built for the{" "}
           <AnchorLink
             href="https://www.jumpersheaven.com"
             target="_blank"
@@ -65,18 +64,17 @@ export const FEATURED_PROJECTS = [
           >
             Jump4Life
           </AnchorLink>{" "}
-          servers across <strong className="highlight">Call of Duty</strong>{" "}
-          titles. The system provides interactive leaderboards, player and map
-          analytics, server monitoring, and detailed performance insights with
-          dedicated pages for each entity.
+          communities across <strong className="highlight">Call of Duty</strong>{" "}
+          titles, featuring leaderboards, player and map analytics, and server
+          statistics.
         </p>
         <p>
-          Designed with performance in mind, the platform uses MessagePack
-          serialization, client-side caching with compression, and optimized
-          data fetching strategies to handle large datasets efficiently while
-          maintaining a responsive user experience.
+          Now archived as a static showcase powered by JSON data, the project
+          demonstrates my approach to UI/UX, frontend architecture, and
+          performance optimization. It was also selected as a{" "}
+          <strong className="highlight">reference</strong> for building a
+          similar platform.
         </p>
-        <p>Currently deployed and actively used by the community.</p>
       </>
     ),
     technologies: [
