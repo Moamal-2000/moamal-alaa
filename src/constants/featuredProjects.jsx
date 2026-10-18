@@ -44,7 +44,7 @@ export const FEATURED_PROJECTS = [
 
   {
     title: "Cod Jumping Stats",
-    underDev: true,
+    underDev: false,
     description: (
       <>
         <p>
@@ -55,7 +55,7 @@ export const FEATURED_PROJECTS = [
             target="_blank"
             rel="noopener noreferrer"
           >
-            Jumpers Heaven
+            JumpersHeaven
           </AnchorLink>{" "}
           and{" "}
           <AnchorLink
@@ -63,7 +63,7 @@ export const FEATURED_PROJECTS = [
             target="_blank"
             rel="noopener noreferrer"
           >
-            Jump 4 Life
+            Jump4Life
           </AnchorLink>{" "}
           servers across <strong className="highlight">Call of Duty</strong>{" "}
           titles. The system provides interactive leaderboards, player and map
