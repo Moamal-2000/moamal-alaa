@@ -38,7 +38,7 @@ export const FEATURED_PROJECTS = [
       "PWA",
     ],
     repoUrl: "https://github.com/Moamal-2000/e-commerce",
-    previewImg: "/images/e-commercew-project.webp",
+    previewImg: "/images/avif/e-commercew-project.avif",
     id: 1,
   },
 
@@ -85,7 +85,7 @@ export const FEATURED_PROJECTS = [
       "Sass",
     ],
     repoUrl: COD_JUMPING_STATS_REPO_URL,
-    previewImg: "/images/call-of-duty-2-stats-project.webp",
+    previewImg: "/images/avif/call-of-duty-2-stats-project.avif",
     caseStudyPath: "/projects/cj-stats",
     id: 2,
   },
@@ -106,7 +106,7 @@ export const FEATURED_PROJECTS = [
       </p>
     ),
     repoUrl: "https://github.com/Moamal-2000/tic-tac-toe",
-    previewImg: "/images/advanced-tic-tac-toe.webp",
+    previewImg: "/images/avif/advanced-tic-tac-toe.avif",
     technologies: ["Next.js", "Socket.IO", "Zustand", "Sass", "PWA"],
     id: 3,
   },

@@ -18,7 +18,7 @@ const AboutSection = () => {
         height={FRAME_SIZE}
       >
         <Image
-          src="/images/me.webp"
+          src="/images/avif/me.avif"
           alt="Professional headshot of a young man with short, slightly spiked hair, wearing black rectangular eyeglasses and a muted blue-gray t-shirt, smiling warmly against a neutral light-gray background."
           width={FRAME_SIZE}
           height={FRAME_SIZE}
