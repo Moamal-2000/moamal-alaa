@@ -34,16 +34,24 @@
   }
 }
 
+.navLinks li a::before {
+  content: "0" counter(item) ".";
+  margin-right: 5px;
+  color: var(--green);
+  font-size: .75rem;
+  text-align: right;
+}
+
 @include m.media(medium) {
+  .navLinks li {
+    margin-inline: 2px;
+  }
+
   .navLinks li a {
-    padding: 10px 0;
+    padding: 6px;
   }
 
   .navLinks li a::before {
-    content: "0" counter(item) ".";
-    margin-right: 5px;
-    color: var(--green);
-    font-size: .75rem;
-    text-align: right;
+    display: none;
   }
 }

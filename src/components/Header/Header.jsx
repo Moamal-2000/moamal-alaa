@@ -10,8 +10,8 @@ const Header = () => {
     <HeaderWrapper>
       <nav className={s.navLinks}>
         <HeaderLogo />
-        <MobileNavBtn />
         <MobileNavMenu />
+        <MobileNavBtn />
         <HeaderButtons />
       </nav>
     </HeaderWrapper>
