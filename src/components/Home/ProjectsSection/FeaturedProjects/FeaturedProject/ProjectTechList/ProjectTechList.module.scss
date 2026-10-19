@@ -2,23 +2,16 @@
 
 .techList {
   display: flex;
-  flex-wrap: wrap;
   margin: 12px 0;
   position: relative;
   left: -13px;
-  width: 440px;
-}
-
-@include m.media(large) {
-  .techList {
-    width: 400px;
-  }
 }
 
 @include m.media(medium) {
   .techList {
     width: fit-content;
     display: inline-flex;
+    flex-wrap: wrap;
   }
 }
 
@@ -36,11 +29,11 @@
 .techList li {
   -webkit-tap-highlight-color: transparent;
   padding: 6px 13px;
-  border-radius: 20px;
   font-family: var(--font-mono-main);
   font-size: .875rem;
   font-weight: 500;
   color: #a8b2d1;
+  text-wrap: nowrap;
   pointer-events: all;
   transition: color .3s ease;
 }

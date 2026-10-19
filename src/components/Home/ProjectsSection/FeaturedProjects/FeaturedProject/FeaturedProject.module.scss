@@ -126,6 +126,11 @@
 .content .projectMeta {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
   gap: 12px;
+}
+
+@include m.media(small) {
+  .content .projectMeta {
+    flex-wrap: wrap;
+  }
 }
