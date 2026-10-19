@@ -4,9 +4,8 @@
   -webkit-tap-highlight-color: transparent;
   border-radius: 6px;
   cursor: pointer;
-  position: relative;
-  overflow: hidden;
   grid-area: 1 / 6 / -1 / -1;
+  position: relative;
   z-index: 1;
   outline: solid 0 var(--green);
   outline-offset: 0;
@@ -32,4 +31,8 @@
     height: 100%;
     opacity: .25;
   }
+}
+
+.previewImg>img {
+  border-radius: inherit;
 }
