@@ -1,8 +1,9 @@
 "use client";
 
 import { NAV_LINKS } from "@/constants/staticData";
-import { isSmallScreen } from "@/lib/utils";
+import { isSmallScreen, scrollToTop } from "@/lib/utils";
 import useGlobalStore from "@/stores/global/useGlobalStore";
+import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import InstallPWAButton from "../../PWA/InstallPWAButton";
 import s from "./MobileNavMenu.module.scss";
@@ -14,8 +15,8 @@ const MobileNavMenu = () => {
 
   const activeClass = isMobileNavOpen ? s.active : "";
 
-  function handleClick(title) {
-    if (pathname !== "/") {
+  function handleClick({ title, skipHashLink = false } = {}) {
+    if (pathname !== "/" && !skipHashLink) {
       router.push(`/#${title}`);
     }
     updateGlobalState({ isMobileNavOpen: !isMobileNavOpen });
@@ -29,16 +30,34 @@ const MobileNavMenu = () => {
     >
       <nav>
         <ol>
-          {NAV_LINKS.map(({ title, id }) => (
-            <li key={id}>
-              <a
-                href={`#${title.toLowerCase()}`}
-                onClick={() => handleClick(title.toLowerCase())}
-              >
-                {title}
-              </a>
-            </li>
-          ))}
+          {NAV_LINKS.map(({ title, href, id }) => {
+            if (href && href !== undefined && href !== null) {
+              return (
+                <li key={id}>
+                  <Link
+                    href={href}
+                    onClick={() => {
+                      scrollToTop();
+                      handleClick({ skipHashLink: true });
+                    }}
+                  >
+                    {title}
+                  </Link>
+                </li>
+              );
+            }
+
+            return (
+              <li key={id}>
+                <a
+                  href={`#${title.toLowerCase()}`}
+                  onClick={() => handleClick({ title: title.toLowerCase() })}
+                >
+                  {title}
+                </a>
+              </li>
+            );
+          })}
         </ol>
 
         <div className={s.buttons}>
