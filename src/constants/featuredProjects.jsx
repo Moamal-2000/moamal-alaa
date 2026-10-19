@@ -46,36 +46,31 @@ export const FEATURED_PROJECTS = [
     title: "Cod Jumping Stats",
     underDev: false,
     description: (
-      <>
-        <p>
-          CJ Statistics is a gaming analytics platform built for the{" "}
-          <AnchorLink
-            href="https://www.jumpersheaven.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            JumpersHeaven
-          </AnchorLink>{" "}
-          and{" "}
-          <AnchorLink
-            href="https://jump4life.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Jump4Life
-          </AnchorLink>{" "}
-          communities across <strong className="highlight">Call of Duty</strong>{" "}
-          titles, featuring leaderboards, player and map analytics, and server
-          statistics.
-        </p>
-        <p>
-          Now archived as a static showcase powered by JSON data, the project
-          demonstrates my approach to UI/UX, frontend architecture, and
-          performance optimization. It was also selected as a{" "}
-          <strong className="highlight">reference</strong> for building a
-          similar platform.
-        </p>
-      </>
+      <p>
+        CJ Statistics is an analytics platform built for the{" "}
+        <AnchorLink
+          href="https://www.jumpersheaven.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          JumpersHeaven
+        </AnchorLink>{" "}
+        and{" "}
+        <AnchorLink
+          href="https://jump4life.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Jump4Life
+        </AnchorLink>{" "}
+        communities across <strong className="highlight">Call of Duty</strong>{" "}
+        titles, featuring leaderboards, player and map analytics, and server
+        statistics. Now archived as a showcase powered by JSON, the project
+        demonstrates my approach to UI/UX, frontend architecture, and
+        performance optimization. It was selected as a{" "}
+        <strong className="highlight">reference</strong> for building a
+        platform.
+      </p>
     ),
     technologies: [
       "Next.js",
