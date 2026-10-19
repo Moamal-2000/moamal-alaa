@@ -4,7 +4,11 @@ const ProjectLinks = ({ fetchedData = {}, title, caseStudyPath }) => {
   return (
     <div className={s.projectLinks} data-type="project-links">
       {fetchedData?.isPrivate ? (
-        <span className={s.githubLink} title="Private repository">
+        <span
+          className={s.githubLink}
+          data-tooltip="Private repository"
+          aria-label="Source code unavailable: private repository"
+        >
           <svg aria-hidden="true">
             <use href="/icons-sprite.svg#github" />
           </svg>
