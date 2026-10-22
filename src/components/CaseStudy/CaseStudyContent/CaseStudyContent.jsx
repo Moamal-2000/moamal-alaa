@@ -49,14 +49,11 @@ const CaseStudyContent = () => (
       <CaseStudyHeading id="where-the-project-started">
         Where the project started
       </CaseStudyHeading>
-      <p>The early version of CJ Statistics was fairly straightforward.</p>
       <p>
-        Fetch some data, render it, add a few filters, and make the pages
-        usable.
-      </p>
-      <p>
-        That approach is fine for a small application. It becomes less
-        comfortable once the same data starts appearing everywhere.
+        The early version of CJ Statistics was fairly straightforward. Fetch
+        some data, render it, add a few filters, and make the pages usable. That
+        approach is fine for a small application. It becomes less comfortable
+        once the same data starts appearing everywhere.
       </p>
       <p>
         Players were shown in leaderboards, player pages, recent activity, and
@@ -64,12 +61,12 @@ const CaseStudyContent = () => (
         to be reflected in the URL. Different leaderboard sources had different
         fields and behavior.
       </p>
-      <p>The problem was not that the code stopped working.</p>
       <p>
-        The problem was that every new feature had a little more knowledge about
-        the rest of the application than I wanted it to have.
+        The problem was not that the code stopped working. The problem was that
+        every new feature had a little more knowledge about the rest of the
+        application than I wanted it to have. That is where most of the
+        architectural work started.
       </p>
-      <p>That is where most of the architectural work started.</p>
 
       <CaseStudyHeading id="giving-the-frontend-some-structure">
         Giving the frontend some structure
@@ -84,11 +81,8 @@ const CaseStudyContent = () => (
 
       <p>
         There was no point in creating a complicated architecture just for the
-        sake of having one.
-      </p>
-      <p>
-        The useful part of the split was knowing where different kinds of logic
-        belonged.
+        sake of having one. The useful part of the split was knowing where
+        different kinds of logic belonged.
       </p>
 
       <ul>
@@ -157,10 +151,8 @@ const CaseStudyContent = () => (
       <p>
         The same idea was used for maps, players, and leaderboards. The actual
         list mapping is linear in the number of records, but the bigger benefit
-        was keeping the transport format out of the rest of the application.
-      </p>
-      <p>
-        If the API representation changes, there is one place where that change
+        was keeping the transport format out of the rest of the application. If
+        the API representation changes, there is one place where that change
         needs to be understood.
       </p>
 
@@ -169,11 +161,8 @@ const CaseStudyContent = () => (
       </CaseStudyHeading>
       <p>
         As the application grew, more of the data needed to be used in more than
-        one place.
-      </p>
-      <p>
-        I used Redux Toolkit for shared state and organized it around the
-        domains that actually exist in the application:
+        one place. I used Redux Toolkit for shared state and organized it around
+        the domains that actually exist in the application:
       </p>
 
       <div className={s.chipList}>
@@ -228,19 +217,14 @@ const CaseStudyContent = () => (
       <CaseStudyHeading id="the-map-preview">The map preview</CaseStudyHeading>
       <p>
         Map thumbnails are useful, but sometimes you want to actually look at
-        the map image.
-      </p>
-      <p>
-        I built a full-screen preview with thumbnail navigation, previous/next
-        controls, counters, and keyboard support.
+        the map image. I built a full-screen preview with thumbnail navigation,
+        previous/next controls, counters, and keyboard support.
       </p>
       <p>
         The modal was moved into the global provider layer so it did not need to
-        be mounted separately on every page.
-      </p>
-      <p>
-        I also simplified the navigation logic and replaced some repeated inline
-        SVG markup with a shared SVG sprite.
+        be mounted separately on every page. I also simplified the navigation
+        logic and replaced some repeated inline SVG markup with a shared SVG
+        sprite.
       </p>
       <p>
         Nothing particularly exotic was happening here. It was mostly a case of
@@ -274,9 +258,9 @@ const CaseStudyContent = () => (
         Accessibility has been part of the frontend work throughout the project.
       </p>
       <p>
-        I worked on semantic HTML, CaseStudyheading structure, keyboard
-        interaction, form labels, custom controls, skip links, landmarks,
-        tooltips, and screen-reader behavior.
+        I worked on semantic HTML, heading structure, keyboard interaction, form
+        labels, custom controls, skip links, landmarks, tooltips, and
+        screen-reader behavior.
       </p>
       <p>I also added accessibility tooling during development.</p>
       <p>
@@ -350,8 +334,8 @@ const CaseStudyContent = () => (
         What I'm working on now
       </CaseStudyHeading>
       <p>
-        CJ Statistics is still being developed, so some parts of the frontend
-        are not finished yet.
+        CJ Statistics is <del>still being developed</del>, so some parts of the
+        frontend are not finished yet.
       </p>
       <p>
         Current work includes responsive improvements, continuing the
@@ -360,7 +344,7 @@ const CaseStudyContent = () => (
       </p>
       <p>
         I am keeping those items separate from the completed work in this case
-        study because the project is still changing.
+        study because the project is <del>still changing</del>.
       </p>
 
       <CaseStudyHeading id="my-role">My role</CaseStudyHeading>
@@ -390,13 +374,9 @@ const CaseStudyContent = () => (
 
       <CaseStudyHeading id="key-takeaways">Key Takeaways</CaseStudyHeading>
       <p>
-        The most useful thing I got from this project was not learning another
-        React pattern.
-      </p>
-      <p>
-        It was learning what happens when an application stays alive long enough
-        for its first implementation to become too small for what the product
-        has turned into.
+        The most useful thing I got from this project was learning what happens
+        when an application stays alive long enough for its first implementation
+        to become too small for what the product has turned into.
       </p>
       <p>
         A new feature can expose a problem in routing. A new API format can
@@ -415,12 +395,11 @@ const CaseStudyContent = () => (
         without making the interface feel complicated.
       </p>
       <p>
-        There is still work to do, and I expect the codebase to keep changing.
-        That is normal.
-      </p>
-      <p>
-        For me, the interesting part is trying to make the next change easier
-        than the last one.
+        <del>
+          There is still work to do, and I expect the codebase to keep changing
+        </del>
+        . That is normal. For me, the interesting part is trying to make the
+        next change easier than the last one.
       </p>
     </div>
   </article>
