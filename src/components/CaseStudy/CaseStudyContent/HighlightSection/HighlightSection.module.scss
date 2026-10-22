@@ -14,8 +14,14 @@
 }
 
 .highlightPanel h2 {
-  margin: 0 0 18px;
+  margin-bottom: 18px;
   font-size: 1.4rem;
+}
+
+@include m.media(small) {
+  .highlightPanel h2 {
+    margin-top: 70px;
+  }
 }
 
 .highlightPanel li {

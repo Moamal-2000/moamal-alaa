@@ -1,0 +1,16 @@
+@use "@/styles/mixins" as m;
+
+.heading {
+  scroll-margin-top: 115px;
+  margin: 92px 0 25px;
+  color: #ccd6f6;
+  font-size: clamp(1.8rem, 4vw, 2.45rem);
+  font-weight: 600;
+  line-height: 1.05;
+}
+
+@include m.media(small) {
+  .prose h2 {
+    margin-top: 70px;
+  }
+}
