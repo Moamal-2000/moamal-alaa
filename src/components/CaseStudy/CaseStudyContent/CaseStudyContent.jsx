@@ -46,7 +46,9 @@ const CaseStudyContent = () => (
 
       <HighlightSection />
 
-      <CaseStudyHeading id={sections[0][0]}>{sections[0][1]}</CaseStudyHeading>
+      <CaseStudyHeading id="where-the-project-started">
+        Where the project started
+      </CaseStudyHeading>
       <p>The early version of CJ Statistics was fairly straightforward.</p>
       <p>
         Fetch some data, render it, add a few filters, and make the pages
@@ -69,7 +71,9 @@ const CaseStudyContent = () => (
       </p>
       <p>That is where most of the architectural work started.</p>
 
-      <CaseStudyHeading id={sections[1][0]}>{sections[1][1]}</CaseStudyHeading>
+      <CaseStudyHeading id="giving-the-frontend-some-structure">
+        Giving the frontend some structure
+      </CaseStudyHeading>
       <p>
         I gradually separated the application into areas for pages, UI
         components, API code, data transformation, hooks, utilities, Redux
@@ -99,7 +103,9 @@ const CaseStudyContent = () => (
         did not automatically have to spread through the whole UI.
       </p>
 
-      <CaseStudyHeading id={sections[2][0]}>{sections[2][1]}</CaseStudyHeading>
+      <CaseStudyHeading id="player-and-map-routes">
+        Player and map routes
+      </CaseStudyHeading>
       <p>
         One of the bigger refactors was changing how individual players and maps
         were represented in the application.
@@ -119,7 +125,9 @@ const CaseStudyContent = () => (
         as a Git commit and turns out to touch half the application.
       </p>
 
-      <CaseStudyHeading id={sections[3][0]}>{sections[3][1]}</CaseStudyHeading>
+      <CaseStudyHeading id="working-with-messagepack">
+        Working with MessagePack
+      </CaseStudyHeading>
       <p>
         The API eventually introduced a newer MessagePack-based format for
         several of the main datasets. It was compact, which was useful, but the
@@ -156,7 +164,9 @@ const CaseStudyContent = () => (
         needs to be understood.
       </p>
 
-      <CaseStudyHeading id={sections[4][0]}>{sections[4][1]}</CaseStudyHeading>
+      <CaseStudyHeading id="redux-and-shared-state">
+        Redux and shared state
+      </CaseStudyHeading>
       <p>
         As the application grew, more of the data needed to be used in more than
         one place.
@@ -182,7 +192,9 @@ const CaseStudyContent = () => (
         for everything.
       </p>
 
-      <CaseStudyHeading id={sections[5][0]}>{sections[5][1]}</CaseStudyHeading>
+      <CaseStudyHeading id="building-the-actual-ui">
+        Building the actual UI
+      </CaseStudyHeading>
       <p>
         The project has a lot of data, but users do not want to "browse the
         API". They want to find a player, compare leaderboard results, look at a
@@ -213,7 +225,7 @@ const CaseStudyContent = () => (
         noticed the same problem appearing in several places.
       </p>
 
-      <CaseStudyHeading id={sections[6][0]}>{sections[6][1]}</CaseStudyHeading>
+      <CaseStudyHeading id="the-map-preview">The map preview</CaseStudyHeading>
       <p>
         Map thumbnails are useful, but sometimes you want to actually look at
         the map image.
@@ -236,7 +248,9 @@ const CaseStudyContent = () => (
         obviously repetitive.
       </p>
 
-      <CaseStudyHeading id={sections[7][0]}>{sections[7][1]}</CaseStudyHeading>
+      <CaseStudyHeading id="different-leaderboard-systems">
+        Different leaderboard systems
+      </CaseStudyHeading>
       <p>
         CJ Statistics has more than one leaderboard system, so the frontend
         cannot assume that every leaderboard has the same meaning.
@@ -255,7 +269,7 @@ const CaseStudyContent = () => (
         much as writing the component.
       </p>
 
-      <CaseStudyHeading id={sections[8][0]}>{sections[8][1]}</CaseStudyHeading>
+      <CaseStudyHeading id="accessibility">Accessibility</CaseStudyHeading>
       <p>
         Accessibility has been part of the frontend work throughout the project.
       </p>
@@ -276,7 +290,7 @@ const CaseStudyContent = () => (
         browser.
       </p>
 
-      <CaseStudyHeading id={sections[9][0]}>{sections[9][1]}</CaseStudyHeading>
+      <CaseStudyHeading id="performance">Performance</CaseStudyHeading>
       <p>
         Performance has mostly been a collection of smaller decisions rather
         than one big optimization.
@@ -295,8 +309,8 @@ const CaseStudyContent = () => (
         adding another library every time there is a performance problem.
       </p>
 
-      <CaseStudyHeading id={sections[10][0]}>
-        {sections[10][1]}
+      <CaseStudyHeading id="seo-and-social-previews">
+        SEO and social previews
       </CaseStudyHeading>
       <p>
         Once player and map pages became proper dynamic routes, it also made
@@ -312,9 +326,7 @@ const CaseStudyContent = () => (
         instead of the page being just another state of a generic route.
       </p>
 
-      <CaseStudyHeading id={sections[11][0]}>
-        {sections[11][1]}
-      </CaseStudyHeading>
+      <CaseStudyHeading id="deployment">Deployment</CaseStudyHeading>
       <p>
         The project was initially deployed on Vercel. Later, I worked on moving
         it to Cloudflare Workers using Vinext.
@@ -334,8 +346,8 @@ const CaseStudyContent = () => (
         and still make assumptions that do not hold somewhere else.
       </p>
 
-      <CaseStudyHeading id={sections[12][0]}>
-        {sections[12][1]}
+      <CaseStudyHeading id="what-im-working-on-now">
+        What I'm working on now
       </CaseStudyHeading>
       <p>
         CJ Statistics is still being developed, so some parts of the frontend
@@ -351,9 +363,7 @@ const CaseStudyContent = () => (
         study because the project is still changing.
       </p>
 
-      <CaseStudyHeading id={sections[13][0]}>
-        {sections[13][1]}
-      </CaseStudyHeading>
+      <CaseStudyHeading id="my-role">My role</CaseStudyHeading>
       <p>My work on CJ Statistics has been focused on the frontend.</p>
 
       <ul>
@@ -378,9 +388,7 @@ const CaseStudyContent = () => (
         top of the backend API.
       </blockquote>
 
-      <CaseStudyHeading id={sections[14][0]}>
-        {sections[14][1]}
-      </CaseStudyHeading>
+      <CaseStudyHeading id="key-takeaways">Key Takeaways</CaseStudyHeading>
       <p>
         The most useful thing I got from this project was not learning another
         React pattern.
@@ -419,24 +427,6 @@ const CaseStudyContent = () => (
 );
 
 export default CaseStudyContent;
-
-const sections = [
-  ["where-the-project-started", "Where the project started"],
-  ["giving-the-frontend-some-structure", "Giving the frontend some structure"],
-  ["player-and-map-routes", "Player and map routes"],
-  ["working-with-messagepack", "Working with MessagePack"],
-  ["redux-and-shared-state", "Redux and shared state"],
-  ["building-the-actual-ui", "Building the actual UI"],
-  ["the-map-preview", "The map preview"],
-  ["different-leaderboard-systems", "Different leaderboard systems"],
-  ["accessibility", "Accessibility"],
-  ["performance", "Performance"],
-  ["seo-and-social-previews", "SEO and social previews"],
-  ["deployment", "Deployment"],
-  ["what-im-working-on-now", "What I'm working on now"],
-  ["my-role", "My role"],
-  ["key-takeaways", "Key Takeaways"],
-];
 
 const PROJECT_REDUX_SLICES = [
   "servers",
