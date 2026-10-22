@@ -1,0 +1,23 @@
+@use "@/styles/mixins" as m;
+
+.highlightPanel {
+  margin-block: 75px 45px;
+  padding-block: 25px 18px;
+  border-top: 1px solid var(--main-text-color);
+  border-bottom: 1px solid #233554;
+}
+
+@include m.media(small) {
+  .highlightPanel {
+    padding-top: 0;
+  }
+}
+
+.highlightPanel h2 {
+  margin: 0 0 18px;
+  font-size: 1.4rem;
+}
+
+.highlightPanel li {
+  margin-bottom: 14px;
+}
