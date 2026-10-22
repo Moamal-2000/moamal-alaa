@@ -1,3 +1,4 @@
+import AnchorLink from "@/components/Shared/AnchorLink/AnchorLink";
 import ArticleHeader from "./ArticleHeader/ArticleHeader";
 import s from "./CaseStudyContent.module.scss";
 import DirectoryTree from "./DirectoryTree/DirectoryTree";
@@ -28,8 +29,15 @@ const CaseStudyContent = () => (
 
     <div className={s.prose}>
       <p>
-        CJ Statistics is a web app for browsing and analyzing Call of Duty
-        jumping statistics from Jumpers Heaven and Jump 4 Life.
+        <AnchorLink
+          href="https://cjstats.moamalalaa.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          CJ Statistics
+        </AnchorLink>{" "}
+        is a web app for browsing and analyzing Call of Duty jumping statistics
+        from Jumpers Heaven and Jump 4 Life.
       </p>
 
       <h2 id="introduction">2+ years of development · 3,000 commits</h2>
@@ -204,14 +212,7 @@ const CaseStudyContent = () => (
       </p>
 
       <div className={s.chipList}>
-        {[
-          "servers",
-          "maps",
-          "players",
-          "playerProfile",
-          "leaderboard",
-          "global",
-        ].map((item) => (
+        {PROJECT_REDUX_SLICES.map((item) => (
           <code key={item}>{item}</code>
         ))}
       </div>
@@ -453,3 +454,13 @@ const CaseStudyContent = () => (
 );
 
 export default CaseStudyContent;
+
+const PROJECT_REDUX_SLICES = [
+  "servers",
+  "recent",
+  "maps",
+  "players",
+  "playerProfile",
+  "leaderboard",
+  "global",
+];
