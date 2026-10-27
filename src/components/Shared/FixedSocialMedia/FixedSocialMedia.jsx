@@ -1,4 +1,5 @@
 import { SOCIAL_MEDIA } from "@/constants/staticData";
+import Svg from "../Svg";
 import s from "./FixedSocialMedia.module.scss";
 
 const FixedSocialMedia = () => {
@@ -7,9 +8,7 @@ const FixedSocialMedia = () => {
       {SOCIAL_MEDIA.map(({ media, iconName, url, id }) => (
         <li key={id}>
           <a href={url} target="_blank" rel="noopener noreferrer" title={media}>
-            <svg aria-hidden="true" data-type={iconName}>
-              <use href={`/icons-sprite.svg#${iconName}`} />
-            </svg>
+            <Svg name={iconName} data-type={iconName} />
           </a>
         </li>
       ))}

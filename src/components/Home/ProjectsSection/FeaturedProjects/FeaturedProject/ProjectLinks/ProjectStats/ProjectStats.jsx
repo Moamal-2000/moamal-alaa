@@ -1,3 +1,4 @@
+import Svg from "@/components/Shared/Svg";
 import { STATS_FALLBACK } from "@/constants/global";
 import { Fragment } from "react";
 import s from "./ProjectStats.module.scss";
@@ -15,9 +16,7 @@ const ProjectStats = ({
       {stats.map(({ value, icon, label }, index) => (
         <Fragment key={icon}>
           <dt className={s.term}>
-            <svg aria-hidden="true">
-              <use href={`/icons-sprite.svg#${icon}`} />
-            </svg>
+            <Svg name={icon} />
             <span className="visuallyHidden">{label}</span>
           </dt>
 

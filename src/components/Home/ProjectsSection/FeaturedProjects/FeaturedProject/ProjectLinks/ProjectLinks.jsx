@@ -1,3 +1,4 @@
+import Svg from "@/components/Shared/Svg";
 import s from "./ProjectLinks.module.scss";
 
 const ProjectLinks = ({ fetchedData = {}, title, caseStudyPath }) => {
@@ -9,9 +10,7 @@ const ProjectLinks = ({ fetchedData = {}, title, caseStudyPath }) => {
           data-tooltip="Private repository"
           aria-label="Source code unavailable: private repository"
         >
-          <svg aria-hidden="true">
-            <use href="/icons-sprite.svg#github" />
-          </svg>
+          <Svg name="github" />
           Source
         </span>
       ) : (
@@ -22,9 +21,7 @@ const ProjectLinks = ({ fetchedData = {}, title, caseStudyPath }) => {
           className={s.githubLink}
           aria-label={`View ${title} source code on GitHub`}
         >
-          <svg aria-hidden="true">
-            <use href="/icons-sprite.svg#github" />
-          </svg>
+          <Svg name="github" />
           Source
         </a>
       )}
@@ -35,17 +32,13 @@ const ProjectLinks = ({ fetchedData = {}, title, caseStudyPath }) => {
         rel="noopener noreferrer"
         aria-label={`Visit ${title} live site (opens in a new tab)`}
       >
-        <svg aria-hidden="true">
-          <use href="/icons-sprite.svg#live" />
-        </svg>
+        <Svg name="live" />
         Live
       </a>
 
       {caseStudyPath && (
         <a href={caseStudyPath} aria-label={`Visit ${title} case study`}>
-          <svg aria-hidden="true">
-            <use href="/icons-sprite.svg#case-study" />
-          </svg>
+          <Svg name="case-study" />
           Case Study
         </a>
       )}

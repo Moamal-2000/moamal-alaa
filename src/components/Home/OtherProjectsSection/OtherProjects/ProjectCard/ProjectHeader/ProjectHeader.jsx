@@ -1,3 +1,4 @@
+import Svg from "@/components/Shared/Svg";
 import s from "./ProjectHeader.module.scss";
 import ProjectLinks from "./ProjectLinks/ProjectLinks";
 import ProjectTitle from "./ProjectTitle/ProjectTitle";
@@ -8,9 +9,7 @@ const ProjectHeader = ({
   return (
     <header className={s.projectHeader}>
       <div className={s.projectTop}>
-        <svg aria-hidden="true">
-          <use href="/icons-sprite.svg#folder" />
-        </svg>
+        <Svg name="folder" />
         <ProjectLinks repoUrl={repoUrl} liveUrl={liveUrl} title={title} />
       </div>
 

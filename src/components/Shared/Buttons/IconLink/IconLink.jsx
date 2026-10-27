@@ -1,3 +1,4 @@
+import Svg from "../../Svg";
 import s from "./IconLink.module.scss";
 
 const IconLink = ({ href, title, ariaLabel, iconName }) => {
@@ -14,9 +15,7 @@ const IconLink = ({ href, title, ariaLabel, iconName }) => {
       aria-label={ariaLabel}
       className={s.link}
     >
-      <svg aria-hidden="true">
-        <use href={`/icons-sprite.svg#${iconName}`} />
-      </svg>
+      <Svg name={iconName} />
     </a>
   );
 };

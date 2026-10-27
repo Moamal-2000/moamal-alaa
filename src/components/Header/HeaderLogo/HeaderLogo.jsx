@@ -1,5 +1,6 @@
 "use client";
 
+import Svg from "@/components/Shared/Svg";
 import { scrollToTop } from "@/lib/utils";
 import Link from "next/link";
 import s from "./HeaderLogo.module.scss";
@@ -13,9 +14,7 @@ const HeaderLogo = () => {
       aria-label="Go to homepage"
       onClick={scrollToTop}
     >
-      <svg aria-hidden="true">
-        <use href="/icons-sprite.svg#logo" />
-      </svg>
+      <Svg name="logo" />
     </Link>
   );
 };

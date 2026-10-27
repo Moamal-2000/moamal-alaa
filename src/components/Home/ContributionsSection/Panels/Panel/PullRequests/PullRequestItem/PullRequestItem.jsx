@@ -1,3 +1,4 @@
+import Svg from "@/components/Shared/Svg";
 import Link from "next/link";
 import s from "./PullRequestItem.module.scss";
 
@@ -31,9 +32,7 @@ const PullRequestItem = ({ data, activeTabOrder, index }) => {
 
         {commentCount}
 
-        <svg aria-hidden="true">
-          <use href="/icons-sprite.svg#comment" />
-        </svg>
+        <Svg name="comment" />
       </div>
     </li>
   );
