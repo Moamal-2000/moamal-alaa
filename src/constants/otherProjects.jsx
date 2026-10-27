@@ -12,7 +12,7 @@ export const OTHER_PROJECTS_DATA = [
   {
     title: "Custom React Hooks Library",
     description:
-      "A collection of reusable and well-documented custom React hooks for boosting productivity and consistency across React projects. Includes live previews and code highlighting",
+      "A collection of reusable, documented React hooks with live previews and code highlighting.",
     year: "2024",
     liveUrl: "https://custom-hooks.moamalalaa.com",
     repoUrl: "https://github.com/Moamal-2000/custom-hooks",
@@ -23,12 +23,9 @@ export const OTHER_PROJECTS_DATA = [
     title: "Aster Information",
     description: (
       <>
-        A production-quality responsive website developed for a{" "}
-        <strong className="highlight">freelance client</strong>, emphasizing
-        professional UI design, smooth interactive animations, and robust
-        cross-browser support. The project demonstrates real-world delivery
-        standards, attention to usability, and modern front-end implementation
-        practices.
+        A responsive website built for a{" "}
+        <strong className="highlight">freelance client</strong>, featuring
+        polished UI design, smooth animations, and cross-browser compatibility.
       </>
     ),
     year: "2024",
@@ -40,7 +37,7 @@ export const OTHER_PROJECTS_DATA = [
   {
     title: "CSS Arts Gallery",
     description:
-      "A personal gallery of creative CSS-based visual artworks built during my front-end learning journey. Each piece explores animations, shapes, and UI tricks using CSS (and sometimes JavaScript) to push the limits of what's possible in the browser.",
+      "A collection of CSS-based visual experiments exploring animations, shapes, and creative UI effects, with occasional JavaScript.",
     year: "2025",
     liveUrl: "https://css-arts-gallery.moamalalaa.com",
     repoUrl: "https://github.com/Moamal-2000/css-arts-gallery",
