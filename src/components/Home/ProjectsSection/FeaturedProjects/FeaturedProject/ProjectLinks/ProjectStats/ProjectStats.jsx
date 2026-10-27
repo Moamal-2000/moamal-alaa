@@ -1,4 +1,4 @@
-import { STATS_FALLBACK } from "@/constants/constants";
+import { STATS_FALLBACK } from "@/constants/global";
 import { Fragment } from "react";
 import s from "./ProjectStats.module.scss";
 

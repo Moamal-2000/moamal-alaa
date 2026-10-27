@@ -1,4 +1,4 @@
-import { GITHUB_API } from "@/constants/constants";
+import { GITHUB_API } from "@/constants/global";
 
 export async function fetchGithubGraphQL(query) {
   try {

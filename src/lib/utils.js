@@ -1,4 +1,4 @@
-import { IS_SERVER } from "@/constants/constants";
+import { IS_SERVER } from "@/constants/global";
 
 const mobilesType = /Mobi|Android|iPhone|iPad|iPod/i;
 

@@ -1,7 +1,7 @@
 import RegisterPWA from "@/components/PWA/RegisterPWA";
 import Body from "@/components/Shared/Body";
 import { AxeReporter } from "@/components/Shared/Logic/AxeReporter";
-import { IS_PRODUCTION } from "@/constants/constants";
+import { IS_PRODUCTION } from "@/constants/global";
 import { JSON_LD } from "@/constants/jsonLd";
 import { METADATA } from "@/constants/metadata";
 import { calibreFont, sfMonoFont } from "@/lib/fonts";

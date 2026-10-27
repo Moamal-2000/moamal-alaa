@@ -1,6 +1,6 @@
 "use client";
 
-import { MEDIUM_SCREEN_WIDTH } from "@/constants/constants";
+import { MEDIUM_SCREEN_WIDTH } from "@/constants/global";
 import { useKeyListeners } from "@/hooks/useKeyListeners";
 import { getRepoFullName } from "@/lib/contributions";
 import { checkMediaQuery, getNextTabIndex, getPrevTabIndex } from "@/lib/utils";

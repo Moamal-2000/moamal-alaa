@@ -1,6 +1,6 @@
 "use client";
 
-import { IS_SERVER } from "@/constants/constants";
+import { IS_SERVER } from "@/constants/global";
 import { useEffect, useState } from "react";
 
 const useGetResizeWindow = ({ debounceDelay = 300 }) => {

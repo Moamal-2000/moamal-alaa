@@ -1,6 +1,6 @@
 "use client";
 
-import { IS_PRODUCTION } from "@/constants/constants";
+import { IS_PRODUCTION } from "@/constants/global";
 import React, { useEffect } from "react";
 import ReactDOM from "react-dom";
 

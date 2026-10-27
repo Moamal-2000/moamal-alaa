@@ -1,6 +1,6 @@
 "use client";
 
-import { IS_SERVER } from "@/constants/constants";
+import { IS_SERVER } from "@/constants/global";
 import { useEffect, useRef, useState } from "react";
 
 const useScrollDirection = ({

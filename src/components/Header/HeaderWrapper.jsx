@@ -1,6 +1,6 @@
 "use client";
 
-import { DEBOUNCE_DELAY, SCROLL_THRESHOLD } from "@/constants/constants";
+import { DEBOUNCE_DELAY, SCROLL_THRESHOLD } from "@/constants/global";
 import { HeaderContext } from "@/context/HeaderContext";
 import useScrollDirection from "@/hooks/useScrollDirection";
 import { getHeaderClasses } from "@/lib/classNames";

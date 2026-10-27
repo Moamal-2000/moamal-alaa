@@ -1,5 +1,5 @@
-import { MY_REPOS_URL } from "@/constants/constants";
 import { FEATURED_PROJECTS } from "@/constants/featuredProjects";
+import { MY_REPOS_URL } from "@/constants/global";
 import { featuredProjectsQuery } from "@/graphql/featuredProjectsQuery";
 import { fetchGithubGraphQL } from "./github/client";
 
