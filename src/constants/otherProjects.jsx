@@ -1,15 +1,5 @@
 export const OTHER_PROJECTS_DATA = [
   {
-    title: "Responsive Landing Page",
-    description:
-      "A clean and modern landing page template designed to capture visitor attention and effectively showcase content or products.",
-    year: "2022",
-    liveUrl: "https://moamal-2000.github.io/template2",
-    repoUrl: "https://github.com/Moamal-2000/template2",
-    technologies: ["HTML", "CSS", "Sass", "JavaScript"],
-    id: 1,
-  },
-  {
     title: "Custom React Hooks Library",
     description:
       "A collection of reusable, documented React hooks with live previews and code highlighting.",
