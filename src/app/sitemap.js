@@ -5,7 +5,7 @@ import path from "path";
 export const revalidate = 43200; // 12 hour
 
 const baseDir = "src/app";
-const excludeDirs = ["api", "fonts"];
+const excludeDirs = ["api", "fonts", "projects"];
 
 export default function sitemap() {
   return getRoutes();
