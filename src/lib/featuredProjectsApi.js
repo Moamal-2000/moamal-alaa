@@ -7,7 +7,7 @@ export async function fetchMyGithubRepos() {
   try {
     const response = await fetch(MY_REPOS_URL, {
       cache: "force-cache",
-      next: { revalidate: 1000 * 60 * 60 },
+      next: { revalidate: 43200 }, // 12 hour
     });
 
     if (!response.ok) {

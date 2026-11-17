@@ -9,7 +9,7 @@ export async function fetchGithubGraphQL(query) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ query }),
-      next: { revalidate: 3600 }, // 1 hour
+      next: { revalidate: 43200 }, // 12 hour
     });
 
     if (!response.ok) {

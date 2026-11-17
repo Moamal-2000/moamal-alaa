@@ -2,7 +2,7 @@ import { BASE_URL } from "@/constants/metadata";
 import { readdirSync } from "fs";
 import path from "path";
 
-export const revalidate = 3600;
+export const revalidate = 43200; // 12 hour
 
 const baseDir = "src/app";
 const excludeDirs = ["api", "fonts"];
